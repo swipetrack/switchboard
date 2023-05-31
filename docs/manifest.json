@@ -1,4 +1,8 @@
 {
+  "sitemap": {
+    "baseUrl": "https://swipetrack.github.io/Switchboard/",
+    "changefreq": "yearly"
+  },
   "homepages": [],
   "source_base_path": "C:/Users/Dev4/Projects/SwitchboardDistribution/docs",
   "xrefmap": "xrefmap.yml",
