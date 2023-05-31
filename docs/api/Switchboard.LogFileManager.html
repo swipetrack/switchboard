@@ -1,0 +1,801 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class LogFileManager
+ | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class LogFileManager
+ | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <article data-uid="Switchboard.LogFileManager">
+
+
+
+  <h1 id="Switchboard_LogFileManager" data-uid="Switchboard.LogFileManager" class="text-break">
+    Class LogFileManager
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SwitchboardUnity.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides a helpful utility for managing instances of <a class="xref" href="Switchboard.LogFileWriter.html">LogFileWriter</a> within Unity.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class LogFileManager</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">LogFileManager</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Switchboard_LogFileManager__ctor_" data-uid="Switchboard.LogFileManager.#ctor*"></a>
+
+  <h3 id="Switchboard_LogFileManager__ctor" data-uid="Switchboard.LogFileManager.#ctor">
+  LogFileManager()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogFileManager()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager__ctor_" data-uid="Switchboard.LogFileManager.#ctor*"></a>
+
+  <h3 id="Switchboard_LogFileManager__ctor_System_String_" data-uid="Switchboard.LogFileManager.#ctor(System.String)">
+  LogFileManager(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogFileManager(string directory)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the directory where log files will be written.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager__ctor_" data-uid="Switchboard.LogFileManager.#ctor*"></a>
+
+  <h3 id="Switchboard_LogFileManager__ctor_System_String_System_String_" data-uid="Switchboard.LogFileManager.#ctor(System.String,System.String)">
+  LogFileManager(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogFileManager(string directory, string fileNamePrefix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the directory where log files will be written.</p>
+</dd>
+    <dt><code>fileNamePrefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The first part of the file name.
+A time stamp will be added to each file name, after the prefix, before the <code class="paramref">extension</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager__ctor_" data-uid="Switchboard.LogFileManager.#ctor*"></a>
+
+  <h3 id="Switchboard_LogFileManager__ctor_System_String_System_String_System_String_" data-uid="Switchboard.LogFileManager.#ctor(System.String,System.String,System.String)">
+  LogFileManager(string, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogFileManager(string directory, string fileNamePrefix, string extension)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the directory where log files will be written.</p>
+</dd>
+    <dt><code>fileNamePrefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The first part of the file name.
+A time stamp will be added to each file name, after the prefix, before the <code class="paramref">extension</code>.</p>
+</dd>
+    <dt><code>extension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file name extension to use.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager__ctor_" data-uid="Switchboard.LogFileManager.#ctor*"></a>
+
+  <h3 id="Switchboard_LogFileManager__ctor_System_String_System_String_System_String_System_Int32_" data-uid="Switchboard.LogFileManager.#ctor(System.String,System.String,System.String,System.Int32)">
+  LogFileManager(string, string, string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogFileManager(string directory, string fileNamePrefix, string extension, int fileSizeLimit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the directory where log files will be written.</p>
+</dd>
+    <dt><code>fileNamePrefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The first part of the file name.
+A time stamp will be added to each file name, after the prefix, before the <code class="paramref">extension</code>.</p>
+</dd>
+    <dt><code>extension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file name extension to use.</p>
+</dd>
+    <dt><code>fileSizeLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum file size in bytes for log files.
+When a log file reaches the size limit, a new file will be created.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager__ctor_" data-uid="Switchboard.LogFileManager.#ctor*"></a>
+
+  <h3 id="Switchboard_LogFileManager__ctor_System_String_System_String_System_String_System_Int32_System_Int32_" data-uid="Switchboard.LogFileManager.#ctor(System.String,System.String,System.String,System.Int32,System.Int32)">
+  LogFileManager(string, string, string, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogFileManager(string directory, string fileNamePrefix, string extension, int fileSizeLimit, int directorySizeLimit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the directory where log files will be written.</p>
+</dd>
+    <dt><code>fileNamePrefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The first part of the file name.
+A time stamp will be added to each file name, after the prefix, before the <code class="paramref">extension</code>.</p>
+</dd>
+    <dt><code>extension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file name extension to use.</p>
+</dd>
+    <dt><code>fileSizeLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum file size in bytes for log files.
+When a log file reaches the size limit, a new file will be created.</p>
+</dd>
+    <dt><code>directorySizeLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum total size for all log files in the log directory.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager__ctor_" data-uid="Switchboard.LogFileManager.#ctor*"></a>
+
+  <h3 id="Switchboard_LogFileManager__ctor_System_String_System_String_System_String_System_Int32_System_Int32_Switchboard_ILogFormatter_" data-uid="Switchboard.LogFileManager.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,Switchboard.ILogFormatter)">
+  LogFileManager(string, string, string, int, int, ILogFormatter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogFileManager(string directory, string fileNamePrefix, string extension, int fileSizeLimit, int directorySizeLimit, ILogFormatter formatter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the directory where log files will be written.</p>
+</dd>
+    <dt><code>fileNamePrefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The first part of the file name.
+A time stamp will be added to each file name, after the prefix, before the <code class="paramref">extension</code>.</p>
+</dd>
+    <dt><code>extension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file name extension to use.</p>
+</dd>
+    <dt><code>fileSizeLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum file size in bytes for log files.
+When a log file reaches the size limit, a new file will be created.</p>
+</dd>
+    <dt><code>directorySizeLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum total size for all log files in the log directory.</p>
+</dd>
+    <dt><code>formatter</code> <a class="xref" href="Switchboard.ILogFormatter.html">ILogFormatter</a></dt>
+    <dd><p>The formatter to use for formatting log entries.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Switchboard_LogFileManager_DefaultDirectorySizeLimit" data-uid="Switchboard.LogFileManager.DefaultDirectorySizeLimit">
+  DefaultDirectorySizeLimit
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default value for <a class="xref" href="Switchboard.LogFileManager.html#Switchboard_LogFileManager_DirectorySizeLimit">DirectorySizeLimit</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DefaultDirectorySizeLimit = 50000000</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Switchboard_LogFileManager_DirectorySizeLimit_" data-uid="Switchboard.LogFileManager.DirectorySizeLimit*"></a>
+
+  <h3 id="Switchboard_LogFileManager_DirectorySizeLimit" data-uid="Switchboard.LogFileManager.DirectorySizeLimit">
+  DirectorySizeLimit
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the maximum number of total bytes allowed for the combined size of all log files within the log directory.
+The latest file will remain, even if its size exceeds the limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int DirectorySizeLimit { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager_DisplayCallerInfo_" data-uid="Switchboard.LogFileManager.DisplayCallerInfo*"></a>
+
+  <h3 id="Switchboard_LogFileManager_DisplayCallerInfo" data-uid="Switchboard.LogFileManager.DisplayCallerInfo">
+  DisplayCallerInfo
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether information about the caller of log method should be displayed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisplayCallerInfo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager_FileSizeLimit_" data-uid="Switchboard.LogFileManager.FileSizeLimit*"></a>
+
+  <h3 id="Switchboard_LogFileManager_FileSizeLimit" data-uid="Switchboard.LogFileManager.FileSizeLimit">
+  FileSizeLimit
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the maximum size of log files in bytes.
+When a log file reaches the size limit, a new file will be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FileSizeLimit { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if attempting to set a value less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MaxBytesPerLog">MaxBytesPerLog</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_LogFileManager_Formatter_" data-uid="Switchboard.LogFileManager.Formatter*"></a>
+
+  <h3 id="Switchboard_LogFileManager_Formatter" data-uid="Switchboard.LogFileManager.Formatter">
+  Formatter
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the formatter to use for formatting log entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILogFormatter Formatter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager_LogFileWriter_" data-uid="Switchboard.LogFileManager.LogFileWriter*"></a>
+
+  <h3 id="Switchboard_LogFileManager_LogFileWriter" data-uid="Switchboard.LogFileManager.LogFileWriter">
+  LogFileWriter
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Switchboard.LogFileWriter.html">LogFileWriter</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogFileWriter LogFileWriter { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager_LogLevel_" data-uid="Switchboard.LogFileManager.LogLevel*"></a>
+
+  <h3 id="Switchboard_LogFileManager_LogLevel" data-uid="Switchboard.LogFileManager.LogLevel">
+  LogLevel
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the minimum level of significance required for a log entry to be processed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogLevel LogLevel { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager_Path_" data-uid="Switchboard.LogFileManager.Path*"></a>
+
+  <h3 id="Switchboard_LogFileManager_Path" data-uid="Switchboard.LogFileManager.Path">
+  Path
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the file path for the current log file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Path { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Switchboard_LogFileManager_FlushLogFile_" data-uid="Switchboard.LogFileManager.FlushLogFile*"></a>
+
+  <h3 id="Switchboard_LogFileManager_FlushLogFile" data-uid="Switchboard.LogFileManager.FlushLogFile">
+  FlushLogFile()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flushes queued log file entries so that they are written to the actual file.
+Automatically called once per frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FlushLogFile()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager_RemoveExcessLogFiles_" data-uid="Switchboard.LogFileManager.RemoveExcessLogFiles*"></a>
+
+  <h3 id="Switchboard_LogFileManager_RemoveExcessLogFiles" data-uid="Switchboard.LogFileManager.RemoveExcessLogFiles">
+  RemoveExcessLogFiles()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes older log files from the log directory if their total size is greater than <a class="xref" href="Switchboard.LogFileManager.html#Switchboard_LogFileManager_DirectorySizeLimit">DirectorySizeLimit</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveExcessLogFiles()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager_RemoveLogFilesBeyondLimit_" data-uid="Switchboard.LogFileManager.RemoveLogFilesBeyondLimit*"></a>
+
+  <h3 id="Switchboard_LogFileManager_RemoveLogFilesBeyondLimit_System_Int32_" data-uid="Switchboard.LogFileManager.RemoveLogFilesBeyondLimit(System.Int32)">
+  RemoveLogFilesBeyondLimit(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes older log files from the log directory if their total size is greater than <code class="paramref">byteLimit</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveLogFilesBeyondLimit(int byteLimit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>byteLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum allowed total size for all log files in the log directory.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager_StartLogging_" data-uid="Switchboard.LogFileManager.StartLogging*"></a>
+
+  <h3 id="Switchboard_LogFileManager_StartLogging" data-uid="Switchboard.LogFileManager.StartLogging">
+  StartLogging()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens the log file, creating a new file if necessary, and adds it as a log target.
+Starts ticking the log file once per frame to flush queued logs to file.
+Writes hardware platform statistics upon first opening.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StartLogging()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileManager_StopLogging_" data-uid="Switchboard.LogFileManager.StopLogging*"></a>
+
+  <h3 id="Switchboard_LogFileManager_StopLogging" data-uid="Switchboard.LogFileManager.StopLogging">
+  StopLogging()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flushes queued log entries to file, and closes the file.
+Removes the log file as a log target and stops ticking.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopLogging()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by Ronnie Moon. - Copyright © 2023 SwipeTrack Solutions</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

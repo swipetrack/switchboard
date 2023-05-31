@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PreciseClock
+ | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PreciseClock
+ | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <article data-uid="Switchboard.PreciseClock">
+
+
+
+  <h1 id="Switchboard_PreciseClock" data-uid="Switchboard.PreciseClock" class="text-break">
+    Class PreciseClock
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> values that have the precision of a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch">Stopwatch</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class PreciseClock</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PreciseClock</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Switchboard_PreciseClock_Now_" data-uid="Switchboard.PreciseClock.Now*"></a>
+
+  <h3 id="Switchboard_PreciseClock_Now" data-uid="Switchboard.PreciseClock.Now">
+  Now
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the last synchronized <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime.now">Now</a> value, plus the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.elapsed">Elapsed</a> time since synchronization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DateTime Now { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_PreciseClock_UtcNow_" data-uid="Switchboard.PreciseClock.UtcNow*"></a>
+
+  <h3 id="Switchboard_PreciseClock_UtcNow" data-uid="Switchboard.PreciseClock.UtcNow">
+  UtcNow
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the last synchronized <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime.utcnow">UtcNow</a> value, plus the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.elapsed">Elapsed</a> time since synchronization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DateTime UtcNow { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Switchboard_PreciseClock_SynchronizeWithSystemClock_" data-uid="Switchboard.PreciseClock.SynchronizeWithSystemClock*"></a>
+
+  <h3 id="Switchboard_PreciseClock_SynchronizeWithSystemClock" data-uid="Switchboard.PreciseClock.SynchronizeWithSystemClock">
+  SynchronizeWithSystemClock()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Synchronizes the <a class="xref" href="Switchboard.PreciseClock.html#Switchboard_PreciseClock_UtcNow">UtcNow</a> and <a class="xref" href="Switchboard.PreciseClock.html#Switchboard_PreciseClock_Now">Now</a> properties with the system clock.
+If the difference between the old time and the new time is less than one second, the time will not be changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SynchronizeWithSystemClock()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by Ronnie Moon. - Copyright © 2023 SwipeTrack Solutions</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

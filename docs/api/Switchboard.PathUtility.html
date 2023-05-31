@@ -1,0 +1,973 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PathUtility
+ | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PathUtility
+ | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <article data-uid="Switchboard.PathUtility">
+
+
+
+  <h1 id="Switchboard_PathUtility" data-uid="Switchboard.PathUtility" class="text-break">
+    Class PathUtility
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides utilities for working with file system paths.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class PathUtility</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PathUtility</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Switchboard_PathUtility_DirectorySeparator_" data-uid="Switchboard.PathUtility.DirectorySeparator*"></a>
+
+  <h3 id="Switchboard_PathUtility_DirectorySeparator" data-uid="Switchboard.PathUtility.DirectorySeparator">
+  DirectorySeparator
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the standard directory separator character for the platform, either Windows '\', or non-Windows '/'.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static char DirectorySeparator { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Switchboard_PathUtility_CombinePaths_" data-uid="Switchboard.PathUtility.CombinePaths*"></a>
+
+  <h3 id="Switchboard_PathUtility_CombinePaths_System_String_System_String_" data-uid="Switchboard.PathUtility.CombinePaths(System.String,System.String)">
+  CombinePaths(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Combines two path strings into one, and converts directory separator characters into a single, standard directory separator for the platform.
+Two consecutive directory separator characters are allowed at the start of the path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string CombinePaths(string path1, string path2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The start of the combined path string.</p>
+</dd>
+    <dt><code>path2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The end of the combined path string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A new string combining <code class="paramref">path1</code> and <code class="paramref">path2</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">path1</code> of <code class="paramref">path2</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">path1</code> of <code class="paramref">path2</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>,
+or contains an invalid path character.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_CombinePathsForNonWindows_" data-uid="Switchboard.PathUtility.CombinePathsForNonWindows*"></a>
+
+  <h3 id="Switchboard_PathUtility_CombinePathsForNonWindows_System_String_System_String_" data-uid="Switchboard.PathUtility.CombinePathsForNonWindows(System.String,System.String)">
+  CombinePathsForNonWindows(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Combines two path strings into one, and converts directory separator characters into a single, standard directory separator for non-Windows '/'.
+Two consecutive directory separator characters are allowed at the start of the path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string CombinePathsForNonWindows(string path1, string path2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The start of the combined path string.</p>
+</dd>
+    <dt><code>path2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The end of the combined path string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A new string combining <code class="paramref">path1</code> and <code class="paramref">path2</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">path1</code> of <code class="paramref">path2</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">path1</code> of <code class="paramref">path2</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>,
+or contains an invalid path character.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_CombinePathsForWindows_" data-uid="Switchboard.PathUtility.CombinePathsForWindows*"></a>
+
+  <h3 id="Switchboard_PathUtility_CombinePathsForWindows_System_String_System_String_" data-uid="Switchboard.PathUtility.CombinePathsForWindows(System.String,System.String)">
+  CombinePathsForWindows(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Combines two path strings into one, and converts directory separator characters into a single, standard directory separator for Windows '\'.
+Two consecutive directory separator characters are allowed at the start of the path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string CombinePathsForWindows(string path1, string path2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The start of the combined path string.</p>
+</dd>
+    <dt><code>path2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The end of the combined path string.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A new string combining <code class="paramref">path1</code> and <code class="paramref">path2</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">path1</code> of <code class="paramref">path2</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">path1</code> of <code class="paramref">path2</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>,
+or contains an invalid path character.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_GetFileName_" data-uid="Switchboard.PathUtility.GetFileName*"></a>
+
+  <h3 id="Switchboard_PathUtility_GetFileName_System_String_" data-uid="Switchboard.PathUtility.GetFileName(System.String)">
+  GetFileName(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Uses a static <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary&lt;TKey, TValue&gt;</a> to cache file names parsed from a given path string.
+The method is thread safe. It calls <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.path.getfilename#system-io-path-getfilename(system-string)">GetFileName(string)</a> and stores the result.
+So, if the same <code class="paramref">filePath</code> is evaluated multiple times, the value is simply retrieved from the cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetFileName(string filePath)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file path to parse for a file name.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">filePath</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">filePath</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_GetFileNameAndExtension_" data-uid="Switchboard.PathUtility.GetFileNameAndExtension*"></a>
+
+  <h3 id="Switchboard_PathUtility_GetFileNameAndExtension_System_String_System_String__System_String__" data-uid="Switchboard.PathUtility.GetFileNameAndExtension(System.String,System.String@,System.String@)">
+  GetFileNameAndExtension(string, out string, out string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the file name and extension of a given path string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetFileNameAndExtension(string path, out string fileName, out string extension)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path string to parse.</p>
+</dd>
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file name parsed from the path, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if not found.</p>
+</dd>
+    <dt><code>extension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The extension parsed from the path, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if not found.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the last directory separator, or -1 if not found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>,
+if the file name contains an invalid character for the platform, or ends with a period on Windows.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_GetFileNameAndExtensionForNonWindows_" data-uid="Switchboard.PathUtility.GetFileNameAndExtensionForNonWindows*"></a>
+
+  <h3 id="Switchboard_PathUtility_GetFileNameAndExtensionForNonWindows_System_String_System_String__System_String__" data-uid="Switchboard.PathUtility.GetFileNameAndExtensionForNonWindows(System.String,System.String@,System.String@)">
+  GetFileNameAndExtensionForNonWindows(string, out string, out string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetFileNameAndExtensionForNonWindows(string path, out string fileName, out string extension)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>extension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the index of the last directory separator, or -1 if not found. File name and extension will be null if they are not found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>,
+or if the file name contains an invalid character for non-Windows platforms.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_GetFileNameAndExtensionForWindows_" data-uid="Switchboard.PathUtility.GetFileNameAndExtensionForWindows*"></a>
+
+  <h3 id="Switchboard_PathUtility_GetFileNameAndExtensionForWindows_System_String_System_String__System_String__" data-uid="Switchboard.PathUtility.GetFileNameAndExtensionForWindows(System.String,System.String@,System.String@)">
+  GetFileNameAndExtensionForWindows(string, out string, out string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetFileNameAndExtensionForWindows(string path, out string fileName, out string extension)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>extension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the index of the last directory separator, or -1 if not found. File name and extension will be null if they arenot found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>,
+if the file name contains an invalid character for Windows, or ends with a period.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_IsDirectorySeparator_" data-uid="Switchboard.PathUtility.IsDirectorySeparator*"></a>
+
+  <h3 id="Switchboard_PathUtility_IsDirectorySeparator_System_Char_" data-uid="Switchboard.PathUtility.IsDirectorySeparator(System.Char)">
+  IsDirectorySeparator(char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether a character is any type of directory separator character.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsDirectorySeparator(char character)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>character</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to evalute.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the character is a directory separator character, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_PathUtility_NormalizePath_" data-uid="Switchboard.PathUtility.NormalizePath*"></a>
+
+  <h3 id="Switchboard_PathUtility_NormalizePath_System_String_" data-uid="Switchboard.PathUtility.NormalizePath(System.String)">
+  NormalizePath(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts directory separator characters within a path string into a single, standard directory separator for the platform.
+Two consecutive directory separator characters are allowed at the start of the path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string NormalizePath(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path string to normalize.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A new path string with normalized directory separator characters.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>, or contains an invalid path character.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_NormalizePathForNonWindows_" data-uid="Switchboard.PathUtility.NormalizePathForNonWindows*"></a>
+
+  <h3 id="Switchboard_PathUtility_NormalizePathForNonWindows_System_String_" data-uid="Switchboard.PathUtility.NormalizePathForNonWindows(System.String)">
+  NormalizePathForNonWindows(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts directory separator characters within a path string into a single, standard directory separator for non-Windows '/'.
+Two consecutive directory separator characters are allowed at the start of the path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string NormalizePathForNonWindows(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path string to normalize.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A new path string with normalized directory separator characters.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>, or contains an invalid path character.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_NormalizePathForWindows_" data-uid="Switchboard.PathUtility.NormalizePathForWindows*"></a>
+
+  <h3 id="Switchboard_PathUtility_NormalizePathForWindows_System_String_" data-uid="Switchboard.PathUtility.NormalizePathForWindows(System.String)">
+  NormalizePathForWindows(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts directory separator characters within a path string into a single, standard directory separator for Windows '\'.
+Two consecutive directory separator characters are allowed at the start of the path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string NormalizePathForWindows(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path string to normalize.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A new path string with normalized directory separator characters.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>, or contains an invalid path character.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_ValidateFileNameCharacters_" data-uid="Switchboard.PathUtility.ValidateFileNameCharacters*"></a>
+
+  <h3 id="Switchboard_PathUtility_ValidateFileNameCharacters_System_String_" data-uid="Switchboard.PathUtility.ValidateFileNameCharacters(System.String)">
+  ValidateFileNameCharacters(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Throws exceptions if any characters in the <code class="paramref">fileName</code> are invalid file name characters for the current platform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ValidateFileNameCharacters(string fileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file name to evaluate.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">fileName</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">fileName</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>, or contains an invalid file name character.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_ValidateFileNameCharactersForNonWindows_" data-uid="Switchboard.PathUtility.ValidateFileNameCharactersForNonWindows*"></a>
+
+  <h3 id="Switchboard_PathUtility_ValidateFileNameCharactersForNonWindows_System_String_" data-uid="Switchboard.PathUtility.ValidateFileNameCharactersForNonWindows(System.String)">
+  ValidateFileNameCharactersForNonWindows(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Throws exceptions if any characters in the <code class="paramref">fileName</code> are invalid file name characters for a non-Windows platform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ValidateFileNameCharactersForNonWindows(string fileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file name to evaluate.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">fileName</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">fileName</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>, or contains an invalid file name character.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_ValidateFileNameCharactersForWindows_" data-uid="Switchboard.PathUtility.ValidateFileNameCharactersForWindows*"></a>
+
+  <h3 id="Switchboard_PathUtility_ValidateFileNameCharactersForWindows_System_String_" data-uid="Switchboard.PathUtility.ValidateFileNameCharactersForWindows(System.String)">
+  ValidateFileNameCharactersForWindows(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Throws exceptions if any characters in the <code class="paramref">fileName</code> are invalid file name characters for the Windows platform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ValidateFileNameCharactersForWindows(string fileName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file name to evaluate.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">fileName</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">fileName</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>, or contains an invalid file name character.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_ValidatePathCharacters_" data-uid="Switchboard.PathUtility.ValidatePathCharacters*"></a>
+
+  <h3 id="Switchboard_PathUtility_ValidatePathCharacters_System_String_" data-uid="Switchboard.PathUtility.ValidatePathCharacters(System.String)">
+  ValidatePathCharacters(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Throws exceptions if any characters in the <code class="paramref">path</code> are invalid path characters for the current platform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ValidatePathCharacters(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to evaluate.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>, or contains an invalid path character.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_ValidatePathCharactersForNonWindows_" data-uid="Switchboard.PathUtility.ValidatePathCharactersForNonWindows*"></a>
+
+  <h3 id="Switchboard_PathUtility_ValidatePathCharactersForNonWindows_System_String_" data-uid="Switchboard.PathUtility.ValidatePathCharactersForNonWindows(System.String)">
+  ValidatePathCharactersForNonWindows(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Throws exceptions if any characters in the <code class="paramref">path</code> are invalid path characters for a non-Windows platform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ValidatePathCharactersForNonWindows(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to evaluate.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>, or contains an invalid path character.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_PathUtility_ValidatePathCharactersForWindows_" data-uid="Switchboard.PathUtility.ValidatePathCharactersForWindows*"></a>
+
+  <h3 id="Switchboard_PathUtility_ValidatePathCharactersForWindows_System_String_" data-uid="Switchboard.PathUtility.ValidatePathCharactersForWindows(System.String)">
+  ValidatePathCharactersForWindows(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Throws exceptions if any characters in the <code class="paramref">path</code> are invalid path characters for the Windows platform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ValidatePathCharactersForWindows(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to evaluate.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">path</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>, or contains an invalid path character.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by Ronnie Moon. - Copyright © 2023 SwipeTrack Solutions</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

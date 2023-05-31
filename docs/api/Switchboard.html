@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Switchboard
+ | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Switchboard
+ | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <article data-uid="Switchboard">
+
+  <h1 id="Switchboard" data-uid="Switchboard" class="text-break">Namespace Switchboard
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.ApplicationEnd.html">ApplicationEnd</a></dt>
+      <dd><p>Provides an event that is invoked near the very end of the application, after Application.quitting and OnDestroy() of MonoBehaviours.
+Any scripts that are ordered to execute later than <a class="xref" href="Switchboard.Destructor.html">Destructor</a> will have OnDestroy() called after this event.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.ApplicationTicker.html">ApplicationTicker</a></dt>
+      <dd><p>Provides a static, root instance for all types of ticker that lazy load as necessary,
+which manages its own life cycle in the player and editor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.ClockSynchronizer.html">ClockSynchronizer</a></dt>
+      <dd><p>Adds a permanent observer to a <a class="xref" href="Switchboard.ILateTicker.html">ILateTicker</a>,
+which synchronizes the <a class="xref" href="Switchboard.PreciseClock.html">PreciseClock</a> with the system clock every certain number of seconds.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.CompositionRoot.html">CompositionRoot</a></dt>
+      <dd><p>Loads the <a class="xref" href="Switchboard.CompositionRootAsset.html">CompositionRootAsset</a> and initializes the <a class="xref" href="Switchboard.DependencyInjector.html">DependencyInjector</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.CompositionRootAsset.html">CompositionRootAsset</a></dt>
+      <dd><p>Represents a single, root asset file that can be loaded when the app runs in order to activate dependency injection.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.DateTimeToTextConverter.html">DateTimeToTextConverter</a></dt>
+      <dd><p>Converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> value into a string of characters without allocating memory for garbage collection.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.DependencyInjector.html">DependencyInjector</a></dt>
+      <dd><p>Provides a base representation for an asset that can be initialized on start up,
+provide instances of requested types, and shut down on exit.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.Destructor.html">Destructor</a></dt>
+      <dd><p>A MonoBehaviour that invokes a <a class="xref" href="Switchboard.Destructor.html#Switchboard_Destructor_Destroyed">Destroyed</a> event when OnDestroy() is called.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.DynamicQueue-1.html">DynamicQueue&lt;T&gt;</a></dt>
+      <dd><p>Stores objects of a specific type in a queue. Objects are kept in the order of first in, first out.
+The internal memory used to store these objects grows and shrinks automatically as objects are added and removed.
+Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectArrayPool.html">SharedObjectArrayPool</a>, so no garbage collection is necessary.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.ExpandableAttribute.html">ExpandableAttribute</a></dt>
+      <dd><p>Indicates that a serialized UnityEngine.Object field should be displayed with an expandable toggle that displays the object's properties.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.FileRemover.html">FileRemover</a></dt>
+      <dd><p>Provides methods for removing excess files from a directory.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.FixedTicker.html">FixedTicker</a></dt>
+      <dd><p>Invokes an event once per fixed update.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
+      <dd><p>Provides detailed info for formatting floating-point numbers.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.FloatToTextConverter.html">FloatToTextConverter</a></dt>
+      <dd><p>Converts floating-point numbers into strings of characters without allocating memory for garbage collection.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.FloatToTextExtensions.html">FloatToTextExtensions</a></dt>
+      <dd><p>Adds extension methods to float and double for converting to strings of characters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.ILoggerExtensions.html">ILoggerExtensions</a></dt>
+      <dd><p>Provides extension methods for the <a class="xref" href="Switchboard.ILogger.html">ILogger</a> interface that assign the <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a> based on the method.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.InjectorLocator.html">InjectorLocator</a></dt>
+      <dd><p>Provides a static event that an <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a> can invoke to request an <a class="xref" href="Switchboard.IInjector.html">IInjector</a>
+to call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectable_InjectWith_Switchboard_IInjector_">InjectWith(IInjector)</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.IntToTextConverter.html">IntToTextConverter</a></dt>
+      <dd><p>Converts integral numbers into strings of characters, without allocating memory for garbage collection.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.LateTicker.html">LateTicker</a></dt>
+      <dd><p>Invokes an event once per late update.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.LogFileManager.html">LogFileManager</a></dt>
+      <dd><p>Provides a helpful utility for managing instances of <a class="xref" href="Switchboard.LogFileWriter.html">LogFileWriter</a> within Unity.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.LogFileWriter.html">LogFileWriter</a></dt>
+      <dd><p>Writes log entries to log files.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.Logger.html">Logger</a></dt>
+      <dd><p>Provides a single, static <a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a> and helper methods for standard operations.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a></dt>
+      <dd><p>Represents a logger composed of other <a class="xref" href="Switchboard.ILogger.html">ILogger</a> implementations, which serve as the actual targets for log output.
+A <a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a> cannot have another <a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a> added as a log target.
+Adding and removing targets are thread safe operations, but changes may not be immediate across threads.
+Thread safety of logging operations are left up to the target implementations of the <a class="xref" href="Switchboard.ILogger.html">ILogger</a> interface.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.ObjectArrayPool.html">ObjectArrayPool</a></dt>
+      <dd><p>Stores object arrays of a specific length in a thread safe pool.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.ObjectPool-1.html">ObjectPool&lt;T&gt;</a></dt>
+      <dd><p>Stores objects of a specific type in a pool.
+The order is not guaranteed. Removing a specific object swaps it with the last object in the pool before removal.
+The <a class="xref" href="Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_MaxCount">MaxCount</a> can be specified to limit the number of objects that may be stored.
+The <a class="xref" href="Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_Add__0_">Add(T)</a> method will return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if the pool is at max capacity.
+An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a> may be applied to each object in the pool with the <a class="xref" href="Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_ForEach_System_Action__0__">ForEach(Action&lt;T&gt;)</a> method.
+The internal memory used to store these objects grows and shrinks automatically as objects are added and removed.
+Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectArrayPool.html">SharedObjectArrayPool</a>, so no garbage collection is necessary.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.PathUtility.html">PathUtility</a></dt>
+      <dd><p>Provides utilities for working with file system paths.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.PlatformStats.html">PlatformStats</a></dt>
+      <dd><p>Provides a string that contains detailed information about the current hardware platform on which the application is running.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.PreciseClock.html">PreciseClock</a></dt>
+      <dd><p>Provides <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> values that have the precision of a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch">Stopwatch</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.PriorityEvent-1.html">PriorityEvent&lt;T&gt;</a></dt>
+      <dd><p>Represents an event to be invoked. Observer delegates can be added with a priority value to specify invocation order.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.SharedObjectArrayPool.html">SharedObjectArrayPool</a></dt>
+      <dd><p>A static collection of <a class="xref" href="Switchboard.ObjectArrayPool.html">ObjectArrayPool</a> instances that store object arrays of length 32, 64, 128, 256.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.StandardDependencyInjector.html">StandardDependencyInjector</a></dt>
+      <dd><p>Provides a standard implementation of <a class="xref" href="Switchboard.DependencyInjector.html">DependencyInjector</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.StandardLogFormatter.html">StandardLogFormatter</a></dt>
+      <dd><p>Provides a standard implementation of the <a class="xref" href="Switchboard.ILogFormatter.html">ILogFormatter</a> interface.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+      <dd><p>Represents a string of characters that can be modified without allocating memory for garbage collection.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.StringMakerILoggerExtensions.html">StringMakerILoggerExtensions</a></dt>
+      <dd><p>Provides extension methods for the <a class="xref" href="Switchboard.ILogger.html">ILogger</a> interface to accept <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a> messages.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.StringMakerUnityExtensions.html">StringMakerUnityExtensions</a></dt>
+      <dd><p>Provides extension methods for <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a> to append common Unity types.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.SwitchboardMenuOrder.html">SwitchboardMenuOrder</a></dt>
+      <dd><p>Provides Switchboard's order in the asset creation menu.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.TheTypeOf-1.html">TheTypeOf&lt;T&gt;</a></dt>
+      <dd><p>Provides a generic, static cache for the results of the typeof operator.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.ThreadSafeObjectPool-1.html">ThreadSafeObjectPool&lt;T&gt;</a></dt>
+      <dd><p>Stores objects of a specific type in a thread safe pool. Objects are kept in the order of last in, first out.
+The <a class="xref" href="Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_MaxCount">MaxCount</a> value can be specified to limit the number of objects that may be stored.
+The <a class="xref" href="Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_Add__0_">Add(T)</a> method will return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if the pool is at max capacity.
+The internal memory used to store these objects grows and shrinks automatically as objects are added and removed.
+Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectArrayPool.html">SharedObjectArrayPool</a>, so no garbage collection is necessary.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.Ticker.html">Ticker</a></dt>
+      <dd><p>Invokes an event once per update.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.UnityLogHandler.html">UnityLogHandler</a></dt>
+      <dd><p>Provides a reference to the default Unity log handler.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.UnityLogHijacker.html">UnityLogHijacker</a></dt>
+      <dd><p>Redirects calls to Unity log methods to an <a class="xref" href="Switchboard.ILogger.html">ILogger</a> implementation instead,
+when assigned to UnityEngine.Debug.unityLogger.logHandler.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.UnityLogger.html">UnityLogger</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Switchboard.ILogger.html">ILogger</a> that targets the <a class="xref" href="Switchboard.UnityLogger.html">UnityLogger</a>.</p>
+</dd>
+    </dl>
+    <h3 id="structs">Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.FrameOfTime.html">FrameOfTime</a></dt>
+      <dd><p>Represents information about the timing of a single frame in an update loop.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+      <dd><p>Provides a readonly ref struct facade for <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a>.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.IFixedTicker.html">IFixedTicker</a></dt>
+      <dd><p>Provides an interface for adding observers to a fixed tick event,
+called each fixed update of the physics state, a variable number of times per frame.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.IInjectable.html">IInjectable</a></dt>
+      <dd><p>Provides a generic interface for having a single dependency injected per type.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.IInjector.html">IInjector</a></dt>
+      <dd><p>Provides a generic interface for injecting a single dependency per type.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.ILateTicker.html">ILateTicker</a></dt>
+      <dd><p>Provides an interface for adding observers to a late tick event,
+called at the end of each update, once per frame.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.ILogFormatter.html">ILogFormatter</a></dt>
+      <dd><p>Provides an interface for formatting log message and exceptions.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.ILogger.html">ILogger</a></dt>
+      <dd><p>Provides an interface for logging.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.ITicker.html">ITicker</a></dt>
+      <dd><p>Provides an interface for adding observers to a tick event, called each update, once per frame.</p>
+</dd>
+    </dl>
+    <h3 id="enums">Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.LogLevel.html">LogLevel</a></dt>
+      <dd><p>Defines the levels of significance that may be assigned to a log entry.</p>
+</dd>
+    </dl>
+    <h3 id="delegates">Delegates
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.InputAction-1.html">InputAction&lt;T&gt;</a></dt>
+      <dd><p>Represents a type of delegate similar to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a>, but utilizing an in parameter as a readonly reference.
+Because the parameter is an in parameter, the action cannot have a contravariant type parameter like <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a>.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by Ronnie Moon. - Copyright © 2023 SwipeTrack Solutions</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

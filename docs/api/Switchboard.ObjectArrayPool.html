@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ObjectArrayPool
+ | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ObjectArrayPool
+ | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <article data-uid="Switchboard.ObjectArrayPool">
+
+
+
+  <h1 id="Switchboard_ObjectArrayPool" data-uid="Switchboard.ObjectArrayPool" class="text-break">
+    Class ObjectArrayPool
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Stores object arrays of a specific length in a thread safe pool.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ObjectArrayPool</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ObjectArrayPool</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Switchboard_ObjectArrayPool__ctor_" data-uid="Switchboard.ObjectArrayPool.#ctor*"></a>
+
+  <h3 id="Switchboard_ObjectArrayPool__ctor_System_Int32_" data-uid="Switchboard.ObjectArrayPool.#ctor(System.Int32)">
+  ObjectArrayPool(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObjectArrayPool(int arrayLength)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arrayLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The length of the object arrays to be stored in the pool.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown when <code class="paramref">arrayLength</code> is less than <a class="xref" href="Switchboard.ObjectArrayPool.html#Switchboard_ObjectArrayPool_MinArrayLength">MinArrayLength</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_ObjectArrayPool__ctor_" data-uid="Switchboard.ObjectArrayPool.#ctor*"></a>
+
+  <h3 id="Switchboard_ObjectArrayPool__ctor_System_Int32_System_Int32_" data-uid="Switchboard.ObjectArrayPool.#ctor(System.Int32,System.Int32)">
+  ObjectArrayPool(int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObjectArrayPool(int arrayLength, int maxCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arrayLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The length of the object arrays to be stored in the pool.</p>
+</dd>
+    <dt><code>maxCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of object arrays that may be stored in the pool.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown when <code class="paramref">arrayLength</code> is less than <a class="xref" href="Switchboard.ObjectArrayPool.html#Switchboard_ObjectArrayPool_MinArrayLength">MinArrayLength</a>, or when <code class="paramref">maxCount</code> is less than zero.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Switchboard_ObjectArrayPool_MinArrayLength" data-uid="Switchboard.ObjectArrayPool.MinArrayLength">
+  MinArrayLength
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the smallest possible length of object arrays that can be stored in any <a class="xref" href="Switchboard.ObjectArrayPool.html">ObjectArrayPool</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MinArrayLength = 15</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Switchboard_ObjectArrayPool_ArrayLength_" data-uid="Switchboard.ObjectArrayPool.ArrayLength*"></a>
+
+  <h3 id="Switchboard_ObjectArrayPool_ArrayLength" data-uid="Switchboard.ObjectArrayPool.ArrayLength">
+  ArrayLength
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the length of the object arrays stored in the pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ArrayLength { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_ObjectArrayPool_Count_" data-uid="Switchboard.ObjectArrayPool.Count*"></a>
+
+  <h3 id="Switchboard_ObjectArrayPool_Count" data-uid="Switchboard.ObjectArrayPool.Count">
+  Count
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current number of object arrays stored in the pool.
+The value may not be accurate as other threads add and remove arrays from the pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_ObjectArrayPool_MaxCount_" data-uid="Switchboard.ObjectArrayPool.MaxCount*"></a>
+
+  <h3 id="Switchboard_ObjectArrayPool_MaxCount" data-uid="Switchboard.ObjectArrayPool.MaxCount">
+  MaxCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum number of object arrays that may be stored in the pool.
+The value can be set with the <a class="xref" href="Switchboard.ObjectArrayPool.html#Switchboard_ObjectArrayPool_SetMaxCount_System_Int32_">SetMaxCount(int)</a> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Switchboard_ObjectArrayPool_Add_" data-uid="Switchboard.ObjectArrayPool.Add*"></a>
+
+  <h3 id="Switchboard_ObjectArrayPool_Add_System_Object___" data-uid="Switchboard.ObjectArrayPool.Add(System.Object[])">
+  Add(object[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds an object array to the pool, unless the pool is at max capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Add(object[] array)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>array</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>The object array to add to the pool.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the object array was added to the pool, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">array</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the length of the <code class="paramref">array</code> does not equal <a class="xref" href="Switchboard.ObjectArrayPool.html#Switchboard_ObjectArrayPool_ArrayLength">ArrayLength</a>,
+or if the exact type of the <code class="paramref">array</code> is not an object array.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_ObjectArrayPool_Clear_" data-uid="Switchboard.ObjectArrayPool.Clear*"></a>
+
+  <h3 id="Switchboard_ObjectArrayPool_Clear" data-uid="Switchboard.ObjectArrayPool.Clear">
+  Clear()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes all object arrays from the pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_ObjectArrayPool_GetArray_" data-uid="Switchboard.ObjectArrayPool.GetArray*"></a>
+
+  <h3 id="Switchboard_ObjectArrayPool_GetArray" data-uid="Switchboard.ObjectArrayPool.GetArray">
+  GetArray()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides an object array with a length equal to the value of <a class="xref" href="Switchboard.ObjectArrayPool.html#Switchboard_ObjectArrayPool_ArrayLength">ArrayLength</a>.
+If the pool is empty, a new array is instantiated. Otherwise, an array is provided by removing it from the pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object[] GetArray()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>An object array with a length equal to the value of <a class="xref" href="Switchboard.ObjectArrayPool.html#Switchboard_ObjectArrayPool_ArrayLength">ArrayLength</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_ObjectArrayPool_SetMaxCount_" data-uid="Switchboard.ObjectArrayPool.SetMaxCount*"></a>
+
+  <h3 id="Switchboard_ObjectArrayPool_SetMaxCount_System_Int32_" data-uid="Switchboard.ObjectArrayPool.SetMaxCount(System.Int32)">
+  SetMaxCount(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the maximum number of object arrays that can be stored in the pool.
+The value cannot be set to less than the current <a class="xref" href="Switchboard.ObjectArrayPool.html#Switchboard_ObjectArrayPool_Count">Count</a>, unless the value is set to zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMaxCount(int maxCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of object arrays that can be stored in the pool.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">maxCount</code> is less than the current <a class="xref" href="Switchboard.ObjectArrayPool.html#Switchboard_ObjectArrayPool_Count">Count</a>, and not equal to zero.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by Ronnie Moon. - Copyright © 2023 SwipeTrack Solutions</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

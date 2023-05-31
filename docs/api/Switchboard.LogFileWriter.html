@@ -1,0 +1,1001 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class LogFileWriter
+ | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class LogFileWriter
+ | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <article data-uid="Switchboard.LogFileWriter">
+
+
+
+  <h1 id="Switchboard_LogFileWriter" data-uid="Switchboard.LogFileWriter" class="text-break">
+    Class LogFileWriter
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Writes log entries to log files.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class LogFileWriter : ILogger</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">LogFileWriter</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Switchboard.ILogger.html">ILogger</a></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogDebug_Switchboard_ILogger_System_Exception_System_ReadOnlySpan_System_Char__">ILoggerExtensions.LogDebug(ILogger, Exception, ReadOnlySpan&lt;char&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogDebug_Switchboard_ILogger_System_ReadOnlySpan_System_Char__System_String_System_String_System_Int32_">ILoggerExtensions.LogDebug(ILogger, ReadOnlySpan&lt;char&gt;, string, string, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogError_Switchboard_ILogger_System_Exception_System_ReadOnlySpan_System_Char__">ILoggerExtensions.LogError(ILogger, Exception, ReadOnlySpan&lt;char&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogError_Switchboard_ILogger_System_ReadOnlySpan_System_Char__System_String_System_String_System_Int32_">ILoggerExtensions.LogError(ILogger, ReadOnlySpan&lt;char&gt;, string, string, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogInformation_Switchboard_ILogger_System_Exception_System_ReadOnlySpan_System_Char__">ILoggerExtensions.LogInformation(ILogger, Exception, ReadOnlySpan&lt;char&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogInformation_Switchboard_ILogger_System_ReadOnlySpan_System_Char__System_String_System_String_System_Int32_">ILoggerExtensions.LogInformation(ILogger, ReadOnlySpan&lt;char&gt;, string, string, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogWarning_Switchboard_ILogger_System_Exception_System_ReadOnlySpan_System_Char__">ILoggerExtensions.LogWarning(ILogger, Exception, ReadOnlySpan&lt;char&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogWarning_Switchboard_ILogger_System_ReadOnlySpan_System_Char__System_String_System_String_System_Int32_">ILoggerExtensions.LogWarning(ILogger, ReadOnlySpan&lt;char&gt;, string, string, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_Log_Switchboard_ILogger_Switchboard_LogLevel_Switchboard_StringMaker_System_String_System_String_System_Int32_">StringMakerILoggerExtensions.Log(ILogger, LogLevel, StringMaker, string, string, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogDebug_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_">StringMakerILoggerExtensions.LogDebug(ILogger, StringMaker, string, string, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogError_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_">StringMakerILoggerExtensions.LogError(ILogger, StringMaker, string, string, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogInformation_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_">StringMakerILoggerExtensions.LogInformation(ILogger, StringMaker, string, string, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogWarning_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_">StringMakerILoggerExtensions.LogWarning(ILogger, StringMaker, string, string, int)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Switchboard_LogFileWriter__ctor_" data-uid="Switchboard.LogFileWriter.#ctor*"></a>
+
+  <h3 id="Switchboard_LogFileWriter__ctor_System_String_System_String_" data-uid="Switchboard.LogFileWriter.#ctor(System.String,System.String)">
+  LogFileWriter(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogFileWriter(string directory, string fileNamePrefix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the directory where log files will be written.</p>
+</dd>
+    <dt><code>fileNamePrefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The first part of the file name.
+A time stamp will be added to each file name, after the prefix, before the <code class="paramref">extension</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code> or <code class="paramref">fileNamePrefix</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code> or <code class="paramref">fileNamePrefix</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
+\ OR \ Thrown if <code class="paramref">directory</code> contains invalid path characters.
+\ OR \ Thrown if <code class="paramref">fileNamePrefix</code> contains invalid file name characters for the current platform.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_LogFileWriter__ctor_" data-uid="Switchboard.LogFileWriter.#ctor*"></a>
+
+  <h3 id="Switchboard_LogFileWriter__ctor_System_String_System_String_System_String_" data-uid="Switchboard.LogFileWriter.#ctor(System.String,System.String,System.String)">
+  LogFileWriter(string, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogFileWriter(string directory, string fileNamePrefix, string extension)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the directory where log files will be written.</p>
+</dd>
+    <dt><code>fileNamePrefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The first part of the file name.
+A time stamp will be added to each file name, after the prefix, before the <code class="paramref">extension</code>.</p>
+</dd>
+    <dt><code>extension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file name extension to use.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
+\ OR \ Thrown if <code class="paramref">directory</code> contains invalid path characters.
+\ OR \ Thrown if <code class="paramref">fileNamePrefix</code> or <code class="paramref">extension</code> contain invalid file name characters for the current platform.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_LogFileWriter__ctor_" data-uid="Switchboard.LogFileWriter.#ctor*"></a>
+
+  <h3 id="Switchboard_LogFileWriter__ctor_System_String_System_String_System_String_System_Int32_" data-uid="Switchboard.LogFileWriter.#ctor(System.String,System.String,System.String,System.Int32)">
+  LogFileWriter(string, string, string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogFileWriter(string directory, string fileNamePrefix, string extension, int fileSizeLimit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the directory where log files will be written.</p>
+</dd>
+    <dt><code>fileNamePrefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The first part of the file name.
+A time stamp will be added to each file name, after the prefix, before the <code class="paramref">extension</code>.</p>
+</dd>
+    <dt><code>extension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file name extension to use.</p>
+</dd>
+    <dt><code>fileSizeLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum file size in bytes for log files.
+When a log file reaches the size limit, a new file will be created.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
+\ OR \ Thrown if <code class="paramref">directory</code> contains invalid path characters.
+\ OR \ Thrown if <code class="paramref">fileNamePrefix</code> or <code class="paramref">extension</code> contain invalid file name characters for the current platform.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">fileSizeLimit</code> is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MaxBytesPerLog">MaxBytesPerLog</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_LogFileWriter__ctor_" data-uid="Switchboard.LogFileWriter.#ctor*"></a>
+
+  <h3 id="Switchboard_LogFileWriter__ctor_System_String_System_String_System_String_System_Int32_Switchboard_ILogFormatter_" data-uid="Switchboard.LogFileWriter.#ctor(System.String,System.String,System.String,System.Int32,Switchboard.ILogFormatter)">
+  LogFileWriter(string, string, string, int, ILogFormatter)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogFileWriter(string directory, string fileNamePrefix, string extension, int fileSizeLimit, ILogFormatter formatter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the directory where log files will be written.</p>
+</dd>
+    <dt><code>fileNamePrefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The first part of the file name.
+A time stamp will be added to each file name, after the prefix, before the <code class="paramref">extension</code>.</p>
+</dd>
+    <dt><code>extension</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file name extension to use.</p>
+</dd>
+    <dt><code>fileSizeLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum file size in bytes for log files.
+When a log file reaches the size limit, a new file will be created.</p>
+</dd>
+    <dt><code>formatter</code> <a class="xref" href="Switchboard.ILogFormatter.html">ILogFormatter</a></dt>
+    <dd><p>The formatter to use for formatting log entries.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
+\ OR \ Thrown if <code class="paramref">directory</code> contains invalid path characters.
+\ OR \ Thrown if <code class="paramref">fileNamePrefix</code> or <code class="paramref">extension</code> contain invalid file name characters for the current platform.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">fileSizeLimit</code> is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MaxBytesPerLog">MaxBytesPerLog</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Switchboard_LogFileWriter_DefaultExtension" data-uid="Switchboard.LogFileWriter.DefaultExtension">
+  DefaultExtension
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default file name extension for log files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultExtension = &quot;.log&quot;</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Switchboard_LogFileWriter_DefaultFileSizeLimit" data-uid="Switchboard.LogFileWriter.DefaultFileSizeLimit">
+  DefaultFileSizeLimit
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default file size limit in bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DefaultFileSizeLimit = 10000000</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h3 id="Switchboard_LogFileWriter_MaxBytesPerLog" data-uid="Switchboard.LogFileWriter.MaxBytesPerLog">
+  MaxBytesPerLog
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum number of bytes that may be necessary to write a single log entry to the log file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaxBytesPerLog = 82944</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Switchboard_LogFileWriter_DisplayCallerInfo_" data-uid="Switchboard.LogFileWriter.DisplayCallerInfo*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_DisplayCallerInfo" data-uid="Switchboard.LogFileWriter.DisplayCallerInfo">
+  DisplayCallerInfo
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether information about the caller of log method should be displayed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisplayCallerInfo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileWriter_FileSizeLimit_" data-uid="Switchboard.LogFileWriter.FileSizeLimit*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_FileSizeLimit" data-uid="Switchboard.LogFileWriter.FileSizeLimit">
+  FileSizeLimit
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the maximum size of log files in bytes.
+When a log file reaches the size limit, a new file will be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FileSizeLimit { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if attempting to set a value less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MaxBytesPerLog">MaxBytesPerLog</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_LogFileWriter_Formatter_" data-uid="Switchboard.LogFileWriter.Formatter*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_Formatter" data-uid="Switchboard.LogFileWriter.Formatter">
+  Formatter
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the formatter to use for formatting log entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ILogFormatter Formatter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileWriter_LogLevel_" data-uid="Switchboard.LogFileWriter.LogLevel*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_LogLevel" data-uid="Switchboard.LogFileWriter.LogLevel">
+  LogLevel
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the minimum level of significance required for a log entry to be processed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LogLevel LogLevel { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileWriter_Path_" data-uid="Switchboard.LogFileWriter.Path*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_Path" data-uid="Switchboard.LogFileWriter.Path">
+  Path
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the file path for the current log file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Path { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Switchboard_LogFileWriter_Close_" data-uid="Switchboard.LogFileWriter.Close*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_Close" data-uid="Switchboard.LogFileWriter.Close">
+  Close()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Closes the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filestream">FileStream</a> for the current log file.
+Closing the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filestream">FileStream</a> does not automatically <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_FlushLogs">FlushLogs()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if another file operation is in progress, such as <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_OpenNewFile">OpenNewFile()</a>, <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Open">Open()</a>, or <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_FlushLogs">FlushLogs()</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_LogFileWriter_FlushLogs_" data-uid="Switchboard.LogFileWriter.FlushLogs*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_FlushLogs" data-uid="Switchboard.LogFileWriter.FlushLogs">
+  FlushLogs()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flushes queued log entries so that they are written to the log file.
+If necessary, a new log file will be created, and the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filestream">FileStream</a> will be opened.
+It should be called regularly to prevent too many logs from accumulating in the queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FlushLogs()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if another file operation is in progress, such as <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_OpenNewFile">OpenNewFile()</a>, <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Open">Open()</a>, or <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Close">Close()</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.securityexception">SecurityException</a></dt>
+    <dd><p>A new file needs to be created, and the caller does not have the required permission.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directorynotfoundexception">DirectoryNotFoundException</a></dt>
+    <dd><p>A new file needs to be created, and the specified path is invalid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a></dt>
+    <dd><p>A new file needs to be created, and write access is not permitted by the operating system for the specified path,
+such as when the file or directory is set for read-only access.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.pathtoolongexception">PathTooLongException</a></dt>
+    <dd><p>A new file needs to be created, and the specified path exceeds the system-defined maximum length.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.aggregateexception">AggregateException</a></dt>
+    <dd><p>Thrown if multiple exceptions occur during the course of the method.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_LogFileWriter_Log_" data-uid="Switchboard.LogFileWriter.Log*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_Log_Switchboard_LogLevel_System_Exception_System_ReadOnlySpan_System_Char__" data-uid="Switchboard.LogFileWriter.Log(Switchboard.LogLevel,System.Exception,System.ReadOnlySpan{System.Char})">
+  Log(LogLevel, Exception, ReadOnlySpan&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queues an exception to be written to the log file.
+The character limit is equal to <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.
+If the <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Formatter">Formatter</a> throws an exception when formatting the <code class="paramref">exception</code>,
+the formatting exception, the <code class="paramref">message</code>, and original <code class="paramref">exception</code> will be queued without formatting.
+No exception will be thrown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Log(LogLevel logLevel, Exception exception, ReadOnlySpan&lt;char&gt; message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logLevel</code> <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a></dt>
+    <dd><p>The level of significance assigned to the exception.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception to log.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>A log message to be included with the exception.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">exception</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_LogFileWriter_Log_" data-uid="Switchboard.LogFileWriter.Log*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_Log_Switchboard_LogLevel_System_ReadOnlySpan_System_Char__System_String_System_String_System_Int32_" data-uid="Switchboard.LogFileWriter.Log(Switchboard.LogLevel,System.ReadOnlySpan{System.Char},System.String,System.String,System.Int32)">
+  Log(LogLevel, ReadOnlySpan&lt;char&gt;, string, string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Queues a message to be written to the log file.
+The character limit is equal to <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.
+If the <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Formatter">Formatter</a> throws an exception when formatting the <code class="paramref">message</code>,
+the <code class="paramref">message</code> will be queued without formatting.
+Then, the formatting exception will be re-thrown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Log(LogLevel logLevel, ReadOnlySpan&lt;char&gt; message, string memberName = null, string filePath = null, int lineNumber = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logLevel</code> <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a></dt>
+    <dd><p>The level of significance assigned to the message.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The log message.</p>
+</dd>
+    <dt><code>memberName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the file that contains the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+    <dt><code>lineNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The line number within the file that contains the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">message</code> is empty.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_LogFileWriter_Open_" data-uid="Switchboard.LogFileWriter.Open*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_Open" data-uid="Switchboard.LogFileWriter.Open">
+  Open()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filestream">FileStream</a> for the current log file.
+If there is no current log file a new one will be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Open()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if another file operation is in progress, such as <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_OpenNewFile">OpenNewFile()</a>, <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Close">Close()</a>, or <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_FlushLogs">FlushLogs()</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a></dt>
+    <dd><p>The file cannot be found.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.securityexception">SecurityException</a></dt>
+    <dd><p>The caller does not have the required permission.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directorynotfoundexception">DirectoryNotFoundException</a></dt>
+    <dd><p>The specified path is invalid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a></dt>
+    <dd><p>Write access is not permitted by the operating system for the specified path, such as when the file or directory is set for read-only access.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.pathtoolongexception">PathTooLongException</a></dt>
+    <dd><p>The specified path exceeds the system-defined maximum length.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.aggregateexception">AggregateException</a></dt>
+    <dd><p>Thrown if multiple exceptions occur during the course of the method.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_LogFileWriter_OpenNewFile_" data-uid="Switchboard.LogFileWriter.OpenNewFile*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_OpenNewFile" data-uid="Switchboard.LogFileWriter.OpenNewFile">
+  OpenNewFile()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Opens a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filestream">FileStream</a> for a new log file.
+The file name will start with the file name prefix, followed by a time stamp and the file name extension.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OpenNewFile()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if another file operation is in progress, such as <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Open">Open()</a>, <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Close">Close()</a>, or <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_FlushLogs">FlushLogs()</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.securityexception">SecurityException</a></dt>
+    <dd><p>The caller does not have the required permission.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directorynotfoundexception">DirectoryNotFoundException</a></dt>
+    <dd><p>The specified path is invalid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a></dt>
+    <dd><p>Write access is not permitted by the operating system for the specified path, such as when the file or directory is set for read-only access.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.pathtoolongexception">PathTooLongException</a></dt>
+    <dd><p>The specified path exceeds the system-defined maximum length.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.aggregateexception">AggregateException</a></dt>
+    <dd><p>Thrown if multiple exceptions occur during the course of the method.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_LogFileWriter_SetFileSizeLimit_" data-uid="Switchboard.LogFileWriter.SetFileSizeLimit*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_SetFileSizeLimit_System_Int32_" data-uid="Switchboard.LogFileWriter.SetFileSizeLimit(System.Int32)">
+  SetFileSizeLimit(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the maximum log file size in bytes.
+When a log file reaches the size limit, a new file will be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFileSizeLimit(int fileSizeLimit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fileSizeLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum file size in bytes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">fileSizeLimit</code> is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MaxBytesPerLog">MaxBytesPerLog</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Switchboard_LogFileWriter_FileClosed" data-uid="Switchboard.LogFileWriter.FileClosed">
+  FileClosed
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filestream">FileStream</a> for the current log file is closed.
+Provides an opportunity to clean up old log files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action FileClosed</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by Ronnie Moon. - Copyright © 2023 SwipeTrack Solutions</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

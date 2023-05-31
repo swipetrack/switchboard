@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class StringMakerILoggerExtensions
+ | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class StringMakerILoggerExtensions
+ | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <article data-uid="Switchboard.StringMakerILoggerExtensions">
+
+
+
+  <h1 id="Switchboard_StringMakerILoggerExtensions" data-uid="Switchboard.StringMakerILoggerExtensions" class="text-break">
+    Class StringMakerILoggerExtensions
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides extension methods for the <a class="xref" href="Switchboard.ILogger.html">ILogger</a> interface to accept <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a> messages.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class StringMakerILoggerExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">StringMakerILoggerExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Switchboard_StringMakerILoggerExtensions_Log_" data-uid="Switchboard.StringMakerILoggerExtensions.Log*"></a>
+
+  <h3 id="Switchboard_StringMakerILoggerExtensions_Log_Switchboard_ILogger_Switchboard_LogLevel_Switchboard_StringMaker_System_String_System_String_System_Int32_" data-uid="Switchboard.StringMakerILoggerExtensions.Log(Switchboard.ILogger,Switchboard.LogLevel,Switchboard.StringMaker,System.String,System.String,System.Int32)">
+  Log(ILogger, LogLevel, StringMaker, string, string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a> message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Log(this ILogger logger, LogLevel logLevel, StringMaker message, string memberName = null, string filePath = null, int lineNumber = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Switchboard.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger.</p>
+</dd>
+    <dt><code>logLevel</code> <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a></dt>
+    <dd><p>The level of significance assigned to the message.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>The log message.</p>
+</dd>
+    <dt><code>memberName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the file that contains the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+    <dt><code>lineNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The line number within the file that contains the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerILoggerExtensions_LogDebug_" data-uid="Switchboard.StringMakerILoggerExtensions.LogDebug*"></a>
+
+  <h3 id="Switchboard_StringMakerILoggerExtensions_LogDebug_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_" data-uid="Switchboard.StringMakerILoggerExtensions.LogDebug(Switchboard.ILogger,Switchboard.StringMaker,System.String,System.String,System.Int32)">
+  LogDebug(ILogger, StringMaker, string, string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message with the <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a> set to <a class="xref" href="Switchboard.LogLevel.html#Switchboard_LogLevel_Debug">Debug</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogDebug(this ILogger logger, StringMaker message, string memberName = null, string filePath = null, int lineNumber = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Switchboard.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>The log message.</p>
+</dd>
+    <dt><code>memberName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the file that contains the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+    <dt><code>lineNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The line number within the file that contains the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerILoggerExtensions_LogError_" data-uid="Switchboard.StringMakerILoggerExtensions.LogError*"></a>
+
+  <h3 id="Switchboard_StringMakerILoggerExtensions_LogError_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_" data-uid="Switchboard.StringMakerILoggerExtensions.LogError(Switchboard.ILogger,Switchboard.StringMaker,System.String,System.String,System.Int32)">
+  LogError(ILogger, StringMaker, string, string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message with the <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a> set to <a class="xref" href="Switchboard.LogLevel.html#Switchboard_LogLevel_Error">Error</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogError(this ILogger logger, StringMaker message, string memberName = null, string filePath = null, int lineNumber = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Switchboard.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>The log message.</p>
+</dd>
+    <dt><code>memberName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the file that contains the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+    <dt><code>lineNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The line number within the file that contains the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerILoggerExtensions_LogInformation_" data-uid="Switchboard.StringMakerILoggerExtensions.LogInformation*"></a>
+
+  <h3 id="Switchboard_StringMakerILoggerExtensions_LogInformation_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_" data-uid="Switchboard.StringMakerILoggerExtensions.LogInformation(Switchboard.ILogger,Switchboard.StringMaker,System.String,System.String,System.Int32)">
+  LogInformation(ILogger, StringMaker, string, string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message with the <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a> set to <a class="xref" href="Switchboard.LogLevel.html#Switchboard_LogLevel_Information">Information</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogInformation(this ILogger logger, StringMaker message, string memberName = null, string filePath = null, int lineNumber = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Switchboard.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>The log message.</p>
+</dd>
+    <dt><code>memberName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the file that contains the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+    <dt><code>lineNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The line number within the file that contains the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerILoggerExtensions_LogWarning_" data-uid="Switchboard.StringMakerILoggerExtensions.LogWarning*"></a>
+
+  <h3 id="Switchboard_StringMakerILoggerExtensions_LogWarning_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_" data-uid="Switchboard.StringMakerILoggerExtensions.LogWarning(Switchboard.ILogger,Switchboard.StringMaker,System.String,System.String,System.Int32)">
+  LogWarning(ILogger, StringMaker, string, string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message with the <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a> set to <a class="xref" href="Switchboard.LogLevel.html#Switchboard_LogLevel_Warning">Warning</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogWarning(this ILogger logger, StringMaker message, string memberName = null, string filePath = null, int lineNumber = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Switchboard.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>The log message.</p>
+</dd>
+    <dt><code>memberName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+    <dt><code>filePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the file that contains the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+    <dt><code>lineNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The line number within the file that contains the member that called the method.
+Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by Ronnie Moon. - Copyright © 2023 SwipeTrack Solutions</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

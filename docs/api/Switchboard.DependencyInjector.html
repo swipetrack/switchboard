@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DependencyInjector
+ | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DependencyInjector
+ | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <article data-uid="Switchboard.DependencyInjector">
+
+
+
+  <h1 id="Switchboard_DependencyInjector" data-uid="Switchboard.DependencyInjector" class="text-break">
+    Class DependencyInjector
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SwitchboardUnity.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides a base representation for an asset that can be initialized on start up,
+provide instances of requested types, and shut down on exit.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class DependencyInjector : ScriptableObject, IInjector</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">ScriptableObject</span></div>
+      <div><span class="xref">DependencyInjector</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Switchboard.IInjector.html">IInjector</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Switchboard.StandardDependencyInjector.html">StandardDependencyInjector</a></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Switchboard_DependencyInjector_IsActive_" data-uid="Switchboard.DependencyInjector.IsActive*"></a>
+
+  <h3 id="Switchboard_DependencyInjector_IsActive" data-uid="Switchboard.DependencyInjector.IsActive">
+  IsActive
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets whether the instance has been initialized and not shut down.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Switchboard_DependencyInjector_Activate_" data-uid="Switchboard.DependencyInjector.Activate*"></a>
+
+  <h3 id="Switchboard_DependencyInjector_Activate" data-uid="Switchboard.DependencyInjector.Activate">
+  Activate()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Activation">Activation()</a>, unless it is already active.
+<a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_IsActive">IsActive</a> will be set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> even if an exception is thrown from <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Activation">Activation()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Activate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_DependencyInjector_Activation_" data-uid="Switchboard.DependencyInjector.Activation*"></a>
+
+  <h3 id="Switchboard_DependencyInjector_Activation" data-uid="Switchboard.DependencyInjector.Activation">
+  Activation()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked on <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Activate">Activate()</a>, unless the instance <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_IsActive">IsActive</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void Activation()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_DependencyInjector_Deactivate_" data-uid="Switchboard.DependencyInjector.Deactivate*"></a>
+
+  <h3 id="Switchboard_DependencyInjector_Deactivate" data-uid="Switchboard.DependencyInjector.Deactivate">
+  Deactivate()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Deactivation">Deactivation()</a> and sets <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_IsActive">IsActive</a> to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, unless it is already inactive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deactivate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_DependencyInjector_Deactivation_" data-uid="Switchboard.DependencyInjector.Deactivation*"></a>
+
+  <h3 id="Switchboard_DependencyInjector_Deactivation" data-uid="Switchboard.DependencyInjector.Deactivation">
+  Deactivation()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked on <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Deactivate">Deactivate()</a> if <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_IsActive">IsActive</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>. It may not be called at all if the application exits unexpectedly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void Deactivation()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_DependencyInjector_GetInstanceOf_" data-uid="Switchboard.DependencyInjector.GetInstanceOf*"></a>
+
+  <h3 id="Switchboard_DependencyInjector_GetInstanceOf_System_Type_" data-uid="Switchboard.DependencyInjector.GetInstanceOf(System.Type)">
+  GetInstanceOf(Type)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked on <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Inject__1___0__">Inject&lt;T&gt;(out T)</a>, if the instance <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_IsActive">IsActive</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract object GetInstanceOf(Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type of object requested.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Returns an object reference to an instance of the requested type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if none can be provided.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_DependencyInjector_Inject_" data-uid="Switchboard.DependencyInjector.Inject*"></a>
+
+  <h3 id="Switchboard_DependencyInjector_Inject__1___0__" data-uid="Switchboard.DependencyInjector.Inject``1(``0@)">
+  Inject&lt;T&gt;(out T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an instance of the requested type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Inject&lt;T&gt;(out T instance) where T : class</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>instance</code> <span class="xref">T</span></dt>
+    <dd><p>Contains the reference to an instance of the requested type, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if none can be provided.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if an instance of the requested type was provided successfully.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of object requested.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by Ronnie Moon. - Copyright © 2023 SwipeTrack Solutions</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

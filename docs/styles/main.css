@@ -1,0 +1,10 @@
+footer .container-xxl .flex-fill span {
+	display: inline-block
+}
+footer .container-xxl .flex-fill span:nth-child(1) {
+	text-align: left;
+}
+footer .container-xxl .flex-fill span:nth-child(2) {
+	float: right;
+	text-align: right;
+}

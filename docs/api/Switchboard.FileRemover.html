@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class FileRemover
+ | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class FileRemover
+ | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <article data-uid="Switchboard.FileRemover">
+
+
+
+  <h1 id="Switchboard_FileRemover" data-uid="Switchboard.FileRemover" class="text-break">
+    Class FileRemover
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides methods for removing excess files from a directory.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class FileRemover</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">FileRemover</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Switchboard_FileRemover_RemoveFilesBeyondLimit_" data-uid="Switchboard.FileRemover.RemoveFilesBeyondLimit*"></a>
+
+  <h3 id="Switchboard_FileRemover_RemoveFilesBeyondLimit_System_Int32_System_String_System_String_System_String_" data-uid="Switchboard.FileRemover.RemoveFilesBeyondLimit(System.Int32,System.String,System.String,System.String)">
+  RemoveFilesBeyondLimit(int, string, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes excess files from a <code class="paramref">directory</code>.
+All files that start with <code class="paramref">fileNamePrefix</code> and end with <code class="paramref">fileNameSuffix</code> are sorted by <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filesysteminfo.creationtimeutc">CreationTimeUtc</a>.
+If the <code class="paramref">fileNamePrefix</code> and <code class="paramref">fileNameSuffix</code> are both empty, all files in the <code class="paramref">directory</code> will be considered.
+Then, the size of each file is added to a cumulative sum.
+When adding a file's size causes the sum to exceed the <code class="paramref">byteLimit</code>,
+that file and all remaining files will be removed from the <code class="paramref">directory</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveFilesBeyondLimit(int byteLimit, string directory, string fileNamePrefix, string fileNameSuffix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>byteLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum total size in bytes allowed for all files that match the file name pattern.</p>
+</dd>
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The directory to search for excess files.</p>
+</dd>
+    <dt><code>fileNamePrefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The start of the file name pattern, which may be empty.</p>
+</dd>
+    <dt><code>fileNameSuffix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The end of the file name pattern. For example, the file name extension, which may be empty.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">fileNameSuffix</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">fileNameSuffix</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
+\ OR \ Thrown if <code class="paramref">directory</code> contains invalid path characters.
+\ OR \ Thrown if <code class="paramref">fileNamePrefix</code> or <code class="paramref">fileNameSuffix</code> contain invalid file name characters, for the current platform.
+\ OR \ Thrown if the platform is Windows, and the <code class="paramref">fileNameSuffix</code> ends with a period or space character.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.securityexception">SecurityException</a></dt>
+    <dd><p>The caller does not have the required permission to access the directory or files.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directorynotfoundexception">DirectoryNotFoundException</a></dt>
+    <dd><p>The specified path is invalid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a></dt>
+    <dd><p>The caller does not have the required permission to delete a file.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.pathtoolongexception">PathTooLongException</a></dt>
+    <dd><p>The specified path exceeds the system-defined maximum length.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>A file to be deleted is in use.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_FileRemover_RemoveFilesBeyondLimit_" data-uid="Switchboard.FileRemover.RemoveFilesBeyondLimit*"></a>
+
+  <h3 id="Switchboard_FileRemover_RemoveFilesBeyondLimit_System_Int32_System_String_System_String_System_String_System_Boolean_" data-uid="Switchboard.FileRemover.RemoveFilesBeyondLimit(System.Int32,System.String,System.String,System.String,System.Boolean)">
+  RemoveFilesBeyondLimit(int, string, string, string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes excess files from a <code class="paramref">directory</code>.
+All files that start with <code class="paramref">fileNamePrefix</code> and end with <code class="paramref">fileNameSuffix</code> are sorted by <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filesysteminfo.creationtimeutc">CreationTimeUtc</a>.
+If the <code class="paramref">fileNamePrefix</code> and <code class="paramref">fileNameSuffix</code> are both empty, all files in the <code class="paramref">directory</code> will be considered.
+Then, the size of each file is added to a cumulative sum.
+When adding a file's size causes the sum to exceed the <code class="paramref">byteLimit</code>,
+that file and all remaining files will be removed from the <code class="paramref">directory</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveFilesBeyondLimit(int byteLimit, string directory, string fileNamePrefix, string fileNameSuffix, bool leaveOneFile)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>byteLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum total size in bytes allowed for all files that match the file name pattern.</p>
+</dd>
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The directory to search for excess files.</p>
+</dd>
+    <dt><code>fileNamePrefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The start of the file name pattern, which may be empty.</p>
+</dd>
+    <dt><code>fileNameSuffix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The end of the file name pattern. For example, the file name extension, which may be empty.</p>
+</dd>
+    <dt><code>leaveOneFile</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the first sorted file will not be removed, even if it exceeds the <code class="paramref">byteLimit</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">fileNameSuffix</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">fileNameSuffix</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
+\ OR \ Thrown if <code class="paramref">directory</code> contains invalid path characters.
+\ OR \ Thrown if <code class="paramref">fileNamePrefix</code> or <code class="paramref">fileNameSuffix</code> contain invalid file name characters, for the current platform.
+\ OR \ Thrown if the platform is Windows, and the <code class="paramref">fileNameSuffix</code> ends with a period or space character.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.securityexception">SecurityException</a></dt>
+    <dd><p>The caller does not have the required permission to access the directory or files.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directorynotfoundexception">DirectoryNotFoundException</a></dt>
+    <dd><p>The specified path is invalid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a></dt>
+    <dd><p>The caller does not have the required permission to delete a file.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.pathtoolongexception">PathTooLongException</a></dt>
+    <dd><p>The specified path exceeds the system-defined maximum length.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>A file to be deleted is in use.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_FileRemover_RemoveFilesBeyondLimit_" data-uid="Switchboard.FileRemover.RemoveFilesBeyondLimit*"></a>
+
+  <h3 id="Switchboard_FileRemover_RemoveFilesBeyondLimit_System_Int32_System_String_System_String_System_String_System_Boolean_System_Comparison_System_IO_FileSystemInfo__" data-uid="Switchboard.FileRemover.RemoveFilesBeyondLimit(System.Int32,System.String,System.String,System.String,System.Boolean,System.Comparison{System.IO.FileSystemInfo})">
+  RemoveFilesBeyondLimit(int, string, string, string, bool, Comparison&lt;FileSystemInfo&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes excess files from a <code class="paramref">directory</code>.
+All files that start with <code class="paramref">fileNamePrefix</code> and end with <code class="paramref">fileNameSuffix</code>
+are sorted according to the <code class="paramref">sortComparison</code> method.
+If the <code class="paramref">fileNamePrefix</code> and <code class="paramref">fileNameSuffix</code> are both empty, all files in the <code class="paramref">directory</code> will be considered.
+Then, the size of each file is added to a cumulative sum.
+When adding a file's size causes the sum to exceed the <code class="paramref">byteLimit</code>,
+that file and all remaining files will be removed from the <code class="paramref">directory</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RemoveFilesBeyondLimit(int byteLimit, string directory, string fileNamePrefix, string fileNameSuffix, bool leaveOneFile, Comparison&lt;FileSystemInfo&gt; sortComparison)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>byteLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum total size in bytes allowed for all files that match the file name pattern.</p>
+</dd>
+    <dt><code>directory</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The directory to search for excess files.</p>
+</dd>
+    <dt><code>fileNamePrefix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The start of the file name pattern, which may be empty.</p>
+</dd>
+    <dt><code>fileNameSuffix</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The end of the file name pattern. For example, the file name extension, which may be empty.</p>
+</dd>
+    <dt><code>leaveOneFile</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the first sorted file will not be removed, even if it exceeds the <code class="paramref">byteLimit</code>.</p>
+</dd>
+    <dt><code>sortComparison</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.comparison-1">Comparison</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filesysteminfo">FileSystemInfo</a>&gt;</dt>
+    <dd><p>The comparison method to use for sorting files, before accumulating their file size.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, <code class="paramref">fileNameSuffix</code>, or <code class="paramref">sortComparison</code>&gt; are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">fileNameSuffix</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
+\ OR \ Thrown if <code class="paramref">directory</code> contains invalid path characters.
+\ OR \ Thrown if <code class="paramref">fileNamePrefix</code> or <code class="paramref">fileNameSuffix</code> contain invalid file name characters, for the current platform.
+\ OR \ Thrown if the platform is Windows, and the <code class="paramref">fileNameSuffix</code> ends with a period or space character.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.securityexception">SecurityException</a></dt>
+    <dd><p>The caller does not have the required permission to access the directory or files.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directorynotfoundexception">DirectoryNotFoundException</a></dt>
+    <dd><p>The specified path is invalid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a></dt>
+    <dd><p>The caller does not have the required permission to delete a file.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.pathtoolongexception">PathTooLongException</a></dt>
+    <dd><p>The specified path exceeds the system-defined maximum length.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></dt>
+    <dd><p>A file to be deleted is in use.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by Ronnie Moon. - Copyright © 2023 SwipeTrack Solutions</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

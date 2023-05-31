@@ -1,0 +1,3985 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class IntToTextConverter
+ | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class IntToTextConverter
+ | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <article data-uid="Switchboard.IntToTextConverter">
+
+
+
+  <h1 id="Switchboard_IntToTextConverter" data-uid="Switchboard.IntToTextConverter" class="text-break">
+    Class IntToTextConverter
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Converts integral numbers into strings of characters, without allocating memory for garbage collection.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class IntToTextConverter</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">IntToTextConverter</span></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Switchboard_IntToTextConverter_MaxCharacterCount" data-uid="Switchboard.IntToTextConverter.MaxCharacterCount">
+  MaxCharacterCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum number of characters that may be necessary to store the text representation of a number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int MaxCharacterCount = 71</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_Byte_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.Byte,System.Span{System.Char})">
+  ConvertToText(byte, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this byte value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_Int16_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.Int16,System.Span{System.Char})">
+  ConvertToText(short, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this short value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_Int16_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.Int16,System.Span{System.Char},System.Char)">
+  ConvertToText(short, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this short value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_Int32_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.Int32,System.Span{System.Char})">
+  ConvertToText(int, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this int value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_Int32_System_Span_System_Char__System_Boolean__" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.Int32,System.Span{System.Char},System.Boolean@)">
+  ConvertToText(int, Span&lt;char&gt;, out bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters, without a negative sign.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this int value, Span&lt;char&gt; result, out bool valueIsNegative)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>valueIsNegative</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The value will be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <code class="paramref">value</code> is a negative number.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_Int32_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.Int32,System.Span{System.Char},System.Char)">
+  ConvertToText(int, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this int value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_Int32_System_Span_System_Char__System_Char_System_Boolean__" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.Int32,System.Span{System.Char},System.Char,System.Boolean@)">
+  ConvertToText(int, Span&lt;char&gt;, char, out bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters, without a negative sign.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this int value, Span&lt;char&gt; result, char digitGroupSeparator, out bool valueIsNegative)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+    <dt><code>valueIsNegative</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The value will be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <code class="paramref">value</code> is a negative number.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_Int64_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.Int64,System.Span{System.Char})">
+  ConvertToText(long, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this long value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_Int64_System_Span_System_Char__System_Boolean__" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.Int64,System.Span{System.Char},System.Boolean@)">
+  ConvertToText(long, Span&lt;char&gt;, out bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters, without a negative sign.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this long value, Span&lt;char&gt; result, out bool valueIsNegative)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>valueIsNegative</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The value will be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <code class="paramref">value</code> is a negative number.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_Int64_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.Int64,System.Span{System.Char},System.Char)">
+  ConvertToText(long, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this long value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_Int64_System_Span_System_Char__System_Char_System_Boolean__" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.Int64,System.Span{System.Char},System.Char,System.Boolean@)">
+  ConvertToText(long, Span&lt;char&gt;, char, out bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters, without a negative sign.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this long value, Span&lt;char&gt; result, char digitGroupSeparator, out bool valueIsNegative)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+    <dt><code>valueIsNegative</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The value will be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <code class="paramref">value</code> is a negative number.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_SByte_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.SByte,System.Span{System.Char})">
+  ConvertToText(sbyte, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a signed byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this sbyte value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_UInt16_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.UInt16,System.Span{System.Char})">
+  ConvertToText(ushort, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this ushort value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_UInt16_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.UInt16,System.Span{System.Char},System.Char)">
+  ConvertToText(ushort, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this ushort value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_UInt32_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.UInt32,System.Span{System.Char})">
+  ConvertToText(uint, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this uint value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_UInt32_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.UInt32,System.Span{System.Char},System.Char)">
+  ConvertToText(uint, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this uint value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_UInt64_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.UInt64,System.Span{System.Char})">
+  ConvertToText(ulong, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this ulong value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText_System_UInt64_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToText(System.UInt64,System.Span{System.Char},System.Char)">
+  ConvertToText(ulong, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this ulong value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_Byte_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.Byte,System.Span{System.Char})">
+  ConvertToTextAsBinary(byte, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this byte value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_Int16_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.Int16,System.Span{System.Char})">
+  ConvertToTextAsBinary(short, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this short value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_Int16_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.Int16,System.Span{System.Char},System.Char)">
+  ConvertToTextAsBinary(short, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this short value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_Int32_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.Int32,System.Span{System.Char})">
+  ConvertToTextAsBinary(int, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this int value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_Int32_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.Int32,System.Span{System.Char},System.Char)">
+  ConvertToTextAsBinary(int, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this int value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_Int64_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.Int64,System.Span{System.Char})">
+  ConvertToTextAsBinary(long, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this long value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_Int64_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.Int64,System.Span{System.Char},System.Char)">
+  ConvertToTextAsBinary(long, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this long value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_SByte_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.SByte,System.Span{System.Char})">
+  ConvertToTextAsBinary(sbyte, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a signed byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this sbyte value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_UInt16_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.UInt16,System.Span{System.Char})">
+  ConvertToTextAsBinary(ushort, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this ushort value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_UInt16_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.UInt16,System.Span{System.Char},System.Char)">
+  ConvertToTextAsBinary(ushort, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this ushort value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_UInt32_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.UInt32,System.Span{System.Char})">
+  ConvertToTextAsBinary(uint, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this uint value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_UInt32_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.UInt32,System.Span{System.Char},System.Char)">
+  ConvertToTextAsBinary(uint, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this uint value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_UInt64_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.UInt64,System.Span{System.Char})">
+  ConvertToTextAsBinary(ulong, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this ulong value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_System_UInt64_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary(System.UInt64,System.Span{System.Char},System.Char)">
+  ConvertToTextAsBinary(ulong, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsBinary(this ulong value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_Byte___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.Byte,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsBinary&lt;T&gt;(byte, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this byte value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_Int16___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.Int16,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsBinary&lt;T&gt;(short, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this short value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_Int16___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.Int16,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToTextAsBinary&lt;T&gt;(short, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this short value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_Int32___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.Int32,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsBinary&lt;T&gt;(int, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this int value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_Int32___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.Int32,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToTextAsBinary&lt;T&gt;(int, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this int value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_Int64___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.Int64,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsBinary&lt;T&gt;(long, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this long value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_Int64___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.Int64,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToTextAsBinary&lt;T&gt;(long, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this long value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_SByte___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.SByte,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsBinary&lt;T&gt;(sbyte, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a signed byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this sbyte value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_UInt16___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.UInt16,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsBinary&lt;T&gt;(ushort, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this ushort value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_UInt16___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.UInt16,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToTextAsBinary&lt;T&gt;(ushort, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this ushort value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_UInt32___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.UInt32,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsBinary&lt;T&gt;(uint, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this uint value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_UInt32___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.UInt32,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToTextAsBinary&lt;T&gt;(uint, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this uint value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_UInt64___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.UInt64,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsBinary&lt;T&gt;(ulong, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this ulong value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsBinary_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsBinary__1_System_UInt64___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsBinary``1(System.UInt64,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToTextAsBinary&lt;T&gt;(ulong, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this ulong value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_Byte_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.Byte,System.Span{System.Char})">
+  ConvertToTextAsHex(byte, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this byte value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_Int16_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.Int16,System.Span{System.Char})">
+  ConvertToTextAsHex(short, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this short value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_Int16_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.Int16,System.Span{System.Char},System.Char)">
+  ConvertToTextAsHex(short, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this short value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_Int32_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.Int32,System.Span{System.Char})">
+  ConvertToTextAsHex(int, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this int value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_Int32_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.Int32,System.Span{System.Char},System.Char)">
+  ConvertToTextAsHex(int, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this int value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_Int64_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.Int64,System.Span{System.Char})">
+  ConvertToTextAsHex(long, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this long value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_Int64_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.Int64,System.Span{System.Char},System.Char)">
+  ConvertToTextAsHex(long, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this long value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_SByte_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.SByte,System.Span{System.Char})">
+  ConvertToTextAsHex(sbyte, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a signed byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this sbyte value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_UInt16_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.UInt16,System.Span{System.Char})">
+  ConvertToTextAsHex(ushort, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this ushort value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_UInt16_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.UInt16,System.Span{System.Char},System.Char)">
+  ConvertToTextAsHex(ushort, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this ushort value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_UInt32_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.UInt32,System.Span{System.Char})">
+  ConvertToTextAsHex(uint, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this uint value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_UInt32_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.UInt32,System.Span{System.Char},System.Char)">
+  ConvertToTextAsHex(uint, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this uint value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_UInt64_System_Span_System_Char__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.UInt64,System.Span{System.Char})">
+  ConvertToTextAsHex(ulong, Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this ulong value, Span&lt;char&gt; result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex_System_UInt64_System_Span_System_Char__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex(System.UInt64,System.Span{System.Char},System.Char)">
+  ConvertToTextAsHex(ulong, Span&lt;char&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsHex(this ulong value, Span&lt;char&gt; result, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_Byte___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.Byte,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsHex&lt;T&gt;(byte, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this byte value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_Int16___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.Int16,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsHex&lt;T&gt;(short, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this short value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_Int16___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.Int16,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToTextAsHex&lt;T&gt;(short, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this short value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_Int32___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.Int32,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsHex&lt;T&gt;(int, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this int value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_Int32___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.Int32,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToTextAsHex&lt;T&gt;(int, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this int value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_Int64___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.Int64,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsHex&lt;T&gt;(long, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this long value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_Int64___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.Int64,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToTextAsHex&lt;T&gt;(long, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this long value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_SByte___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.SByte,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsHex&lt;T&gt;(sbyte, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a signed byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this sbyte value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_UInt16___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.UInt16,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsHex&lt;T&gt;(ushort, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this ushort value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_UInt16___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.UInt16,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToTextAsHex&lt;T&gt;(ushort, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this ushort value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_UInt32___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.UInt32,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsHex&lt;T&gt;(uint, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this uint value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_UInt32___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.UInt32,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToTextAsHex&lt;T&gt;(uint, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this uint value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_UInt64___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.UInt64,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToTextAsHex&lt;T&gt;(ulong, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this ulong value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToTextAsHex_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToTextAsHex__1_System_UInt64___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToTextAsHex``1(System.UInt64,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToTextAsHex&lt;T&gt;(ulong, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this ulong value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText__1_System_Int64___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToText``1(System.Int64,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToText&lt;T&gt;(long, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this long value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText__1_System_Int64___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToText``1(System.Int64,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToText&lt;T&gt;(long, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this long value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText__1_System_UInt32___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToText``1(System.UInt32,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToText&lt;T&gt;(uint, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this uint value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText__1_System_UInt32___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToText``1(System.UInt32,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToText&lt;T&gt;(uint, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this uint value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText__1_System_UInt64___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.IntToTextConverter.ConvertToText``1(System.UInt64,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
+  ConvertToText&lt;T&gt;(ulong, T, ReadOnlySpanAction&lt;char, T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this ulong value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_IntToTextConverter_ConvertToText_" data-uid="Switchboard.IntToTextConverter.ConvertToText*"></a>
+
+  <h3 id="Switchboard_IntToTextConverter_ConvertToText__1_System_UInt64___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Char_" data-uid="Switchboard.IntToTextConverter.ConvertToText``1(System.UInt64,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Char)">
+  ConvertToText&lt;T&gt;(ulong, T, ReadOnlySpanAction&lt;char, T&gt;, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
+then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this ulong value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating groups of digits.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by Ronnie Moon. - Copyright © 2023 SwipeTrack Solutions</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <article data-uid="Setup">
+
+<h4 id="basic-setup">Basic Setup</h4>
+<ul>
+<li>Open the Switchboard menu in the project settings window. This will automatically create a composition root asset located at Switchboard/Resources/CompositionRoot.asset. This asset is required by Switchboard at run time. The name of the file cannot be changed, but it can be relocated to any Resources directory.</li>
+<li>Disable the &quot;Log Null Injector Error&quot; option, or assign a dependency injector asset. Example dependency injectors can be found in the Switchboard/Example/DependencyInjectors directory.</li>
+</ul>
+<h4 id="example">Example</h4>
+<ul>
+<li>Open the SwitchboardExample scene.</li>
+<li>Assign one of the example dependency injector assets located at Switchboard/Example/DependencyInjectors/ to the Dependency Injector field of the composition root asset in the Switchboard project settings menu.</li>
+<li>Press play.</li>
+<li>See how the color and position of the Example Renderer game object are provided automatically by the example model assigned to the dependency injector.</li>
+<li>Change the color and properties of the example model in the dependency injector.</li>
+<li>See how the color and motion of the Example Renderer change in real time according to your changes.</li>
+<li>Assign the other example model asset, located at Switchboard/Example/Assets/, to the dependency injector. If ExampleModelA is assigned to the Model field, assign ExampleModelB, or vice versa.</li>
+<li>Drag the Example Renderer prefab, located at Switchboard/Example/Assets/, to the scene hierarchy.</li>
+<li>See how the color of the new Example Renderer object matches the Color property of the newly assigned example model asset, but the object does not move. This is because the dependency injector began updating the example model that was assigned when the application started running. The newly assigned example model was never told to update. It is still provided to new objects that request a model, and the current color value can be retreived. Be aware of this potential when creating a custom dependency injector.</li>
+<li>Assign the original model asset back to the dependency injector.</li>
+<li>Assign the other dependency injector asset to the Dependency Injector field of the composition root asset in the Switchboard project settings menu.</li>
+<li>Drag the Example Renderer prefab to the scene hierarchy.</li>
+<li>See how the newly created object receives the model that was assigned to the original dependency injector. The dependency injector referenced by the composition root cannot actually be changed at run time, even though a different injector can be assigned in the editor. Be aware that the composition root maintains a reference to the original dependency injector asset.</li>
+<li>Stop play.</li>
+<li>Open the UnityEngine.Application.persistentDataPath directory and examine the log file.</li>
+</ul>
+<h4 id="create-a-custom-dependency-injector">Create a Custom Dependency Injector</h4>
+<ul>
+<li>View the ExampleInjectorDerived and ExampleInjectorBase classes located at Switchboard/Example/Scripts/. The ExampleInjectorDerived class provides an example for creating a custom dependency injector that derives from the StandardDependencyInjector class. The StandardDependencyInjector provides standard, basic functionality, such as log files, a Ticker interface for updating any object, and synchronizes the PreciseClock with the system clock every two seconds. The PreciseClock is used by the standard log file formatter to apply time stamps to log entries. The ExampleInjectorBase class provides an example for creating a custom dependency injector that derives directly from the abstract DependencyInjector class. That way, the definition of what happens in the composition root at start up and shut down can be fully customized. The ExampleInjectorBase class includes a basic replication of how the StandardDependencyInjector works.</li>
+<li>Create a new C# script and provide the class name of the custom dependency injector.</li>
+<li>Open the script and change the class to derive from either StandardDependencyInjector, or DependencyInjector. Remove any predefined MonoBehaviour methods.</li>
+<li>Override the Activation(), Deactivation(), and GetInstanceOf(Type) methods. If you derive from StandardDependencyInjector, call base.Activation() at the start of the Activation method, and base.Deactivation() at the end of the Deactivation() method. Also, return base.GetInstanceOf(type) at the end of the GetInstancOf(Type) method.</li>
+<li>The Activation() method will run when the application starts, before the first scene is fully loaded, before Awake(), OnEnable(), Start() or other methods are called on objects in the scene. You can create game objects and they will be added to the first scene that is loaded. However, it shouldn't usually be necessary to create game objects or MonoBehaviours. That's the whole reason for this framework!</li>
+<li>The Deactivation() method will be run when the application is quitting, but it is not guaranteed. Don't assume that Deactivation() will run in all cases. If the application closes suddenly, it is possible that this method may not be invoked. However, this method is where everything that was spun up during Activation() can also be shut down when play is stopped in the editor.</li>
+<li>The GetInstanceOfType(Type) method provides an instance of the requested Type of object, if the dependency injector has been activated. This method will not be invoked until Activation() has occurred and Deactivation() has not. The ExampleInjectorBase class provides examples of how type comparisons may be handled. The Type argument will never be null, it will always be a reference type, and it can be compared for equality with a result of the typeof operator. However, typeof will perform an operation each time, the result of which can be cached. Switchboard provides a generic, static class called TheTypeOf<t> that automatically creates a static Type variable representing the cached result of the typeof operator for any type. This provides a small performance increase over using the typeof operator each time. Also, the IsAssignableFrom(Type) method can be invoked on the type argument for a more flexible comparison of whether a type of object may be assigned to the requested type, whether that it be the type itself, a base class, or an interface it implements.</t></li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by Ronnie Moon. - Copyright © 2023 SwipeTrack Solutions</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,2369 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct StringMakerHandle
+ | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct StringMakerHandle
+ | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <article data-uid="Switchboard.StringMakerHandle">
+
+
+
+  <h1 id="Switchboard_StringMakerHandle" data-uid="Switchboard.StringMakerHandle" class="text-break">
+    Struct StringMakerHandle
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides a readonly ref struct facade for <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ref struct StringMakerHandle</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Switchboard_StringMakerHandle__ctor_" data-uid="Switchboard.StringMakerHandle.#ctor*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle__ctor_Switchboard_StringMaker_" data-uid="Switchboard.StringMakerHandle.#ctor(Switchboard.StringMaker)">
+  StringMakerHandle(StringMaker)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance with the <code class="paramref">stringMaker</code> as the internal reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle(StringMaker stringMaker)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stringMaker</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>The <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a> to contain within the <a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Switchboard_StringMakerHandle_Item_" data-uid="Switchboard.StringMakerHandle.Item*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Item_System_Int32_" data-uid="Switchboard.StringMakerHandle.Item(System.Int32)">
+  this[int]
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the character at a specific index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public char this[int index] { get; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The character index.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Length_" data-uid="Switchboard.StringMakerHandle.Length*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Length" data-uid="Switchboard.StringMakerHandle.Length">
+  Length
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current character count,
+the number of characters that will be copied during operations like <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_ToString">ToString()</a> or <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_CopyTo_System_Span_System_Char__">CopyTo(Span&lt;char&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Length { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Boolean_" data-uid="Switchboard.StringMakerHandle.Append(System.Boolean)">
+  Append(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a boolean value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(bool value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The boolean value to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Char_" data-uid="Switchboard.StringMakerHandle.Append(System.Char)">
+  Append(char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a character.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(char value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Char_System_Int32_" data-uid="Switchboard.StringMakerHandle.Append(System.Char,System.Int32)">
+  Append(char, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a repeating character.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(char value, int count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to append.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of times to repeat the character.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_DateTime_" data-uid="Switchboard.StringMakerHandle.Append(System.DateTime)">
+  Append(DateTime)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(DateTime value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_DateTime_System_Int32_" data-uid="Switchboard.StringMakerHandle.Append(System.DateTime,System.Int32)">
+  Append(DateTime, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(DateTime value, int subSecondPrecision)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> to append.</p>
+</dd>
+    <dt><code>subSecondPrecision</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of digits to display for fractions of a second.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Double_" data-uid="Switchboard.StringMakerHandle.Append(System.Double)">
+  Append(double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Double_System_Int32_" data-uid="Switchboard.StringMakerHandle.Append(System.Double,System.Int32)">
+  Append(double, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(double value, int fractionalMax)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of fractional digits to display.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Double_System_Int32_System_Int32_" data-uid="Switchboard.StringMakerHandle.Append(System.Double,System.Int32,System.Int32)">
+  Append(double, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(double value, int fractionalMax, int fractionalMin)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of fractional digits to display.</p>
+</dd>
+    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Double_System_Int32_System_Int32_System_Boolean_" data-uid="Switchboard.StringMakerHandle.Append(System.Double,System.Int32,System.Int32,System.Boolean)">
+  Append(double, int, int, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(double value, int fractionalMax, int fractionalMin, bool groupDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of fractional digits to display.</p>
+</dd>
+    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Set <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if three-digit groups should be separated by a comma.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Double_System_Int32_System_Int32_System_Boolean_Switchboard_FloatFormatInfo_" data-uid="Switchboard.StringMakerHandle.Append(System.Double,System.Int32,System.Int32,System.Boolean,Switchboard.FloatFormatInfo)">
+  Append(double, int, int, bool, FloatFormatInfo)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(double value, int fractionalMax, int fractionalMin, bool groupDigits, FloatFormatInfo format)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of fractional digits to display.</p>
+</dd>
+    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Set <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
+    <dd><p>The format configuration info used to append the result.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Int64_" data-uid="Switchboard.StringMakerHandle.Append(System.Int64)">
+  Append(long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a long integer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(long value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Int64_System_Char_" data-uid="Switchboard.StringMakerHandle.Append(System.Int64,System.Char)">
+  Append(long, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a long integer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(long value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_ReadOnlySpan_System_Char__" data-uid="Switchboard.StringMakerHandle.Append(System.ReadOnlySpan{System.Char})">
+  Append(ReadOnlySpan&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(ReadOnlySpan&lt;char&gt; value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_UInt64_" data-uid="Switchboard.StringMakerHandle.Append(System.UInt64)">
+  Append(ulong)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsinged long integer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(ulong value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_UInt64_System_Char_" data-uid="Switchboard.StringMakerHandle.Append(System.UInt64,System.Char)">
+  Append(ulong, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsinged long integer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(ulong value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Byte_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Byte)">
+  AppendAsBinary(byte)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a byte as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(byte value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Int16_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Int16)">
+  AppendAsBinary(short)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a short integer as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(short value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Int16_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Int16,System.Char)">
+  AppendAsBinary(short, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a short integer as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(short value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Int32_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Int32)">
+  AppendAsBinary(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an integer as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(int value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Int32_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Int32,System.Char)">
+  AppendAsBinary(int, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an integer as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(int value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Int64_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Int64)">
+  AppendAsBinary(long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a long integer as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(long value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Int64_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Int64,System.Char)">
+  AppendAsBinary(long, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a long integer as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(long value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_SByte_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.SByte)">
+  AppendAsBinary(sbyte)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a signed byte as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(sbyte value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_UInt16_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.UInt16)">
+  AppendAsBinary(ushort)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsigned short integer as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(ushort value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_UInt16_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.UInt16,System.Char)">
+  AppendAsBinary(ushort, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsigned short integer as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(ushort value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_UInt32_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.UInt32)">
+  AppendAsBinary(uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsigned integer as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(uint value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_UInt32_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.UInt32,System.Char)">
+  AppendAsBinary(uint, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsigned integer as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(uint value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_UInt64_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.UInt64)">
+  AppendAsBinary(ulong)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsigned long integer as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(ulong value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_UInt64_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.UInt64,System.Char)">
+  AppendAsBinary(ulong, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsigned long integer as a binary value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(ulong value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Byte_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Byte)">
+  AppendAsHex(byte)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a byte as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(byte value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Int16_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Int16)">
+  AppendAsHex(short)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a short integer as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(short value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Int16_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Int16,System.Char)">
+  AppendAsHex(short, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a short integer as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(short value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Int32_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Int32)">
+  AppendAsHex(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an integer as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(int value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Int32_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Int32,System.Char)">
+  AppendAsHex(int, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an integer as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(int value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Int64_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Int64)">
+  AppendAsHex(long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a long integer as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(long value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Int64_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Int64,System.Char)">
+  AppendAsHex(long, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a long integer as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(long value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_SByte_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.SByte)">
+  AppendAsHex(sbyte)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a signed byte as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(sbyte value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_UInt16_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.UInt16)">
+  AppendAsHex(ushort)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsigned short integer as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(ushort value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_UInt16_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.UInt16,System.Char)">
+  AppendAsHex(ushort, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsigned short integer as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(ushort value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_UInt32_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.UInt32)">
+  AppendAsHex(uint)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsigned integer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(uint value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_UInt32_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.UInt32,System.Char)">
+  AppendAsHex(uint, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsigned integer as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(uint value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_UInt64_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.UInt64)">
+  AppendAsHex(ulong)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsigned long integer as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(ulong value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_UInt64_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.UInt64,System.Char)">
+  AppendAsHex(ulong, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends an unsigned long integer as a hexadecimal value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(ulong value, char digitGroupSeparator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitGroupSeparator</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to use for separating digit groups.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsScientific_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsScientific_System_Double_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific(System.Double)">
+  AppendAsScientific(double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsScientific(double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsScientific_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsScientific_System_Double_System_Int32_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific(System.Double,System.Int32)">
+  AppendAsScientific(double, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsScientific(double value, int digitMax)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of digits to display.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsScientific_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsScientific_System_Double_System_Int32_System_Int32_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific(System.Double,System.Int32,System.Int32)">
+  AppendAsScientific(double, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsScientific(double value, int digitMax, int digitMin)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of digits to display.</p>
+</dd>
+    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of digits to display.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendAsScientific_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendAsScientific_System_Double_System_Int32_System_Int32_Switchboard_FloatFormatInfo_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific(System.Double,System.Int32,System.Int32,Switchboard.FloatFormatInfo)">
+  AppendAsScientific(double, int, int, FloatFormatInfo)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsScientific(double value, int digitMax, int digitMin, FloatFormatInfo format)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of digits to display.</p>
+</dd>
+    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of digits to display.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
+    <dd><p>The format configuration info used to append the result.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendLine_" data-uid="Switchboard.StringMakerHandle.AppendLine*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendLine" data-uid="Switchboard.StringMakerHandle.AppendLine">
+  AppendLine()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.environment.newline">NewLine</a> character(s).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendLine()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendLine_" data-uid="Switchboard.StringMakerHandle.AppendLine*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendLine_System_ReadOnlySpan_System_Char__" data-uid="Switchboard.StringMakerHandle.AppendLine(System.ReadOnlySpan{System.Char})">
+  AppendLine(ReadOnlySpan&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters, followed by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.environment.newline">NewLine</a> character(s).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendLine(ReadOnlySpan&lt;char&gt; value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendWithDigitLimit_" data-uid="Switchboard.StringMakerHandle.AppendWithDigitLimit*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendWithDigitLimit_System_Double_System_Int32_" data-uid="Switchboard.StringMakerHandle.AppendWithDigitLimit(System.Double,System.Int32)">
+  AppendWithDigitLimit(double, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendWithDigitLimit(double value, int digitLimit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of digits to display. Results may be converted to scientific notation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendWithDigitLimit_" data-uid="Switchboard.StringMakerHandle.AppendWithDigitLimit*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendWithDigitLimit_System_Double_System_Int32_System_Boolean_" data-uid="Switchboard.StringMakerHandle.AppendWithDigitLimit(System.Double,System.Int32,System.Boolean)">
+  AppendWithDigitLimit(double, int, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendWithDigitLimit(double value, int digitLimit, bool groupDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of digits to display. Results may be converted to scientific notation.</p>
+</dd>
+    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Set <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if three-digit groups should be separated by a comma.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_AppendWithDigitLimit_" data-uid="Switchboard.StringMakerHandle.AppendWithDigitLimit*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_AppendWithDigitLimit_System_Double_System_Int32_System_Boolean_Switchboard_FloatFormatInfo_" data-uid="Switchboard.StringMakerHandle.AppendWithDigitLimit(System.Double,System.Int32,System.Boolean,Switchboard.FloatFormatInfo)">
+  AppendWithDigitLimit(double, int, bool, FloatFormatInfo)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendWithDigitLimit(double value, int digitLimit, bool groupDigits, FloatFormatInfo format)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of digits to display. Results may be converted to scientific notation.</p>
+</dd>
+    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Set <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
+    <dd><p>The format configuration info used to append the result.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by Ronnie Moon. - Copyright © 2023 SwipeTrack Solutions</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
