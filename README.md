@@ -11,7 +11,7 @@ Every feature has been meticulously crafted for maximum stability and performanc
 
 #### Unity
 
-Switchboard is a Unity framework for composing your application and injecting dependencies automatically when scenes load.
+Switchboard is a Unity framework for composing your application and injecting dependencies automatically when objects are instantiated.
 
 - Composition Root
 - Automatic Dependency Injection
