@@ -43,3 +43,7 @@ If you would like to discuss any topic please add your contribution to https://g
 ## Report an Issue
 
 If you discover a bug, would like to request a feature, or have any other issue please contribute the issue to https://github.com/swipetrack/switchboard/issues.
+
+## Direct Message
+
+If you would like to send a direct message concerning Switchboard, email rmoon@swipetrack.com with "Switchboard" somewhere in the subject line.
