@@ -1,8 +1,4 @@
 
-## Switchboard Interface
-
-The files in this directory and sub-directories constitute the necessary interface of dependencies that may be required for coupling this plugin with other software.
-
 ## License
 
 The MIT license applies only to files within this directory or sub-directories that explicitly state the terms of licensing within the source file.
