@@ -2,11 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class InjectorLocator
- | Switchboard 1.0.0 </title>
+      <title> | Switchboard 1.0.0 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class InjectorLocator
- | Switchboard 1.0.0 ">
+      <meta name="title" content=" | Switchboard 1.0.0 ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -29,7 +27,7 @@
       <script type="text/javascript" src="../styles/main.js"></script>
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -74,116 +72,11 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Switchboard.InjectorLocator">
+        <article data-uid="Memory">
 
-
-
-  <h1 id="Switchboard_InjectorLocator" data-uid="Switchboard.InjectorLocator" class="text-break">
-    Class InjectorLocator
-  
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>SwitchboardUnity.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>Provides a static event that an <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a> can invoke to request an <a class="xref" href="Switchboard.IInjector.html">IInjector</a>
-to call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectable_InjectWith_Switchboard_IInjector_">InjectWith(IInjector)</a>.</p>
-</div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class InjectorLocator</code></pre>
-  </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">InjectorLocator</span></div>
-    </dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Switchboard_InjectorLocator_RequestInjection_" data-uid="Switchboard.InjectorLocator.RequestInjection*"></a>
-
-  <h3 id="Switchboard_InjectorLocator_RequestInjection_Switchboard_IInjectable_" data-uid="Switchboard.InjectorLocator.RequestInjection(Switchboard.IInjectable)">
-  RequestInjection(IInjectable)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Invokes an event for an <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a> to request an <a class="xref" href="Switchboard.IInjector.html">IInjector</a> to call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectable_InjectWith_Switchboard_IInjector_">InjectWith(IInjector)</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RequestInjection(IInjectable injectable)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>injectable</code> <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a></dt>
-    <dd><p>The injectable requesting an <a class="xref" href="Switchboard.IInjector.html">IInjector</a> from any event observer.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="events">Events
-</h2>
-
-
-
-  <h3 id="Switchboard_InjectorLocator_InjectionRequested" data-uid="Switchboard.InjectorLocator.InjectionRequested">
-  InjectionRequested
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Observers of this event should call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectable_InjectWith_Switchboard_IInjector_">InjectWith(IInjector)</a> on the <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event Action&lt;IInjectable&gt; InjectionRequested</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<h4 id="memory-management">Memory Management</h4>
+<p>Whether you read the Collections section, or not, you should be aware that Switchboard uses memory pooling to avoid garbage collection. One of the potential negative side effects of this is that you can effectively simulate a memory leak by pooling too much memory at one time in the execution of your application, that is unnecessary and problematic at a later time. Most of what is actually pooled by Switchboard can be controlled by setting a max count value on the four memory pools help by SharedObjectArrayPool. Instead of pooling all types of arrays, generic Switchboard collections all use object arrays internally. SharedObjectArray is the static close holding the four ObjectArrayPool instances of lengths 32, 64, 128, and 256. Limiting the max count of those pools will help assure that your application does not accidentally run out of memory. When the max count is exceeded the excess will be discarded for garbage collection as usual.</p>
+<p>StringMaker also pools arrays of characters. StringMaker has a public, static ThreadSafeObjectPool of character arrays. Each array that StringMaker conributes to the pool is 1024 characters. Each StringMaker can only hold 27 of those arrays, but the static character array pool that all StringMaker instances share can store up to 65536. When you want to return the internal memory allocated to a StringMaker instance, you should set the Length as desired and call TrimExcess(), or just call Clear(). That will return the character arrays used by that StringMaker to the static StringMaker.CharacterArrayPool.</p>
 </article>
 
         <div class="contribution d-print-none">

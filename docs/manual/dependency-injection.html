@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="DependencyInjection">
+
+<h4 id="what-is-dependency-injection">What is Dependency Injection?</h4>
+<p>Dependency injection is simply when one object has a dependency that gets provided by an external object. When you instantiate a new object by calling the class contructor, and provide an argument that the object requires for instantiation and proper function, you have just performed dependency injection. In fact, this is the ideal form of dependency injection. Constructor injection should be used wherever possible. Objects that instantiate other objects should provide the dependencies of those child objects down through the hierarchy of your application. So, the dependent object does not seek out its own dependency, like with a static reference. When an object contains a direct reference to a type that it depends on those types become tightly coupled. You cannot separate the implementation of the dependent object from the object upon which it depends. This can lead to an unecessary amount of strong dependencies over time, resulting in spaghetti code, where all of your classes are tangled together. They can't be separated from one another without causing compilation errors. When many classes have these types of strong dependencies it can feel like every file in the project has some chain of dependencies that ultimately reach every other file in the project. This makes it very difficult to separate your modules along clean conceptual boundaries.</p>
+<p>So, what is the alternative? When we have well defined conceptual boundaries between the responsibilities of various classes and modules, it's nice for those types to be loosely coupled via interfaces. An interface provides a minimal definition for object interaction, like the required method signatures and properties. This allows your types to depend on a simple interface, rather than an explicit implementation of a particular class. When an object depends on an interface it becomes trivial to swap the specific implementation of that interface. Also, the dependent code is now more portable, as it only requires that very small interface as a dependency, rather than all of the actual code behind a specific implementation, and the entire dependency chain that may come along with it.</p>
+<p>Programming an object to depend on interfaces encourages <a href="https://en.wikipedia.org/wiki/SOLID">S.O.L.I.D.</a> programming and clean code architecture. Or, perhaps it is more accurate to say that S.O.L.I.D. programming and clean architecture are not possible without programming some dependencies as interfaces and having those dependencies injected from outside, in order to avoid tight coupling of distinctly separate classes. So, dependency injection is fundamental and necessary for truly object-oriented, modular code architecture.</p>
+<h4 id="singletons-vs-dependency-injection">Singletons vs Dependency Injection</h4>
+<p>Many Unity programmers will be familiar with using singletons, or static classes and instances, to implement a module that is intended to have only a single instance or representation. These types of modules are sometimes referred to as services. Other objects that depend on these services can easily reference them directly via their static reference. However, that creates tight coupling between the dependent object and that static type.</p>
+<p>So, why would anyone ever use static, global references if they always result in tight coupling? Well, that's why some people advise against it. However, there are circumstances where it is unavoidable. When you have no choice, it becomes unhelpful to only hear that you should avoid it. One circumstance where reaching out for a global, static reference is all but required is when you do not have control over the instantiation of objects. This is, in fact, the case in an environment such as Unity. In Unity, most scripts inherit from MonoBehaviour and are instantiated automatically via the Unity engine. By the time your code executes, it is far too late to call the constructor yourself. Having been constructed without an opportunity for dependency injection, nearly the only option that remains is for <em>something</em> to reach out for a static frame of reference. This is why many Unity programmers are so familiar with the concept of singletons, and all of the problems that come along with them.</p>
+<h4 id="unity">Unity</h4>
+<p>Unity does not allow you to control instantiation of scripts derived from MonoBehaviour or ScriptableObject. The constructor is called by the Unity engine environment within which your code resides. Also, there is no root entry point from which to compose your application. The actual composition root of the player or editor application is again controlled by Unity, and no analogous main method is provided directly for you. What's more, there is no event invoked when a new object is created for services to observe and inject dependencies. Therefore, something must reach out for a static reference from the MonoBehaviour side of the environment. Bridging this gap between scenes, and the MonoBehaviour components loaded into them, is the crucial issue that makes programming in the Unity environment fundamentally different from most other programming contexts when it comes to dependency injection and singletons.</p>
+<p>One pattern that is related to both singletons and dependency injection is the Service Locator pattern. A service locator is a singleton that provides dependencies to other objects upon request. So, it is like a singleton service that provides all other services. This pattern inherently comes with all of the pitfalls of any singleton or static reference, like tightly coupling a dependency upon that particular implementation of the service. However, when the particular implementation is sufficiently abstract, it can effectively operate like an interface. Which brings me to the Injector Locator pattern.</p>
+<h4 id="the-injector-locator-pattern">The Injector Locator Pattern</h4>
+<p>When object instantiation, calling constructors, and dependency injection are out of your control due to the programming environment it becomes necessary to call upon a static reference in order to satisfy dependencies. However, this need not be an overly explicit or concrete implementation of any particular service. Following abstraction to its logical conclusion, the static reference itself can be abstracted almost away entirely. To this end, I created a static class called InjectorLocator. This class functions like a static middle man that bridges the gap between two sides of the development environment. On one side are the composition root of your application, the main entry point for the lifecycle of your software, and various static services. On the other side are the objects being instantiated outside of your control.</p>
+<p>There are two public methods for interacting with the InjectorLocator, one for each side of the environment. When the application launches from the composition root, objects that satisfy dependencies are registered with the InjectorLocator as observers of an event to be invoked when a new object requests dependency injection. When objects are created, and they can eventually reach out for a static reference, they reach out to the InjectorLocator to call a method for requesting dependency injection, which invokes the event. In order for this class, the method, and the event it invokes to be sufficiently abstract, they must operate on abstract interfaces. The generic IInjector and IInjectable interfaces make up a pair that allow one to inject the other with an instance of a class based on the requested type. These two interfaces have no dependency on the InjectorLocator, and are fully self sufficient as an abstract dependency injection interface. Injector locator operates on these two interfaces, with IInjector implementations on the composition root and static service side of the environment, and IInjectable objects on the other. An IInjector observer of the event receives the IInjectable that is requesting injection, and can then invoke method injection on that object simply by passing itself in as the argument to the IInjectable.InjectWith(IInjector).</p>
+<p>One other concern to note with a static reference is that they are global. The properties of a global reference can be altered from anywhere, potentially corrupting the expected state. However, the C# event paradigm automatically mitigates those concerns. The ability to add and remove an observer is limited by the ability to access the method delegate that is added to the event. Delegates can refer to private or protected methods, enabling observers of the event to hide access to the method that is delegated to observe the event. Therefore, even though the event is global, if the methods added to the event are not global, they cannot be removed from the event by an external actor. Also, the event cannot be cleared of delegates because only the class that owns the event can do that. The expected state set by one observer, that it is observing the event, cannot be altered or corrupted externally. Only one with access to add the method delegate to the global event has access to remove it. Outside of C# the pattern can be replicated by replicating the functionality of the C# event paradigm. After all, it is just a hidden MultiCastDelegate with public methods to add and remove, in the form of the += and -= operators. C# just makes it easy to encapsulate the whole concept into one line of code.</p>
+<p>The entirety of this pattern is demonstrated via Switchboard's public interface which is free and open source under the MIT license at <a href="https://github.com/swipetrack/switchboard/tree/main/interface">https://github.com/swipetrack/switchboard/tree/main/interface</a>. Switchboard itself is designed to be loosely coupled to your application. Therefore, the only real dependency requirement is on a free, open-source, publicly available implementation of this pattern that is all of 19 lines of code, including curly braces. Switchboard provides a concrete implementation of the IInjector interface, which provides many actual services by observing the InjectorLocator, but it is possible to use Switchboard and only depend directly on those IInjector, IInjectable, and InjectorLocator interfaces. Even though InjectorLocator is a static class, and technically constitues a tightly coupled dependency, it is so light weight and abstract that it effectively functions more like an interface. This is the essence of the InjectorLocator pattern, true loose coupling across a boundary that prevents constructor injection.</p>
+<h4 id="iinjector-and-iinjectable">IInjector and IInjectable</h4>
+<p>The IInjector interface is the most fundamental interface for dependency injection. It has no dependencies and consists of a single method. It makes use of C# generics to provide a method that accepts any object as an out parameter. This is the object to which the IInjector should assign an instance, and the type is automatically inferred at compile time. The type is the metadata that defines the request. A boolean is returened so the IInjector can return indicate whether the dependency was provided successfully. This enables the client that is requesting an instance of a type to embed the request within a conditional if statement, performing other actions based on whether the IInjector indicated success. Additionally, the object reference can be checked for null. An IInjector reference can refer to your entire dependency container at the composition root of your application, containing all of your services, and it be passed down into any newly created object via constructor injection as a single argument. Any C# application could easily adopt this interface as a way of generically injecting loosely coupled dependencies with not other framework or dependencies necessary. The IInjectable interface defines a method for method injection of an IInjector. This only becomes truly necessary when constructor injection is out of the question, as is the case in the Unity environment.</p>
+<h4 id="other-dependency-injection-frameworks">Other Dependency Injection Frameworks</h4>
+<p>You may be wondering how Switchboard compares to other dependency injection frameworks for Unity. Hopefully, if you've read this far some of the major differences are apparent, but I will point out some of the common pitfalls that I see in most the other plugins that Switchboard avoids entirely. For one, Switchboard does not use reflection. Many, if not all, of the other dependency injection frameworks out there for Unity rely heavily on reflection, and decorating your code base with various attributes. Reflection refers to the ability in C# to examine and invoke private and protected members of a type or instance that you would not normally have access to. Most dependency injection frameworks will have you decorate the various members of your classes with certain attributes, particular to that specific framework. At run time, objects are caused to undergo reflection, examining all of their members for those attributes, and injecting dependencies accordingly. There's just one problem, reflection is notoriously slow. I am of the opinion that reflection should be avoided almost entirely, at all costs, under any circumstance, if you are trying to make something like a video game with high performance requirements.</p>
+<p>Some of the more mature frameworks have a feature for baking reflection. This is a process by which reflection occurs only at compile time, then those references are then serialized for deployment so they are already defined at run time. This eliminates the run time performance penalty. However, it does not eliminate the penalty all together, and it does not allow for dynamic alteration of those references at run time for newly created objects. You still have to bake, which takes time, and those baked references are now locked in.</p>
+<p>Switchboard has none of those issues. No reflection occurs at design time, compile time, or run time. It is avoided entirely, and the performance is nearly instantaneous. Switchboard is fully compatible with Unity's enter play mode options that allow you to press play and begin working nearly instantly. No need for loading, waiting, baking, etc. You can just hit play and instantly be playing with all dependencies satisfied in any scene. You can swap all of those references in an instant, and the updates will be live, and persist when you stop playing. They don't get reverted like changes you make to a scene file while playing in the editor. You can drop a prefab into a scene, and it will automatically and instantly have all of it's dependencies resolved with no performance penalty. That is the difference! You will not find another plugin that works this way.</p>
+<p>Also, I feel like there is a common mistake that occurs in implementing inversion of control with attributes and reflection. Just because you've eliminated a client object's explicit reference to another class, does not mean that you have eliminated tight coupling of dependencies from your code base! It's like not being able to see the forest through all of the treees. When the entire code base has very specific attributes belonging to a particular framework peppered all over various members of every class, you have a tightly coupled dependency! Now, all of your classes depend on <em>that</em> dependency injection framework! So, even though you may not be referencing the concrete type that is being injected, you <em>are</em> referencing the concrete types of the particular dependency injection framework that you've chosen to weave throughout your codebase. Without that particular plugin, none of your code works. No other plugin is going to operate predictably on the attributes defined in a different framework. When using Switchboard you only depend on the ultra-light, interface based Injector Locator pattern. Swapping out the entire plugin would be trivial, if there were any alternatives to choose from.</p>
+<p>Another issue I have with some of the other frameworks, and plugins generally, is that they are often too feature rich for my taste. A plethora of features may seem enticing. More is better right? Well, when the features get too idiosyncratic they effectively constitute tight coupling to a pattern. You're boxed into doing things the way that plugin wants you to. You want that fancy feature? Well, it only works that fancy way, in that fancy plugin, and if you change your mind about the plugin the feature follows. Switchboard aims to be simple and elegant. I want this plugin to get out of your way so that you can be enabled to develop faster, cleaner, more stable code of your own without any interference from some plugin.</p>
+<p>Oh, and one more thing. Some solutions struggle with execution order. Getting your services to load first, and persist beyond the end of all calls to OnDestroy(), represents a problem. Many plugins have elaborate requirements and pitfalls for you, the user, to deal with in order to balance those concerns. Switchboard has all of the execution order issues figured out for you. The composition root runs when you press play, or the player application is launched, with the first scene loaded, but before any Awake(), OnEnable(), or Start() calls occur. You can instantiate a GameObject and add components if you like, although you should no longer need to. The dependency container you define for the composition root deactivates after all other OnDestroy() calls.</p>
+<p>Plus, Switchboard is not only a dependency injection framework. That's just one of the many features it provides!</p>
+<h4 id="is-injector-locator-too-simple">Is Injector Locator Too Simple?</h4>
+<p>No. In this case, simplicity enables complexity. It's important to remember the problem that this pattern is solving, and to not overly complicate the situation. If we weren't bridging the divide between scene objects and application environment, my recommendation would be to use pure constructor injection throughout your entire application. In most circumstances you should be able to fully disregard any overly complex dependency injection framework in favor of pure constructor injection. The entire dependency injection container, with any potentially requested dependency, can be passed down through the whole composition graph of your application as a single IInjector argument passed into the constructor of any object you create. Those objects don't even need to be IInjectable. The IInjectable interface is only necessary for method injection, not constructor injection. So, you're whole dependency injection requirement could come down to a single dependency on the IInjector interface, which is essentially one line of code.</p>
+<p>Some other plugins offer a lot of options for how a particular dependency is loaded, instantiated, or which instance is injected based on various properties, parameters, or attributes. I feel like all of that serves to reduce the simplicity of the interface and solve the original problem. With Switchboard, IInjectable objects are in full control of their own method injection. They can control whether InjectWith(IInjector) may be called only once, or what happens if it is called multiple times, which occurs when multiple IInjectors are added to the InjectorLocator.InjectionRequested event. That control is left for you to define with the full power of the language, in any way you choose. As a convention, C# events are invoked in the order they are added. So, nested IInjector implementations can be implemented simply by registering them with the ServiceLocator.InjectionRequested event in order of priority. Defining how services are loaded is entirely up to how you define your implementation of DependencyInjector assigned to the composition root.</p>
+<h4 id="composition-root-and-dependency-injector">Composition Root and Dependency Injector</h4>
+<p>The composition root is the entry point for the application to start up at run time. This occurs when you press play in the editor, or launch the player application, when the first scene is loaded, but before the first call to Awake(). In the Switchboard section of the project settings window, there is a single object reference. That is where you assign any implementation of DependencyInjector you like. The DependencyInjector referenced when play begins is cached, so changing this value after run time has no effect on the composition root. DependencyInjector is a ScriptableObject, so it exists as an asset in your project rather than the scene hierarchy. You can define multiple implementations of DependencyInjector, and you can have multiple instances of a certain type of DependencyInjector saved as assets with differing properties. The injector can be swapped out easily to change the context of your application. You could create a mock environment dependency injector and swap it out easily for unit testing. Any properties that you change on the dependency injector asset are live at run time, and persist even after you stop playing, making testing, tweaking, and experimentation simple and intuitive.</p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by <a href="https://www.linkedin.com/in/ronnie-moon-12209380/">Ronnie Moon</a>.  Copyright © 2023 <a href="http://www.swipetrack.com/">SwipeTrack Solutions</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

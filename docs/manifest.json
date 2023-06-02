@@ -1,6 +1,6 @@
 {
   "sitemap": {
-    "baseUrl": "https://swipetrack.github.io/Switchboard/",
+    "baseUrl": "https://swipetrack.github.io/switchboard/",
     "changefreq": "yearly"
   },
   "homepages": [],
@@ -630,6 +630,36 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "manual/collections.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/collections.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/dependency-injection.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/dependency-injection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/expandable.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/expandable.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "manual/feedback.md",
       "output": {
         ".html": {
@@ -650,6 +680,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "manual/logger.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/logger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/memory.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/memory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "manual/roadmap.md",
       "output": {
         ".html": {
@@ -664,6 +714,26 @@
       "output": {
         ".html": {
           "relative_path": "manual/setup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/strings.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/strings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/ticker.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/ticker.html"
         }
       },
       "version": ""

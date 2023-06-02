@@ -1,18 +1,36 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: Collections
+  name: Collections
+  href: manual/collections.html
+- uid: DependencyInjection
+  name: DependencyInjection
+  href: manual/dependency-injection.html
+- uid: Expandable
+  name: Expandable
+  href: manual/expandable.html
 - uid: Feedback
   name: Feedback
   href: manual/feedback.html
 - uid: Introduction
   name: Switchboard
   href: manual/introduction.html
+- uid: Logger
+  name: Logger
+  href: manual/logger.html
+- uid: Memory
+  name: Memory
+  href: manual/memory.html
 - uid: Roadmap
   name: Roadmap
   href: manual/roadmap.html
 - uid: Setup
   name: Setup
   href: manual/setup.html
+- uid: Strings
+  name: Strings
+  href: manual/strings.html
 - uid: Switchboard
   name: Switchboard
   href: api/Switchboard.html
@@ -6750,3 +6768,6 @@ references:
   isSpec: "True"
   fullName: Switchboard.UnityLogHijacker.LogFormat
   nameWithType: UnityLogHijacker.LogFormat
+- uid: Ticker
+  name: Ticker
+  href: manual/ticker.html
