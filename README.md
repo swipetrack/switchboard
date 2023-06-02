@@ -24,6 +24,7 @@ The core library contains Unity-independent features that can be used in any C# 
 
 - High Performance Log Files
 - A Better StringBuilder
+- Render Number Values that ToString() Cannot
 - Eliminates Garbage Collection
 
 ________________
