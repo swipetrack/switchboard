@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class ClockSynchronizer
+      <title>Enum PlatformFlags
  | Switchboard 1.0.0 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class ClockSynchronizer
+      <meta name="title" content="Enum PlatformFlags
  | Switchboard 1.0.0 ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
@@ -74,12 +74,13 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Switchboard.ClockSynchronizer">
+        <article data-uid="Switchboard.PlatformFlags">
 
 
 
-  <h1 id="Switchboard_ClockSynchronizer" data-uid="Switchboard.ClockSynchronizer" class="text-break">
-    Class ClockSynchronizer
+
+  <h1 id="Switchboard_PlatformFlags" data-uid="Switchboard.PlatformFlags" class="text-break">
+    Enum PlatformFlags
   
   </h1>
 
@@ -88,135 +89,87 @@
   <dl><dt>Assembly</dt><dd>SwitchboardUnity.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Adds a permanent observer to a <a class="xref" href="Switchboard.IUnityTicker.html">IUnityTicker</a>,
-which synchronizes the <a class="xref" href="Switchboard.PreciseClock.html">PreciseClock</a> with the system clock every certain number of seconds.</p>
+  <div class="markdown summary"><p>Provides a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.flagsattribute">FlagsAttribute</a> enum comparable to UnityEngine.RuntimePlatform.
+Use the <a class="xref" href="Switchboard.ApplicationPlatform.html#Switchboard_ApplicationPlatform_GetFlag_UnityEngine_RuntimePlatform_">GetFlag(RuntimePlatform)</a> method to convert a RuntimePlatform value into a flag value,
+or compare the current platform like so: PlatformFlagsVariable.HasFlag(<a class="xref" href="Switchboard.ApplicationPlatform.html#Switchboard_ApplicationPlatform_Flag">Flag</a>)</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ClockSynchronizer</code></pre>
+    <pre><code class="lang-csharp hljs">[Flags]
+public enum PlatformFlags</code></pre>
   </div>
 
 
 
 
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">ClockSynchronizer</span></div>
-    </dd>
-  </dl>
 
 
 
 
 
-
-
-
-
-  <h2 class="section" id="constructors">Constructors
+  <h2 id="fields">Fields
 </h2>
-
-
-  <a id="Switchboard_ClockSynchronizer__ctor_" data-uid="Switchboard.ClockSynchronizer.#ctor*"></a>
-
-  <h3 id="Switchboard_ClockSynchronizer__ctor_Switchboard_IUnityTicker_" data-uid="Switchboard.ClockSynchronizer.#ctor(Switchboard.IUnityTicker)">
-  ClockSynchronizer(IUnityTicker)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClockSynchronizer(IUnityTicker ticker)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>ticker</code> <a class="xref" href="Switchboard.IUnityTicker.html">IUnityTicker</a></dt>
-    <dd><p>The ticker to observe.</p>
-</dd>
+    <dt id="Switchboard_PlatformFlags_Android"><code>Android = 32</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_CloudRendering"><code>CloudRendering = 262144</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_EmbeddedLinuxArm32"><code>EmbeddedLinuxArm32 = 8388608</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_EmbeddedLinuxArm64"><code>EmbeddedLinuxArm64 = 4194304</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_EmbeddedLinuxX64"><code>EmbeddedLinuxX64 = 16777216</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_EmbeddedLinuxX86"><code>EmbeddedLinuxX86 = 33554432</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_GameCoreXboxOne"><code>GameCoreXboxOne = 1048576</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_GameCoreXboxSeries"><code>GameCoreXboxSeries = 524288</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_IPhonePlayer"><code>IPhonePlayer = 16</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_LinuxEditor"><code>LinuxEditor = 128</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_LinuxPlayer"><code>LinuxPlayer = 64</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_LinuxServer"><code>LinuxServer = 67108864</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_Lumin"><code>Lumin = 65536</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_OSXEditor"><code>OSXEditor = 1</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_OSXPlayer"><code>OSXPlayer = 2</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_OSXServer"><code>OSXServer = 268435456</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_PS4"><code>PS4 = 4096</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_PS5"><code>PS5 = 2097152</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_Stadia"><code>Stadia = 131072</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_Switch"><code>Switch = 32768</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_WSAPlayerARM"><code>WSAPlayerARM = 2048</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_WSAPlayerX64"><code>WSAPlayerX64 = 1024</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_WSAPlayerX86"><code>WSAPlayerX86 = 512</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_WebGLPlayer"><code>WebGLPlayer = 256</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_WindowsEditor"><code>WindowsEditor = 8</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_WindowsPlayer"><code>WindowsPlayer = 4</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_WindowsServer"><code>WindowsServer = 134217728</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_XboxOne"><code>XboxOne = 8192</code></dt>
+    <dd></dd>
+    <dt id="Switchboard_PlatformFlags_tvOS"><code>tvOS = 16384</code></dt>
+    <dd></dd>
   </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Switchboard_ClockSynchronizer__ctor_" data-uid="Switchboard.ClockSynchronizer.#ctor*"></a>
-
-  <h3 id="Switchboard_ClockSynchronizer__ctor_Switchboard_IUnityTicker_System_Single_" data-uid="Switchboard.ClockSynchronizer.#ctor(Switchboard.IUnityTicker,System.Single)">
-  ClockSynchronizer(IUnityTicker, float)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClockSynchronizer(IUnityTicker ticker, float frequency)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>ticker</code> <a class="xref" href="Switchboard.IUnityTicker.html">IUnityTicker</a></dt>
-    <dd><p>The ticker to observe.</p>
-</dd>
-    <dt><code>frequency</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number of seconds between synchronization.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="Switchboard_ClockSynchronizer_DefaultFrequency" data-uid="Switchboard.ClockSynchronizer.DefaultFrequency">
-  DefaultFrequency
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>The default number of seconds between synchronization.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const float DefaultFrequency = 2</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

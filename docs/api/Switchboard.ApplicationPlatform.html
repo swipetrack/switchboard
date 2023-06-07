@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class ClockSynchronizer
+      <title>Class ApplicationPlatform
  | Switchboard 1.0.0 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class ClockSynchronizer
+      <meta name="title" content="Class ApplicationPlatform
  | Switchboard 1.0.0 ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
@@ -74,12 +74,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Switchboard.ClockSynchronizer">
+        <article data-uid="Switchboard.ApplicationPlatform">
 
 
 
-  <h1 id="Switchboard_ClockSynchronizer" data-uid="Switchboard.ClockSynchronizer" class="text-break">
-    Class ClockSynchronizer
+  <h1 id="Switchboard_ApplicationPlatform" data-uid="Switchboard.ApplicationPlatform" class="text-break">
+    Class ApplicationPlatform
   
   </h1>
 
@@ -88,13 +88,12 @@
   <dl><dt>Assembly</dt><dd>SwitchboardUnity.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Adds a permanent observer to a <a class="xref" href="Switchboard.IUnityTicker.html">IUnityTicker</a>,
-which synchronizes the <a class="xref" href="Switchboard.PreciseClock.html">PreciseClock</a> with the system clock every certain number of seconds.</p>
+  <div class="markdown summary"><p>Provides helper methods for getting a <a class="xref" href="Switchboard.PlatformFlags.html">PlatformFlags</a> value for the current platform.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ClockSynchronizer</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ApplicationPlatform</code></pre>
   </div>
 
 
@@ -104,7 +103,7 @@ which synchronizes the <a class="xref" href="Switchboard.PreciseClock.html">Prec
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">ClockSynchronizer</span></div>
+      <div><span class="xref">ApplicationPlatform</span></div>
     </dd>
   </dl>
 
@@ -116,98 +115,69 @@ which synchronizes the <a class="xref" href="Switchboard.PreciseClock.html">Prec
 
 
 
-  <h2 class="section" id="constructors">Constructors
+  <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="Switchboard_ClockSynchronizer__ctor_" data-uid="Switchboard.ClockSynchronizer.#ctor*"></a>
+  <a id="Switchboard_ApplicationPlatform_Flag_" data-uid="Switchboard.ApplicationPlatform.Flag*"></a>
 
-  <h3 id="Switchboard_ClockSynchronizer__ctor_Switchboard_IUnityTicker_" data-uid="Switchboard.ClockSynchronizer.#ctor(Switchboard.IUnityTicker)">
-  ClockSynchronizer(IUnityTicker)
+  <h3 id="Switchboard_ApplicationPlatform_Flag" data-uid="Switchboard.ApplicationPlatform.Flag">
+  Flag
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Switchboard.PlatformFlags.html">PlatformFlags</a> value for the current platform.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClockSynchronizer(IUnityTicker ticker)</code></pre>
+    <pre><code class="lang-csharp hljs">public static PlatformFlags Flag { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Switchboard_ApplicationPlatform_GetFlag_" data-uid="Switchboard.ApplicationPlatform.GetFlag*"></a>
+
+  <h3 id="Switchboard_ApplicationPlatform_GetFlag_UnityEngine_RuntimePlatform_" data-uid="Switchboard.ApplicationPlatform.GetFlag(UnityEngine.RuntimePlatform)">
+  GetFlag(RuntimePlatform)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts the value of a UnityEngine.RuntimePlatform argument into a corresponding <a class="xref" href="Switchboard.PlatformFlags.html">PlatformFlags</a> value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlatformFlags GetFlag(this RuntimePlatform runtimePlatform)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>ticker</code> <a class="xref" href="Switchboard.IUnityTicker.html">IUnityTicker</a></dt>
-    <dd><p>The ticker to observe.</p>
+    <dt><code>runtimePlatform</code> <span class="xref">RuntimePlatform</span></dt>
+    <dd><p>The platform to convert into a flag.</p>
 </dd>
   </dl>
 
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Switchboard_ClockSynchronizer__ctor_" data-uid="Switchboard.ClockSynchronizer.#ctor*"></a>
-
-  <h3 id="Switchboard_ClockSynchronizer__ctor_Switchboard_IUnityTicker_System_Single_" data-uid="Switchboard.ClockSynchronizer.#ctor(Switchboard.IUnityTicker,System.Single)">
-  ClockSynchronizer(IUnityTicker, float)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Initializes a new instance of the class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ClockSynchronizer(IUnityTicker ticker, float frequency)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
+  <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><code>ticker</code> <a class="xref" href="Switchboard.IUnityTicker.html">IUnityTicker</a></dt>
-    <dd><p>The ticker to observe.</p>
-</dd>
-    <dt><code>frequency</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number of seconds between synchronization.</p>
+    <dt><a class="xref" href="Switchboard.PlatformFlags.html">PlatformFlags</a></dt>
+    <dd><p>Returns a <a class="xref" href="Switchboard.PlatformFlags.html">PlatformFlags</a> value that corresponds to the <code class="paramref">runtimePlatform</code>.</p>
 </dd>
   </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="Switchboard_ClockSynchronizer_DefaultFrequency" data-uid="Switchboard.ClockSynchronizer.DefaultFrequency">
-  DefaultFrequency
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>The default number of seconds between synchronization.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const float DefaultFrequency = 2</code></pre>
-  </div>
-
-
 
 
 

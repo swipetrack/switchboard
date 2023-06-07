@@ -91,6 +91,11 @@ Any scripts that are ordered to execute later than <a class="xref" href="Switchb
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.ApplicationPlatform.html">ApplicationPlatform</a></dt>
+      <dd><p>Provides helper methods for getting a <a class="xref" href="Switchboard.PlatformFlags.html">PlatformFlags</a> value for the current platform.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.ApplicationTicker.html">ApplicationTicker</a></dt>
       <dd><p>Provides a static, root instance for all types of ticker that lazy load as necessary,
 which manages its own life cycle in the player and editor.</p>
@@ -98,7 +103,7 @@ which manages its own life cycle in the player and editor.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.ClockSynchronizer.html">ClockSynchronizer</a></dt>
-      <dd><p>Adds a permanent observer to a <a class="xref" href="Switchboard.ILateTicker.html">ILateTicker</a>,
+      <dd><p>Adds a permanent observer to a <a class="xref" href="Switchboard.IUnityTicker.html">IUnityTicker</a>,
 which synchronizes the <a class="xref" href="Switchboard.PreciseClock.html">PreciseClock</a> with the system clock every certain number of seconds.</p>
 </dd>
     </dl>
@@ -148,6 +153,11 @@ Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectA
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.FixedTicker.html">FixedTicker</a></dt>
       <dd><p>Invokes an event once per fixed update.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.FlagsFieldAttribute.html">FlagsFieldAttribute</a></dt>
+      <dd><p>Indicates that a serialized <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.flagsattribute">FlagsAttribute</a> enum field should be displayed as such in the editor.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -312,7 +322,7 @@ when assigned to UnityEngine.Debug.unityLogger.logHandler.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.UnityLogger.html">UnityLogger</a></dt>
-      <dd><p>An implementation of <a class="xref" href="Switchboard.ILogger.html">ILogger</a> that targets the <a class="xref" href="Switchboard.UnityLogger.html">UnityLogger</a>.</p>
+      <dd><p>A singleton implementation of <a class="xref" href="Switchboard.ILogger.html">ILogger</a> that targets the <a class="xref" href="Switchboard.UnityLogHandler.html">UnityLogHandler</a>.</p>
 </dd>
     </dl>
     <h3 id="structs">Structs
@@ -330,12 +340,6 @@ when assigned to UnityEngine.Debug.unityLogger.logHandler.</p>
     <h3 id="interfaces">Interfaces
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="Switchboard.IFixedTicker.html">IFixedTicker</a></dt>
-      <dd><p>Provides an interface for adding observers to a fixed tick event,
-called each fixed update of the physics state, a variable number of times per frame.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.IInjectable.html">IInjectable</a></dt>
       <dd><p>Provides a generic interface for having a single dependency injected per type.</p>
 </dd>
@@ -343,12 +347,6 @@ called each fixed update of the physics state, a variable number of times per fr
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.IInjector.html">IInjector</a></dt>
       <dd><p>Provides a generic interface for injecting a single dependency per type.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Switchboard.ILateTicker.html">ILateTicker</a></dt>
-      <dd><p>Provides an interface for adding observers to a late tick event,
-called at the end of each update, once per frame.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -366,11 +364,23 @@ called at the end of each update, once per frame.</p>
       <dd><p>Provides an interface for adding observers to a tick event, called each update, once per frame.</p>
 </dd>
     </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.IUnityTicker.html">IUnityTicker</a></dt>
+      <dd><p>Provides an interface for adding observers to Update, LateUpdate, and FixedUpdate events.</p>
+</dd>
+    </dl>
     <h3 id="enums">Enums
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.LogLevel.html">LogLevel</a></dt>
       <dd><p>Defines the levels of significance that may be assigned to a log entry.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.PlatformFlags.html">PlatformFlags</a></dt>
+      <dd><p>Provides a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.flagsattribute">FlagsAttribute</a> enum comparable to UnityEngine.RuntimePlatform.
+Use the <a class="xref" href="Switchboard.ApplicationPlatform.html#Switchboard_ApplicationPlatform_GetFlag_UnityEngine_RuntimePlatform_">GetFlag(RuntimePlatform)</a> method to convert a RuntimePlatform value into a flag value,
+or compare the current platform like so: PlatformFlagsVariable.HasFlag(<a class="xref" href="Switchboard.ApplicationPlatform.html#Switchboard_ApplicationPlatform_Flag">Flag</a>)</p>
 </dd>
     </dl>
     <h3 id="delegates">Delegates

@@ -69,6 +69,38 @@ references:
   isSpec: "True"
   fullName: Switchboard.ApplicationEnd.Remove
   nameWithType: ApplicationEnd.Remove
+- uid: Switchboard.ApplicationPlatform
+  name: ApplicationPlatform
+  href: api/Switchboard.ApplicationPlatform.html
+  commentId: T:Switchboard.ApplicationPlatform
+  fullName: Switchboard.ApplicationPlatform
+  nameWithType: ApplicationPlatform
+- uid: Switchboard.ApplicationPlatform.Flag
+  name: Flag
+  href: api/Switchboard.ApplicationPlatform.html#Switchboard_ApplicationPlatform_Flag
+  commentId: P:Switchboard.ApplicationPlatform.Flag
+  fullName: Switchboard.ApplicationPlatform.Flag
+  nameWithType: ApplicationPlatform.Flag
+- uid: Switchboard.ApplicationPlatform.Flag*
+  name: Flag
+  href: api/Switchboard.ApplicationPlatform.html#Switchboard_ApplicationPlatform_Flag_
+  commentId: Overload:Switchboard.ApplicationPlatform.Flag
+  isSpec: "True"
+  fullName: Switchboard.ApplicationPlatform.Flag
+  nameWithType: ApplicationPlatform.Flag
+- uid: Switchboard.ApplicationPlatform.GetFlag(UnityEngine.RuntimePlatform)
+  name: GetFlag(RuntimePlatform)
+  href: api/Switchboard.ApplicationPlatform.html#Switchboard_ApplicationPlatform_GetFlag_UnityEngine_RuntimePlatform_
+  commentId: M:Switchboard.ApplicationPlatform.GetFlag(UnityEngine.RuntimePlatform)
+  fullName: Switchboard.ApplicationPlatform.GetFlag(UnityEngine.RuntimePlatform)
+  nameWithType: ApplicationPlatform.GetFlag(RuntimePlatform)
+- uid: Switchboard.ApplicationPlatform.GetFlag*
+  name: GetFlag
+  href: api/Switchboard.ApplicationPlatform.html#Switchboard_ApplicationPlatform_GetFlag_
+  commentId: Overload:Switchboard.ApplicationPlatform.GetFlag
+  isSpec: "True"
+  fullName: Switchboard.ApplicationPlatform.GetFlag
+  nameWithType: ApplicationPlatform.GetFlag
 - uid: Switchboard.ApplicationTicker
   name: ApplicationTicker
   href: api/Switchboard.ApplicationTicker.html
@@ -217,24 +249,24 @@ references:
   commentId: T:Switchboard.ClockSynchronizer
   fullName: Switchboard.ClockSynchronizer
   nameWithType: ClockSynchronizer
-- uid: Switchboard.ClockSynchronizer.#ctor(Switchboard.ILateTicker,System.Single)
-  name: ClockSynchronizer(ILateTicker, float)
-  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer__ctor_Switchboard_ILateTicker_System_Single_
-  commentId: M:Switchboard.ClockSynchronizer.#ctor(Switchboard.ILateTicker,System.Single)
-  name.vb: New(ILateTicker, Single)
-  fullName: Switchboard.ClockSynchronizer.ClockSynchronizer(Switchboard.ILateTicker, float)
-  fullName.vb: Switchboard.ClockSynchronizer.New(Switchboard.ILateTicker, Single)
-  nameWithType: ClockSynchronizer.ClockSynchronizer(ILateTicker, float)
-  nameWithType.vb: ClockSynchronizer.New(ILateTicker, Single)
-- uid: Switchboard.ClockSynchronizer.#ctor(Switchboard.ILateTicker)
-  name: ClockSynchronizer(ILateTicker)
-  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer__ctor_Switchboard_ILateTicker_
-  commentId: M:Switchboard.ClockSynchronizer.#ctor(Switchboard.ILateTicker)
-  name.vb: New(ILateTicker)
-  fullName: Switchboard.ClockSynchronizer.ClockSynchronizer(Switchboard.ILateTicker)
-  fullName.vb: Switchboard.ClockSynchronizer.New(Switchboard.ILateTicker)
-  nameWithType: ClockSynchronizer.ClockSynchronizer(ILateTicker)
-  nameWithType.vb: ClockSynchronizer.New(ILateTicker)
+- uid: Switchboard.ClockSynchronizer.#ctor(Switchboard.IUnityTicker,System.Single)
+  name: ClockSynchronizer(IUnityTicker, float)
+  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer__ctor_Switchboard_IUnityTicker_System_Single_
+  commentId: M:Switchboard.ClockSynchronizer.#ctor(Switchboard.IUnityTicker,System.Single)
+  name.vb: New(IUnityTicker, Single)
+  fullName: Switchboard.ClockSynchronizer.ClockSynchronizer(Switchboard.IUnityTicker, float)
+  fullName.vb: Switchboard.ClockSynchronizer.New(Switchboard.IUnityTicker, Single)
+  nameWithType: ClockSynchronizer.ClockSynchronizer(IUnityTicker, float)
+  nameWithType.vb: ClockSynchronizer.New(IUnityTicker, Single)
+- uid: Switchboard.ClockSynchronizer.#ctor(Switchboard.IUnityTicker)
+  name: ClockSynchronizer(IUnityTicker)
+  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer__ctor_Switchboard_IUnityTicker_
+  commentId: M:Switchboard.ClockSynchronizer.#ctor(Switchboard.IUnityTicker)
+  name.vb: New(IUnityTicker)
+  fullName: Switchboard.ClockSynchronizer.ClockSynchronizer(Switchboard.IUnityTicker)
+  fullName.vb: Switchboard.ClockSynchronizer.New(Switchboard.IUnityTicker)
+  nameWithType: ClockSynchronizer.ClockSynchronizer(IUnityTicker)
+  nameWithType.vb: ClockSynchronizer.New(IUnityTicker)
 - uid: Switchboard.ClockSynchronizer.#ctor*
   name: ClockSynchronizer
   href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer__ctor_
@@ -619,47 +651,53 @@ references:
   commentId: T:Switchboard.FixedTicker
   fullName: Switchboard.FixedTicker
   nameWithType: FixedTicker
-- uid: Switchboard.FixedTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name: StartFixedTick(InputAction<FrameOfTime>, int)
-  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StartFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
-  commentId: M:Switchboard.FixedTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name.vb: StartFixedTick(InputAction(Of FrameOfTime), Integer)
-  fullName: Switchboard.FixedTicker.StartFixedTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
-  fullName.vb: Switchboard.FixedTicker.StartFixedTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
-  nameWithType: FixedTicker.StartFixedTick(InputAction<FrameOfTime>, int)
-  nameWithType.vb: FixedTicker.StartFixedTick(InputAction(Of FrameOfTime), Integer)
-- uid: Switchboard.FixedTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StartFixedTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StartFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.FixedTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StartFixedTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.FixedTicker.StartFixedTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.FixedTicker.StartFixedTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: FixedTicker.StartFixedTick(InputAction<FrameOfTime>)
-  nameWithType.vb: FixedTicker.StartFixedTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.FixedTicker.StartFixedTick*
-  name: StartFixedTick
-  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StartFixedTick_
-  commentId: Overload:Switchboard.FixedTicker.StartFixedTick
+- uid: Switchboard.FixedTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
+  name: StartTick(InputAction<FrameOfTime>, int)
+  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
+  commentId: M:Switchboard.FixedTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
+  name.vb: StartTick(InputAction(Of FrameOfTime), Integer)
+  fullName: Switchboard.FixedTicker.StartTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
+  fullName.vb: Switchboard.FixedTicker.StartTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
+  nameWithType: FixedTicker.StartTick(InputAction<FrameOfTime>, int)
+  nameWithType.vb: FixedTicker.StartTick(InputAction(Of FrameOfTime), Integer)
+- uid: Switchboard.FixedTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name: StartTick(InputAction<FrameOfTime>)
+  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__
+  commentId: M:Switchboard.FixedTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name.vb: StartTick(InputAction(Of FrameOfTime))
+  fullName: Switchboard.FixedTicker.StartTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
+  fullName.vb: Switchboard.FixedTicker.StartTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
+  nameWithType: FixedTicker.StartTick(InputAction<FrameOfTime>)
+  nameWithType.vb: FixedTicker.StartTick(InputAction(Of FrameOfTime))
+- uid: Switchboard.FixedTicker.StartTick*
+  name: StartTick
+  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StartTick_
+  commentId: Overload:Switchboard.FixedTicker.StartTick
   isSpec: "True"
-  fullName: Switchboard.FixedTicker.StartFixedTick
-  nameWithType: FixedTicker.StartFixedTick
-- uid: Switchboard.FixedTicker.StopFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StopFixedTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StopFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.FixedTicker.StopFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StopFixedTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.FixedTicker.StopFixedTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.FixedTicker.StopFixedTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: FixedTicker.StopFixedTick(InputAction<FrameOfTime>)
-  nameWithType.vb: FixedTicker.StopFixedTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.FixedTicker.StopFixedTick*
-  name: StopFixedTick
-  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StopFixedTick_
-  commentId: Overload:Switchboard.FixedTicker.StopFixedTick
+  fullName: Switchboard.FixedTicker.StartTick
+  nameWithType: FixedTicker.StartTick
+- uid: Switchboard.FixedTicker.StopTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name: StopTick(InputAction<FrameOfTime>)
+  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StopTick_Switchboard_InputAction_Switchboard_FrameOfTime__
+  commentId: M:Switchboard.FixedTicker.StopTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name.vb: StopTick(InputAction(Of FrameOfTime))
+  fullName: Switchboard.FixedTicker.StopTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
+  fullName.vb: Switchboard.FixedTicker.StopTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
+  nameWithType: FixedTicker.StopTick(InputAction<FrameOfTime>)
+  nameWithType.vb: FixedTicker.StopTick(InputAction(Of FrameOfTime))
+- uid: Switchboard.FixedTicker.StopTick*
+  name: StopTick
+  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StopTick_
+  commentId: Overload:Switchboard.FixedTicker.StopTick
   isSpec: "True"
-  fullName: Switchboard.FixedTicker.StopFixedTick
-  nameWithType: FixedTicker.StopFixedTick
+  fullName: Switchboard.FixedTicker.StopTick
+  nameWithType: FixedTicker.StopTick
+- uid: Switchboard.FlagsFieldAttribute
+  name: FlagsFieldAttribute
+  href: api/Switchboard.FlagsFieldAttribute.html
+  commentId: T:Switchboard.FlagsFieldAttribute
+  fullName: Switchboard.FlagsFieldAttribute
+  nameWithType: FlagsFieldAttribute
 - uid: Switchboard.FloatFormatInfo
   name: FloatFormatInfo
   href: api/Switchboard.FloatFormatInfo.html
@@ -3111,53 +3149,141 @@ references:
   isSpec: "True"
   fullName: Switchboard.ITicker.StopTick
   nameWithType: ITicker.StopTick
+- uid: Switchboard.IUnityTicker
+  name: IUnityTicker
+  href: api/Switchboard.IUnityTicker.html
+  commentId: T:Switchboard.IUnityTicker
+  fullName: Switchboard.IUnityTicker
+  nameWithType: IUnityTicker
+- uid: Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
+  name: StartFixedTick(InputAction<FrameOfTime>, int)
+  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StartFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
+  commentId: M:Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
+  name.vb: StartFixedTick(InputAction(Of FrameOfTime), Integer)
+  fullName: Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
+  fullName.vb: Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
+  nameWithType: IUnityTicker.StartFixedTick(InputAction<FrameOfTime>, int)
+  nameWithType.vb: IUnityTicker.StartFixedTick(InputAction(Of FrameOfTime), Integer)
+- uid: Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name: StartFixedTick(InputAction<FrameOfTime>)
+  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StartFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__
+  commentId: M:Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name.vb: StartFixedTick(InputAction(Of FrameOfTime))
+  fullName: Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
+  fullName.vb: Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
+  nameWithType: IUnityTicker.StartFixedTick(InputAction<FrameOfTime>)
+  nameWithType.vb: IUnityTicker.StartFixedTick(InputAction(Of FrameOfTime))
+- uid: Switchboard.IUnityTicker.StartFixedTick*
+  name: StartFixedTick
+  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StartFixedTick_
+  commentId: Overload:Switchboard.IUnityTicker.StartFixedTick
+  isSpec: "True"
+  fullName: Switchboard.IUnityTicker.StartFixedTick
+  nameWithType: IUnityTicker.StartFixedTick
+- uid: Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
+  name: StartLateTick(InputAction<FrameOfTime>, int)
+  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StartLateTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
+  commentId: M:Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
+  name.vb: StartLateTick(InputAction(Of FrameOfTime), Integer)
+  fullName: Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
+  fullName.vb: Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
+  nameWithType: IUnityTicker.StartLateTick(InputAction<FrameOfTime>, int)
+  nameWithType.vb: IUnityTicker.StartLateTick(InputAction(Of FrameOfTime), Integer)
+- uid: Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name: StartLateTick(InputAction<FrameOfTime>)
+  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StartLateTick_Switchboard_InputAction_Switchboard_FrameOfTime__
+  commentId: M:Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name.vb: StartLateTick(InputAction(Of FrameOfTime))
+  fullName: Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
+  fullName.vb: Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
+  nameWithType: IUnityTicker.StartLateTick(InputAction<FrameOfTime>)
+  nameWithType.vb: IUnityTicker.StartLateTick(InputAction(Of FrameOfTime))
+- uid: Switchboard.IUnityTicker.StartLateTick*
+  name: StartLateTick
+  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StartLateTick_
+  commentId: Overload:Switchboard.IUnityTicker.StartLateTick
+  isSpec: "True"
+  fullName: Switchboard.IUnityTicker.StartLateTick
+  nameWithType: IUnityTicker.StartLateTick
+- uid: Switchboard.IUnityTicker.StopFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name: StopFixedTick(InputAction<FrameOfTime>)
+  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StopFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__
+  commentId: M:Switchboard.IUnityTicker.StopFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name.vb: StopFixedTick(InputAction(Of FrameOfTime))
+  fullName: Switchboard.IUnityTicker.StopFixedTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
+  fullName.vb: Switchboard.IUnityTicker.StopFixedTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
+  nameWithType: IUnityTicker.StopFixedTick(InputAction<FrameOfTime>)
+  nameWithType.vb: IUnityTicker.StopFixedTick(InputAction(Of FrameOfTime))
+- uid: Switchboard.IUnityTicker.StopFixedTick*
+  name: StopFixedTick
+  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StopFixedTick_
+  commentId: Overload:Switchboard.IUnityTicker.StopFixedTick
+  isSpec: "True"
+  fullName: Switchboard.IUnityTicker.StopFixedTick
+  nameWithType: IUnityTicker.StopFixedTick
+- uid: Switchboard.IUnityTicker.StopLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name: StopLateTick(InputAction<FrameOfTime>)
+  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StopLateTick_Switchboard_InputAction_Switchboard_FrameOfTime__
+  commentId: M:Switchboard.IUnityTicker.StopLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name.vb: StopLateTick(InputAction(Of FrameOfTime))
+  fullName: Switchboard.IUnityTicker.StopLateTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
+  fullName.vb: Switchboard.IUnityTicker.StopLateTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
+  nameWithType: IUnityTicker.StopLateTick(InputAction<FrameOfTime>)
+  nameWithType.vb: IUnityTicker.StopLateTick(InputAction(Of FrameOfTime))
+- uid: Switchboard.IUnityTicker.StopLateTick*
+  name: StopLateTick
+  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StopLateTick_
+  commentId: Overload:Switchboard.IUnityTicker.StopLateTick
+  isSpec: "True"
+  fullName: Switchboard.IUnityTicker.StopLateTick
+  nameWithType: IUnityTicker.StopLateTick
 - uid: Switchboard.LateTicker
   name: LateTicker
   href: api/Switchboard.LateTicker.html
   commentId: T:Switchboard.LateTicker
   fullName: Switchboard.LateTicker
   nameWithType: LateTicker
-- uid: Switchboard.LateTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name: StartLateTick(InputAction<FrameOfTime>, int)
-  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StartLateTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
-  commentId: M:Switchboard.LateTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name.vb: StartLateTick(InputAction(Of FrameOfTime), Integer)
-  fullName: Switchboard.LateTicker.StartLateTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
-  fullName.vb: Switchboard.LateTicker.StartLateTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
-  nameWithType: LateTicker.StartLateTick(InputAction<FrameOfTime>, int)
-  nameWithType.vb: LateTicker.StartLateTick(InputAction(Of FrameOfTime), Integer)
-- uid: Switchboard.LateTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StartLateTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StartLateTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.LateTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StartLateTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.LateTicker.StartLateTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.LateTicker.StartLateTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: LateTicker.StartLateTick(InputAction<FrameOfTime>)
-  nameWithType.vb: LateTicker.StartLateTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.LateTicker.StartLateTick*
-  name: StartLateTick
-  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StartLateTick_
-  commentId: Overload:Switchboard.LateTicker.StartLateTick
+- uid: Switchboard.LateTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
+  name: StartTick(InputAction<FrameOfTime>, int)
+  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
+  commentId: M:Switchboard.LateTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
+  name.vb: StartTick(InputAction(Of FrameOfTime), Integer)
+  fullName: Switchboard.LateTicker.StartTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
+  fullName.vb: Switchboard.LateTicker.StartTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
+  nameWithType: LateTicker.StartTick(InputAction<FrameOfTime>, int)
+  nameWithType.vb: LateTicker.StartTick(InputAction(Of FrameOfTime), Integer)
+- uid: Switchboard.LateTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name: StartTick(InputAction<FrameOfTime>)
+  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__
+  commentId: M:Switchboard.LateTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name.vb: StartTick(InputAction(Of FrameOfTime))
+  fullName: Switchboard.LateTicker.StartTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
+  fullName.vb: Switchboard.LateTicker.StartTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
+  nameWithType: LateTicker.StartTick(InputAction<FrameOfTime>)
+  nameWithType.vb: LateTicker.StartTick(InputAction(Of FrameOfTime))
+- uid: Switchboard.LateTicker.StartTick*
+  name: StartTick
+  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StartTick_
+  commentId: Overload:Switchboard.LateTicker.StartTick
   isSpec: "True"
-  fullName: Switchboard.LateTicker.StartLateTick
-  nameWithType: LateTicker.StartLateTick
-- uid: Switchboard.LateTicker.StopLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StopLateTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StopLateTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.LateTicker.StopLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StopLateTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.LateTicker.StopLateTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.LateTicker.StopLateTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: LateTicker.StopLateTick(InputAction<FrameOfTime>)
-  nameWithType.vb: LateTicker.StopLateTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.LateTicker.StopLateTick*
-  name: StopLateTick
-  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StopLateTick_
-  commentId: Overload:Switchboard.LateTicker.StopLateTick
+  fullName: Switchboard.LateTicker.StartTick
+  nameWithType: LateTicker.StartTick
+- uid: Switchboard.LateTicker.StopTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name: StopTick(InputAction<FrameOfTime>)
+  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StopTick_Switchboard_InputAction_Switchboard_FrameOfTime__
+  commentId: M:Switchboard.LateTicker.StopTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  name.vb: StopTick(InputAction(Of FrameOfTime))
+  fullName: Switchboard.LateTicker.StopTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
+  fullName.vb: Switchboard.LateTicker.StopTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
+  nameWithType: LateTicker.StopTick(InputAction<FrameOfTime>)
+  nameWithType.vb: LateTicker.StopTick(InputAction(Of FrameOfTime))
+- uid: Switchboard.LateTicker.StopTick*
+  name: StopTick
+  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StopTick_
+  commentId: Overload:Switchboard.LateTicker.StopTick
   isSpec: "True"
-  fullName: Switchboard.LateTicker.StopLateTick
-  nameWithType: LateTicker.StopLateTick
+  fullName: Switchboard.LateTicker.StopTick
+  nameWithType: LateTicker.StopTick
 - uid: Switchboard.LogFileManager
   name: LogFileManager
   href: api/Switchboard.LogFileManager.html
@@ -4484,6 +4610,186 @@ references:
   isSpec: "True"
   fullName: Switchboard.PathUtility.ValidatePathCharactersForWindows
   nameWithType: PathUtility.ValidatePathCharactersForWindows
+- uid: Switchboard.PlatformFlags
+  name: PlatformFlags
+  href: api/Switchboard.PlatformFlags.html
+  commentId: T:Switchboard.PlatformFlags
+  fullName: Switchboard.PlatformFlags
+  nameWithType: PlatformFlags
+- uid: Switchboard.PlatformFlags.Android
+  name: Android
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_Android
+  commentId: F:Switchboard.PlatformFlags.Android
+  fullName: Switchboard.PlatformFlags.Android
+  nameWithType: PlatformFlags.Android
+- uid: Switchboard.PlatformFlags.CloudRendering
+  name: CloudRendering
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_CloudRendering
+  commentId: F:Switchboard.PlatformFlags.CloudRendering
+  fullName: Switchboard.PlatformFlags.CloudRendering
+  nameWithType: PlatformFlags.CloudRendering
+- uid: Switchboard.PlatformFlags.EmbeddedLinuxArm32
+  name: EmbeddedLinuxArm32
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_EmbeddedLinuxArm32
+  commentId: F:Switchboard.PlatformFlags.EmbeddedLinuxArm32
+  fullName: Switchboard.PlatformFlags.EmbeddedLinuxArm32
+  nameWithType: PlatformFlags.EmbeddedLinuxArm32
+- uid: Switchboard.PlatformFlags.EmbeddedLinuxArm64
+  name: EmbeddedLinuxArm64
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_EmbeddedLinuxArm64
+  commentId: F:Switchboard.PlatformFlags.EmbeddedLinuxArm64
+  fullName: Switchboard.PlatformFlags.EmbeddedLinuxArm64
+  nameWithType: PlatformFlags.EmbeddedLinuxArm64
+- uid: Switchboard.PlatformFlags.EmbeddedLinuxX64
+  name: EmbeddedLinuxX64
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_EmbeddedLinuxX64
+  commentId: F:Switchboard.PlatformFlags.EmbeddedLinuxX64
+  fullName: Switchboard.PlatformFlags.EmbeddedLinuxX64
+  nameWithType: PlatformFlags.EmbeddedLinuxX64
+- uid: Switchboard.PlatformFlags.EmbeddedLinuxX86
+  name: EmbeddedLinuxX86
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_EmbeddedLinuxX86
+  commentId: F:Switchboard.PlatformFlags.EmbeddedLinuxX86
+  fullName: Switchboard.PlatformFlags.EmbeddedLinuxX86
+  nameWithType: PlatformFlags.EmbeddedLinuxX86
+- uid: Switchboard.PlatformFlags.GameCoreXboxOne
+  name: GameCoreXboxOne
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_GameCoreXboxOne
+  commentId: F:Switchboard.PlatformFlags.GameCoreXboxOne
+  fullName: Switchboard.PlatformFlags.GameCoreXboxOne
+  nameWithType: PlatformFlags.GameCoreXboxOne
+- uid: Switchboard.PlatformFlags.GameCoreXboxSeries
+  name: GameCoreXboxSeries
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_GameCoreXboxSeries
+  commentId: F:Switchboard.PlatformFlags.GameCoreXboxSeries
+  fullName: Switchboard.PlatformFlags.GameCoreXboxSeries
+  nameWithType: PlatformFlags.GameCoreXboxSeries
+- uid: Switchboard.PlatformFlags.IPhonePlayer
+  name: IPhonePlayer
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_IPhonePlayer
+  commentId: F:Switchboard.PlatformFlags.IPhonePlayer
+  fullName: Switchboard.PlatformFlags.IPhonePlayer
+  nameWithType: PlatformFlags.IPhonePlayer
+- uid: Switchboard.PlatformFlags.LinuxEditor
+  name: LinuxEditor
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_LinuxEditor
+  commentId: F:Switchboard.PlatformFlags.LinuxEditor
+  fullName: Switchboard.PlatformFlags.LinuxEditor
+  nameWithType: PlatformFlags.LinuxEditor
+- uid: Switchboard.PlatformFlags.LinuxPlayer
+  name: LinuxPlayer
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_LinuxPlayer
+  commentId: F:Switchboard.PlatformFlags.LinuxPlayer
+  fullName: Switchboard.PlatformFlags.LinuxPlayer
+  nameWithType: PlatformFlags.LinuxPlayer
+- uid: Switchboard.PlatformFlags.LinuxServer
+  name: LinuxServer
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_LinuxServer
+  commentId: F:Switchboard.PlatformFlags.LinuxServer
+  fullName: Switchboard.PlatformFlags.LinuxServer
+  nameWithType: PlatformFlags.LinuxServer
+- uid: Switchboard.PlatformFlags.Lumin
+  name: Lumin
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_Lumin
+  commentId: F:Switchboard.PlatformFlags.Lumin
+  fullName: Switchboard.PlatformFlags.Lumin
+  nameWithType: PlatformFlags.Lumin
+- uid: Switchboard.PlatformFlags.OSXEditor
+  name: OSXEditor
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_OSXEditor
+  commentId: F:Switchboard.PlatformFlags.OSXEditor
+  fullName: Switchboard.PlatformFlags.OSXEditor
+  nameWithType: PlatformFlags.OSXEditor
+- uid: Switchboard.PlatformFlags.OSXPlayer
+  name: OSXPlayer
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_OSXPlayer
+  commentId: F:Switchboard.PlatformFlags.OSXPlayer
+  fullName: Switchboard.PlatformFlags.OSXPlayer
+  nameWithType: PlatformFlags.OSXPlayer
+- uid: Switchboard.PlatformFlags.OSXServer
+  name: OSXServer
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_OSXServer
+  commentId: F:Switchboard.PlatformFlags.OSXServer
+  fullName: Switchboard.PlatformFlags.OSXServer
+  nameWithType: PlatformFlags.OSXServer
+- uid: Switchboard.PlatformFlags.PS4
+  name: PS4
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_PS4
+  commentId: F:Switchboard.PlatformFlags.PS4
+  fullName: Switchboard.PlatformFlags.PS4
+  nameWithType: PlatformFlags.PS4
+- uid: Switchboard.PlatformFlags.PS5
+  name: PS5
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_PS5
+  commentId: F:Switchboard.PlatformFlags.PS5
+  fullName: Switchboard.PlatformFlags.PS5
+  nameWithType: PlatformFlags.PS5
+- uid: Switchboard.PlatformFlags.Stadia
+  name: Stadia
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_Stadia
+  commentId: F:Switchboard.PlatformFlags.Stadia
+  fullName: Switchboard.PlatformFlags.Stadia
+  nameWithType: PlatformFlags.Stadia
+- uid: Switchboard.PlatformFlags.Switch
+  name: Switch
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_Switch
+  commentId: F:Switchboard.PlatformFlags.Switch
+  fullName: Switchboard.PlatformFlags.Switch
+  nameWithType: PlatformFlags.Switch
+- uid: Switchboard.PlatformFlags.tvOS
+  name: tvOS
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_tvOS
+  commentId: F:Switchboard.PlatformFlags.tvOS
+  fullName: Switchboard.PlatformFlags.tvOS
+  nameWithType: PlatformFlags.tvOS
+- uid: Switchboard.PlatformFlags.WebGLPlayer
+  name: WebGLPlayer
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_WebGLPlayer
+  commentId: F:Switchboard.PlatformFlags.WebGLPlayer
+  fullName: Switchboard.PlatformFlags.WebGLPlayer
+  nameWithType: PlatformFlags.WebGLPlayer
+- uid: Switchboard.PlatformFlags.WindowsEditor
+  name: WindowsEditor
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_WindowsEditor
+  commentId: F:Switchboard.PlatformFlags.WindowsEditor
+  fullName: Switchboard.PlatformFlags.WindowsEditor
+  nameWithType: PlatformFlags.WindowsEditor
+- uid: Switchboard.PlatformFlags.WindowsPlayer
+  name: WindowsPlayer
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_WindowsPlayer
+  commentId: F:Switchboard.PlatformFlags.WindowsPlayer
+  fullName: Switchboard.PlatformFlags.WindowsPlayer
+  nameWithType: PlatformFlags.WindowsPlayer
+- uid: Switchboard.PlatformFlags.WindowsServer
+  name: WindowsServer
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_WindowsServer
+  commentId: F:Switchboard.PlatformFlags.WindowsServer
+  fullName: Switchboard.PlatformFlags.WindowsServer
+  nameWithType: PlatformFlags.WindowsServer
+- uid: Switchboard.PlatformFlags.WSAPlayerARM
+  name: WSAPlayerARM
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_WSAPlayerARM
+  commentId: F:Switchboard.PlatformFlags.WSAPlayerARM
+  fullName: Switchboard.PlatformFlags.WSAPlayerARM
+  nameWithType: PlatformFlags.WSAPlayerARM
+- uid: Switchboard.PlatformFlags.WSAPlayerX64
+  name: WSAPlayerX64
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_WSAPlayerX64
+  commentId: F:Switchboard.PlatformFlags.WSAPlayerX64
+  fullName: Switchboard.PlatformFlags.WSAPlayerX64
+  nameWithType: PlatformFlags.WSAPlayerX64
+- uid: Switchboard.PlatformFlags.WSAPlayerX86
+  name: WSAPlayerX86
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_WSAPlayerX86
+  commentId: F:Switchboard.PlatformFlags.WSAPlayerX86
+  fullName: Switchboard.PlatformFlags.WSAPlayerX86
+  nameWithType: PlatformFlags.WSAPlayerX86
+- uid: Switchboard.PlatformFlags.XboxOne
+  name: XboxOne
+  href: api/Switchboard.PlatformFlags.html#Switchboard_PlatformFlags_XboxOne
+  commentId: F:Switchboard.PlatformFlags.XboxOne
+  fullName: Switchboard.PlatformFlags.XboxOne
+  nameWithType: PlatformFlags.XboxOne
 - uid: Switchboard.PlatformStats
   name: PlatformStats
   href: api/Switchboard.PlatformStats.html
@@ -4750,6 +5056,12 @@ references:
   isSpec: "True"
   fullName: Switchboard.StandardDependencyInjector.LogFileManager
   nameWithType: StandardDependencyInjector.LogFileManager
+- uid: Switchboard.StandardDependencyInjector.LogFilePlatforms
+  name: LogFilePlatforms
+  href: api/Switchboard.StandardDependencyInjector.html#Switchboard_StandardDependencyInjector_LogFilePlatforms
+  commentId: F:Switchboard.StandardDependencyInjector.LogFilePlatforms
+  fullName: Switchboard.StandardDependencyInjector.LogFilePlatforms
+  nameWithType: StandardDependencyInjector.LogFilePlatforms
 - uid: Switchboard.StandardLogFormatter
   name: StandardLogFormatter
   href: api/Switchboard.StandardLogFormatter.html
@@ -6631,19 +6943,6 @@ references:
   isSpec: "True"
   fullName: Switchboard.UnityLogger.DisplayCallerInfo
   nameWithType: UnityLogger.DisplayCallerInfo
-- uid: Switchboard.UnityLogger.Instance
-  name: Instance
-  href: api/Switchboard.UnityLogger.html#Switchboard_UnityLogger_Instance
-  commentId: P:Switchboard.UnityLogger.Instance
-  fullName: Switchboard.UnityLogger.Instance
-  nameWithType: UnityLogger.Instance
-- uid: Switchboard.UnityLogger.Instance*
-  name: Instance
-  href: api/Switchboard.UnityLogger.html#Switchboard_UnityLogger_Instance_
-  commentId: Overload:Switchboard.UnityLogger.Instance
-  isSpec: "True"
-  fullName: Switchboard.UnityLogger.Instance
-  nameWithType: UnityLogger.Instance
 - uid: Switchboard.UnityLogger.Log(Switchboard.LogLevel,System.Exception,System.ReadOnlySpan{System.Char})
   name: Log(LogLevel, Exception, ReadOnlySpan<char>)
   href: api/Switchboard.UnityLogger.html#Switchboard_UnityLogger_Log_Switchboard_LogLevel_System_Exception_System_ReadOnlySpan_System_Char__
@@ -6682,6 +6981,19 @@ references:
   isSpec: "True"
   fullName: Switchboard.UnityLogger.LogLevel
   nameWithType: UnityLogger.LogLevel
+- uid: Switchboard.UnityLogger.StaticInstance
+  name: StaticInstance
+  href: api/Switchboard.UnityLogger.html#Switchboard_UnityLogger_StaticInstance
+  commentId: P:Switchboard.UnityLogger.StaticInstance
+  fullName: Switchboard.UnityLogger.StaticInstance
+  nameWithType: UnityLogger.StaticInstance
+- uid: Switchboard.UnityLogger.StaticInstance*
+  name: StaticInstance
+  href: api/Switchboard.UnityLogger.html#Switchboard_UnityLogger_StaticInstance_
+  commentId: Overload:Switchboard.UnityLogger.StaticInstance
+  isSpec: "True"
+  fullName: Switchboard.UnityLogger.StaticInstance
+  nameWithType: UnityLogger.StaticInstance
 - uid: Switchboard.UnityLogHandler
   name: UnityLogHandler
   href: api/Switchboard.UnityLogHandler.html

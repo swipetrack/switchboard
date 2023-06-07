@@ -27,6 +27,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Switchboard.ApplicationPlatform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Switchboard.ApplicationPlatform.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Switchboard.ApplicationTicker.yml",
       "output": {
         ".html": {
@@ -141,6 +151,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Switchboard.FixedTicker.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Switchboard.FlagsFieldAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Switchboard.FlagsFieldAttribute.html"
         }
       },
       "version": ""
@@ -277,6 +297,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Switchboard.IUnityTicker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Switchboard.IUnityTicker.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Switchboard.InjectorLocator.yml",
       "output": {
         ".html": {
@@ -391,6 +421,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Switchboard.PathUtility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Switchboard.PlatformFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Switchboard.PlatformFlags.html"
         }
       },
       "version": ""

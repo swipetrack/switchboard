@@ -94,7 +94,7 @@ which manages its own life cycle in the player and editor.</p>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ApplicationTicker : ITicker, ILateTicker, IFixedTicker</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ApplicationTicker : IUnityTicker, ITicker</code></pre>
   </div>
 
 
@@ -111,9 +111,8 @@ which manages its own life cycle in the player and editor.</p>
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="Switchboard.IUnityTicker.html">IUnityTicker</a></div>
       <div><a class="xref" href="Switchboard.ITicker.html">ITicker</a></div>
-      <div><a class="xref" href="Switchboard.ILateTicker.html">ILateTicker</a></div>
-      <div><a class="xref" href="Switchboard.IFixedTicker.html">IFixedTicker</a></div>
     </dd>
   </dl>
 
