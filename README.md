@@ -31,7 +31,7 @@ ________________
 
 ## Installation
 
-The files contained in this repository only represent the interface, examples, and documentation pages. The full Switchboard package can be downloaded from the Unity Asset Store at https://assetstore.unity.com/packages/slug/250879. (This link is not active yet, as I am waiting for Asset Store approval from Unity. I am #1982 in queue as aof 6-13-2023. It should be available some time before July 2023, hopefully very soon!) Even if you only intend to use the core library for a non-Unity application, the package is licensed for purchase through the Unity Asset Store. Once downloaded, the SwitchboardCore.dll can be migrated to any C# application that targets .NET Standard 2.1 or above.
+The files contained in this repository only represent the interface, examples, and documentation pages. The full Switchboard package can be downloaded from the Unity Asset Store at https://assetstore.unity.com/packages/slug/250879. (This link is not active yet, as I am waiting for Asset Store approval from Unity. I am # 1905 in queue as of 6-14-2023. Based on the current pace through the queue I predict that Switchboard may be available some time around July 17th 2023.) Even if you only intend to use the core library for a non-Unity application, the package is licensed for purchase through the Unity Asset Store. Once downloaded, the SwitchboardCore.dll can be migrated to any C# application that targets .NET Standard 2.1 or above.
 
 ## Documentation
 
