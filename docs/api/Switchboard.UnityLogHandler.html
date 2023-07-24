@@ -85,7 +85,7 @@
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>SwitchboardUnity.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>Switchboard.UnityLogger.dll</dd></dl>
   </div>
 
   <div class="markdown summary"><p>Provides a reference to the default Unity log handler.</p>
@@ -162,7 +162,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    <pre><code class="lang-csharp hljs">[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
 public static void Initialize()</code></pre>
   </div>
 

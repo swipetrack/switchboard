@@ -85,7 +85,7 @@
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>Switchboard.FileUtilities.dll</dd></dl>
   </div>
 
   <div class="markdown summary"><p>Provides methods for removing excess files from a directory.</p>
@@ -166,7 +166,7 @@ that file and all remaining files will be removed from the <code class="paramref
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">fileNameSuffix</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">fileNameSuffix</code> are null.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
     <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">fileNameSuffix</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
@@ -228,7 +228,7 @@ that file and all remaining files will be removed from the <code class="paramref
     <dd><p>The end of the file name pattern. For example, the file name extension, which may be empty.</p>
 </dd>
     <dt><code>leaveOneFile</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the first sorted file will not be removed, even if it exceeds the <code class="paramref">byteLimit</code>.</p>
+    <dd><p>If true, the first sorted file will not be removed, even if it exceeds the <code class="paramref">byteLimit</code>.</p>
 </dd>
   </dl>
 
@@ -243,7 +243,7 @@ that file and all remaining files will be removed from the <code class="paramref
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">fileNameSuffix</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">fileNameSuffix</code> are null.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
     <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">fileNameSuffix</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
@@ -306,7 +306,7 @@ that file and all remaining files will be removed from the <code class="paramref
     <dd><p>The end of the file name pattern. For example, the file name extension, which may be empty.</p>
 </dd>
     <dt><code>leaveOneFile</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, the first sorted file will not be removed, even if it exceeds the <code class="paramref">byteLimit</code>.</p>
+    <dd><p>If true, the first sorted file will not be removed, even if it exceeds the <code class="paramref">byteLimit</code>.</p>
 </dd>
     <dt><code>sortComparison</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.comparison-1">Comparison</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filesysteminfo">FileSystemInfo</a>&gt;</dt>
     <dd><p>The comparison method to use for sorting files, before accumulating their file size.</p>
@@ -324,7 +324,7 @@ that file and all remaining files will be removed from the <code class="paramref
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, <code class="paramref">fileNameSuffix</code>, or <code class="paramref">sortComparison</code>&gt; are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, <code class="paramref">fileNameSuffix</code>, or <code class="paramref">sortComparison</code>&gt; are null.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
     <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">fileNameSuffix</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.

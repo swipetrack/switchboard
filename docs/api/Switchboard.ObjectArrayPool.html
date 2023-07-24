@@ -85,7 +85,7 @@
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>Switchboard.Collections.dll</dd></dl>
   </div>
 
   <div class="markdown summary"><p>Stores object arrays of a specific length in a thread safe pool.</p>
@@ -346,7 +346,7 @@ The value can be set with the <a class="xref" href="Switchboard.ObjectArrayPool.
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the object array was added to the pool, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+    <dd><p>Returns true if the object array was added to the pool, otherwise false.</p>
 </dd>
   </dl>
 
@@ -360,7 +360,7 @@ The value can be set with the <a class="xref" href="Switchboard.ObjectArrayPool.
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">array</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">array</code> is null.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
     <dd><p>Thrown if the length of the <code class="paramref">array</code> does not equal <a class="xref" href="Switchboard.ObjectArrayPool.html#Switchboard_ObjectArrayPool_ArrayLength">ArrayLength</a>,

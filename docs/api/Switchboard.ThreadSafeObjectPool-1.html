@@ -85,12 +85,12 @@
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>Switchboard.Collections.dll</dd></dl>
   </div>
 
   <div class="markdown summary"><p>Stores objects of a specific type in a thread safe pool. Objects are kept in the order of last in, first out.
 The <a class="xref" href="Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_MaxCount">MaxCount</a> value can be specified to limit the number of objects that may be stored.
-The <a class="xref" href="Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_Add__0_">Add(T)</a> method will return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if the pool is at max capacity.
+The <a class="xref" href="Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_Add__0_">Add(T)</a> method will return false if the pool is at max capacity.
 The internal memory used to store these objects grows and shrinks automatically as objects are added and removed.
 Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectArrayPool.html">SharedObjectArrayPool</a>, so no garbage collection is necessary.</p>
 </div>
@@ -341,7 +341,7 @@ The value can be set with the <a class="xref" href="Switchboard.ThreadSafeObject
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the object was added to the pool, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+    <dd><p>Returns true if the object was added to the pool, otherwise false.</p>
 </dd>
   </dl>
 
@@ -407,7 +407,7 @@ The value can be set with the <a class="xref" href="Switchboard.ThreadSafeObject
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd><p>Returns an object, removed from the pool, if one is available. Otherwise, returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Returns an object, removed from the pool, if one is available. Otherwise, returns null.</p>
 </dd>
   </dl>
 

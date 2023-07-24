@@ -85,7 +85,7 @@
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>Switchboard.Logger.dll</dd></dl>
   </div>
 
   <div class="markdown summary"><p>Represents a logger composed of other <a class="xref" href="Switchboard.ILogger.html">ILogger</a> implementations, which serve as the actual targets for log output.
@@ -229,8 +229,8 @@ The value may not be immediately accurate across all threads.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if the <code class="paramref">logTarget</code> has already been added to the <a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a>,
-otherwise returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>.</p>
+    <dd><p>Returns false if the <code class="paramref">logTarget</code> has already been added to the <a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a>,
+otherwise returns true.</p>
 </dd>
   </dl>
 
@@ -244,7 +244,7 @@ otherwise returns <a href="https://learn.microsoft.com/dotnet/csharp/language-re
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">logTarget</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">logTarget</code> is null.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
     <dd><p>Thrown if the <code class="paramref">logTarget</code> is a <a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a>.</p>
@@ -278,7 +278,7 @@ otherwise returns <a href="https://learn.microsoft.com/dotnet/csharp/language-re
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <code class="paramref">logTarget</code> is contained within, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+    <dd><p>Returns true if the <code class="paramref">logTarget</code> is contained within, otherwise false.</p>
 </dd>
   </dl>
 
@@ -292,7 +292,7 @@ otherwise returns <a href="https://learn.microsoft.com/dotnet/csharp/language-re
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">logTarget</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">logTarget</code> is null.</p>
 </dd>
   </dl>
 
@@ -414,7 +414,7 @@ Do not provide an argument. The compiler will automatically assign the correct v
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <code class="paramref">logTarget</code> was found and removed, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+    <dd><p>Returns true if the <code class="paramref">logTarget</code> was found and removed, otherwise false.</p>
 </dd>
   </dl>
 
@@ -428,7 +428,7 @@ Do not provide an argument. The compiler will automatically assign the correct v
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">logTarget</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">logTarget</code> is null.</p>
 </dd>
   </dl>
 

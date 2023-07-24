@@ -85,13 +85,13 @@
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>Switchboard.Collections.dll</dd></dl>
   </div>
 
   <div class="markdown summary"><p>Stores objects of a specific type in a pool.
 The order is not guaranteed. Removing a specific object swaps it with the last object in the pool before removal.
 The <a class="xref" href="Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_MaxCount">MaxCount</a> can be specified to limit the number of objects that may be stored.
-The <a class="xref" href="Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_Add__0_">Add(T)</a> method will return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if the pool is at max capacity.
+The <a class="xref" href="Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_Add__0_">Add(T)</a> method will return false if the pool is at max capacity.
 An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a> may be applied to each object in the pool with the <a class="xref" href="Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_ForEach_System_Action__0__">ForEach(Action&lt;T&gt;)</a> method.
 The internal memory used to store these objects grows and shrinks automatically as objects are added and removed.
 Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectArrayPool.html">SharedObjectArrayPool</a>, so no garbage collection is necessary.</p>
@@ -342,7 +342,7 @@ The value can be set with the <a class="xref" href="Switchboard.ObjectPool-1.htm
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the object was added to the pool, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+    <dd><p>Returns true if the object was added to the pool, otherwise false.</p>
 </dd>
   </dl>
 
@@ -356,7 +356,7 @@ The value can be set with the <a class="xref" href="Switchboard.ObjectPool-1.htm
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">item</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">item</code> is null.</p>
 </dd>
   </dl>
 
@@ -396,8 +396,8 @@ The value can be set with the <a class="xref" href="Switchboard.ObjectPool-1.htm
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <code class="paramref">item</code>'s <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Equals(object)</a> method
-returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> for an object in the pool.</p>
+  <div class="markdown level1 summary"><p>Returns true if the <code class="paramref">item</code>'s <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Equals(object)</a> method
+returns true for an object in the pool.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -415,7 +415,7 @@ returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/bu
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the pool contains the object, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+    <dd><p>Returns true if the pool contains the object, otherwise false.</p>
 </dd>
   </dl>
 
@@ -429,7 +429,7 @@ returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/bu
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">item</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">item</code> is null.</p>
 </dd>
   </dl>
 
@@ -468,7 +468,7 @@ returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/bu
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">action</code> is null.</p>
 </dd>
   </dl>
 
@@ -482,7 +482,7 @@ returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/bu
   </h3>
 
   <div class="markdown level1 summary"><p>Removes a specific object from the pool. Removing an object changes the order of the objects in the pool.
-If the <code class="paramref">item</code>'s <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Equals(object)</a> method returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> for an object in the pool, that object is removed.</p>
+If the <code class="paramref">item</code>'s <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Equals(object)</a> method returns true for an object in the pool, that object is removed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -500,7 +500,7 @@ If the <code class="paramref">item</code>'s <a class="xref" href="https://learn.
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the object was found and removed, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+    <dd><p>Returns true if the object was found and removed, otherwise false.</p>
 </dd>
   </dl>
 
@@ -514,7 +514,7 @@ If the <code class="paramref">item</code>'s <a class="xref" href="https://learn.
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">item</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">item</code> is null.</p>
 </dd>
   </dl>
 
@@ -539,7 +539,7 @@ If the <code class="paramref">item</code>'s <a class="xref" href="https://learn.
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><span class="xref">T</span></dt>
-    <dd><p>Returns an object, removed from the pool, if one is available. Otherwise, returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Returns an object, removed from the pool, if one is available. Otherwise, returns null.</p>
 </dd>
   </dl>
 

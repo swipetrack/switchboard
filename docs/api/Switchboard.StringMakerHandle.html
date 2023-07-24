@@ -85,7 +85,7 @@
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>SwitchboardCore.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>Switchboard.StringMaker.dll</dd></dl>
   </div>
 
   <div class="markdown summary"><p>Provides a readonly ref struct facade for <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a>.</p>
@@ -149,6 +149,33 @@
 </h2>
 
 
+  <a id="Switchboard_StringMakerHandle_Capacity_" data-uid="Switchboard.StringMakerHandle.Capacity*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Capacity" data-uid="Switchboard.StringMakerHandle.Capacity">
+  Capacity
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> of characters that can be set without borrowing or allocating new memory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Capacity { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Switchboard_StringMakerHandle_Item_" data-uid="Switchboard.StringMakerHandle.Item*"></a>
 
   <h3 id="Switchboard_StringMakerHandle_Item_System_Int32_" data-uid="Switchboard.StringMakerHandle.Item(System.Int32)">
@@ -161,7 +188,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public char this[int index] { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public char this[int index] { get; set; }</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -195,7 +222,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Length { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int Length { get; set; }</code></pre>
   </div>
 
 
@@ -568,7 +595,7 @@ the number of characters that will be copied during operations like <a class="xr
     <dd><p>The minimum number of fractional digits to display.</p>
 </dd>
     <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if three-digit groups should be separated by a comma.</p>
+    <dd><p>Set true if three-digit groups should be separated by a comma.</p>
 </dd>
   </dl>
 
@@ -616,7 +643,7 @@ the number of characters that will be copied during operations like <a class="xr
     <dd><p>The minimum number of fractional digits to display.</p>
 </dd>
     <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
+    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
 </dd>
     <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
     <dd><p>The format configuration info used to append the result.</p>
@@ -2281,7 +2308,7 @@ the number of characters that will be copied during operations like <a class="xr
     <dd><p>The maximum number of digits to display. Results may be converted to scientific notation.</p>
 </dd>
     <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if three-digit groups should be separated by a comma.</p>
+    <dd><p>Set true if three-digit groups should be separated by a comma.</p>
 </dd>
   </dl>
 
@@ -2326,12 +2353,339 @@ the number of characters that will be copied during operations like <a class="xr
     <dd><p>The maximum number of digits to display. Results may be converted to scientific notation.</p>
 </dd>
     <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
+    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
 </dd>
     <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
     <dd><p>The format configuration info used to append the result.</p>
 </dd>
   </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Clear_" data-uid="Switchboard.StringMakerHandle.Clear*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Clear" data-uid="Switchboard.StringMakerHandle.Clear">
+  Clear()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears and releases all memory pages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Clear()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_ConvertToUTF8_" data-uid="Switchboard.StringMakerHandle.ConvertToUTF8*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_ConvertToUTF8_System_Span_System_Byte__" data-uid="Switchboard.StringMakerHandle.ConvertToUTF8(System.Span{System.Byte})">
+  ConvertToUTF8(Span&lt;byte&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts the contents of the instance to a UTF-8 byte <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ConvertToUTF8(Span&lt;byte&gt; target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+    <dd><p>The target byte <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> to which the conversion will be copied.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of bytes copied to the <code class="paramref">target</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_CopyTo_" data-uid="Switchboard.StringMakerHandle.CopyTo*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_CopyTo_System_Span_System_Char__" data-uid="Switchboard.StringMakerHandle.CopyTo(System.Span{System.Char})">
+  CopyTo(Span&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies the contents of the instance to a character <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(Span&lt;char&gt; target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_EnsureCapacity_" data-uid="Switchboard.StringMakerHandle.EnsureCapacity*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_EnsureCapacity_System_Int32_" data-uid="Switchboard.StringMakerHandle.EnsureCapacity(System.Int32)">
+  EnsureCapacity(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allocates enough internal memory to store the specified number of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int EnsureCapacity(int capacity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>capacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The total number of characters for which to ensure capacity.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The actual allocated character capacity, may be more than requested.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Equals_" data-uid="Switchboard.StringMakerHandle.Equals*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Equals_Switchboard_StringMaker_" data-uid="Switchboard.StringMakerHandle.Equals(Switchboard.StringMaker)">
+  Equals(StringMaker)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares the characters of two StringMaker instances up to the current <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(StringMaker stringMaker)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stringMaker</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>The other StringMaker to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Return true if both have equal length and equal character values up to the current <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Equals_" data-uid="Switchboard.StringMakerHandle.Equals*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Equals_Switchboard_StringMakerHandle_" data-uid="Switchboard.StringMakerHandle.Equals(Switchboard.StringMakerHandle)">
+  Equals(StringMakerHandle)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares the characters of two StringMaker instances up to the current <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(StringMakerHandle stringMakerHandle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stringMakerHandle</code> <a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>The other StringMaker to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Return true if both have equal length and equal character values up to the current <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Equals_" data-uid="Switchboard.StringMakerHandle.Equals*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Equals_System_ReadOnlySpan_System_Char__" data-uid="Switchboard.StringMakerHandle.Equals(System.ReadOnlySpan{System.Char})">
+  Equals(ReadOnlySpan&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares the characters of a StringMaker to a ReadOnlySpan of char up to the current <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(ReadOnlySpan&lt;char&gt; span)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>span</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The other StringMaker to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Return true if both have equal length and equal character values up to the current <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_ToString_" data-uid="Switchboard.StringMakerHandle.ToString*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_ToString" data-uid="Switchboard.StringMakerHandle.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allocates a new string and copies the contents of the <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The new string.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_TrimExcess_" data-uid="Switchboard.StringMakerHandle.TrimExcess*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_TrimExcess" data-uid="Switchboard.StringMakerHandle.TrimExcess">
+  TrimExcess()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases excess memory pages to the <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_CharacterArrayPool">CharacterArrayPool</a>,
+and clears characters by setting to '\0' from the <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> index to the end of the page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle TrimExcess()</code></pre>
+  </div>
+
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">

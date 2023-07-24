@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface | Switchboard 1.0.0 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface | Switchboard 1.0.0 ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
+            Switchboard 1.0.0
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Interface">
+<h1 id="interface">Interface</h1>
+
+<p>The following modules represent the public interfaces that your software can depend on while still maintaining a loose coupling to this framework. These interfaces are all open source under the MIT open source license, and publicly available on the Switchboard GitHub repo located here: <a href="https://github.com/swipetrack/switchboard/tree/main/interface">https://github.com/swipetrack/switchboard/tree/main/interface</a></p>
+<h2 id="injector-locator">Injector Locator</h2>
+<p>When object instantiation, calling constructors, and dependency injection are out of your control due to the programming environment it becomes necessary to call upon a static reference in order to satisfy dependencies. However, this need not be an overly explicit or concrete implementation of any particular service. Following abstraction to its logical conclusion, the static reference itself can be abstracted almost away entirely. To this end, I created a static class called <a class="xref" href="../api/Switchboard.InjectorLocator.html">InjectorLocator</a>. This class functions like a static middle man that bridges the gap between two sides of the development environment. On one side are the composition root of your application, the main entry point for the lifecycle of your software, and various static services. On the other side are the objects being instantiated outside of your control.</p>
+<p>There are two public methods for interacting with the InjectorLocator, one for each side of the environment. When the application launches from the composition root, objects that satisfy dependencies are registered with the InjectorLocator as observers of an event to be invoked when a new object requests dependency injection. When objects are created, and they can eventually reach out for a static reference, they reach out to the InjectorLocator to call a method for requesting dependency injection, which invokes the event. In order for this class, the method, and the event it invokes to be sufficiently abstract, they must operate on abstract interfaces. The generic <a class="xref" href="../api/Switchboard.IInjector.html">IInjector</a> and <a class="xref" href="../api/Switchboard.IInjectable.html">IInjectable</a> interfaces make up a pair that allow one to inject the other with an instance of a class based on the requested type. These two interfaces have no dependency on the InjectorLocator, and are fully self sufficient as an abstract dependency injection interface. Injector locator operates on these two interfaces, with IInjector implementations on the composition root and static service side of the environment, and IInjectable objects on the other. An IInjector observer of the event receives the IInjectable that is requesting injection, and can then invoke method injection on that object simply by passing itself in as the argument to the IInjectable.Inject(IInjector).</p>
+<p>One other concern to note with a static reference is that they are global. The properties of a global reference can be altered from anywhere, potentially corrupting the expected state. However, the C# event paradigm automatically mitigates those concerns. The ability to add and remove an observer is limited by the ability to access the method delegate that is added to the event. Delegates can refer to private or protected methods, enabling observers of the event to hide access to the method that is delegated to observe the event. Therefore, even though the event is global, if the methods added to the event are not global, they cannot be removed from the event by an external actor. Also, the event cannot be cleared of delegates because only the class that owns the event can do that. The expected state set by one observer, that it is observing the event, cannot be altered or corrupted externally. Only one with access to add the method delegate to the global event has access to remove it. Outside of C# the pattern can be replicated by replicating the functionality of the C# event paradigm. After all, it is just a hidden MultiCastDelegate with public methods to add and remove, in the form of the += and -= operators. C# just makes it easy to encapsulate the whole concept into one line of code.</p>
+<p>The entirety of this pattern is demonstrated via Switchboard's public interface which is free and open source under the MIT license at <a href="https://github.com/swipetrack/switchboard/tree/main/interface">https://github.com/swipetrack/switchboard/tree/main/interface</a>. Switchboard itself is designed to be loosely coupled to your application. Therefore, the only real dependency requirement is on a free, open-source, publicly available implementation of this pattern that is all of 19 lines of code, including curly braces. Switchboard provides a concrete implementation of the IInjector interface, which provides many actual services by observing the InjectorLocator, but it is possible to use Switchboard and only depend directly on those IInjector, IInjectable, and InjectorLocator interfaces. Even though InjectorLocator is a static class, and technically constitues a tightly coupled dependency, it is so light weight and abstract that it effectively functions more like an interface. This is the essence of the InjectorLocator pattern, true loose coupling across a boundary that prevents constructor injection.</p>
+<h2 id="ilogger">ILogger</h2>
+<p>The <a class="xref" href="../api/Switchboard.ILogger.html">ILogger</a> interface is mostly identical in use to the typical .NET ILogger interface. However, the Switchboard.ILogger interface accepts a ReadOnlySpan of char, which supports string and char[] arguments, and StringMaker, for zero GC logging. Also, it can automatically log the file name, method, and line number from which the log call originated, at compile time, with no run time impact on performance, except for the extra operations to log the data.</p>
+<h2 id="delegates">Delegates</h2>
+<p>Switchboard only has one delegate that your code may need to depend on, but it's possible that there could come more later, with development on events. So, this section is maintained for now.</p>
+<h5 id="inputaction">InputAction</h5>
+<p>An InputAction is similar to a .NET Action that accepts one argument, except that the argument is passed with the in keyword, which makes it a readonly reference parameter. This should basically have no affect on class arguments, but it allows for efficient passing of readonly struct arguments. That means event data args can be generated on the stack via local readonly struct, then passed into the event via readonly reference. Then no garbage memory is ever allocated for event arguments.</p>
+<h2 id="iticker">ITicker</h2>
+<p><a class="xref" href="../api/Switchboard.ITicker.html">ITicker</a> the ticker interface that enables you to attach a method in any class to Unity's Update() method. The interface is intentionally vague, with only support for Update() ticks, and no other features. All games have an update loop. Defining further features in the interface could result in tight conceptual coupling to the Unity engine, and the Unity way of doing things. More detailed ticking operations can be done via the <a class="xref" href="../api/Switchboard.ApplicationTicker.html">ApplicationTicker</a>.</p>
+<h2 id="frameoftime">FrameOfTime</h2>
+<p><a class="xref" href="../api/Switchboard.FrameOfTime.html">FrameOfTime</a> is the event data struct that is passed to observer event handlers when ticker events are invoked.</p>
+<h2 id="expandableattribute">ExpandableAttribute</h2>
+<p>Switchboard includes an <a class="xref" href="../api/Switchboard.ExpandableAttribute.html">Expandable</a> attribute that can be applied to UnityEngine.Object references to expand their properties in the editor without having to select the object.</p>
+<h2 id="stringmaker">StringMaker</h2>
+<p>Although using <a class="xref" href="../api/Switchboard.StringMaker.html">StringMaker</a> constitutes a tightly coupled dependency, it deserves an honorable mention here for sharing an interface that is mostly the same as the .NET System.StringBuilder class. Therefore, replacing instances of StringBuilder with StringMaker, or vice versa, should be mostly a find and replace operation.</p>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by <a href="https://www.linkedin.com/in/ronnie-moon-12209380/">Ronnie Moon</a>.  Copyright © 2023 <a href="http://www.swipetrack.com/">SwipeTrack Solutions</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

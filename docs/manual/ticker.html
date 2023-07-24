@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title> | Switchboard 1.0.0 </title>
+      <title>Ticker | Switchboard 1.0.0 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content=" | Switchboard 1.0.0 ">
+      <meta name="title" content="Ticker | Switchboard 1.0.0 ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -73,9 +73,9 @@
         </div>
 
         <article data-uid="Ticker">
+<h1 id="ticker">Ticker</h1>
 
-<h4 id="ticker">Ticker</h4>
-<p>Switchboard provides a Ticker service, which calls Update, LateUpdate, or FixedUpdate on any method</p>
+<p>Switchboard provides a Ticker service, which calls Update(), LateUpdate(), or FixedUpdate() on any method. <a class="xref" href="../api/Switchboard.ApplicationTicker.html">ApplicationTicker</a> is the static class that lazy loads references to singleton instances of <a class="xref" href="../api/Switchboard.Ticker.html">Ticker</a>, <a class="xref" href="../api/Switchboard.LateTicker.html">LateTicker</a>, and <a class="xref" href="../api/Switchboard.FixedTicker.html">FixedTicker</a>. When starting a ticker method, a priority value can be passed to specify the order in which observers should receive invocation of the event. Each of the three ticker MonoBehaviours can have their script execution order specified in the project settings menu. Then, all observers of those tickers are notified in order according to priority. The performance of using a ticker to update is equal to or greater than using Unity's built in update methods. In addition to that, any method that is updating via ticker will not cause the frame to halt if an exception is thrown. The exception will be logged, but all of the other objects in the frame will be allowed to update and continue on. This can alter the behavior of your application by alterting the way exceptions are handled.</p>
 </article>
 
         <div class="contribution d-print-none">

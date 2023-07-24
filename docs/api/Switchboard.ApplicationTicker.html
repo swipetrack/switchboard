@@ -85,16 +85,15 @@
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>SwitchboardUnity.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>Switchboard.Ticker.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides a static, root instance for all types of ticker that lazy load as necessary,
-which manages its own life cycle in the player and editor.</p>
+  <div class="markdown summary"><p>Provides a static root for lazy loaded object tickers that correspond to Update(), LateUpdate(), and FixedUpdate().</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ApplicationTicker : IUnityTicker, ITicker</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ApplicationTicker</code></pre>
   </div>
 
 
@@ -108,13 +107,6 @@ which manages its own life cycle in the player and editor.</p>
     </dd>
   </dl>
 
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="Switchboard.IUnityTicker.html">IUnityTicker</a></div>
-      <div><a class="xref" href="Switchboard.ITicker.html">ITicker</a></div>
-    </dd>
-  </dl>
 
 
 
@@ -127,19 +119,73 @@ which manages its own life cycle in the player and editor.</p>
 </h2>
 
 
-  <a id="Switchboard_ApplicationTicker_StaticInstance_" data-uid="Switchboard.ApplicationTicker.StaticInstance*"></a>
+  <a id="Switchboard_ApplicationTicker_FixedTicker_" data-uid="Switchboard.ApplicationTicker.FixedTicker*"></a>
 
-  <h3 id="Switchboard_ApplicationTicker_StaticInstance" data-uid="Switchboard.ApplicationTicker.StaticInstance">
-  StaticInstance
+  <h3 id="Switchboard_ApplicationTicker_FixedTicker" data-uid="Switchboard.ApplicationTicker.FixedTicker">
+  FixedTicker
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the single, static instance of the class.</p>
+  <div class="markdown level1 summary"><p>Gets a static <a class="xref" href="Switchboard.ApplicationTicker.html#Switchboard_ApplicationTicker_FixedTicker">FixedTicker</a> instance, which is lazy loaded if necessary.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ApplicationTicker StaticInstance { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static FixedTicker FixedTicker { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_ApplicationTicker_LateTicker_" data-uid="Switchboard.ApplicationTicker.LateTicker*"></a>
+
+  <h3 id="Switchboard_ApplicationTicker_LateTicker" data-uid="Switchboard.ApplicationTicker.LateTicker">
+  LateTicker
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a static <a class="xref" href="Switchboard.ApplicationTicker.html#Switchboard_ApplicationTicker_LateTicker">LateTicker</a> instance, which is lazy loaded if necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LateTicker LateTicker { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_ApplicationTicker_Ticker_" data-uid="Switchboard.ApplicationTicker.Ticker*"></a>
+
+  <h3 id="Switchboard_ApplicationTicker_Ticker" data-uid="Switchboard.ApplicationTicker.Ticker">
+  Ticker
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a static <a class="xref" href="Switchboard.ApplicationTicker.html#Switchboard_ApplicationTicker_Ticker">Ticker</a> instance, which is lazy loaded if necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Ticker Ticker { get; }</code></pre>
   </div>
 
 
@@ -170,7 +216,7 @@ which manages its own life cycle in the player and editor.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartFixedTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void StartFixedTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -191,10 +237,10 @@ which manages its own life cycle in the player and editor.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">handler</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">handler</code> is null.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>Thrown if <a class="xref" href="Switchboard.CompositionRoot.html#Switchboard_CompositionRoot_IsRunning">IsRunning</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, or the application is quitting.</p>
+    <dd><p>Thrown if the application is not playing or is quitting.</p>
 </dd>
   </dl>
 
@@ -212,7 +258,7 @@ which manages its own life cycle in the player and editor.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartFixedTick(InputAction&lt;FrameOfTime&gt; handler, int priority)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void StartFixedTick(InputAction&lt;FrameOfTime&gt; handler, int priority)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -236,10 +282,10 @@ which manages its own life cycle in the player and editor.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">handler</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">handler</code> is null.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>Thrown if <a class="xref" href="Switchboard.CompositionRoot.html#Switchboard_CompositionRoot_IsRunning">IsRunning</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, or the application is quitting.</p>
+    <dd><p>Thrown if the application is not playing or is quitting.</p>
 </dd>
   </dl>
 
@@ -257,7 +303,7 @@ which manages its own life cycle in the player and editor.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartLateTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void StartLateTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -278,10 +324,10 @@ which manages its own life cycle in the player and editor.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">handler</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">handler</code> is null.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>Thrown if <a class="xref" href="Switchboard.CompositionRoot.html#Switchboard_CompositionRoot_IsRunning">IsRunning</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, or the application is quitting.</p>
+    <dd><p>Thrown if the application is not playing or is quitting.</p>
 </dd>
   </dl>
 
@@ -299,7 +345,7 @@ which manages its own life cycle in the player and editor.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartLateTick(InputAction&lt;FrameOfTime&gt; handler, int priority)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void StartLateTick(InputAction&lt;FrameOfTime&gt; handler, int priority)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -323,10 +369,10 @@ which manages its own life cycle in the player and editor.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">handler</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">handler</code> is null.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>Thrown if <a class="xref" href="Switchboard.CompositionRoot.html#Switchboard_CompositionRoot_IsRunning">IsRunning</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, or the application is quitting.</p>
+    <dd><p>Thrown if the application is not playing or is quitting.</p>
 </dd>
   </dl>
 
@@ -344,7 +390,7 @@ which manages its own life cycle in the player and editor.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void StartTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -365,10 +411,10 @@ which manages its own life cycle in the player and editor.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">handler</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">handler</code> is null.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>Thrown if <a class="xref" href="Switchboard.CompositionRoot.html#Switchboard_CompositionRoot_IsRunning">IsRunning</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, or the application is quitting.</p>
+    <dd><p>Thrown if the application is not playing or is quitting.</p>
 </dd>
   </dl>
 
@@ -386,7 +432,7 @@ which manages its own life cycle in the player and editor.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartTick(InputAction&lt;FrameOfTime&gt; handler, int priority)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void StartTick(InputAction&lt;FrameOfTime&gt; handler, int priority)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -410,10 +456,10 @@ which manages its own life cycle in the player and editor.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">handler</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">handler</code> is null.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>Thrown if <a class="xref" href="Switchboard.CompositionRoot.html#Switchboard_CompositionRoot_IsRunning">IsRunning</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, or the application is quitting.</p>
+    <dd><p>Thrown if the application is not playing or is quitting.</p>
 </dd>
   </dl>
 
@@ -431,7 +477,7 @@ which manages its own life cycle in the player and editor.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StopFixedTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void StopFixedTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -452,7 +498,7 @@ which manages its own life cycle in the player and editor.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">handler</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">handler</code> is null.</p>
 </dd>
   </dl>
 
@@ -470,7 +516,7 @@ which manages its own life cycle in the player and editor.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StopLateTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void StopLateTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -491,7 +537,7 @@ which manages its own life cycle in the player and editor.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">handler</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">handler</code> is null.</p>
 </dd>
   </dl>
 
@@ -509,7 +555,7 @@ which manages its own life cycle in the player and editor.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StopTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void StopTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -530,7 +576,7 @@ which manages its own life cycle in the player and editor.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">handler</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">handler</code> is null.</p>
 </dd>
   </dl>
 

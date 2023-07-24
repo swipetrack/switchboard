@@ -85,11 +85,11 @@
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>SwitchboardUnity.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>Switchboard.InjectorLocator.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides a static event that an <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a> can invoke to request an <a class="xref" href="Switchboard.IInjector.html">IInjector</a>
-to call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectable_InjectWith_Switchboard_IInjector_">InjectWith(IInjector)</a>.</p>
+  <div class="markdown summary"><p>Provides a static event that an <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a> can invoke to locate an <a class="xref" href="Switchboard.IInjector.html">IInjector</a>
+to call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectable_Inject_Switchboard_IInjector_">Inject(IInjector)</a>.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -120,19 +120,19 @@ to call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectab
 </h2>
 
 
-  <a id="Switchboard_InjectorLocator_RequestInjection_" data-uid="Switchboard.InjectorLocator.RequestInjection*"></a>
+  <a id="Switchboard_InjectorLocator_Inject_" data-uid="Switchboard.InjectorLocator.Inject*"></a>
 
-  <h3 id="Switchboard_InjectorLocator_RequestInjection_Switchboard_IInjectable_" data-uid="Switchboard.InjectorLocator.RequestInjection(Switchboard.IInjectable)">
-  RequestInjection(IInjectable)
+  <h3 id="Switchboard_InjectorLocator_Inject_Switchboard_IInjectable_" data-uid="Switchboard.InjectorLocator.Inject(Switchboard.IInjectable)">
+  Inject(IInjectable)
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Invokes an event for an <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a> to request an <a class="xref" href="Switchboard.IInjector.html">IInjector</a> to call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectable_InjectWith_Switchboard_IInjector_">InjectWith(IInjector)</a>.</p>
+  <div class="markdown level1 summary"><p>Invokes an event for an <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a> to locate an <a class="xref" href="Switchboard.IInjector.html">IInjector</a> to call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectable_Inject_Switchboard_IInjector_">Inject(IInjector)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RequestInjection(IInjectable injectable)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Inject(IInjectable injectable)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -158,17 +158,17 @@ to call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectab
 
 
 
-  <h3 id="Switchboard_InjectorLocator_InjectionRequested" data-uid="Switchboard.InjectorLocator.InjectionRequested">
-  InjectionRequested
+  <h3 id="Switchboard_InjectorLocator_LocateInjector" data-uid="Switchboard.InjectorLocator.LocateInjector">
+  LocateInjector
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Observers of this event should call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectable_InjectWith_Switchboard_IInjector_">InjectWith(IInjector)</a> on the <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a>.</p>
+  <div class="markdown level1 summary"><p>Observers of this event should call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectable_Inject_Switchboard_IInjector_">Inject(IInjector)</a> on the <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event Action&lt;IInjectable&gt; InjectionRequested</code></pre>
+    <pre><code class="lang-csharp hljs">public static event Action&lt;IInjectable&gt; LocateInjector</code></pre>
   </div>
 
 

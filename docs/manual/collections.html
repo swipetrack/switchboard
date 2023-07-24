@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title> | Switchboard 1.0.0 </title>
+      <title>Collections | Switchboard 1.0.0 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content=" | Switchboard 1.0.0 ">
+      <meta name="title" content="Collections | Switchboard 1.0.0 ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -73,8 +73,8 @@
         </div>
 
         <article data-uid="Collections">
+<h1 id="collections">Collections</h1>
 
-<h4 id="collections">Collections</h4>
 <p>While developing Switchboard, one of my ultimate goals became to eliminate allocation of new memory for garbage collection. You, the user, shouldn't have to worry about something like that just for integrating a plugin. This framework is designed for game development, and should have an absolute minimal impact on the performance of your software. So, it became necessary to look at collections to replace some of the standard .NET collections for my purposes. When a collection, like a List, grows in size, it must re-allocate an array of internal memory. For many collections the pattern is to allocate a new array, twice the size of the previous array, copy the contents, and discard the old array for garbage collection. Since I would like to eliminate undue garbage collection all together, I created collections that return unused arrays back to a memory pool.</p>
 <p>I would be creating multiple types of collection classes that would store generic types of elements, and I did not want that to result in an untenable mess of memory pools of arrays of various lengths and types. I realized that I could use object arrays as a sort of universal underlying memory store, regardless of collection or type. So, I created the ObjectArrayPool, which can store an infinite amount of object arrays of a specific length without ever allocating <em>any</em> other memory than the arrays that are being stored. This class serves as the basis for pooling all of the underlying memory pages or buckets that serve the other collections. It is also thread safe.</p>
 <p>So, after some benchmarking experiments I chose some specific lengths for memory pages that I might use, 32, 64, 128, and 256. The SharedObjectArrayPool is just a static class that holds an ObjectArrayPool for each of those lengths. So, when ObjectPool, ThreadSafeObjectPool, or DynamicQueue need to expand their internal memory, they borrow an object array of one of those four sizes from the SharedObjectArrayPool. So, the main place to profile memory pooling is at the SharedObjectArrayPool. You can set a max count on each of those pools, so if they fill to that point, any excess arrays will be subject to garbage collection as usual.</p>

@@ -85,10 +85,10 @@
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>SwitchboardUnity.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>Switchboard.DependencyInjection.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a single, root asset file that can be loaded when the app runs in order to activate dependency injection.</p>
+  <div class="markdown summary"><p>Represents a single, root asset file that can be loaded when the application starts, in order to enable dependency injection.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -128,12 +128,13 @@ public sealed class CompositionRootAsset : ScriptableObject</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>The <a class="xref" href="Switchboard.DependencyInjector.html">DependencyInjector</a> to initialize when the app runs.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Switchboard.DependencyInjector.html">DependencyInjector</a> to initialize when the application starts.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DependencyInjector DependencyInjector</code></pre>
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The DependencyInjector to initialize when the application starts.&quot;)]
+public DependencyInjector DependencyInjector</code></pre>
   </div>
 
 
@@ -180,12 +181,13 @@ public sealed class CompositionRootAsset : ScriptableObject</code></pre>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, an error will be logged when the app runs if the <a class="xref" href="Switchboard.CompositionRootAsset.html#Switchboard_CompositionRootAsset_DependencyInjector">DependencyInjector</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+  <div class="markdown level1 summary"><p>If true, and the <a class="xref" href="Switchboard.CompositionRootAsset.html#Switchboard_CompositionRootAsset_DependencyInjector">DependencyInjector</a> is null, an error will be logged when the application starts.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool LogNullInjectorError</code></pre>
+    <pre><code class="lang-csharp hljs">[Tooltip(&quot;If true, and the DependencyInjector is null, an error will be logged when the application starts.&quot;)]
+public bool LogNullInjectorError</code></pre>
   </div>
 
 

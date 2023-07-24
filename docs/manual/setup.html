@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title> | Switchboard 1.0.0 </title>
+      <title>Installation &amp; Basic Setup | Switchboard 1.0.0 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content=" | Switchboard 1.0.0 ">
+      <meta name="title" content="Installation &amp; Basic Setup | Switchboard 1.0.0 ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -73,44 +73,42 @@
         </div>
 
         <article data-uid="Setup">
+<h2 id="installation--basic-setup">Installation &amp; Basic Setup</h2>
 
-<h4 id="installation">Installation</h4>
 <p>Switchboard is available for download through the Unity Asset Store at <a href="https://assetstore.unity.com/packages/slug/250879">https://assetstore.unity.com/packages/slug/250879</a>.</p>
-<h4 id="basic-setup">Basic Setup</h4>
 <ul>
-<li>Open the Switchboard menu in the project settings window. This will automatically create a composition root asset located at Switchboard/Resources/CompositionRoot.asset. This asset is required by Switchboard at run time. The name of the file cannot be changed, but it can be relocated to any Resources directory.</li>
-<li>Disable the &quot;Log Null Injector Error&quot; option, or assign a dependency injector asset. Example dependency injectors can be found in the Switchboard/Example/DependencyInjectors directory.</li>
+<li>After importing Switchboard, open the Switchboard menu in the project settings window. This will automatically create a composition root asset located at Switchboard/Resources/CompositionRoot.asset. This asset is required by Switchboard at run time. The name of the file cannot be changed, but it can be relocated to any Resources directory.</li>
+<li>Assign a dependency injector asset to the composition root, or you may disable the &quot;Log Null Injector Error&quot; option to ignore dependency injection. An example dependency injector can be found in the Switchboard/Example/Assets/ directory.</li>
 </ul>
-<h4 id="example">Example</h4>
+<p><img src="../assets/SwitchboardSettings.png" alt="SwitchboardSettingsMenu"></p>
+<h2 id="example">Example</h2>
 <ul>
 <li>Open the SwitchboardExample scene.</li>
-<li>Assign one of the example dependency injector assets located at Switchboard/Example/DependencyInjectors/ to the Dependency Injector field of the composition root asset in the Switchboard project settings menu.</li>
+<li>Assign the example dependency injector asset, located at Switchboard/Example/Assets/, to the Dependency Injector field of the composition root asset, in the Switchboard project settings menu.</li>
 <li>Press play.</li>
-<li>See how the color and position of the Example Renderer game object are provided automatically by the example model assigned to the dependency injector.</li>
-<li>Change the color and properties of the example model in the dependency injector.</li>
-<li>See how the color and motion of the Example Renderer change in real time according to your changes.</li>
-<li>Assign the other example model asset, located at Switchboard/Example/Assets/, to the dependency injector. If ExampleModelA is assigned to the Model field, assign ExampleModelB, or vice versa.</li>
-<li>Drag the Example Renderer prefab, located at Switchboard/Example/Assets/, to the scene hierarchy.</li>
-<li>See how the color of the new Example Renderer object matches the Color property of the newly assigned example model asset, but the object does not move. This is because the dependency injector began updating the example model that was assigned when the application started running. The newly assigned example model was never told to update. It is still provided to new objects that request a model, and the current color value can be retreived. Be aware of this potential when creating a custom dependency injector.</li>
-<li>Assign the original model asset back to the dependency injector.</li>
-<li>Assign the other dependency injector asset to the Dependency Injector field of the composition root asset in the Switchboard project settings menu.</li>
-<li>Drag the Example Renderer prefab to the scene hierarchy.</li>
-<li>See how the newly created object receives the model that was assigned to the original dependency injector. The dependency injector referenced by the composition root cannot actually be changed at run time, even though a different injector can be assigned in the editor. Be aware that the composition root maintains a reference to the original dependency injector asset.</li>
+<li>See how the color and position of the example object are injected automatically with the model data assigned to the dependency injector.</li>
+<li>Change the color and properties of the model assigned to the dependency injector.</li>
+<li>See how the color and motion of the example object change in real time.</li>
+<li>Assign the other model asset, located at Switchboard/Example/Assets/, to the dependency injector. If ModelA is assigned, assign ModelB, or vice versa.</li>
+<li>Drag the ExamplePrefab from Switchboard/Example/Assets/ to the scene hierarchy.</li>
+<li>See how the color of the new object matches the color of the current model, but the object does not move. This is not a bug. The dependency injector began updating the original model when the application started playing. The new model was never told to update. It is still injected into new objects that request model data. The current color value can be retreived. Be aware of this potential when creating your own dependency injector. You may want to cache a reference to original data when the dependency injector activates, or make use of other designs, to prevent certain data from changing at run time. Note that the composition root already caches a reference to the original dependency injector when play begins. You are able to change the assigned dependency injector at run time because it is rendered with the expandable property drawer, but the composition root will remember which dependency injector was assigned from the start and use that one until the end.</li>
 <li>Stop play.</li>
-<li>See that the changes made to the dependency injector and example model assets while playing still persist after stopping play.</li>
-<li>Open the UnityEngine.Application.persistentDataPath directory and examine the log file.</li>
+<li>See that the changes made to the dependency injector and model assets while playing still remain after stopping. Changes made while playing are not lost.</li>
+<li>Open the UnityEngine.Application.persistentDataPath directory for your project to view the generated log file.</li>
 </ul>
-<h4 id="create-a-custom-dependency-injector">Create a Custom Dependency Injector</h4>
+<h2 id="create-a-dependency-injector">Create a Dependency Injector</h2>
 <ul>
-<li>View the ExampleInjectorDerived and ExampleInjectorBase classes located at Switchboard/Example/Scripts/. The ExampleInjectorDerived class provides an example for creating a custom dependency injector that derives from the StandardDependencyInjector class. The StandardDependencyInjector provides standard, basic functionality, such as log files, a Ticker interface for updating any object, and synchronizes the PreciseClock with the system clock every two seconds. The PreciseClock is used by the standard log file formatter to apply time stamps to log entries. The ExampleInjectorBase class provides an example for creating a custom dependency injector that derives directly from the abstract DependencyInjector class. That way, the definition of what happens in the composition root at start up and shut down can be fully customized. The ExampleInjectorBase class includes a basic replication of how the StandardDependencyInjector works.</li>
-<li>Create a new C# script and provide the class name of the custom dependency injector.</li>
-<li>Open the script and change the class to derive from either StandardDependencyInjector, or DependencyInjector. Remove any predefined MonoBehaviour methods.</li>
-<li>Add a CreateAssetMenu attribute similar to the example injector classes so that instances can be created and added to the project. If you want the create option to be in the Switchboard directory, use the attribute arguments (menuName = &quot;Switchboard/Your Injector Name&quot;, order = SwitchboardMenuOrder.Value).</li>
-<li>Override the Activation(), Deactivation(), and GetInstanceOf(Type) methods. If you derive from StandardDependencyInjector, call base.Activation() at the start of the Activation method, and base.Deactivation() at the end of the Deactivation() method. Also, return base.GetInstanceOf(type) at the end of the GetInstancOf(Type) method.</li>
-<li>The Activation() method will run when the application starts, before the first scene is fully loaded, before Awake(), OnEnable(), Start() or other methods are called on objects in the scene. You can create game objects and they will be added to the first scene that is loaded. However, it shouldn't usually be necessary to create game objects or MonoBehaviours. That's the whole reason for this framework!</li>
-<li>The Deactivation() method will be run when the application is quitting, but it is not guaranteed. Don't assume that Deactivation() will run in all cases. If the application closes suddenly, it is possible that this method may not be invoked. However, this method is where everything that was spun up during Activation() can also be shut down when play is stopped in the editor.</li>
-<li>The GetInstanceOfType(Type) method provides an instance of the requested Type of object, if the dependency injector has been activated. This method will not be invoked until Activation() has occurred and Deactivation() has not. The ExampleInjectorBase class provides examples of how type comparisons may be handled. The Type argument will never be null, it will always be a reference type, and it can be compared for equality with a result of the typeof operator. However, typeof will perform an operation each time, the result of which can be cached. Switchboard provides a generic, static class called <a class="xref" href="../api/Switchboard.TheTypeOf-1.html">TheTypeOf&lt;T&gt;</a> that automatically creates a static Type variable representing the cached result of the typeof operator for any type. This provides a small performance increase over using the typeof operator each time. Also, the IsAssignableFrom(Type) method can be invoked on the type argument for a more flexible comparison of whether a type of object may be assigned to the requested type, whether that it be the type itself, a base class, or an interface it implements.</li>
+<li>The ExampleInjector class, located at Switchboard/Example/Scripts/, can be used as a starting point for creating your own dependency injector. The <a class="xref" href="../api/Switchboard.LogFileManager.html">LogFileManager</a> class simplifies the process of starting a log file in Unity. The <a class="xref" href="../api/Switchboard.ClockSynchronizer.html">ClockSynchronizer</a> synchronizes the <a class="xref" href="../api/Switchboard.PreciseClock.html">PreciseClock</a> with the system clock so that log file time stamps are accurate. The ClockSynchronizer is updated by the <a class="xref" href="../api/Switchboard.ApplicationTicker.html">ApplicationTicker</a>. Both the LogFileManager and ClockSynchronizer are provided with source code, which can be seen in the Switchboard/Assemblies/Unity/ directory.</li>
+<li>Create a new C# script, or copy the ExampleInjector to create a new dependency injector class.</li>
+<li>Open the script and ensure the class derives from DependencyInjector. Remove any predefined MonoBehaviour methods.</li>
+<li>Add a CreateAssetMenu attribute similar to the example injector so that an instance can be created and added to the project. If you want the create option to be in the Switchboard directory, use the attribute arguments (menuName = &quot;Switchboard/Your Injector Name Here&quot;, order = <a class="xref" href="../api/Switchboard.SwitchboardMenuOrder.html#Switchboard_SwitchboardMenuOrder_Value">SwitchboardMenuOrder.Value</a>).</li>
+<li>Override the Activation(), Deactivation(), and GetInstanceOf(Type) methods.</li>
+<li>The Activation() method will run when the application starts playing, before the first scene is fully loaded, before Awake(), OnEnable(), Start() or other methods are called on objects in the scene. You can create game objects and they will be added to the first scene that is loaded. However, it shouldn't usually be necessary to create game objects or MonoBehaviours. That's the whole reason for this framework exists!</li>
+<li>The Deactivation() method will be run when the application is quitting, but don't assume it is guaranteed. Don't assume that Deactivation() will run in all cases. If the application closes suddenly, it is possible that this method may not be invoked. However, this method is where everything that was spun up during Activation() can also be shut down gracefully when play is stopped in the editor.</li>
+<li>The GetInstanceOfType(Type) method provides an instance of the requested Type of object, if the dependency injector has been activated. This method will not be invoked until Activation() has occurred, prior to Deactivation(). The ExampleInjector class provides examples of how to handle type comparison. The Type argument will never be null, it will always be a reference type, and it can be compared for equality with a result of the typeof operator. Additionally, the IsAssignableFrom(Type) method can be invoked on the Type argument for a more flexible comparison of whether a certain type of object may be assigned to the requested type. The requested Type may be the exact Type of object in the injector, a base class in the same inheritance hierarchy, or an interface that it implements. If the object injected from the dependency injector can be assigned to the requested Type, IsAssignableFrom(Type) will tell you. If you want to restrict injection to only work with, for instance, an exact interface Type request then just compare for equality with a specific typeof() operator result.</li>
 </ul>
+<h2 id="textmeshpro-integration">TextMeshPro Integration</h2>
+<p>A TextMeshProExtensions class is included in the Switchboard/Example/Scripts/ directory. This class provides an extension method that enables easy assignment of a StringMaker to a TextMeshProUGUI text component. The extension method checks whether the text has actually changed to avoid re-creating geometry and other unnecessary operations, which provides a performance increase. Also, using a StringMaker to assign the text generates no new memory allocation for garbage collection. The script is included with the example code, with references to TextMeshPro commented out, so that Switchboard does not technically have a dependency on TextMeshPro. Simply uncomment the included method and move the script to a suitable location in your project to integrate StringMaker with TextMeshPro.</p>
 </article>
 
         <div class="contribution d-print-none">

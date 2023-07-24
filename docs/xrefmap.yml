@@ -1,36 +1,45 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: Benchmarks
+  name: Benchmarks
+  href: manual/benchmarks.html
 - uid: Collections
   name: Collections
   href: manual/collections.html
 - uid: DependencyInjection
-  name: DependencyInjection
+  name: What is Dependency Injection?
   href: manual/dependency-injection.html
-- uid: Expandable
-  name: Expandable
-  href: manual/expandable.html
+- uid: Events
+  name: Events
+  href: manual/events.html
 - uid: Feedback
-  name: Feedback
+  name: Discussion Forum
   href: manual/feedback.html
+- uid: Interface
+  name: Interface
+  href: manual/interface.html
 - uid: Introduction
-  name: Switchboard
+  name: User Manual
   href: manual/introduction.html
 - uid: Logger
-  name: Logger
+  name: Core Logger
   href: manual/logger.html
-- uid: Memory
-  name: Memory
-  href: manual/memory.html
+- uid: MemoryManagement
+  name: Memory Management
+  href: manual/memory-management.html
+- uid: Miscellaneous
+  name: Expandable Objects
+  href: manual/miscellaneous.html
 - uid: Roadmap
-  name: Roadmap
+  name: Memory Pool Management
   href: manual/roadmap.html
 - uid: Setup
-  name: Setup
+  name: Installation & Basic Setup
   href: manual/setup.html
-- uid: Strings
-  name: Strings
-  href: manual/strings.html
+- uid: StringMaker
+  name: StringMaker
+  href: manual/stringmaker.html
 - uid: Switchboard
   name: Switchboard
   href: api/Switchboard.html
@@ -107,6 +116,32 @@ references:
   commentId: T:Switchboard.ApplicationTicker
   fullName: Switchboard.ApplicationTicker
   nameWithType: ApplicationTicker
+- uid: Switchboard.ApplicationTicker.FixedTicker
+  name: FixedTicker
+  href: api/Switchboard.ApplicationTicker.html#Switchboard_ApplicationTicker_FixedTicker
+  commentId: P:Switchboard.ApplicationTicker.FixedTicker
+  fullName: Switchboard.ApplicationTicker.FixedTicker
+  nameWithType: ApplicationTicker.FixedTicker
+- uid: Switchboard.ApplicationTicker.FixedTicker*
+  name: FixedTicker
+  href: api/Switchboard.ApplicationTicker.html#Switchboard_ApplicationTicker_FixedTicker_
+  commentId: Overload:Switchboard.ApplicationTicker.FixedTicker
+  isSpec: "True"
+  fullName: Switchboard.ApplicationTicker.FixedTicker
+  nameWithType: ApplicationTicker.FixedTicker
+- uid: Switchboard.ApplicationTicker.LateTicker
+  name: LateTicker
+  href: api/Switchboard.ApplicationTicker.html#Switchboard_ApplicationTicker_LateTicker
+  commentId: P:Switchboard.ApplicationTicker.LateTicker
+  fullName: Switchboard.ApplicationTicker.LateTicker
+  nameWithType: ApplicationTicker.LateTicker
+- uid: Switchboard.ApplicationTicker.LateTicker*
+  name: LateTicker
+  href: api/Switchboard.ApplicationTicker.html#Switchboard_ApplicationTicker_LateTicker_
+  commentId: Overload:Switchboard.ApplicationTicker.LateTicker
+  isSpec: "True"
+  fullName: Switchboard.ApplicationTicker.LateTicker
+  nameWithType: ApplicationTicker.LateTicker
 - uid: Switchboard.ApplicationTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
   name: StartFixedTick(InputAction<FrameOfTime>, int)
   href: api/Switchboard.ApplicationTicker.html#Switchboard_ApplicationTicker_StartFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
@@ -182,19 +217,6 @@ references:
   isSpec: "True"
   fullName: Switchboard.ApplicationTicker.StartTick
   nameWithType: ApplicationTicker.StartTick
-- uid: Switchboard.ApplicationTicker.StaticInstance
-  name: StaticInstance
-  href: api/Switchboard.ApplicationTicker.html#Switchboard_ApplicationTicker_StaticInstance
-  commentId: P:Switchboard.ApplicationTicker.StaticInstance
-  fullName: Switchboard.ApplicationTicker.StaticInstance
-  nameWithType: ApplicationTicker.StaticInstance
-- uid: Switchboard.ApplicationTicker.StaticInstance*
-  name: StaticInstance
-  href: api/Switchboard.ApplicationTicker.html#Switchboard_ApplicationTicker_StaticInstance_
-  commentId: Overload:Switchboard.ApplicationTicker.StaticInstance
-  isSpec: "True"
-  fullName: Switchboard.ApplicationTicker.StaticInstance
-  nameWithType: ApplicationTicker.StaticInstance
 - uid: Switchboard.ApplicationTicker.StopFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
   name: StopFixedTick(InputAction<FrameOfTime>)
   href: api/Switchboard.ApplicationTicker.html#Switchboard_ApplicationTicker_StopFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__
@@ -243,65 +265,72 @@ references:
   isSpec: "True"
   fullName: Switchboard.ApplicationTicker.StopTick
   nameWithType: ApplicationTicker.StopTick
+- uid: Switchboard.ApplicationTicker.Ticker
+  name: Ticker
+  href: api/Switchboard.ApplicationTicker.html#Switchboard_ApplicationTicker_Ticker
+  commentId: P:Switchboard.ApplicationTicker.Ticker
+  fullName: Switchboard.ApplicationTicker.Ticker
+  nameWithType: ApplicationTicker.Ticker
+- uid: Switchboard.ApplicationTicker.Ticker*
+  name: Ticker
+  href: api/Switchboard.ApplicationTicker.html#Switchboard_ApplicationTicker_Ticker_
+  commentId: Overload:Switchboard.ApplicationTicker.Ticker
+  isSpec: "True"
+  fullName: Switchboard.ApplicationTicker.Ticker
+  nameWithType: ApplicationTicker.Ticker
 - uid: Switchboard.ClockSynchronizer
   name: ClockSynchronizer
   href: api/Switchboard.ClockSynchronizer.html
   commentId: T:Switchboard.ClockSynchronizer
   fullName: Switchboard.ClockSynchronizer
   nameWithType: ClockSynchronizer
-- uid: Switchboard.ClockSynchronizer.#ctor(Switchboard.IUnityTicker,System.Single)
-  name: ClockSynchronizer(IUnityTicker, float)
-  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer__ctor_Switchboard_IUnityTicker_System_Single_
-  commentId: M:Switchboard.ClockSynchronizer.#ctor(Switchboard.IUnityTicker,System.Single)
-  name.vb: New(IUnityTicker, Single)
-  fullName: Switchboard.ClockSynchronizer.ClockSynchronizer(Switchboard.IUnityTicker, float)
-  fullName.vb: Switchboard.ClockSynchronizer.New(Switchboard.IUnityTicker, Single)
-  nameWithType: ClockSynchronizer.ClockSynchronizer(IUnityTicker, float)
-  nameWithType.vb: ClockSynchronizer.New(IUnityTicker, Single)
-- uid: Switchboard.ClockSynchronizer.#ctor(Switchboard.IUnityTicker)
-  name: ClockSynchronizer(IUnityTicker)
-  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer__ctor_Switchboard_IUnityTicker_
-  commentId: M:Switchboard.ClockSynchronizer.#ctor(Switchboard.IUnityTicker)
-  name.vb: New(IUnityTicker)
-  fullName: Switchboard.ClockSynchronizer.ClockSynchronizer(Switchboard.IUnityTicker)
-  fullName.vb: Switchboard.ClockSynchronizer.New(Switchboard.IUnityTicker)
-  nameWithType: ClockSynchronizer.ClockSynchronizer(IUnityTicker)
-  nameWithType.vb: ClockSynchronizer.New(IUnityTicker)
-- uid: Switchboard.ClockSynchronizer.#ctor*
-  name: ClockSynchronizer
-  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer__ctor_
-  commentId: Overload:Switchboard.ClockSynchronizer.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: Switchboard.ClockSynchronizer.ClockSynchronizer
-  fullName.vb: Switchboard.ClockSynchronizer.New
-  nameWithType: ClockSynchronizer.ClockSynchronizer
-  nameWithType.vb: ClockSynchronizer.New
 - uid: Switchboard.ClockSynchronizer.DefaultFrequency
   name: DefaultFrequency
   href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer_DefaultFrequency
   commentId: F:Switchboard.ClockSynchronizer.DefaultFrequency
   fullName: Switchboard.ClockSynchronizer.DefaultFrequency
   nameWithType: ClockSynchronizer.DefaultFrequency
+- uid: Switchboard.ClockSynchronizer.Start
+  name: Start()
+  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer_Start
+  commentId: M:Switchboard.ClockSynchronizer.Start
+  fullName: Switchboard.ClockSynchronizer.Start()
+  nameWithType: ClockSynchronizer.Start()
+- uid: Switchboard.ClockSynchronizer.Start(System.Single)
+  name: Start(float)
+  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer_Start_System_Single_
+  commentId: M:Switchboard.ClockSynchronizer.Start(System.Single)
+  name.vb: Start(Single)
+  fullName: Switchboard.ClockSynchronizer.Start(float)
+  fullName.vb: Switchboard.ClockSynchronizer.Start(Single)
+  nameWithType: ClockSynchronizer.Start(float)
+  nameWithType.vb: ClockSynchronizer.Start(Single)
+- uid: Switchboard.ClockSynchronizer.Start*
+  name: Start
+  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer_Start_
+  commentId: Overload:Switchboard.ClockSynchronizer.Start
+  isSpec: "True"
+  fullName: Switchboard.ClockSynchronizer.Start
+  nameWithType: ClockSynchronizer.Start
+- uid: Switchboard.ClockSynchronizer.Stop
+  name: Stop()
+  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer_Stop
+  commentId: M:Switchboard.ClockSynchronizer.Stop
+  fullName: Switchboard.ClockSynchronizer.Stop()
+  nameWithType: ClockSynchronizer.Stop()
+- uid: Switchboard.ClockSynchronizer.Stop*
+  name: Stop
+  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer_Stop_
+  commentId: Overload:Switchboard.ClockSynchronizer.Stop
+  isSpec: "True"
+  fullName: Switchboard.ClockSynchronizer.Stop
+  nameWithType: ClockSynchronizer.Stop
 - uid: Switchboard.CompositionRoot
   name: CompositionRoot
   href: api/Switchboard.CompositionRoot.html
   commentId: T:Switchboard.CompositionRoot
   fullName: Switchboard.CompositionRoot
   nameWithType: CompositionRoot
-- uid: Switchboard.CompositionRoot.IsRunning
-  name: IsRunning
-  href: api/Switchboard.CompositionRoot.html#Switchboard_CompositionRoot_IsRunning
-  commentId: P:Switchboard.CompositionRoot.IsRunning
-  fullName: Switchboard.CompositionRoot.IsRunning
-  nameWithType: CompositionRoot.IsRunning
-- uid: Switchboard.CompositionRoot.IsRunning*
-  name: IsRunning
-  href: api/Switchboard.CompositionRoot.html#Switchboard_CompositionRoot_IsRunning_
-  commentId: Overload:Switchboard.CompositionRoot.IsRunning
-  isSpec: "True"
-  fullName: Switchboard.CompositionRoot.IsRunning
-  nameWithType: CompositionRoot.IsRunning
 - uid: Switchboard.CompositionRootAsset
   name: CompositionRootAsset
   href: api/Switchboard.CompositionRootAsset.html
@@ -326,18 +355,6 @@ references:
   commentId: F:Switchboard.CompositionRootAsset.LogNullInjectorError
   fullName: Switchboard.CompositionRootAsset.LogNullInjectorError
   nameWithType: CompositionRootAsset.LogNullInjectorError
-- uid: Switchboard.CreateAssetMenuOrder
-  name: CreateAssetMenuOrder
-  href: api/Switchboard.CreateAssetMenuOrder.html
-  commentId: T:Switchboard.CreateAssetMenuOrder
-  fullName: Switchboard.CreateAssetMenuOrder
-  nameWithType: CreateAssetMenuOrder
-- uid: Switchboard.CreateAssetMenuOrder.Value
-  name: Value
-  href: api/Switchboard.CreateAssetMenuOrder.html#Switchboard_CreateAssetMenuOrder_Value
-  commentId: F:Switchboard.CreateAssetMenuOrder.Value
-  fullName: Switchboard.CreateAssetMenuOrder.Value
-  nameWithType: CreateAssetMenuOrder.Value
 - uid: Switchboard.DateTimeToTextConverter
   name: DateTimeToTextConverter
   href: api/Switchboard.DateTimeToTextConverter.html
@@ -651,53 +668,6 @@ references:
   commentId: T:Switchboard.FixedTicker
   fullName: Switchboard.FixedTicker
   nameWithType: FixedTicker
-- uid: Switchboard.FixedTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name: StartTick(InputAction<FrameOfTime>, int)
-  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
-  commentId: M:Switchboard.FixedTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name.vb: StartTick(InputAction(Of FrameOfTime), Integer)
-  fullName: Switchboard.FixedTicker.StartTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
-  fullName.vb: Switchboard.FixedTicker.StartTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
-  nameWithType: FixedTicker.StartTick(InputAction<FrameOfTime>, int)
-  nameWithType.vb: FixedTicker.StartTick(InputAction(Of FrameOfTime), Integer)
-- uid: Switchboard.FixedTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StartTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.FixedTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StartTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.FixedTicker.StartTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.FixedTicker.StartTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: FixedTicker.StartTick(InputAction<FrameOfTime>)
-  nameWithType.vb: FixedTicker.StartTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.FixedTicker.StartTick*
-  name: StartTick
-  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StartTick_
-  commentId: Overload:Switchboard.FixedTicker.StartTick
-  isSpec: "True"
-  fullName: Switchboard.FixedTicker.StartTick
-  nameWithType: FixedTicker.StartTick
-- uid: Switchboard.FixedTicker.StopTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StopTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StopTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.FixedTicker.StopTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StopTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.FixedTicker.StopTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.FixedTicker.StopTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: FixedTicker.StopTick(InputAction<FrameOfTime>)
-  nameWithType.vb: FixedTicker.StopTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.FixedTicker.StopTick*
-  name: StopTick
-  href: api/Switchboard.FixedTicker.html#Switchboard_FixedTicker_StopTick_
-  commentId: Overload:Switchboard.FixedTicker.StopTick
-  isSpec: "True"
-  fullName: Switchboard.FixedTicker.StopTick
-  nameWithType: FixedTicker.StopTick
-- uid: Switchboard.FlagsFieldAttribute
-  name: FlagsFieldAttribute
-  href: api/Switchboard.FlagsFieldAttribute.html
-  commentId: T:Switchboard.FlagsFieldAttribute
-  fullName: Switchboard.FlagsFieldAttribute
-  nameWithType: FlagsFieldAttribute
 - uid: Switchboard.FloatFormatInfo
   name: FloatFormatInfo
   href: api/Switchboard.FloatFormatInfo.html
@@ -1823,96 +1793,6 @@ references:
   fullName.vb: Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit(Of T)(Single, T, System.Buffers.ReadOnlySpanAction(Of Char, T), Integer)
   nameWithType: FloatToTextExtensions.ConvertToTextWithDigitLimit<T>(float, T, ReadOnlySpanAction<char, T>, int)
   nameWithType.vb: FloatToTextExtensions.ConvertToTextWithDigitLimit(Of T)(Single, T, ReadOnlySpanAction(Of Char, T), Integer)
-- uid: Switchboard.FrameData
-  name: FrameData
-  href: api/Switchboard.FrameData.html
-  commentId: T:Switchboard.FrameData
-  fullName: Switchboard.FrameData
-  nameWithType: FrameData
-- uid: Switchboard.FrameData.#ctor(System.Int32,System.Single,System.Single,System.Single,System.Single)
-  name: FrameData(int, float, float, float, float)
-  href: api/Switchboard.FrameData.html#Switchboard_FrameData__ctor_System_Int32_System_Single_System_Single_System_Single_System_Single_
-  commentId: M:Switchboard.FrameData.#ctor(System.Int32,System.Single,System.Single,System.Single,System.Single)
-  name.vb: New(Integer, Single, Single, Single, Single)
-  fullName: Switchboard.FrameData.FrameData(int, float, float, float, float)
-  fullName.vb: Switchboard.FrameData.New(Integer, Single, Single, Single, Single)
-  nameWithType: FrameData.FrameData(int, float, float, float, float)
-  nameWithType.vb: FrameData.New(Integer, Single, Single, Single, Single)
-- uid: Switchboard.FrameData.#ctor*
-  name: FrameData
-  href: api/Switchboard.FrameData.html#Switchboard_FrameData__ctor_
-  commentId: Overload:Switchboard.FrameData.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: Switchboard.FrameData.FrameData
-  fullName.vb: Switchboard.FrameData.New
-  nameWithType: FrameData.FrameData
-  nameWithType.vb: FrameData.New
-- uid: Switchboard.FrameData.Delta
-  name: Delta
-  href: api/Switchboard.FrameData.html#Switchboard_FrameData_Delta
-  commentId: P:Switchboard.FrameData.Delta
-  fullName: Switchboard.FrameData.Delta
-  nameWithType: FrameData.Delta
-- uid: Switchboard.FrameData.Delta*
-  name: Delta
-  href: api/Switchboard.FrameData.html#Switchboard_FrameData_Delta_
-  commentId: Overload:Switchboard.FrameData.Delta
-  isSpec: "True"
-  fullName: Switchboard.FrameData.Delta
-  nameWithType: FrameData.Delta
-- uid: Switchboard.FrameData.FrameCount
-  name: FrameCount
-  href: api/Switchboard.FrameData.html#Switchboard_FrameData_FrameCount
-  commentId: P:Switchboard.FrameData.FrameCount
-  fullName: Switchboard.FrameData.FrameCount
-  nameWithType: FrameData.FrameCount
-- uid: Switchboard.FrameData.FrameCount*
-  name: FrameCount
-  href: api/Switchboard.FrameData.html#Switchboard_FrameData_FrameCount_
-  commentId: Overload:Switchboard.FrameData.FrameCount
-  isSpec: "True"
-  fullName: Switchboard.FrameData.FrameCount
-  nameWithType: FrameData.FrameCount
-- uid: Switchboard.FrameData.RealDelta
-  name: RealDelta
-  href: api/Switchboard.FrameData.html#Switchboard_FrameData_RealDelta
-  commentId: P:Switchboard.FrameData.RealDelta
-  fullName: Switchboard.FrameData.RealDelta
-  nameWithType: FrameData.RealDelta
-- uid: Switchboard.FrameData.RealDelta*
-  name: RealDelta
-  href: api/Switchboard.FrameData.html#Switchboard_FrameData_RealDelta_
-  commentId: Overload:Switchboard.FrameData.RealDelta
-  isSpec: "True"
-  fullName: Switchboard.FrameData.RealDelta
-  nameWithType: FrameData.RealDelta
-- uid: Switchboard.FrameData.RealTime
-  name: RealTime
-  href: api/Switchboard.FrameData.html#Switchboard_FrameData_RealTime
-  commentId: P:Switchboard.FrameData.RealTime
-  fullName: Switchboard.FrameData.RealTime
-  nameWithType: FrameData.RealTime
-- uid: Switchboard.FrameData.RealTime*
-  name: RealTime
-  href: api/Switchboard.FrameData.html#Switchboard_FrameData_RealTime_
-  commentId: Overload:Switchboard.FrameData.RealTime
-  isSpec: "True"
-  fullName: Switchboard.FrameData.RealTime
-  nameWithType: FrameData.RealTime
-- uid: Switchboard.FrameData.Time
-  name: Time
-  href: api/Switchboard.FrameData.html#Switchboard_FrameData_Time
-  commentId: P:Switchboard.FrameData.Time
-  fullName: Switchboard.FrameData.Time
-  nameWithType: FrameData.Time
-- uid: Switchboard.FrameData.Time*
-  name: Time
-  href: api/Switchboard.FrameData.html#Switchboard_FrameData_Time_
-  commentId: Overload:Switchboard.FrameData.Time
-  isSpec: "True"
-  fullName: Switchboard.FrameData.Time
-  nameWithType: FrameData.Time
 - uid: Switchboard.FrameOfTime
   name: FrameOfTime
   href: api/Switchboard.FrameOfTime.html
@@ -2003,72 +1883,25 @@ references:
   isSpec: "True"
   fullName: Switchboard.FrameOfTime.Time
   nameWithType: FrameOfTime.Time
-- uid: Switchboard.IFixedTicker
-  name: IFixedTicker
-  href: api/Switchboard.IFixedTicker.html
-  commentId: T:Switchboard.IFixedTicker
-  fullName: Switchboard.IFixedTicker
-  nameWithType: IFixedTicker
-- uid: Switchboard.IFixedTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name: StartFixedTick(InputAction<FrameOfTime>, int)
-  href: api/Switchboard.IFixedTicker.html#Switchboard_IFixedTicker_StartFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
-  commentId: M:Switchboard.IFixedTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name.vb: StartFixedTick(InputAction(Of FrameOfTime), Integer)
-  fullName: Switchboard.IFixedTicker.StartFixedTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
-  fullName.vb: Switchboard.IFixedTicker.StartFixedTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
-  nameWithType: IFixedTicker.StartFixedTick(InputAction<FrameOfTime>, int)
-  nameWithType.vb: IFixedTicker.StartFixedTick(InputAction(Of FrameOfTime), Integer)
-- uid: Switchboard.IFixedTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StartFixedTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.IFixedTicker.html#Switchboard_IFixedTicker_StartFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.IFixedTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StartFixedTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.IFixedTicker.StartFixedTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.IFixedTicker.StartFixedTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: IFixedTicker.StartFixedTick(InputAction<FrameOfTime>)
-  nameWithType.vb: IFixedTicker.StartFixedTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.IFixedTicker.StartFixedTick*
-  name: StartFixedTick
-  href: api/Switchboard.IFixedTicker.html#Switchboard_IFixedTicker_StartFixedTick_
-  commentId: Overload:Switchboard.IFixedTicker.StartFixedTick
-  isSpec: "True"
-  fullName: Switchboard.IFixedTicker.StartFixedTick
-  nameWithType: IFixedTicker.StartFixedTick
-- uid: Switchboard.IFixedTicker.StopFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StopFixedTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.IFixedTicker.html#Switchboard_IFixedTicker_StopFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.IFixedTicker.StopFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StopFixedTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.IFixedTicker.StopFixedTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.IFixedTicker.StopFixedTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: IFixedTicker.StopFixedTick(InputAction<FrameOfTime>)
-  nameWithType.vb: IFixedTicker.StopFixedTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.IFixedTicker.StopFixedTick*
-  name: StopFixedTick
-  href: api/Switchboard.IFixedTicker.html#Switchboard_IFixedTicker_StopFixedTick_
-  commentId: Overload:Switchboard.IFixedTicker.StopFixedTick
-  isSpec: "True"
-  fullName: Switchboard.IFixedTicker.StopFixedTick
-  nameWithType: IFixedTicker.StopFixedTick
 - uid: Switchboard.IInjectable
   name: IInjectable
   href: api/Switchboard.IInjectable.html
   commentId: T:Switchboard.IInjectable
   fullName: Switchboard.IInjectable
   nameWithType: IInjectable
-- uid: Switchboard.IInjectable.InjectWith(Switchboard.IInjector)
-  name: InjectWith(IInjector)
-  href: api/Switchboard.IInjectable.html#Switchboard_IInjectable_InjectWith_Switchboard_IInjector_
-  commentId: M:Switchboard.IInjectable.InjectWith(Switchboard.IInjector)
-  fullName: Switchboard.IInjectable.InjectWith(Switchboard.IInjector)
-  nameWithType: IInjectable.InjectWith(IInjector)
-- uid: Switchboard.IInjectable.InjectWith*
-  name: InjectWith
-  href: api/Switchboard.IInjectable.html#Switchboard_IInjectable_InjectWith_
-  commentId: Overload:Switchboard.IInjectable.InjectWith
+- uid: Switchboard.IInjectable.Inject(Switchboard.IInjector)
+  name: Inject(IInjector)
+  href: api/Switchboard.IInjectable.html#Switchboard_IInjectable_Inject_Switchboard_IInjector_
+  commentId: M:Switchboard.IInjectable.Inject(Switchboard.IInjector)
+  fullName: Switchboard.IInjectable.Inject(Switchboard.IInjector)
+  nameWithType: IInjectable.Inject(IInjector)
+- uid: Switchboard.IInjectable.Inject*
+  name: Inject
+  href: api/Switchboard.IInjectable.html#Switchboard_IInjectable_Inject_
+  commentId: Overload:Switchboard.IInjectable.Inject
   isSpec: "True"
-  fullName: Switchboard.IInjectable.InjectWith
-  nameWithType: IInjectable.InjectWith
+  fullName: Switchboard.IInjectable.Inject
+  nameWithType: IInjectable.Inject
 - uid: Switchboard.IInjector
   name: IInjector
   href: api/Switchboard.IInjector.html
@@ -2091,53 +1924,6 @@ references:
   fullName.vb: Switchboard.IInjector.Inject(Of T)(T)
   nameWithType: IInjector.Inject<T>(out T)
   nameWithType.vb: IInjector.Inject(Of T)(T)
-- uid: Switchboard.ILateTicker
-  name: ILateTicker
-  href: api/Switchboard.ILateTicker.html
-  commentId: T:Switchboard.ILateTicker
-  fullName: Switchboard.ILateTicker
-  nameWithType: ILateTicker
-- uid: Switchboard.ILateTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name: StartLateTick(InputAction<FrameOfTime>, int)
-  href: api/Switchboard.ILateTicker.html#Switchboard_ILateTicker_StartLateTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
-  commentId: M:Switchboard.ILateTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name.vb: StartLateTick(InputAction(Of FrameOfTime), Integer)
-  fullName: Switchboard.ILateTicker.StartLateTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
-  fullName.vb: Switchboard.ILateTicker.StartLateTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
-  nameWithType: ILateTicker.StartLateTick(InputAction<FrameOfTime>, int)
-  nameWithType.vb: ILateTicker.StartLateTick(InputAction(Of FrameOfTime), Integer)
-- uid: Switchboard.ILateTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StartLateTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.ILateTicker.html#Switchboard_ILateTicker_StartLateTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.ILateTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StartLateTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.ILateTicker.StartLateTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.ILateTicker.StartLateTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: ILateTicker.StartLateTick(InputAction<FrameOfTime>)
-  nameWithType.vb: ILateTicker.StartLateTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.ILateTicker.StartLateTick*
-  name: StartLateTick
-  href: api/Switchboard.ILateTicker.html#Switchboard_ILateTicker_StartLateTick_
-  commentId: Overload:Switchboard.ILateTicker.StartLateTick
-  isSpec: "True"
-  fullName: Switchboard.ILateTicker.StartLateTick
-  nameWithType: ILateTicker.StartLateTick
-- uid: Switchboard.ILateTicker.StopLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StopLateTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.ILateTicker.html#Switchboard_ILateTicker_StopLateTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.ILateTicker.StopLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StopLateTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.ILateTicker.StopLateTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.ILateTicker.StopLateTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: ILateTicker.StopLateTick(InputAction<FrameOfTime>)
-  nameWithType.vb: ILateTicker.StopLateTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.ILateTicker.StopLateTick*
-  name: StopLateTick
-  href: api/Switchboard.ILateTicker.html#Switchboard_ILateTicker_StopLateTick_
-  commentId: Overload:Switchboard.ILateTicker.StopLateTick
-  isSpec: "True"
-  fullName: Switchboard.ILateTicker.StopLateTick
-  nameWithType: ILateTicker.StopLateTick
 - uid: Switchboard.ILogFormatter
   name: ILogFormatter
   href: api/Switchboard.ILogFormatter.html
@@ -2321,25 +2107,25 @@ references:
   commentId: T:Switchboard.InjectorLocator
   fullName: Switchboard.InjectorLocator
   nameWithType: InjectorLocator
-- uid: Switchboard.InjectorLocator.InjectionRequested
-  name: InjectionRequested
-  href: api/Switchboard.InjectorLocator.html#Switchboard_InjectorLocator_InjectionRequested
-  commentId: E:Switchboard.InjectorLocator.InjectionRequested
-  fullName: Switchboard.InjectorLocator.InjectionRequested
-  nameWithType: InjectorLocator.InjectionRequested
-- uid: Switchboard.InjectorLocator.RequestInjection(Switchboard.IInjectable)
-  name: RequestInjection(IInjectable)
-  href: api/Switchboard.InjectorLocator.html#Switchboard_InjectorLocator_RequestInjection_Switchboard_IInjectable_
-  commentId: M:Switchboard.InjectorLocator.RequestInjection(Switchboard.IInjectable)
-  fullName: Switchboard.InjectorLocator.RequestInjection(Switchboard.IInjectable)
-  nameWithType: InjectorLocator.RequestInjection(IInjectable)
-- uid: Switchboard.InjectorLocator.RequestInjection*
-  name: RequestInjection
-  href: api/Switchboard.InjectorLocator.html#Switchboard_InjectorLocator_RequestInjection_
-  commentId: Overload:Switchboard.InjectorLocator.RequestInjection
+- uid: Switchboard.InjectorLocator.Inject(Switchboard.IInjectable)
+  name: Inject(IInjectable)
+  href: api/Switchboard.InjectorLocator.html#Switchboard_InjectorLocator_Inject_Switchboard_IInjectable_
+  commentId: M:Switchboard.InjectorLocator.Inject(Switchboard.IInjectable)
+  fullName: Switchboard.InjectorLocator.Inject(Switchboard.IInjectable)
+  nameWithType: InjectorLocator.Inject(IInjectable)
+- uid: Switchboard.InjectorLocator.Inject*
+  name: Inject
+  href: api/Switchboard.InjectorLocator.html#Switchboard_InjectorLocator_Inject_
+  commentId: Overload:Switchboard.InjectorLocator.Inject
   isSpec: "True"
-  fullName: Switchboard.InjectorLocator.RequestInjection
-  nameWithType: InjectorLocator.RequestInjection
+  fullName: Switchboard.InjectorLocator.Inject
+  nameWithType: InjectorLocator.Inject
+- uid: Switchboard.InjectorLocator.LocateInjector
+  name: LocateInjector
+  href: api/Switchboard.InjectorLocator.html#Switchboard_InjectorLocator_LocateInjector
+  commentId: E:Switchboard.InjectorLocator.LocateInjector
+  fullName: Switchboard.InjectorLocator.LocateInjector
+  nameWithType: InjectorLocator.LocateInjector
 - uid: Switchboard.InputAction`1
   name: InputAction<T>
   href: api/Switchboard.InputAction-1.html
@@ -3108,15 +2894,6 @@ references:
   commentId: T:Switchboard.ITicker
   fullName: Switchboard.ITicker
   nameWithType: ITicker
-- uid: Switchboard.ITicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name: StartTick(InputAction<FrameOfTime>, int)
-  href: api/Switchboard.ITicker.html#Switchboard_ITicker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
-  commentId: M:Switchboard.ITicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name.vb: StartTick(InputAction(Of FrameOfTime), Integer)
-  fullName: Switchboard.ITicker.StartTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
-  fullName.vb: Switchboard.ITicker.StartTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
-  nameWithType: ITicker.StartTick(InputAction<FrameOfTime>, int)
-  nameWithType.vb: ITicker.StartTick(InputAction(Of FrameOfTime), Integer)
 - uid: Switchboard.ITicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})
   name: StartTick(InputAction<FrameOfTime>)
   href: api/Switchboard.ITicker.html#Switchboard_ITicker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__
@@ -3149,141 +2926,12 @@ references:
   isSpec: "True"
   fullName: Switchboard.ITicker.StopTick
   nameWithType: ITicker.StopTick
-- uid: Switchboard.IUnityTicker
-  name: IUnityTicker
-  href: api/Switchboard.IUnityTicker.html
-  commentId: T:Switchboard.IUnityTicker
-  fullName: Switchboard.IUnityTicker
-  nameWithType: IUnityTicker
-- uid: Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name: StartFixedTick(InputAction<FrameOfTime>, int)
-  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StartFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
-  commentId: M:Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name.vb: StartFixedTick(InputAction(Of FrameOfTime), Integer)
-  fullName: Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
-  fullName.vb: Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
-  nameWithType: IUnityTicker.StartFixedTick(InputAction<FrameOfTime>, int)
-  nameWithType.vb: IUnityTicker.StartFixedTick(InputAction(Of FrameOfTime), Integer)
-- uid: Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StartFixedTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StartFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StartFixedTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.IUnityTicker.StartFixedTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: IUnityTicker.StartFixedTick(InputAction<FrameOfTime>)
-  nameWithType.vb: IUnityTicker.StartFixedTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.IUnityTicker.StartFixedTick*
-  name: StartFixedTick
-  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StartFixedTick_
-  commentId: Overload:Switchboard.IUnityTicker.StartFixedTick
-  isSpec: "True"
-  fullName: Switchboard.IUnityTicker.StartFixedTick
-  nameWithType: IUnityTicker.StartFixedTick
-- uid: Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name: StartLateTick(InputAction<FrameOfTime>, int)
-  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StartLateTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
-  commentId: M:Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name.vb: StartLateTick(InputAction(Of FrameOfTime), Integer)
-  fullName: Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
-  fullName.vb: Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
-  nameWithType: IUnityTicker.StartLateTick(InputAction<FrameOfTime>, int)
-  nameWithType.vb: IUnityTicker.StartLateTick(InputAction(Of FrameOfTime), Integer)
-- uid: Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StartLateTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StartLateTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StartLateTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.IUnityTicker.StartLateTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: IUnityTicker.StartLateTick(InputAction<FrameOfTime>)
-  nameWithType.vb: IUnityTicker.StartLateTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.IUnityTicker.StartLateTick*
-  name: StartLateTick
-  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StartLateTick_
-  commentId: Overload:Switchboard.IUnityTicker.StartLateTick
-  isSpec: "True"
-  fullName: Switchboard.IUnityTicker.StartLateTick
-  nameWithType: IUnityTicker.StartLateTick
-- uid: Switchboard.IUnityTicker.StopFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StopFixedTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StopFixedTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.IUnityTicker.StopFixedTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StopFixedTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.IUnityTicker.StopFixedTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.IUnityTicker.StopFixedTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: IUnityTicker.StopFixedTick(InputAction<FrameOfTime>)
-  nameWithType.vb: IUnityTicker.StopFixedTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.IUnityTicker.StopFixedTick*
-  name: StopFixedTick
-  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StopFixedTick_
-  commentId: Overload:Switchboard.IUnityTicker.StopFixedTick
-  isSpec: "True"
-  fullName: Switchboard.IUnityTicker.StopFixedTick
-  nameWithType: IUnityTicker.StopFixedTick
-- uid: Switchboard.IUnityTicker.StopLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StopLateTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StopLateTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.IUnityTicker.StopLateTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StopLateTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.IUnityTicker.StopLateTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.IUnityTicker.StopLateTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: IUnityTicker.StopLateTick(InputAction<FrameOfTime>)
-  nameWithType.vb: IUnityTicker.StopLateTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.IUnityTicker.StopLateTick*
-  name: StopLateTick
-  href: api/Switchboard.IUnityTicker.html#Switchboard_IUnityTicker_StopLateTick_
-  commentId: Overload:Switchboard.IUnityTicker.StopLateTick
-  isSpec: "True"
-  fullName: Switchboard.IUnityTicker.StopLateTick
-  nameWithType: IUnityTicker.StopLateTick
 - uid: Switchboard.LateTicker
   name: LateTicker
   href: api/Switchboard.LateTicker.html
   commentId: T:Switchboard.LateTicker
   fullName: Switchboard.LateTicker
   nameWithType: LateTicker
-- uid: Switchboard.LateTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name: StartTick(InputAction<FrameOfTime>, int)
-  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
-  commentId: M:Switchboard.LateTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
-  name.vb: StartTick(InputAction(Of FrameOfTime), Integer)
-  fullName: Switchboard.LateTicker.StartTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
-  fullName.vb: Switchboard.LateTicker.StartTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
-  nameWithType: LateTicker.StartTick(InputAction<FrameOfTime>, int)
-  nameWithType.vb: LateTicker.StartTick(InputAction(Of FrameOfTime), Integer)
-- uid: Switchboard.LateTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StartTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.LateTicker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StartTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.LateTicker.StartTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.LateTicker.StartTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: LateTicker.StartTick(InputAction<FrameOfTime>)
-  nameWithType.vb: LateTicker.StartTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.LateTicker.StartTick*
-  name: StartTick
-  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StartTick_
-  commentId: Overload:Switchboard.LateTicker.StartTick
-  isSpec: "True"
-  fullName: Switchboard.LateTicker.StartTick
-  nameWithType: LateTicker.StartTick
-- uid: Switchboard.LateTicker.StopTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name: StopTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StopTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.LateTicker.StopTick(Switchboard.InputAction{Switchboard.FrameOfTime})
-  name.vb: StopTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.LateTicker.StopTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.LateTicker.StopTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: LateTicker.StopTick(InputAction<FrameOfTime>)
-  nameWithType.vb: LateTicker.StopTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.LateTicker.StopTick*
-  name: StopTick
-  href: api/Switchboard.LateTicker.html#Switchboard_LateTicker_StopTick_
-  commentId: Overload:Switchboard.LateTicker.StopTick
-  isSpec: "True"
-  fullName: Switchboard.LateTicker.StopTick
-  nameWithType: LateTicker.StopTick
 - uid: Switchboard.LogFileManager
   name: LogFileManager
   href: api/Switchboard.LogFileManager.html
@@ -3762,77 +3410,6 @@ references:
   isSpec: "True"
   fullName: Switchboard.LogFileWriter.SetFileSizeLimit
   nameWithType: LogFileWriter.SetFileSizeLimit
-- uid: Switchboard.Logger
-  name: Logger
-  href: api/Switchboard.Logger.html
-  commentId: T:Switchboard.Logger
-  fullName: Switchboard.Logger
-  nameWithType: Logger
-- uid: Switchboard.Logger.AddUnityLogger
-  name: AddUnityLogger()
-  href: api/Switchboard.Logger.html#Switchboard_Logger_AddUnityLogger
-  commentId: M:Switchboard.Logger.AddUnityLogger
-  fullName: Switchboard.Logger.AddUnityLogger()
-  nameWithType: Logger.AddUnityLogger()
-- uid: Switchboard.Logger.AddUnityLogger*
-  name: AddUnityLogger
-  href: api/Switchboard.Logger.html#Switchboard_Logger_AddUnityLogger_
-  commentId: Overload:Switchboard.Logger.AddUnityLogger
-  isSpec: "True"
-  fullName: Switchboard.Logger.AddUnityLogger
-  nameWithType: Logger.AddUnityLogger
-- uid: Switchboard.Logger.HijackUnityLogHandler
-  name: HijackUnityLogHandler()
-  href: api/Switchboard.Logger.html#Switchboard_Logger_HijackUnityLogHandler
-  commentId: M:Switchboard.Logger.HijackUnityLogHandler
-  fullName: Switchboard.Logger.HijackUnityLogHandler()
-  nameWithType: Logger.HijackUnityLogHandler()
-- uid: Switchboard.Logger.HijackUnityLogHandler*
-  name: HijackUnityLogHandler
-  href: api/Switchboard.Logger.html#Switchboard_Logger_HijackUnityLogHandler_
-  commentId: Overload:Switchboard.Logger.HijackUnityLogHandler
-  isSpec: "True"
-  fullName: Switchboard.Logger.HijackUnityLogHandler
-  nameWithType: Logger.HijackUnityLogHandler
-- uid: Switchboard.Logger.RemoveUnityLogger
-  name: RemoveUnityLogger()
-  href: api/Switchboard.Logger.html#Switchboard_Logger_RemoveUnityLogger
-  commentId: M:Switchboard.Logger.RemoveUnityLogger
-  fullName: Switchboard.Logger.RemoveUnityLogger()
-  nameWithType: Logger.RemoveUnityLogger()
-- uid: Switchboard.Logger.RemoveUnityLogger*
-  name: RemoveUnityLogger
-  href: api/Switchboard.Logger.html#Switchboard_Logger_RemoveUnityLogger_
-  commentId: Overload:Switchboard.Logger.RemoveUnityLogger
-  isSpec: "True"
-  fullName: Switchboard.Logger.RemoveUnityLogger
-  nameWithType: Logger.RemoveUnityLogger
-- uid: Switchboard.Logger.ResetUnityLogHandler
-  name: ResetUnityLogHandler()
-  href: api/Switchboard.Logger.html#Switchboard_Logger_ResetUnityLogHandler
-  commentId: M:Switchboard.Logger.ResetUnityLogHandler
-  fullName: Switchboard.Logger.ResetUnityLogHandler()
-  nameWithType: Logger.ResetUnityLogHandler()
-- uid: Switchboard.Logger.ResetUnityLogHandler*
-  name: ResetUnityLogHandler
-  href: api/Switchboard.Logger.html#Switchboard_Logger_ResetUnityLogHandler_
-  commentId: Overload:Switchboard.Logger.ResetUnityLogHandler
-  isSpec: "True"
-  fullName: Switchboard.Logger.ResetUnityLogHandler
-  nameWithType: Logger.ResetUnityLogHandler
-- uid: Switchboard.Logger.Root
-  name: Root
-  href: api/Switchboard.Logger.html#Switchboard_Logger_Root
-  commentId: P:Switchboard.Logger.Root
-  fullName: Switchboard.Logger.Root
-  nameWithType: Logger.Root
-- uid: Switchboard.Logger.Root*
-  name: Root
-  href: api/Switchboard.Logger.html#Switchboard_Logger_Root_
-  commentId: Overload:Switchboard.Logger.Root
-  isSpec: "True"
-  fullName: Switchboard.Logger.Root
-  nameWithType: Logger.Root
 - uid: Switchboard.LoggerRoot
   name: LoggerRoot
   href: api/Switchboard.LoggerRoot.html
@@ -3947,6 +3524,12 @@ references:
   commentId: F:Switchboard.LogLevel.Error
   fullName: Switchboard.LogLevel.Error
   nameWithType: LogLevel.Error
+- uid: Switchboard.LogLevel.Exact
+  name: Exact
+  href: api/Switchboard.LogLevel.html
+  commentId: F:Switchboard.LogLevel.Exact
+  fullName: Switchboard.LogLevel.Exact
+  nameWithType: LogLevel.Exact
 - uid: Switchboard.LogLevel.Information
   name: Information
   href: api/Switchboard.LogLevel.html#Switchboard_LogLevel_Information
@@ -4985,83 +4568,6 @@ references:
   isSpec: "True"
   fullName: Switchboard.SharedObjectArrayPool.GetPoolForLength
   nameWithType: SharedObjectArrayPool.GetPoolForLength
-- uid: Switchboard.StandardDependencyInjector
-  name: StandardDependencyInjector
-  href: api/Switchboard.StandardDependencyInjector.html
-  commentId: T:Switchboard.StandardDependencyInjector
-  fullName: Switchboard.StandardDependencyInjector
-  nameWithType: StandardDependencyInjector
-- uid: Switchboard.StandardDependencyInjector.Activation
-  name: Activation()
-  href: api/Switchboard.StandardDependencyInjector.html#Switchboard_StandardDependencyInjector_Activation
-  commentId: M:Switchboard.StandardDependencyInjector.Activation
-  fullName: Switchboard.StandardDependencyInjector.Activation()
-  nameWithType: StandardDependencyInjector.Activation()
-- uid: Switchboard.StandardDependencyInjector.Activation*
-  name: Activation
-  href: api/Switchboard.StandardDependencyInjector.html#Switchboard_StandardDependencyInjector_Activation_
-  commentId: Overload:Switchboard.StandardDependencyInjector.Activation
-  isSpec: "True"
-  fullName: Switchboard.StandardDependencyInjector.Activation
-  nameWithType: StandardDependencyInjector.Activation
-- uid: Switchboard.StandardDependencyInjector.Deactivation
-  name: Deactivation()
-  href: api/Switchboard.StandardDependencyInjector.html#Switchboard_StandardDependencyInjector_Deactivation
-  commentId: M:Switchboard.StandardDependencyInjector.Deactivation
-  fullName: Switchboard.StandardDependencyInjector.Deactivation()
-  nameWithType: StandardDependencyInjector.Deactivation()
-- uid: Switchboard.StandardDependencyInjector.Deactivation*
-  name: Deactivation
-  href: api/Switchboard.StandardDependencyInjector.html#Switchboard_StandardDependencyInjector_Deactivation_
-  commentId: Overload:Switchboard.StandardDependencyInjector.Deactivation
-  isSpec: "True"
-  fullName: Switchboard.StandardDependencyInjector.Deactivation
-  nameWithType: StandardDependencyInjector.Deactivation
-- uid: Switchboard.StandardDependencyInjector.GetInstanceOf(System.Type)
-  name: GetInstanceOf(Type)
-  href: api/Switchboard.StandardDependencyInjector.html#Switchboard_StandardDependencyInjector_GetInstanceOf_System_Type_
-  commentId: M:Switchboard.StandardDependencyInjector.GetInstanceOf(System.Type)
-  fullName: Switchboard.StandardDependencyInjector.GetInstanceOf(System.Type)
-  nameWithType: StandardDependencyInjector.GetInstanceOf(Type)
-- uid: Switchboard.StandardDependencyInjector.GetInstanceOf*
-  name: GetInstanceOf
-  href: api/Switchboard.StandardDependencyInjector.html#Switchboard_StandardDependencyInjector_GetInstanceOf_
-  commentId: Overload:Switchboard.StandardDependencyInjector.GetInstanceOf
-  isSpec: "True"
-  fullName: Switchboard.StandardDependencyInjector.GetInstanceOf
-  nameWithType: StandardDependencyInjector.GetInstanceOf
-- uid: Switchboard.StandardDependencyInjector.GetLogFileManager
-  name: GetLogFileManager()
-  href: api/Switchboard.StandardDependencyInjector.html#Switchboard_StandardDependencyInjector_GetLogFileManager
-  commentId: M:Switchboard.StandardDependencyInjector.GetLogFileManager
-  fullName: Switchboard.StandardDependencyInjector.GetLogFileManager()
-  nameWithType: StandardDependencyInjector.GetLogFileManager()
-- uid: Switchboard.StandardDependencyInjector.GetLogFileManager*
-  name: GetLogFileManager
-  href: api/Switchboard.StandardDependencyInjector.html#Switchboard_StandardDependencyInjector_GetLogFileManager_
-  commentId: Overload:Switchboard.StandardDependencyInjector.GetLogFileManager
-  isSpec: "True"
-  fullName: Switchboard.StandardDependencyInjector.GetLogFileManager
-  nameWithType: StandardDependencyInjector.GetLogFileManager
-- uid: Switchboard.StandardDependencyInjector.LogFileManager
-  name: LogFileManager
-  href: api/Switchboard.StandardDependencyInjector.html#Switchboard_StandardDependencyInjector_LogFileManager
-  commentId: P:Switchboard.StandardDependencyInjector.LogFileManager
-  fullName: Switchboard.StandardDependencyInjector.LogFileManager
-  nameWithType: StandardDependencyInjector.LogFileManager
-- uid: Switchboard.StandardDependencyInjector.LogFileManager*
-  name: LogFileManager
-  href: api/Switchboard.StandardDependencyInjector.html#Switchboard_StandardDependencyInjector_LogFileManager_
-  commentId: Overload:Switchboard.StandardDependencyInjector.LogFileManager
-  isSpec: "True"
-  fullName: Switchboard.StandardDependencyInjector.LogFileManager
-  nameWithType: StandardDependencyInjector.LogFileManager
-- uid: Switchboard.StandardDependencyInjector.LogFilePlatforms
-  name: LogFilePlatforms
-  href: api/Switchboard.StandardDependencyInjector.html#Switchboard_StandardDependencyInjector_LogFilePlatforms
-  commentId: F:Switchboard.StandardDependencyInjector.LogFilePlatforms
-  fullName: Switchboard.StandardDependencyInjector.LogFilePlatforms
-  nameWithType: StandardDependencyInjector.LogFilePlatforms
 - uid: Switchboard.StandardLogFormatter
   name: StandardLogFormatter
   href: api/Switchboard.StandardLogFormatter.html
@@ -5720,6 +5226,28 @@ references:
   isSpec: "True"
   fullName: Switchboard.StringMaker.EnsureCapacity
   nameWithType: StringMaker.EnsureCapacity
+- uid: Switchboard.StringMaker.Equals(Switchboard.StringMaker)
+  name: Equals(StringMaker)
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_Equals_Switchboard_StringMaker_
+  commentId: M:Switchboard.StringMaker.Equals(Switchboard.StringMaker)
+  fullName: Switchboard.StringMaker.Equals(Switchboard.StringMaker)
+  nameWithType: StringMaker.Equals(StringMaker)
+- uid: Switchboard.StringMaker.Equals(System.ReadOnlySpan{System.Char})
+  name: Equals(ReadOnlySpan<char>)
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_Equals_System_ReadOnlySpan_System_Char__
+  commentId: M:Switchboard.StringMaker.Equals(System.ReadOnlySpan{System.Char})
+  name.vb: Equals(ReadOnlySpan(Of Char))
+  fullName: Switchboard.StringMaker.Equals(System.ReadOnlySpan<char>)
+  fullName.vb: Switchboard.StringMaker.Equals(System.ReadOnlySpan(Of Char))
+  nameWithType: StringMaker.Equals(ReadOnlySpan<char>)
+  nameWithType.vb: StringMaker.Equals(ReadOnlySpan(Of Char))
+- uid: Switchboard.StringMaker.Equals*
+  name: Equals
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_Equals_
+  commentId: Overload:Switchboard.StringMaker.Equals
+  isSpec: "True"
+  fullName: Switchboard.StringMaker.Equals
+  nameWithType: StringMaker.Equals
 - uid: Switchboard.StringMaker.Item(System.Int32)
   name: this[int]
   href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_Item_System_Int32_
@@ -6341,6 +5869,108 @@ references:
   isSpec: "True"
   fullName: Switchboard.StringMakerHandle.AppendWithDigitLimit
   nameWithType: StringMakerHandle.AppendWithDigitLimit
+- uid: Switchboard.StringMakerHandle.Capacity
+  name: Capacity
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Capacity
+  commentId: P:Switchboard.StringMakerHandle.Capacity
+  fullName: Switchboard.StringMakerHandle.Capacity
+  nameWithType: StringMakerHandle.Capacity
+- uid: Switchboard.StringMakerHandle.Capacity*
+  name: Capacity
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Capacity_
+  commentId: Overload:Switchboard.StringMakerHandle.Capacity
+  isSpec: "True"
+  fullName: Switchboard.StringMakerHandle.Capacity
+  nameWithType: StringMakerHandle.Capacity
+- uid: Switchboard.StringMakerHandle.Clear
+  name: Clear()
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Clear
+  commentId: M:Switchboard.StringMakerHandle.Clear
+  fullName: Switchboard.StringMakerHandle.Clear()
+  nameWithType: StringMakerHandle.Clear()
+- uid: Switchboard.StringMakerHandle.Clear*
+  name: Clear
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Clear_
+  commentId: Overload:Switchboard.StringMakerHandle.Clear
+  isSpec: "True"
+  fullName: Switchboard.StringMakerHandle.Clear
+  nameWithType: StringMakerHandle.Clear
+- uid: Switchboard.StringMakerHandle.ConvertToUTF8(System.Span{System.Byte})
+  name: ConvertToUTF8(Span<byte>)
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_ConvertToUTF8_System_Span_System_Byte__
+  commentId: M:Switchboard.StringMakerHandle.ConvertToUTF8(System.Span{System.Byte})
+  name.vb: ConvertToUTF8(Span(Of Byte))
+  fullName: Switchboard.StringMakerHandle.ConvertToUTF8(System.Span<byte>)
+  fullName.vb: Switchboard.StringMakerHandle.ConvertToUTF8(System.Span(Of Byte))
+  nameWithType: StringMakerHandle.ConvertToUTF8(Span<byte>)
+  nameWithType.vb: StringMakerHandle.ConvertToUTF8(Span(Of Byte))
+- uid: Switchboard.StringMakerHandle.ConvertToUTF8*
+  name: ConvertToUTF8
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_ConvertToUTF8_
+  commentId: Overload:Switchboard.StringMakerHandle.ConvertToUTF8
+  isSpec: "True"
+  fullName: Switchboard.StringMakerHandle.ConvertToUTF8
+  nameWithType: StringMakerHandle.ConvertToUTF8
+- uid: Switchboard.StringMakerHandle.CopyTo(System.Span{System.Char})
+  name: CopyTo(Span<char>)
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_CopyTo_System_Span_System_Char__
+  commentId: M:Switchboard.StringMakerHandle.CopyTo(System.Span{System.Char})
+  name.vb: CopyTo(Span(Of Char))
+  fullName: Switchboard.StringMakerHandle.CopyTo(System.Span<char>)
+  fullName.vb: Switchboard.StringMakerHandle.CopyTo(System.Span(Of Char))
+  nameWithType: StringMakerHandle.CopyTo(Span<char>)
+  nameWithType.vb: StringMakerHandle.CopyTo(Span(Of Char))
+- uid: Switchboard.StringMakerHandle.CopyTo*
+  name: CopyTo
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_CopyTo_
+  commentId: Overload:Switchboard.StringMakerHandle.CopyTo
+  isSpec: "True"
+  fullName: Switchboard.StringMakerHandle.CopyTo
+  nameWithType: StringMakerHandle.CopyTo
+- uid: Switchboard.StringMakerHandle.EnsureCapacity(System.Int32)
+  name: EnsureCapacity(int)
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_EnsureCapacity_System_Int32_
+  commentId: M:Switchboard.StringMakerHandle.EnsureCapacity(System.Int32)
+  name.vb: EnsureCapacity(Integer)
+  fullName: Switchboard.StringMakerHandle.EnsureCapacity(int)
+  fullName.vb: Switchboard.StringMakerHandle.EnsureCapacity(Integer)
+  nameWithType: StringMakerHandle.EnsureCapacity(int)
+  nameWithType.vb: StringMakerHandle.EnsureCapacity(Integer)
+- uid: Switchboard.StringMakerHandle.EnsureCapacity*
+  name: EnsureCapacity
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_EnsureCapacity_
+  commentId: Overload:Switchboard.StringMakerHandle.EnsureCapacity
+  isSpec: "True"
+  fullName: Switchboard.StringMakerHandle.EnsureCapacity
+  nameWithType: StringMakerHandle.EnsureCapacity
+- uid: Switchboard.StringMakerHandle.Equals(Switchboard.StringMaker)
+  name: Equals(StringMaker)
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Equals_Switchboard_StringMaker_
+  commentId: M:Switchboard.StringMakerHandle.Equals(Switchboard.StringMaker)
+  fullName: Switchboard.StringMakerHandle.Equals(Switchboard.StringMaker)
+  nameWithType: StringMakerHandle.Equals(StringMaker)
+- uid: Switchboard.StringMakerHandle.Equals(Switchboard.StringMakerHandle)
+  name: Equals(StringMakerHandle)
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Equals_Switchboard_StringMakerHandle_
+  commentId: M:Switchboard.StringMakerHandle.Equals(Switchboard.StringMakerHandle)
+  fullName: Switchboard.StringMakerHandle.Equals(Switchboard.StringMakerHandle)
+  nameWithType: StringMakerHandle.Equals(StringMakerHandle)
+- uid: Switchboard.StringMakerHandle.Equals(System.ReadOnlySpan{System.Char})
+  name: Equals(ReadOnlySpan<char>)
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Equals_System_ReadOnlySpan_System_Char__
+  commentId: M:Switchboard.StringMakerHandle.Equals(System.ReadOnlySpan{System.Char})
+  name.vb: Equals(ReadOnlySpan(Of Char))
+  fullName: Switchboard.StringMakerHandle.Equals(System.ReadOnlySpan<char>)
+  fullName.vb: Switchboard.StringMakerHandle.Equals(System.ReadOnlySpan(Of Char))
+  nameWithType: StringMakerHandle.Equals(ReadOnlySpan<char>)
+  nameWithType.vb: StringMakerHandle.Equals(ReadOnlySpan(Of Char))
+- uid: Switchboard.StringMakerHandle.Equals*
+  name: Equals
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Equals_
+  commentId: Overload:Switchboard.StringMakerHandle.Equals
+  isSpec: "True"
+  fullName: Switchboard.StringMakerHandle.Equals
+  nameWithType: StringMakerHandle.Equals
 - uid: Switchboard.StringMakerHandle.Item(System.Int32)
   name: this[int]
   href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Item_System_Int32_
@@ -6373,6 +6003,32 @@ references:
   isSpec: "True"
   fullName: Switchboard.StringMakerHandle.Length
   nameWithType: StringMakerHandle.Length
+- uid: Switchboard.StringMakerHandle.ToString
+  name: ToString()
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_ToString
+  commentId: M:Switchboard.StringMakerHandle.ToString
+  fullName: Switchboard.StringMakerHandle.ToString()
+  nameWithType: StringMakerHandle.ToString()
+- uid: Switchboard.StringMakerHandle.ToString*
+  name: ToString
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_ToString_
+  commentId: Overload:Switchboard.StringMakerHandle.ToString
+  isSpec: "True"
+  fullName: Switchboard.StringMakerHandle.ToString
+  nameWithType: StringMakerHandle.ToString
+- uid: Switchboard.StringMakerHandle.TrimExcess
+  name: TrimExcess()
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_TrimExcess
+  commentId: M:Switchboard.StringMakerHandle.TrimExcess
+  fullName: Switchboard.StringMakerHandle.TrimExcess()
+  nameWithType: StringMakerHandle.TrimExcess()
+- uid: Switchboard.StringMakerHandle.TrimExcess*
+  name: TrimExcess
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_TrimExcess_
+  commentId: Overload:Switchboard.StringMakerHandle.TrimExcess
+  isSpec: "True"
+  fullName: Switchboard.StringMakerHandle.TrimExcess
+  nameWithType: StringMakerHandle.TrimExcess
 - uid: Switchboard.StringMakerILoggerExtensions
   name: StringMakerILoggerExtensions
   href: api/Switchboard.StringMakerILoggerExtensions.html
@@ -6532,6 +6188,77 @@ references:
   isSpec: "True"
   fullName: Switchboard.StringMakerUnityExtensions.Append
   nameWithType: StringMakerUnityExtensions.Append
+- uid: Switchboard.SwitchboardLogger
+  name: SwitchboardLogger
+  href: api/Switchboard.SwitchboardLogger.html
+  commentId: T:Switchboard.SwitchboardLogger
+  fullName: Switchboard.SwitchboardLogger
+  nameWithType: SwitchboardLogger
+- uid: Switchboard.SwitchboardLogger.AddUnityLogger
+  name: AddUnityLogger()
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_AddUnityLogger
+  commentId: M:Switchboard.SwitchboardLogger.AddUnityLogger
+  fullName: Switchboard.SwitchboardLogger.AddUnityLogger()
+  nameWithType: SwitchboardLogger.AddUnityLogger()
+- uid: Switchboard.SwitchboardLogger.AddUnityLogger*
+  name: AddUnityLogger
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_AddUnityLogger_
+  commentId: Overload:Switchboard.SwitchboardLogger.AddUnityLogger
+  isSpec: "True"
+  fullName: Switchboard.SwitchboardLogger.AddUnityLogger
+  nameWithType: SwitchboardLogger.AddUnityLogger
+- uid: Switchboard.SwitchboardLogger.HijackUnityLogHandler
+  name: HijackUnityLogHandler()
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_HijackUnityLogHandler
+  commentId: M:Switchboard.SwitchboardLogger.HijackUnityLogHandler
+  fullName: Switchboard.SwitchboardLogger.HijackUnityLogHandler()
+  nameWithType: SwitchboardLogger.HijackUnityLogHandler()
+- uid: Switchboard.SwitchboardLogger.HijackUnityLogHandler*
+  name: HijackUnityLogHandler
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_HijackUnityLogHandler_
+  commentId: Overload:Switchboard.SwitchboardLogger.HijackUnityLogHandler
+  isSpec: "True"
+  fullName: Switchboard.SwitchboardLogger.HijackUnityLogHandler
+  nameWithType: SwitchboardLogger.HijackUnityLogHandler
+- uid: Switchboard.SwitchboardLogger.RemoveUnityLogger
+  name: RemoveUnityLogger()
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_RemoveUnityLogger
+  commentId: M:Switchboard.SwitchboardLogger.RemoveUnityLogger
+  fullName: Switchboard.SwitchboardLogger.RemoveUnityLogger()
+  nameWithType: SwitchboardLogger.RemoveUnityLogger()
+- uid: Switchboard.SwitchboardLogger.RemoveUnityLogger*
+  name: RemoveUnityLogger
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_RemoveUnityLogger_
+  commentId: Overload:Switchboard.SwitchboardLogger.RemoveUnityLogger
+  isSpec: "True"
+  fullName: Switchboard.SwitchboardLogger.RemoveUnityLogger
+  nameWithType: SwitchboardLogger.RemoveUnityLogger
+- uid: Switchboard.SwitchboardLogger.ResetUnityLogHandler
+  name: ResetUnityLogHandler()
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_ResetUnityLogHandler
+  commentId: M:Switchboard.SwitchboardLogger.ResetUnityLogHandler
+  fullName: Switchboard.SwitchboardLogger.ResetUnityLogHandler()
+  nameWithType: SwitchboardLogger.ResetUnityLogHandler()
+- uid: Switchboard.SwitchboardLogger.ResetUnityLogHandler*
+  name: ResetUnityLogHandler
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_ResetUnityLogHandler_
+  commentId: Overload:Switchboard.SwitchboardLogger.ResetUnityLogHandler
+  isSpec: "True"
+  fullName: Switchboard.SwitchboardLogger.ResetUnityLogHandler
+  nameWithType: SwitchboardLogger.ResetUnityLogHandler
+- uid: Switchboard.SwitchboardLogger.RootInstance
+  name: RootInstance
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_RootInstance
+  commentId: P:Switchboard.SwitchboardLogger.RootInstance
+  fullName: Switchboard.SwitchboardLogger.RootInstance
+  nameWithType: SwitchboardLogger.RootInstance
+- uid: Switchboard.SwitchboardLogger.RootInstance*
+  name: RootInstance
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_RootInstance_
+  commentId: Overload:Switchboard.SwitchboardLogger.RootInstance
+  isSpec: "True"
+  fullName: Switchboard.SwitchboardLogger.RootInstance
+  nameWithType: SwitchboardLogger.RootInstance
 - uid: Switchboard.SwitchboardMenuOrder
   name: SwitchboardMenuOrder
   href: api/Switchboard.SwitchboardMenuOrder.html
@@ -6544,32 +6271,6 @@ references:
   commentId: F:Switchboard.SwitchboardMenuOrder.Value
   fullName: Switchboard.SwitchboardMenuOrder.Value
   nameWithType: SwitchboardMenuOrder.Value
-- uid: Switchboard.TheTypeOf`1
-  name: TheTypeOf<T>
-  href: api/Switchboard.TheTypeOf-1.html
-  commentId: T:Switchboard.TheTypeOf`1
-  name.vb: TheTypeOf(Of T)
-  fullName: Switchboard.TheTypeOf<T>
-  fullName.vb: Switchboard.TheTypeOf(Of T)
-  nameWithType: TheTypeOf<T>
-  nameWithType.vb: TheTypeOf(Of T)
-- uid: Switchboard.TheTypeOf`1.Type
-  name: Type
-  href: api/Switchboard.TheTypeOf-1.html#Switchboard_TheTypeOf_1_Type
-  commentId: P:Switchboard.TheTypeOf`1.Type
-  fullName: Switchboard.TheTypeOf<T>.Type
-  fullName.vb: Switchboard.TheTypeOf(Of T).Type
-  nameWithType: TheTypeOf<T>.Type
-  nameWithType.vb: TheTypeOf(Of T).Type
-- uid: Switchboard.TheTypeOf`1.Type*
-  name: Type
-  href: api/Switchboard.TheTypeOf-1.html#Switchboard_TheTypeOf_1_Type_
-  commentId: Overload:Switchboard.TheTypeOf`1.Type
-  isSpec: "True"
-  fullName: Switchboard.TheTypeOf<T>.Type
-  fullName.vb: Switchboard.TheTypeOf(Of T).Type
-  nameWithType: TheTypeOf<T>.Type
-  nameWithType.vb: TheTypeOf(Of T).Type
 - uid: Switchboard.ThreadSafeObjectPool`1
   name: ThreadSafeObjectPool<T>
   href: api/Switchboard.ThreadSafeObjectPool-1.html
@@ -6741,189 +6442,66 @@ references:
   commentId: T:Switchboard.Ticker
   fullName: Switchboard.Ticker
   nameWithType: Ticker
-- uid: Switchboard.Ticker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
+- uid: Switchboard.TickerBase
+  name: TickerBase
+  href: api/Switchboard.TickerBase.html
+  commentId: T:Switchboard.TickerBase
+  fullName: Switchboard.TickerBase
+  nameWithType: TickerBase
+- uid: Switchboard.TickerBase.OnTick
+  name: OnTick()
+  href: api/Switchboard.TickerBase.html#Switchboard_TickerBase_OnTick
+  commentId: M:Switchboard.TickerBase.OnTick
+  fullName: Switchboard.TickerBase.OnTick()
+  nameWithType: TickerBase.OnTick()
+- uid: Switchboard.TickerBase.OnTick*
+  name: OnTick
+  href: api/Switchboard.TickerBase.html#Switchboard_TickerBase_OnTick_
+  commentId: Overload:Switchboard.TickerBase.OnTick
+  isSpec: "True"
+  fullName: Switchboard.TickerBase.OnTick
+  nameWithType: TickerBase.OnTick
+- uid: Switchboard.TickerBase.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
   name: StartTick(InputAction<FrameOfTime>, int)
-  href: api/Switchboard.Ticker.html#Switchboard_Ticker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
-  commentId: M:Switchboard.Ticker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
+  href: api/Switchboard.TickerBase.html#Switchboard_TickerBase_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_
+  commentId: M:Switchboard.TickerBase.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)
   name.vb: StartTick(InputAction(Of FrameOfTime), Integer)
-  fullName: Switchboard.Ticker.StartTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
-  fullName.vb: Switchboard.Ticker.StartTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
-  nameWithType: Ticker.StartTick(InputAction<FrameOfTime>, int)
-  nameWithType.vb: Ticker.StartTick(InputAction(Of FrameOfTime), Integer)
-- uid: Switchboard.Ticker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  fullName: Switchboard.TickerBase.StartTick(Switchboard.InputAction<Switchboard.FrameOfTime>, int)
+  fullName.vb: Switchboard.TickerBase.StartTick(Switchboard.InputAction(Of Switchboard.FrameOfTime), Integer)
+  nameWithType: TickerBase.StartTick(InputAction<FrameOfTime>, int)
+  nameWithType.vb: TickerBase.StartTick(InputAction(Of FrameOfTime), Integer)
+- uid: Switchboard.TickerBase.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})
   name: StartTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.Ticker.html#Switchboard_Ticker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.Ticker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  href: api/Switchboard.TickerBase.html#Switchboard_TickerBase_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__
+  commentId: M:Switchboard.TickerBase.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})
   name.vb: StartTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.Ticker.StartTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.Ticker.StartTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: Ticker.StartTick(InputAction<FrameOfTime>)
-  nameWithType.vb: Ticker.StartTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.Ticker.StartTick*
+  fullName: Switchboard.TickerBase.StartTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
+  fullName.vb: Switchboard.TickerBase.StartTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
+  nameWithType: TickerBase.StartTick(InputAction<FrameOfTime>)
+  nameWithType.vb: TickerBase.StartTick(InputAction(Of FrameOfTime))
+- uid: Switchboard.TickerBase.StartTick*
   name: StartTick
-  href: api/Switchboard.Ticker.html#Switchboard_Ticker_StartTick_
-  commentId: Overload:Switchboard.Ticker.StartTick
+  href: api/Switchboard.TickerBase.html#Switchboard_TickerBase_StartTick_
+  commentId: Overload:Switchboard.TickerBase.StartTick
   isSpec: "True"
-  fullName: Switchboard.Ticker.StartTick
-  nameWithType: Ticker.StartTick
-- uid: Switchboard.Ticker.StopTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  fullName: Switchboard.TickerBase.StartTick
+  nameWithType: TickerBase.StartTick
+- uid: Switchboard.TickerBase.StopTick(Switchboard.InputAction{Switchboard.FrameOfTime})
   name: StopTick(InputAction<FrameOfTime>)
-  href: api/Switchboard.Ticker.html#Switchboard_Ticker_StopTick_Switchboard_InputAction_Switchboard_FrameOfTime__
-  commentId: M:Switchboard.Ticker.StopTick(Switchboard.InputAction{Switchboard.FrameOfTime})
+  href: api/Switchboard.TickerBase.html#Switchboard_TickerBase_StopTick_Switchboard_InputAction_Switchboard_FrameOfTime__
+  commentId: M:Switchboard.TickerBase.StopTick(Switchboard.InputAction{Switchboard.FrameOfTime})
   name.vb: StopTick(InputAction(Of FrameOfTime))
-  fullName: Switchboard.Ticker.StopTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
-  fullName.vb: Switchboard.Ticker.StopTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
-  nameWithType: Ticker.StopTick(InputAction<FrameOfTime>)
-  nameWithType.vb: Ticker.StopTick(InputAction(Of FrameOfTime))
-- uid: Switchboard.Ticker.StopTick*
+  fullName: Switchboard.TickerBase.StopTick(Switchboard.InputAction<Switchboard.FrameOfTime>)
+  fullName.vb: Switchboard.TickerBase.StopTick(Switchboard.InputAction(Of Switchboard.FrameOfTime))
+  nameWithType: TickerBase.StopTick(InputAction<FrameOfTime>)
+  nameWithType.vb: TickerBase.StopTick(InputAction(Of FrameOfTime))
+- uid: Switchboard.TickerBase.StopTick*
   name: StopTick
-  href: api/Switchboard.Ticker.html#Switchboard_Ticker_StopTick_
-  commentId: Overload:Switchboard.Ticker.StopTick
+  href: api/Switchboard.TickerBase.html#Switchboard_TickerBase_StopTick_
+  commentId: Overload:Switchboard.TickerBase.StopTick
   isSpec: "True"
-  fullName: Switchboard.Ticker.StopTick
-  nameWithType: Ticker.StopTick
-- uid: Switchboard.TickerRoot
-  name: TickerRoot
-  href: api/Switchboard.TickerRoot.html
-  commentId: T:Switchboard.TickerRoot
-  fullName: Switchboard.TickerRoot
-  nameWithType: TickerRoot
-- uid: Switchboard.TickerRoot.Instance
-  name: Instance
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_Instance
-  commentId: P:Switchboard.TickerRoot.Instance
-  fullName: Switchboard.TickerRoot.Instance
-  nameWithType: TickerRoot.Instance
-- uid: Switchboard.TickerRoot.Instance*
-  name: Instance
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_Instance_
-  commentId: Overload:Switchboard.TickerRoot.Instance
-  isSpec: "True"
-  fullName: Switchboard.TickerRoot.Instance
-  nameWithType: TickerRoot.Instance
-- uid: Switchboard.TickerRoot.StartFixedTick(Switchboard.InputAction{Switchboard.FrameData},System.Int32)
-  name: StartFixedTick(InputAction<FrameData>, int)
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StartFixedTick_Switchboard_InputAction_Switchboard_FrameData__System_Int32_
-  commentId: M:Switchboard.TickerRoot.StartFixedTick(Switchboard.InputAction{Switchboard.FrameData},System.Int32)
-  name.vb: StartFixedTick(InputAction(Of FrameData), Integer)
-  fullName: Switchboard.TickerRoot.StartFixedTick(Switchboard.InputAction<Switchboard.FrameData>, int)
-  fullName.vb: Switchboard.TickerRoot.StartFixedTick(Switchboard.InputAction(Of Switchboard.FrameData), Integer)
-  nameWithType: TickerRoot.StartFixedTick(InputAction<FrameData>, int)
-  nameWithType.vb: TickerRoot.StartFixedTick(InputAction(Of FrameData), Integer)
-- uid: Switchboard.TickerRoot.StartFixedTick(Switchboard.InputAction{Switchboard.FrameData})
-  name: StartFixedTick(InputAction<FrameData>)
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StartFixedTick_Switchboard_InputAction_Switchboard_FrameData__
-  commentId: M:Switchboard.TickerRoot.StartFixedTick(Switchboard.InputAction{Switchboard.FrameData})
-  name.vb: StartFixedTick(InputAction(Of FrameData))
-  fullName: Switchboard.TickerRoot.StartFixedTick(Switchboard.InputAction<Switchboard.FrameData>)
-  fullName.vb: Switchboard.TickerRoot.StartFixedTick(Switchboard.InputAction(Of Switchboard.FrameData))
-  nameWithType: TickerRoot.StartFixedTick(InputAction<FrameData>)
-  nameWithType.vb: TickerRoot.StartFixedTick(InputAction(Of FrameData))
-- uid: Switchboard.TickerRoot.StartFixedTick*
-  name: StartFixedTick
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StartFixedTick_
-  commentId: Overload:Switchboard.TickerRoot.StartFixedTick
-  isSpec: "True"
-  fullName: Switchboard.TickerRoot.StartFixedTick
-  nameWithType: TickerRoot.StartFixedTick
-- uid: Switchboard.TickerRoot.StartLateTick(Switchboard.InputAction{Switchboard.FrameData},System.Int32)
-  name: StartLateTick(InputAction<FrameData>, int)
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StartLateTick_Switchboard_InputAction_Switchboard_FrameData__System_Int32_
-  commentId: M:Switchboard.TickerRoot.StartLateTick(Switchboard.InputAction{Switchboard.FrameData},System.Int32)
-  name.vb: StartLateTick(InputAction(Of FrameData), Integer)
-  fullName: Switchboard.TickerRoot.StartLateTick(Switchboard.InputAction<Switchboard.FrameData>, int)
-  fullName.vb: Switchboard.TickerRoot.StartLateTick(Switchboard.InputAction(Of Switchboard.FrameData), Integer)
-  nameWithType: TickerRoot.StartLateTick(InputAction<FrameData>, int)
-  nameWithType.vb: TickerRoot.StartLateTick(InputAction(Of FrameData), Integer)
-- uid: Switchboard.TickerRoot.StartLateTick(Switchboard.InputAction{Switchboard.FrameData})
-  name: StartLateTick(InputAction<FrameData>)
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StartLateTick_Switchboard_InputAction_Switchboard_FrameData__
-  commentId: M:Switchboard.TickerRoot.StartLateTick(Switchboard.InputAction{Switchboard.FrameData})
-  name.vb: StartLateTick(InputAction(Of FrameData))
-  fullName: Switchboard.TickerRoot.StartLateTick(Switchboard.InputAction<Switchboard.FrameData>)
-  fullName.vb: Switchboard.TickerRoot.StartLateTick(Switchboard.InputAction(Of Switchboard.FrameData))
-  nameWithType: TickerRoot.StartLateTick(InputAction<FrameData>)
-  nameWithType.vb: TickerRoot.StartLateTick(InputAction(Of FrameData))
-- uid: Switchboard.TickerRoot.StartLateTick*
-  name: StartLateTick
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StartLateTick_
-  commentId: Overload:Switchboard.TickerRoot.StartLateTick
-  isSpec: "True"
-  fullName: Switchboard.TickerRoot.StartLateTick
-  nameWithType: TickerRoot.StartLateTick
-- uid: Switchboard.TickerRoot.StartTick(Switchboard.InputAction{Switchboard.FrameData},System.Int32)
-  name: StartTick(InputAction<FrameData>, int)
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StartTick_Switchboard_InputAction_Switchboard_FrameData__System_Int32_
-  commentId: M:Switchboard.TickerRoot.StartTick(Switchboard.InputAction{Switchboard.FrameData},System.Int32)
-  name.vb: StartTick(InputAction(Of FrameData), Integer)
-  fullName: Switchboard.TickerRoot.StartTick(Switchboard.InputAction<Switchboard.FrameData>, int)
-  fullName.vb: Switchboard.TickerRoot.StartTick(Switchboard.InputAction(Of Switchboard.FrameData), Integer)
-  nameWithType: TickerRoot.StartTick(InputAction<FrameData>, int)
-  nameWithType.vb: TickerRoot.StartTick(InputAction(Of FrameData), Integer)
-- uid: Switchboard.TickerRoot.StartTick(Switchboard.InputAction{Switchboard.FrameData})
-  name: StartTick(InputAction<FrameData>)
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StartTick_Switchboard_InputAction_Switchboard_FrameData__
-  commentId: M:Switchboard.TickerRoot.StartTick(Switchboard.InputAction{Switchboard.FrameData})
-  name.vb: StartTick(InputAction(Of FrameData))
-  fullName: Switchboard.TickerRoot.StartTick(Switchboard.InputAction<Switchboard.FrameData>)
-  fullName.vb: Switchboard.TickerRoot.StartTick(Switchboard.InputAction(Of Switchboard.FrameData))
-  nameWithType: TickerRoot.StartTick(InputAction<FrameData>)
-  nameWithType.vb: TickerRoot.StartTick(InputAction(Of FrameData))
-- uid: Switchboard.TickerRoot.StartTick*
-  name: StartTick
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StartTick_
-  commentId: Overload:Switchboard.TickerRoot.StartTick
-  isSpec: "True"
-  fullName: Switchboard.TickerRoot.StartTick
-  nameWithType: TickerRoot.StartTick
-- uid: Switchboard.TickerRoot.StopFixedTick(Switchboard.InputAction{Switchboard.FrameData})
-  name: StopFixedTick(InputAction<FrameData>)
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StopFixedTick_Switchboard_InputAction_Switchboard_FrameData__
-  commentId: M:Switchboard.TickerRoot.StopFixedTick(Switchboard.InputAction{Switchboard.FrameData})
-  name.vb: StopFixedTick(InputAction(Of FrameData))
-  fullName: Switchboard.TickerRoot.StopFixedTick(Switchboard.InputAction<Switchboard.FrameData>)
-  fullName.vb: Switchboard.TickerRoot.StopFixedTick(Switchboard.InputAction(Of Switchboard.FrameData))
-  nameWithType: TickerRoot.StopFixedTick(InputAction<FrameData>)
-  nameWithType.vb: TickerRoot.StopFixedTick(InputAction(Of FrameData))
-- uid: Switchboard.TickerRoot.StopFixedTick*
-  name: StopFixedTick
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StopFixedTick_
-  commentId: Overload:Switchboard.TickerRoot.StopFixedTick
-  isSpec: "True"
-  fullName: Switchboard.TickerRoot.StopFixedTick
-  nameWithType: TickerRoot.StopFixedTick
-- uid: Switchboard.TickerRoot.StopLateTick(Switchboard.InputAction{Switchboard.FrameData})
-  name: StopLateTick(InputAction<FrameData>)
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StopLateTick_Switchboard_InputAction_Switchboard_FrameData__
-  commentId: M:Switchboard.TickerRoot.StopLateTick(Switchboard.InputAction{Switchboard.FrameData})
-  name.vb: StopLateTick(InputAction(Of FrameData))
-  fullName: Switchboard.TickerRoot.StopLateTick(Switchboard.InputAction<Switchboard.FrameData>)
-  fullName.vb: Switchboard.TickerRoot.StopLateTick(Switchboard.InputAction(Of Switchboard.FrameData))
-  nameWithType: TickerRoot.StopLateTick(InputAction<FrameData>)
-  nameWithType.vb: TickerRoot.StopLateTick(InputAction(Of FrameData))
-- uid: Switchboard.TickerRoot.StopLateTick*
-  name: StopLateTick
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StopLateTick_
-  commentId: Overload:Switchboard.TickerRoot.StopLateTick
-  isSpec: "True"
-  fullName: Switchboard.TickerRoot.StopLateTick
-  nameWithType: TickerRoot.StopLateTick
-- uid: Switchboard.TickerRoot.StopTick(Switchboard.InputAction{Switchboard.FrameData})
-  name: StopTick(InputAction<FrameData>)
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StopTick_Switchboard_InputAction_Switchboard_FrameData__
-  commentId: M:Switchboard.TickerRoot.StopTick(Switchboard.InputAction{Switchboard.FrameData})
-  name.vb: StopTick(InputAction(Of FrameData))
-  fullName: Switchboard.TickerRoot.StopTick(Switchboard.InputAction<Switchboard.FrameData>)
-  fullName.vb: Switchboard.TickerRoot.StopTick(Switchboard.InputAction(Of Switchboard.FrameData))
-  nameWithType: TickerRoot.StopTick(InputAction<FrameData>)
-  nameWithType.vb: TickerRoot.StopTick(InputAction(Of FrameData))
-- uid: Switchboard.TickerRoot.StopTick*
-  name: StopTick
-  href: api/Switchboard.TickerRoot.html#Switchboard_TickerRoot_StopTick_
-  commentId: Overload:Switchboard.TickerRoot.StopTick
-  isSpec: "True"
-  fullName: Switchboard.TickerRoot.StopTick
-  nameWithType: TickerRoot.StopTick
+  fullName: Switchboard.TickerBase.StopTick
+  nameWithType: TickerBase.StopTick
 - uid: Switchboard.UnityLogger
   name: UnityLogger
   href: api/Switchboard.UnityLogger.html
@@ -7080,6 +6658,12 @@ references:
   isSpec: "True"
   fullName: Switchboard.UnityLogHijacker.LogFormat
   nameWithType: UnityLogHijacker.LogFormat
+- uid: TextConverter
+  name: Text Converter
+  href: manual/text-converter.html
 - uid: Ticker
   name: Ticker
   href: manual/ticker.html
+- uid: Version-1.0.0
+  name: Version 1.0.0
+  href: release-notes/v1.0.0.html

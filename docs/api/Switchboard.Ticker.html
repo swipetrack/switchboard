@@ -85,7 +85,7 @@
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>SwitchboardUnity.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>Switchboard.Ticker.dll</dd></dl>
   </div>
 
   <div class="markdown summary"><p>Invokes an event once per update.</p>
@@ -93,7 +93,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class Ticker : MonoBehaviour, ITicker</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class Ticker : TickerBase, ITicker</code></pre>
   </div>
 
 
@@ -107,6 +107,7 @@
       <div><span class="xref">Component</span></div>
       <div><span class="xref">Behaviour</span></div>
       <div><span class="xref">MonoBehaviour</span></div>
+      <div><a class="xref" href="Switchboard.TickerBase.html">TickerBase</a></div>
       <div><span class="xref">Ticker</span></div>
     </dd>
   </dl>
@@ -119,133 +120,22 @@
   </dl>
 
 
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Switchboard.TickerBase.html#Switchboard_TickerBase_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__">TickerBase.StartTick(InputAction&lt;FrameOfTime&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Switchboard.TickerBase.html#Switchboard_TickerBase_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_">TickerBase.StartTick(InputAction&lt;FrameOfTime&gt;, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Switchboard.TickerBase.html#Switchboard_TickerBase_StopTick_Switchboard_InputAction_Switchboard_FrameOfTime__">TickerBase.StopTick(InputAction&lt;FrameOfTime&gt;)</a>
+    </div>
+  </dd></dl>
 
 
 
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Switchboard_Ticker_StartTick_" data-uid="Switchboard.Ticker.StartTick*"></a>
-
-  <h3 id="Switchboard_Ticker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__" data-uid="Switchboard.Ticker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime})">
-  StartTick(InputAction&lt;FrameOfTime&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Adds an observer event handler to the Tick event, invoked once per update.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>handler</code> <a class="xref" href="Switchboard.InputAction-1.html">InputAction</a>&lt;<a class="xref" href="Switchboard.FrameOfTime.html">FrameOfTime</a>&gt;</dt>
-    <dd><p>The observer event handler to add.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">handler</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_Ticker_StartTick_" data-uid="Switchboard.Ticker.StartTick*"></a>
-
-  <h3 id="Switchboard_Ticker_StartTick_Switchboard_InputAction_Switchboard_FrameOfTime__System_Int32_" data-uid="Switchboard.Ticker.StartTick(Switchboard.InputAction{Switchboard.FrameOfTime},System.Int32)">
-  StartTick(InputAction&lt;FrameOfTime&gt;, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Adds an observer event handler to the Tick event, invoked once per update.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartTick(InputAction&lt;FrameOfTime&gt; handler, int priority)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>handler</code> <a class="xref" href="Switchboard.InputAction-1.html">InputAction</a>&lt;<a class="xref" href="Switchboard.FrameOfTime.html">FrameOfTime</a>&gt;</dt>
-    <dd><p>The event handler to add.</p>
-</dd>
-    <dt><code>priority</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The order in which the event handler will be called.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">handler</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_Ticker_StopTick_" data-uid="Switchboard.Ticker.StopTick*"></a>
-
-  <h3 id="Switchboard_Ticker_StopTick_Switchboard_InputAction_Switchboard_FrameOfTime__" data-uid="Switchboard.Ticker.StopTick(Switchboard.InputAction{Switchboard.FrameOfTime})">
-  StopTick(InputAction&lt;FrameOfTime&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Removes an observer event handler from the Tick event.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StopTick(InputAction&lt;FrameOfTime&gt; handler)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>handler</code> <a class="xref" href="Switchboard.InputAction-1.html">InputAction</a>&lt;<a class="xref" href="Switchboard.FrameOfTime.html">FrameOfTime</a>&gt;</dt>
-    <dd><p>The event handler to be removed.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">handler</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
 
 
 

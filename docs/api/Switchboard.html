@@ -97,14 +97,12 @@ Any scripts that are ordered to execute later than <a class="xref" href="Switchb
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.ApplicationTicker.html">ApplicationTicker</a></dt>
-      <dd><p>Provides a static, root instance for all types of ticker that lazy load as necessary,
-which manages its own life cycle in the player and editor.</p>
+      <dd><p>Provides a static root for lazy loaded object tickers that correspond to Update(), LateUpdate(), and FixedUpdate().</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.ClockSynchronizer.html">ClockSynchronizer</a></dt>
-      <dd><p>Adds a permanent observer to a <a class="xref" href="Switchboard.IUnityTicker.html">IUnityTicker</a>,
-which synchronizes the <a class="xref" href="Switchboard.PreciseClock.html">PreciseClock</a> with the system clock every certain number of seconds.</p>
+      <dd><p>Synchronizes the <a class="xref" href="Switchboard.PreciseClock.html">PreciseClock</a> with the system clock at a certain frequency.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -114,7 +112,7 @@ which synchronizes the <a class="xref" href="Switchboard.PreciseClock.html">Prec
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.CompositionRootAsset.html">CompositionRootAsset</a></dt>
-      <dd><p>Represents a single, root asset file that can be loaded when the app runs in order to activate dependency injection.</p>
+      <dd><p>Represents a single, root asset file that can be loaded when the application starts, in order to enable dependency injection.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -156,11 +154,6 @@ Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectA
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Switchboard.FlagsFieldAttribute.html">FlagsFieldAttribute</a></dt>
-      <dd><p>Indicates that a serialized <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.flagsattribute">FlagsAttribute</a> enum field should be displayed as such in the editor.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
       <dd><p>Provides detailed info for formatting floating-point numbers.</p>
 </dd>
@@ -182,8 +175,8 @@ Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectA
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.InjectorLocator.html">InjectorLocator</a></dt>
-      <dd><p>Provides a static event that an <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a> can invoke to request an <a class="xref" href="Switchboard.IInjector.html">IInjector</a>
-to call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectable_InjectWith_Switchboard_IInjector_">InjectWith(IInjector)</a>.</p>
+      <dd><p>Provides a static event that an <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a> can invoke to locate an <a class="xref" href="Switchboard.IInjector.html">IInjector</a>
+to call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectable_Inject_Switchboard_IInjector_">Inject(IInjector)</a>.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -207,11 +200,6 @@ to call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectab
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Switchboard.Logger.html">Logger</a></dt>
-      <dd><p>Provides a single, static <a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a> and helper methods for standard operations.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a></dt>
       <dd><p>Represents a logger composed of other <a class="xref" href="Switchboard.ILogger.html">ILogger</a> implementations, which serve as the actual targets for log output.
 A <a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a> cannot have another <a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a> added as a log target.
@@ -229,7 +217,7 @@ Thread safety of logging operations are left up to the target implementations of
       <dd><p>Stores objects of a specific type in a pool.
 The order is not guaranteed. Removing a specific object swaps it with the last object in the pool before removal.
 The <a class="xref" href="Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_MaxCount">MaxCount</a> can be specified to limit the number of objects that may be stored.
-The <a class="xref" href="Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_Add__0_">Add(T)</a> method will return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if the pool is at max capacity.
+The <a class="xref" href="Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_Add__0_">Add(T)</a> method will return false if the pool is at max capacity.
 An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a> may be applied to each object in the pool with the <a class="xref" href="Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_ForEach_System_Action__0__">ForEach(Action&lt;T&gt;)</a> method.
 The internal memory used to store these objects grows and shrinks automatically as objects are added and removed.
 Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectArrayPool.html">SharedObjectArrayPool</a>, so no garbage collection is necessary.</p>
@@ -261,11 +249,6 @@ Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectA
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Switchboard.StandardDependencyInjector.html">StandardDependencyInjector</a></dt>
-      <dd><p>Provides a standard implementation of <a class="xref" href="Switchboard.DependencyInjector.html">DependencyInjector</a>.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.StandardLogFormatter.html">StandardLogFormatter</a></dt>
       <dd><p>Provides a standard implementation of the <a class="xref" href="Switchboard.ILogFormatter.html">ILogFormatter</a> interface.</p>
 </dd>
@@ -286,20 +269,20 @@ Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectA
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Switchboard.SwitchboardMenuOrder.html">SwitchboardMenuOrder</a></dt>
-      <dd><p>Provides Switchboard's order in the asset creation menu.</p>
+      <dt><a class="xref" href="Switchboard.SwitchboardLogger.html">SwitchboardLogger</a></dt>
+      <dd><p>Provides a single, static <a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a> and helper methods for standard operations.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Switchboard.TheTypeOf-1.html">TheTypeOf&lt;T&gt;</a></dt>
-      <dd><p>Provides a generic, static cache for the results of the typeof operator.</p>
+      <dt><a class="xref" href="Switchboard.SwitchboardMenuOrder.html">SwitchboardMenuOrder</a></dt>
+      <dd><p>Provides Switchboard's order in the asset creation menu.</p>
 </dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.ThreadSafeObjectPool-1.html">ThreadSafeObjectPool&lt;T&gt;</a></dt>
       <dd><p>Stores objects of a specific type in a thread safe pool. Objects are kept in the order of last in, first out.
 The <a class="xref" href="Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_MaxCount">MaxCount</a> value can be specified to limit the number of objects that may be stored.
-The <a class="xref" href="Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_Add__0_">Add(T)</a> method will return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if the pool is at max capacity.
+The <a class="xref" href="Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_Add__0_">Add(T)</a> method will return false if the pool is at max capacity.
 The internal memory used to store these objects grows and shrinks automatically as objects are added and removed.
 Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectArrayPool.html">SharedObjectArrayPool</a>, so no garbage collection is necessary.</p>
 </dd>
@@ -307,6 +290,11 @@ Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectA
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.Ticker.html">Ticker</a></dt>
       <dd><p>Invokes an event once per update.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.TickerBase.html">TickerBase</a></dt>
+      <dd><p>Provides an abstract base class for invoking an event once per update.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -361,12 +349,7 @@ when assigned to UnityEngine.Debug.unityLogger.logHandler.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.ITicker.html">ITicker</a></dt>
-      <dd><p>Provides an interface for adding observers to a tick event, called each update, once per frame.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="Switchboard.IUnityTicker.html">IUnityTicker</a></dt>
-      <dd><p>Provides an interface for adding observers to Update, LateUpdate, and FixedUpdate events.</p>
+      <dd><p>Provides an interface for observing an event that is invoked every time a frame of the application is updated.</p>
 </dd>
     </dl>
     <h3 id="enums">Enums

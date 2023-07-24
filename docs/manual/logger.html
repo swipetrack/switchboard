@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title> | Switchboard 1.0.0 </title>
+      <title>Core Logger | Switchboard 1.0.0 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content=" | Switchboard 1.0.0 ">
+      <meta name="title" content="Core Logger | Switchboard 1.0.0 ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -73,12 +73,12 @@
         </div>
 
         <article data-uid="Logger">
+<h2 id="core-logger">Core Logger</h2>
 
-<h4 id="logger">Logger</h4>
 <p>One of the main features of Switchboard is an implementation of the standard logger interface that writes persistent log files to disk, on any hardware platform, with minimal impact on performance. Most of the logger module is in the Core library, which has no dependencies on Unity. Switchboard's logger interface and log file writer can be used in any C# application. One caveat is that the LogFileWriter class is designed for a loop based system, as is the case in game development. When a log entry is sent to LogFileWriter, it is formatted and added to a queue of entries that will be flushed to disk later. This design decouples the log call from the more costly process of opening a file stream and flushing the appropriate bytes to the disk. Therefore, at some later point LogFileWriter.FlushLogs() must be called. In Switchboard's standard use case, this method is called at the end of each frame. In your application you may call this method wherever it seems most appropriate. However, if logs are not flushed regularly, it becomes possible for many logs to build up in the queue, which could cause the next flush to take longer.</p>
 <p>Opening the file stream is a costly operation. Switchboard, by default, opens the file stream and keeps it open for the duration of the application. LogFileWriter.OpenNewFile() or .Open() will open the file stream, creating a new file if necessary, and keep it open until .Close() is called. Flushing logs will open the file stream if it is not open already.</p>
 <p>The Switchboard logger implements an ILogger interface that, while not identical to, is intended to be mostly interchangeable with the default .NET ILogger interface. The core implementation of this interface is LoggerRoot which maintains an array of other ILogger implementations, and calls the appropriate log method on each one. I call these log targets, but they have no special definition because they are just further implementations of the ILogger interface. So, in the typical case, the main logger instance is a LoggerRoot with a LogFileWriter, and potentially other log targets. However, you can use LogFileWriter directly as an ILogger.</p>
-<h4 id="unity">Unity</h4>
+<h2 id="unity-logger">Unity Logger</h2>
 <p>In Unity, Switchboard also includes an implementation of ILogger that writes to Unity's default log console and other log output. This can be assigned to the LoggerRoot as an additional target. Also, I use an implementation of Unity's ILogHandler called UnityLogHijacker to re-route calls to Debug.Log() so that they are sent to the LoggerRoot instead. The static Logger class provides a LoggerRoot instance, and simple methods for hijacking Debug.Log() calls, so they can be routed to LogFileWriter for instance, and for adding Unity's logger to the LoggerRoot as one of the targets, so that they still reach the console. The LogFileManager class is intended to simplify many of the manual operations around handling log files within Unity. Also, when you start a log file in Unity you'll automatically get a detailed report of the current hardware platform statistics that Unity provides, including things like &quot;Graphics Tier&quot; which can really help when configuring your project settings.</p>
 </article>
 
