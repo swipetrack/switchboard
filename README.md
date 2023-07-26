@@ -1,31 +1,33 @@
 # Switchboard
 
 Switchboard is an application framework for the Unity game engine.
-It provides a composition root so you can define what happens when the application runs, regardless of which scenes are loaded.
-Also, dependency injection so your classes can have loose dependencies that are automatically injected at run time.
-It even works when adding new objects to a scene at run time.
-You don't need Monobehaviour singletons or special scenes to load first! It just works! No reflection! No baking!
-Any object you create, meaning any non-MonoBehaviour, can be automatically updated with the game loop.
-The core library provides persistent log files, and garbage-free string manipulation to any C# application, not just Unity.
+It provides a composition root to define what executes when the application starts playing, regardless of which scenes are loaded.
+Dependency injection allows your classes to have loosely coupled dependencies that are automatically injected at run time.
+It even works when adding new objects that are instantiated at run time.
+You don't need singletons or special scenes to load first. It just works! No reflection, no baking.
+Switchboard supports maximum compatibility with other plugins and code bases.
+There is no need to inherit from a special base class, or establish tightly coupled dependencies.
+Switchboard is also a logging framework. 
+The core library provides persistent log files, and garbage-free string operations for any C# application, not just Unity.
+Any object, including any non-MonoBehaviour, can be updated in the game loop via the static ApplicationTicker.
 Every feature has been meticulously crafted for maximum stability and performance.
+Switchboard is built on a system of collections that pool shared memory in universally re-usable memory pools.
+The core library is thread safe, and fast.
+Integrating with Switchboard will undoubtedly improve the architecture and performance of your applications.
 
-#### Unity
-
-Switchboard is a Unity framework for composing your application and injecting dependencies automatically when objects are instantiated.
+## Unity Specific Features
 
 - Composition Root
-- Automatic Dependency Injection
+- Dependency Injection
 - Update Any Object
-- Encourages Best Practices, S.O.L.I.D. Programming, Loose Coupling, Clean Code Architecture
+- Promote S.O.L.I.D. Programming, Loose Coupling, and Clean Code Architecture
 
-#### C# Core
-
-The core library contains Unity-independent features that can be used in any C# application.
+## Universal C# Features
 
 - High Performance Log Files
-- A Better StringBuilder
-- Render Number Values that ToString() Cannot
-- Eliminates Garbage Collection
+- StringMaker, a Superior StringBuilder
+- Render Number Values that .NET Cannot
+- Eliminate Garbage Collection from Strings
 
 ________________
 
@@ -47,4 +49,4 @@ If you discover a bug, would like to request a feature, or have any other issue 
 
 ## Direct Message
 
-If you would like to send a direct message concerning Switchboard, email rmoon@swipetrack.com with "Switchboard" somewhere in the subject line.
+If you would like to send a direct message concerning Switchboard, email switchboard@swipetrack.com.
