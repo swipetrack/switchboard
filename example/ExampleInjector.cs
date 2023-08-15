@@ -17,6 +17,9 @@ namespace SwitchboardExample
 		[Expandable]
 		public ModelBase Model;
 
+		[Expandable] public SerializableClass ExampleData;
+
+
 		protected override void Activation()
 		{
 			// Enable Logger

@@ -110,7 +110,14 @@ namespace SwitchboardExample
 
 				Logger.LogInformation("The float.ToString() method cannot render more than 7 significant digits, except when the \"G9\" format specifier is used. The double.ToString() method cannot render more than 15 significant digits, except when the \"G17\" format spefifier is used. There are many floating-point numbers that can never be accurately represented by using ToString(). Here are some examples of numbers that cannot be rendered with ToString(). However, the Switchboard ConvertToText() and StringMaker.Append() methods can render these values accurately in any format you choose.");
 
-				floatValue = 268435456.0f;
+				floatValue = 1.4f;
+
+				stringMaker.Length = 0;
+				stringMaker.Append("float.ToString(): ").Append(floatValue.ToString())
+					.Append("\nfloat.ConvertToText(): ").Append(floatValue);
+				Logger.LogInformation(stringMaker);
+
+				floatValue = 48103632896.0f;
 
 				stringMaker.Length = 0;
 				stringMaker.Append("float.ToString(): ").Append(floatValue.ToString())
@@ -131,10 +138,10 @@ namespace SwitchboardExample
 					.Append("\nfloat.ConvertToText(): ").Append(floatValue);
 				Logger.LogInformation(stringMaker);
 
-				floatValue = 268435456.0f;
+				floatValue = 48103632896.0f;
 
 				stringMaker.Length = 0;
-				stringMaker.Append("float.ToString(\"0.####################\"): ").Append(floatValue.ToString("0.####################"))
+				stringMaker.Append("float.ToString(\"############\"): ").Append(floatValue.ToString("############"))
 					.Append("\nfloat.ConvertToText(): ").Append(floatValue);
 				Logger.LogInformation(stringMaker);
 
@@ -159,17 +166,17 @@ namespace SwitchboardExample
 					.Append("\ndouble.ConvertToText(): ").Append(doubleValue);
 				Logger.LogInformation(stringMaker);
 
-				doubleValue = 36028797018963968.0;
+				doubleValue = 6456360425798342656.0;
 
 				stringMaker.Length = 0;
-				stringMaker.Append("double.ToString(\"0.###################################################\"): ").Append(doubleValue.ToString("0.###################################################"))
+				stringMaker.Append("double.ToString(\"####################\"): ").Append(doubleValue.ToString("####################"))
 					.Append("\ndouble.ConvertToText(): ").Append(doubleValue);
 				Logger.LogInformation(stringMaker);
 
 				doubleValue = 0.000000000000000444089209850062616169452667236328125;
 
 				stringMaker.Length = 0;
-				stringMaker.Append("double.ToString(\"0.###################################################\"): ").Append(doubleValue.ToString("0.###################################################"))
+				stringMaker.Append("double.ToString(\"0.####################################################\"): ").Append(doubleValue.ToString("0.####################################################"))
 					.Append("\ndouble.ConvertToText(): ").Append(doubleValue);
 				Logger.LogInformation(stringMaker);
 
