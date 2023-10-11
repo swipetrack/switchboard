@@ -1204,7 +1204,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsScientific&lt;T&gt;(this double value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1212,7 +1212,7 @@
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1220,17 +1220,11 @@
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1255,7 +1249,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsScientific&lt;T&gt;(this double value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1263,7 +1257,7 @@
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1274,17 +1268,11 @@
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1309,7 +1297,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsScientific&lt;T&gt;(this double value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax, int digitMin)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax, int digitMin)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1317,7 +1305,7 @@
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1331,17 +1319,11 @@
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1366,7 +1348,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsScientific&lt;T&gt;(this double value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax, int digitMin, FloatFormatInfo format)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax, int digitMin, FloatFormatInfo format)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1374,7 +1356,7 @@
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1391,17 +1373,11 @@
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1426,7 +1402,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsScientific&lt;T&gt;(this float value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1434,7 +1410,7 @@
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1442,17 +1418,11 @@
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1477,7 +1447,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsScientific&lt;T&gt;(this float value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1485,7 +1455,7 @@
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1496,17 +1466,11 @@
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1531,7 +1495,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsScientific&lt;T&gt;(this float value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax, int digitMin)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax, int digitMin)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1539,7 +1503,7 @@
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1553,17 +1517,11 @@
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1588,7 +1546,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsScientific&lt;T&gt;(this float value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax, int digitMin, FloatFormatInfo format)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax, int digitMin, FloatFormatInfo format)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1596,7 +1554,7 @@
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1613,17 +1571,11 @@
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2053,7 +2005,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextWithDigitLimit&lt;T&gt;(this double value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextWithDigitLimit&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2061,7 +2013,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2072,17 +2024,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2108,7 +2054,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextWithDigitLimit&lt;T&gt;(this double value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit, bool groupDigits)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextWithDigitLimit&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit, bool groupDigits)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2116,7 +2062,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2130,17 +2076,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2166,7 +2106,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextWithDigitLimit&lt;T&gt;(this double value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit, bool groupDigits, FloatFormatInfo format)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextWithDigitLimit&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit, bool groupDigits, FloatFormatInfo format)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2174,7 +2114,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2191,17 +2131,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2227,7 +2161,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextWithDigitLimit&lt;T&gt;(this float value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextWithDigitLimit&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2235,7 +2169,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2246,17 +2180,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2282,7 +2210,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextWithDigitLimit&lt;T&gt;(this float value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit, bool groupDigits)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextWithDigitLimit&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit, bool groupDigits)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2290,7 +2218,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2304,17 +2232,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2340,7 +2262,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextWithDigitLimit&lt;T&gt;(this float value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit, bool groupDigits, FloatFormatInfo format)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextWithDigitLimit&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit, bool groupDigits, FloatFormatInfo format)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2348,7 +2270,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2365,17 +2287,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2400,7 +2316,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this double value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2408,7 +2324,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2416,17 +2332,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2451,7 +2361,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this double value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2459,7 +2369,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2470,17 +2380,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2505,7 +2409,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this double value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2513,7 +2417,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2527,17 +2431,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2562,7 +2460,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this double value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin, bool groupDigits)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin, bool groupDigits)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2570,7 +2468,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2587,17 +2485,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2622,7 +2514,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this double value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin, bool groupDigits, FloatFormatInfo format)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin, bool groupDigits, FloatFormatInfo format)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2630,7 +2522,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2650,17 +2542,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2685,7 +2571,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this float value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2693,7 +2579,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2701,17 +2587,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2736,7 +2616,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this float value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2744,7 +2624,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2755,17 +2635,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2790,7 +2664,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this float value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2798,7 +2672,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2812,17 +2686,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2847,7 +2715,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this float value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin, bool groupDigits)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin, bool groupDigits)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2855,7 +2723,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2872,17 +2740,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2907,7 +2769,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this float value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin, bool groupDigits, FloatFormatInfo format)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin, bool groupDigits, FloatFormatInfo format)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2915,7 +2777,7 @@ Results may be converted to scientific notation if the actual number of digits e
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2935,17 +2797,11 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 

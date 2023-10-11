@@ -75,33 +75,21 @@
         <article data-uid="">
 <h1 id="switchboard">Switchboard</h1>
 
-<p>Switchboard is an application framework for the Unity game engine.
-It provides a composition root to define that executes when the application starts playing, regardless of which scenes are loaded.
-Dependency injection allows your classes to have loosely coupled dependencies that are automatically injected at run time.
-It even works when adding new objects are instantiated at run time.
-You don't need singletons or special scenes to load first. It just works! No reflection, and no baking.
-Switchboard boasts maximum compatibility with other plugins and code bases.
-There is no need to inherit from a special base class, or establish tightly coupled dependencies.
-Switchboard is also a logging framework.
-The core library provides persistent log files, and garbage-free string operations for any C# application, not just Unity.
-Any object, including any non-MonoBehaviour, can be updated in the game loop via the static ApplicationTicker.
-Every feature has been meticulously crafted for maximum stability and performance.
-Switchboard is built on a system of collections that pool shared memory in universally re-usable memory pools.
-The core library is thread safe, and fast.
-Integrating with Switchboard undoubtedly improve the architecture and performance of your applications.</p>
+<p>Switchboard is an application framework for the Unity game engine. It provides a composition root where you can add code that executes when the application starts, regardless of which scenes are loaded. Dependency injection enables your class's dependencies to be injected automatically. This enables loose coupling, so you can depend on interfaces rather than specific types. It even works when instantiating new objects at run time. You don't need singletons or certain scenes to load first. It just works, with no reflection and no baking. The actual implementation of your dependencies can be swapped easily, making testing simple. Switchboard is highly compatibile with other projects and plugins. No need for MonoBehaviours to inherit from a certain base class. Disabling domain reload and scene reload is fully supported, so you can enter play mode instantly.</p>
+<p>Switchboard is also a logging framework. The core library provides high performance, zero-garbage log files to any C# application, not just Unity. No garbage memory is allocated while logging or generating strings. The StringMaker class, and the TextConverter module it uses, can render number values that .NET's ToString() simply cannot.</p>
+<p>Applying Switchboard to your project is sure to improve the quality of your application.</p>
 <h2 id="unity-specific-features">Unity Specific Features</h2>
 <ul>
-<li>Composition Root</li>
 <li>Dependency Injection</li>
+<li>Composition Root</li>
 <li>Update Any Object</li>
-<li>Encourages Best Practices, S.O.L.I.D. Programming, Loose Coupling, Clean Code Architecture</li>
+<li>S.O.L.I.D. Code, Loose Coupling</li>
 </ul>
 <h2 id="universal-c-features">Universal C# Features</h2>
 <ul>
 <li>High Performance Log Files</li>
-<li>StringMaker, a Superior StringBuilder</li>
+<li>Zero-Garbage Strings</li>
 <li>Render Number Values that .NET Cannot</li>
-<li>Eliminate Garbage Collection from Strings</li>
 </ul>
 </article>
 

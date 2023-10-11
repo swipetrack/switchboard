@@ -244,12 +244,12 @@
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> value into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this DateTime value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this DateTime value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -257,7 +257,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
     <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -265,17 +265,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -296,12 +290,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> value into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this DateTime value, T model, ReadOnlySpanAction&lt;char, T&gt; action, int subSecondPrecision)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this DateTime value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int subSecondPrecision)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -309,7 +303,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
     <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a> to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -320,17 +314,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 

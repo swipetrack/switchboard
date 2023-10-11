@@ -1,7 +1,7 @@
-using System;
+//using System;
 //using TMPro;
 
-// Uncomment this if using TextMeshPro, in order to easily set text without allocating garbage or updating text geometry when it hasn't changed.
+// Uncomment if using TextMeshPro in order to set text without allocating garbage or updating text geometry when it hasn't changed.
 namespace Switchboard
 {
 	public static class TextMeshProExtensions
@@ -10,12 +10,12 @@ namespace Switchboard
 		//[ThreadStatic] // <- If you think these methods could be accessed from multiple threads. (Unlikely, can remove.)
 		//private static char[] _buffer;
 
-		//public static void TrySetText(this TextMeshProUGUI textComponent, StringMaker stringMaker)
+		//public static void SetText(this TMP_Text textComponent, StringMaker stringMaker)
 		//{
-		//	TrySetText(textComponent, stringMaker, null);
+		//	SetText(textComponent, stringMaker, null);
 		//}
 
-		//public static void TrySetText(this TextMeshProUGUI textComponent, StringMaker stringMaker, char[] buffer)
+		//public static void SetText(this TMP_Text textComponent, StringMaker stringMaker, char[] buffer)
 		//{
 		//	if(textComponent == null)
 		//		throw new ArgumentNullException(nameof(textComponent));

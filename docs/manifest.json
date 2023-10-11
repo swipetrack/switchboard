@@ -17,6 +17,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Switchboard.ActionIn-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Switchboard.ActionIn-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Switchboard.ApplicationEnd.yml",
       "output": {
         ".html": {
@@ -251,16 +261,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Switchboard.InjectorLocator.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.InputAction-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.InputAction-1.html"
         }
       },
       "version": ""
@@ -560,6 +560,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "assets/CompositionRoot.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/CompositionRoot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "assets/SwitchboardIconBorderless16.ico",
       "output": {
         "resource": {
@@ -579,31 +589,11 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "assets/SwitchboardSettings.png",
-      "output": {
-        "resource": {
-          "relative_path": "assets/SwitchboardSettings.png"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/benchmarks.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/benchmarks.html"
         }
       },
       "version": ""

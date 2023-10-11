@@ -1555,12 +1555,12 @@
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this byte value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this byte value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1568,7 +1568,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1576,17 +1576,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1607,12 +1601,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this short value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this short value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1620,7 +1614,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1628,17 +1622,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1659,12 +1647,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this short value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this short value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1672,7 +1660,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1683,17 +1671,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1714,12 +1696,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this int value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this int value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1727,7 +1709,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1735,17 +1717,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1766,12 +1742,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this int value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this int value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1779,7 +1755,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1790,17 +1766,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1821,12 +1791,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this long value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this long value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1834,7 +1804,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1842,17 +1812,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1873,12 +1837,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this long value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this long value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1886,7 +1850,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1897,17 +1861,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1928,12 +1886,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a signed byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this sbyte value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this sbyte value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1941,7 +1899,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -1949,17 +1907,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -1980,12 +1932,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this ushort value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this ushort value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1993,7 +1945,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2001,17 +1953,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2032,12 +1978,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this ushort value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this ushort value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2045,7 +1991,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2056,17 +2002,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2087,12 +2027,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this uint value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this uint value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2100,7 +2040,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2108,17 +2048,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2139,12 +2073,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this uint value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this uint value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2152,7 +2086,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2163,17 +2097,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2194,12 +2122,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this ulong value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this ulong value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2207,7 +2135,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2215,17 +2143,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2246,12 +2168,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a binary value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsBinary&lt;T&gt;(this ulong value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsBinary&lt;T&gt;(this ulong value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2259,7 +2181,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2270,17 +2192,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2907,12 +2823,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this byte value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this byte value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2920,7 +2836,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2928,17 +2844,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -2959,12 +2869,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this short value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this short value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2972,7 +2882,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -2980,17 +2890,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3011,12 +2915,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this short value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this short value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3024,7 +2928,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3035,17 +2939,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3066,12 +2964,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this int value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this int value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3079,7 +2977,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3087,17 +2985,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3118,12 +3010,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this int value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this int value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3131,7 +3023,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3142,17 +3034,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3173,12 +3059,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this long value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this long value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3186,7 +3072,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3194,17 +3080,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3225,12 +3105,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this long value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this long value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3238,7 +3118,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3249,17 +3129,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3280,12 +3154,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a signed byte into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this sbyte value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this sbyte value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3293,7 +3167,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3301,17 +3175,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3332,12 +3200,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this ushort value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this ushort value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3345,7 +3213,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3353,17 +3221,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3384,12 +3246,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned short integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this ushort value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this ushort value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3397,7 +3259,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3408,17 +3270,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3439,12 +3295,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this uint value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this uint value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3452,7 +3308,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3460,17 +3316,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3491,12 +3341,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this uint value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this uint value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3504,7 +3354,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3515,17 +3365,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3546,12 +3390,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this ulong value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this ulong value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3559,7 +3403,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3567,17 +3411,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3598,12 +3436,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters as a hexadecimal value,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToTextAsHex&lt;T&gt;(this ulong value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsHex&lt;T&gt;(this ulong value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3611,7 +3449,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3622,17 +3460,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3653,12 +3485,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this long value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this long value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3666,7 +3498,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3674,17 +3506,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3705,12 +3531,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts a long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this long value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this long value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3718,7 +3544,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3729,17 +3555,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3760,12 +3580,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this uint value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this uint value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3773,7 +3593,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3781,17 +3601,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3812,12 +3626,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this uint value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this uint value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3825,7 +3639,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3836,17 +3650,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3867,12 +3675,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this ulong value, T model, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this ulong value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3880,7 +3688,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3888,17 +3696,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
@@ -3919,12 +3721,12 @@ then passes that and the <code class="paramref">model</code> into the <code clas
   </h3>
 
   <div class="markdown level1 summary"><p>Converts an unsigned long integer into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters,
-then passes that and the <code class="paramref">model</code> into the <code class="paramref">action</code>.</p>
+then passes that and the <code class="paramref">argument</code> into the <code class="paramref">action</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static T ConvertToText&lt;T&gt;(this ulong value, T model, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this ulong value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3932,7 +3734,7 @@ then passes that and the <code class="paramref">model</code> into the <code clas
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
     <dd><p>The number to convert.</p>
 </dd>
-    <dt><code>model</code> <span class="xref">T</span></dt>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
     <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
@@ -3943,17 +3745,11 @@ then passes that and the <code class="paramref">model</code> into the <code clas
 </dd>
   </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns the <code class="paramref">model</code> used in the <code class="paramref">action</code>, enabling a fluent interface.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Type Parameters</h4>
   <dl class="parameters">
     <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">model</code> to pass into the <code class="paramref">action</code>.</p>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
 </dd>
   </dl>
 
