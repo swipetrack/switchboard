@@ -4,7 +4,7 @@
 
 namespace Switchboard
 {
-	/// <summary> Provides a generic interface for having a dependencies injected by type. </summary>
+	/// <summary> Provides a generic interface for having dependencies injected by type. </summary>
 	public interface IInjectable
 	{
 		/// <summary> Provides an IInjector for dependency injection. </summary>
