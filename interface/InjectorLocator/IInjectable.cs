@@ -4,10 +4,10 @@
 
 namespace Switchboard
 {
-	/// <summary> Provides a generic interface for having a single dependency injected per type. </summary>
+	/// <summary> Provides a generic interface for having a dependencies injected by type. </summary>
 	public interface IInjectable
 	{
-		/// <summary> Provides an <see cref="IInjector"/> for dependency injection. </summary>
+		/// <summary> Provides an IInjector for dependency injection. </summary>
 		/// <param name="injector"> The injector to use. </param>
 		void Inject(IInjector injector);
 	}

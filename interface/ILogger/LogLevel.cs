@@ -7,12 +7,12 @@ namespace Switchboard
 	/// <summary> Defines the levels of significance that may be assigned to a log entry. </summary>
 	public enum LogLevel
 	{
-		Exact,
+		Trace,
 		Debug,
 		Information,
 		Warning,
 		Error,
-		//Fatal = 5,
-		None = 6,
+		Critical,
+		None
 	}
 }

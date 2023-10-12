@@ -4,10 +4,10 @@
 
 namespace Switchboard
 {
-	/// <summary> Provides a generic interface for injecting a single dependency per type. </summary>
+	/// <summary> Provides a generic interface for injecting a dependency by type. </summary>
 	public interface IInjector
 	{
-		/// <summary> Provides a reference to a specified type of dependency. </summary>
+		/// <summary> Provides a reference to an instance of the specified type. </summary>
 		/// <typeparam name="T"> The type of instance requested. </typeparam>
 		/// <param name="dependency"> Contains the reference to the requested type. </param>
 		/// <returns> Returns true if an instance of the requested type was provided successfully. </returns>
