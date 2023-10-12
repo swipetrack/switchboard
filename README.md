@@ -17,17 +17,17 @@ Integrating with Switchboard will undoubtedly improve the architecture and perfo
 
 ## Unity Specific Features
 
-- Composition Root
 - Dependency Injection
+- Composition Root
 - Update Any Object
-- Promote S.O.L.I.D. Programming, Loose Coupling, and Clean Code Architecture
+- S.O.L.I.D. Code, Loose Coupling
 
 ## Universal C# Features
 
 - High Performance Log Files
-- StringMaker, a Superior StringBuilder
+- Better String Handling
+- Zero Garbage
 - Render Number Values that .NET Cannot
-- Eliminate Garbage Collection from Strings
 
 ________________
 
