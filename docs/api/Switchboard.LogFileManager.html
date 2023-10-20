@@ -176,6 +176,16 @@
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code> is <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
+\ OR \ Thrown if <code class="paramref">directory</code> contains invalid path characters.</p>
+</dd>
+  </dl>
 
 
 
@@ -213,6 +223,17 @@ A time stamp will be added to each file name, after the prefix, before the exten
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code> or <code class="paramref">fileNamePrefix</code> are null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code> or <code class="paramref">fileNamePrefix</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
+\ OR \ Thrown if <code class="paramref">directory</code> contains invalid path characters.
+\ OR \ Thrown if <code class="paramref">fileNamePrefix</code> contains invalid file name characters for the current platform.</p>
+</dd>
+  </dl>
 
 
 
@@ -253,6 +274,17 @@ A time stamp will be added to each file name, after the prefix, before the <code
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
+\ OR \ Thrown if <code class="paramref">directory</code> contains invalid path characters.
+\ OR \ Thrown if <code class="paramref">fileNamePrefix</code> or <code class="paramref">extension</code> contain invalid file name characters for the current platform.</p>
+</dd>
+  </dl>
 
 
 
@@ -297,6 +329,20 @@ When a log file reaches the size limit, a new file will be created.</p>
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
+\ OR \ Thrown if <code class="paramref">directory</code> contains invalid path characters.
+\ OR \ Thrown if <code class="paramref">fileNamePrefix</code> or <code class="paramref">extension</code> contain invalid file name characters for the current platform.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">fileSizeLimit</code> is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MaxBytesPerLog">MaxBytesPerLog</a>.</p>
+</dd>
+  </dl>
 
 
 
@@ -344,6 +390,20 @@ When a log file reaches the size limit, a new file will be created.</p>
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
+\ OR \ Thrown if <code class="paramref">directory</code> contains invalid path characters.
+\ OR \ Thrown if <code class="paramref">fileNamePrefix</code> or <code class="paramref">extension</code> contain invalid file name characters for the current platform.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">fileSizeLimit</code> is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MaxBytesPerLog">MaxBytesPerLog</a>.</p>
+</dd>
+  </dl>
 
 
 
@@ -394,6 +454,20 @@ When a log file reaches the size limit, a new file will be created.</p>
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">directory</code>, <code class="paramref">fileNamePrefix</code>, or <code class="paramref">extension</code> are <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.
+\ OR \ Thrown if <code class="paramref">directory</code> contains invalid path characters.
+\ OR \ Thrown if <code class="paramref">fileNamePrefix</code> or <code class="paramref">extension</code> contain invalid file name characters for the current platform.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if the <code class="paramref">fileSizeLimit</code> is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MaxBytesPerLog">MaxBytesPerLog</a>.</p>
+</dd>
+  </dl>
 
 
 
@@ -660,6 +734,28 @@ Automatically called once per frame.</p>
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if another file operation is in progress, such as <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_OpenNewFile">OpenNewFile()</a>, <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Open">Open()</a>, or <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Close">Close()</a>.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.security.securityexception">SecurityException</a></dt>
+    <dd><p>A new file needs to be created, and the caller does not have the required permission.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.directorynotfoundexception">DirectoryNotFoundException</a></dt>
+    <dd><p>A new file needs to be created, and the specified path is invalid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.unauthorizedaccessexception">UnauthorizedAccessException</a></dt>
+    <dd><p>A new file needs to be created, and write access is not permitted by the operating system for the specified path,
+such as when the file or directory is set for read-only access.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.pathtoolongexception">PathTooLongException</a></dt>
+    <dd><p>A new file needs to be created, and the specified path exceeds the system-defined maximum length.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.aggregateexception">AggregateException</a></dt>
+    <dd><p>Thrown if multiple exceptions occur during the course of the method.</p>
+</dd>
+  </dl>
 
 
 
@@ -744,7 +840,8 @@ Writes hardware platform statistics upon first opening.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>Returns true if logging to file was started successfully.</p>
+</dd>
   </dl>
 
 

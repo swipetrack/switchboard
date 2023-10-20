@@ -185,7 +185,7 @@
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown when <code class="paramref">handlerCapacity</code> is less than zero.</p>
+    <dd><p>Thrown when <code class="paramref">handlerCapacity</code> is less than zero or greater than 1,073,741,824.</p>
 </dd>
   </dl>
 
@@ -227,7 +227,7 @@
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown when <code class="paramref">handlerCapacity</code> or <code class="paramref">priorityCapacity</code> are less than zero.</p>
+    <dd><p>Thrown when <code class="paramref">handlerCapacity</code> or <code class="paramref">priorityCapacity</code> are less than zero or greater than 1,073,741,824.</p>
 </dd>
   </dl>
 
@@ -355,6 +355,9 @@ Event handlers with lower priority are called before those with higher priority.
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
     <dd><p>Thrown if the event is invoked while the previous invocation is still in progress.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.aggregateexception">AggregateException</a></dt>
+    <dd><p>Thrown if multiple exceptions occur during the course of this method.</p>
 </dd>
   </dl>
 
