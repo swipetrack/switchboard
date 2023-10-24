@@ -28,7 +28,7 @@ namespace SwitchboardExample
 
 		void IInjectable.Inject(IInjector injector)
 		{
-			// In this example, the first non-null instance injected, from the first IInjector to observe InjectorLocator.LocateInjector, is cached and maintained.
+			// In this example, the first non-null instance injected from the first IInjector to observe InjectorLocator.LocateInjector is cached and maintained.
 			if(Ticker == null)
 				injector.Inject(out Ticker);
 
