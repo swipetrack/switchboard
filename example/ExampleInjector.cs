@@ -60,10 +60,10 @@ namespace SwitchboardExample
 			if(type == typeof(ILogger))
 				return SwitchboardLogger.RootInstance;
 
-			if(type == typeof(ITicker))
+			// This way is more flexible and provides an instance to any type that accepts the assignment.
+			if(type.IsAssignableFrom(typeof(Ticker)))
 				return ApplicationTicker.Ticker;
 
-			// This way is more flexible and provides an instance to any type that accepts the assignment.
 			if(type.IsAssignableFrom(typeof(ModelBase)))
 				return Model;
 
