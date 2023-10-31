@@ -32,7 +32,8 @@ namespace SwitchboardExample
 			if(Ticker == null)
 				injector.Inject(out Ticker);
 
-			// In the following examples, multiple Inject(IInjector) calls result in the later calls overriding the original injection.
+			// In the following examples, nested Inject(IInjector) calls result in the later calls overriding the original injection.
+   			// This can be used to implement nested, scene context based dependency containers.
 			if(injector.Inject(out ILogger logger))
 			{
 				if(Logger != null && Logger != logger)
@@ -40,8 +41,7 @@ namespace SwitchboardExample
 				Logger = logger;
 			}
 
-			if(injector.Inject(out IModel model))
-				Model = model;
+			injector.Inject(out IModel Model);
 		}
 
 		private void OnEnable()
