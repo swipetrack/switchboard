@@ -79,6 +79,7 @@ namespace SwitchboardExample
 			}
 		}
 
+		// These logs are written to a persistent file on disk without allocating any new objects for garbage collection.
 		private void Log(float realDeltaTime)
 		{
 			Timer += realDeltaTime;
@@ -90,7 +91,6 @@ namespace SwitchboardExample
 
 				if(Model != null && Logger != null)
 				{
-					// These logs are written to a persistent file on disk without allocating any new objects for garbage collection.
 					StringMaker stringMaker = StringMaker.ThreadStaticInstance;
 					stringMaker.Length = 0;
 					stringMaker.Append("Position: ").Append(Model.Position)
