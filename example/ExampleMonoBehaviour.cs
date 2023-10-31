@@ -12,28 +12,29 @@ namespace SwitchboardExample
 		[Min(0.0f)]
 		public float LogFrequency = 0.5f;
 		private float Timer;
+  
+		private MeshRenderer Renderer;
 		private ILogger Logger;
 		private ITicker Ticker;
-		private IModel Model;
-		private MeshRenderer Renderer;
 		private ActionIn<FrameOfTime> TickAction;
+		private IModel Model;
 
 
 		private void Awake()
 		{
-			TickAction = Tick;
 			Renderer = GetComponent<MeshRenderer>();
+			TickAction = Tick;
 			InjectorLocator.Inject(this);
 		}
 
 		void IInjectable.Inject(IInjector injector)
 		{
-			// In this example, the first non-null instance injected from the first IInjector to observe InjectorLocator.LocateInjector is cached and maintained.
+			// In this example, the first instance injected from the root IInjector observing InjectorLocator.LocateInjector is assigned permanently.
 			if(Ticker == null)
 				injector.Inject(out Ticker);
 
-			// In the following examples, nested Inject(IInjector) calls result in the later calls overriding the original injection.
-   			// This can be used to implement nested, scene context based dependency containers.
+			// In the following examples, nested Inject(IInjector) calls result in the later calls overriding the original.
+   			// This can be used to implement nested, scene or context based dependency containers.
 			if(injector.Inject(out ILogger logger))
 			{
 				if(Logger != null && Logger != logger)
