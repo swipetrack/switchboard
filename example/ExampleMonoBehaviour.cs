@@ -42,7 +42,7 @@ namespace SwitchboardExample
 				Logger = logger;
 			}
 
-			injector.Inject(out IModel Model);
+			injector.Inject(out Model);
 		}
 
 		private void OnEnable()
