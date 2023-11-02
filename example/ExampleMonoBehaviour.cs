@@ -29,7 +29,7 @@ namespace SwitchboardExample
 
 		void IInjectable.Inject(IInjector injector)
 		{
-			// In this example, the first instance injected from the root IInjector observing InjectorLocator.LocateInjector is assigned permanently.
+			// In this example, the first instance injected from the root IInjector is assigned permanently.
 			if(Ticker == null)
 				injector.Inject(out Ticker);
 
