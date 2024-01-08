@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Expandable Objects | Switchboard 1.0.0 </title>
+      <title>Expandable Objects | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Expandable Objects | Switchboard 1.0.0 ">
+      <meta name="title" content="Expandable Objects | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -32,8 +32,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
-            Switchboard 1.0.0
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard">
+            Switchboard
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -75,13 +75,14 @@
         <article data-uid="Miscellaneous">
 <h2 id="expandable-objects">Expandable Objects</h2>
 
-<p>Switchboard makes use of an <a class="xref" href="../api/Switchboard.ExpandableAttribute.html">Expandable</a> attribute in the composition root. This allows you to assign and modify the dependency injector properties in place, without having to change windows or select a different object. This attribute can be used on any object field serialized in the editor to display that object with a dropdown menu, which displays all of the object's properties in place. It cannot render custom property drawers, so the properties may not be rendered in the ideal fashion. Aside from that, it allows you to inspect an object in place without have to explicitly select the object. Expandable object fields can be nested, so there is no limit to the depth of expanding object references. However, if a property has already been expanded once, it will not be displayed as expandable in the same hierarchy. This avoids the potential for infinite recursion.</p>
+<p>Switchboard uses an <a class="xref" href="../api/Switchboard.ExpandableAttribute.html">Expandable</a> attribute on the <a class="xref" href="../api/Switchboard.DependencyInjector.html">DependencyInjector</a> in the <a class="xref" href="../api/Switchboard.CompositionRootAsset.html">CompositionRootAsset</a>. This allows you to assign the DependencyInjector and modify its properties in one place, without having to change the selected object.</p>
+<p>The Expandable attribute can be applied to any serialized object to add a foldout menu that displays its properties. Expandable object fields can be nested, and there is no depth limit on nested objects. However, if an object has already been expanded once, it will not be displayed again in the same hierarchy. This avoids infinite recursion from circular references.</p>
 <h2 id="platform-flags">Platform Flags</h2>
-<p>The <a class="xref" href="../api/Switchboard.PlatformFlags.html">PlatformFlags</a> enum provides a dropdown menu in Unity for selecting multiple hardware platforms that can be easily compared against the platform the application is running on for platform dependent conditional operations.</p>
+<p>The <a class="xref" href="../api/Switchboard.PlatformFlags.html">PlatformFlags</a> enum provides a dropdown menu in Unity for selecting multiple hardware platforms that can be compared against the current platform, for platform dependent conditions.</p>
 <h2 id="precise-clock">Precise Clock</h2>
-<p>The <a class="xref" href="../api/Switchboard.PreciseClock.html">PreciseClock</a> is a static class that provides DateTime.Now and DateTime.UtcNow values that have the precision of a Stopwatch, without the usual performance impace of calling DateTime.Now.</p>
+<p>The <a class="xref" href="../api/Switchboard.PreciseClock.html">PreciseClock</a> is a static class that provides <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> values with the precision of a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch">Stopwatch</a>.</p>
 <h2 id="file-utilties">File Utilties</h2>
-<p>The File Utilties module provides a <a class="xref" href="../api/Switchboard.PathUtility.html">PathUtility</a> for operations like validating and combining file path strings, and a <a class="xref" href="../api/Switchboard.FileRemover.html">FileRemover</a> that is used for removing old log files when the log file directory reaches the size limit.</p>
+<p>The File Utilties module provides a <a class="xref" href="../api/Switchboard.PathUtility.html">PathUtility</a> for operations like validating and combining file paths, and a <a class="xref" href="../api/Switchboard.FileRemover.html">FileRemover</a> for removing old log files when the directory reaches its limit.</p>
 </article>
 
         <div class="contribution d-print-none">

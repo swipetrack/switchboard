@@ -17,10 +17,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.ActionIn-1.yml",
+      "source_relative_path": "api/Switchboard.ActionWithInput-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Switchboard.ActionIn-1.html"
+          "relative_path": "api/Switchboard.ActionWithInput-1.html"
         }
       },
       "version": ""
@@ -91,6 +91,16 @@
       "output": {
         ".html": {
           "relative_path": "api/Switchboard.DateTimeToTextConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Switchboard.DependencyInjector.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Switchboard.DependencyInjector.State.html"
         }
       },
       "version": ""
@@ -191,16 +201,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Switchboard.FrameOfTime.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.IInjectable.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.IInjectable.html"
         }
       },
       "version": ""
@@ -367,10 +367,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.PlatformStats.yml",
+      "source_relative_path": "api/Switchboard.PlatformStatLog.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Switchboard.PlatformStats.html"
+          "relative_path": "api/Switchboard.PlatformStatLog.html"
         }
       },
       "version": ""
@@ -620,16 +620,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/events.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/events.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "manual/feedback.md",
       "output": {
         ".html": {
@@ -770,6 +760,16 @@
       "output": {
         ".html": {
           "relative_path": "release-notes/v1.0.0.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "release-notes/v1.1.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "release-notes/v1.1.0.html"
         }
       },
       "version": ""

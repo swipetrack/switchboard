@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Memory Management | Switchboard 1.0.0 </title>
+      <title>Memory Management | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Memory Management | Switchboard 1.0.0 ">
+      <meta name="title" content="Memory Management | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -32,8 +32,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
-            Switchboard 1.0.0
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard">
+            Switchboard
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -75,8 +75,8 @@
         <article data-uid="MemoryManagement">
 <h1 id="memory-management">Memory Management</h1>
 
-<p>Whether you directly use Switchboard's collection classes, or not, you should be aware that Switchboard uses memory pooling to avoid garbage collection. One of the potential negative side effects of this is that you can effectively simulate a memory leak by pooling too much memory. Most of what is actually pooled by Switchboard can be controlled by setting a max count value on the four memory pools held by SharedObjectArrayPool. Instead of pooling arrays of various types, Switchboard's generic collections all use object arrays internally. SharedObjectArray is the static close holding the four ObjectArrayPool instances of lengths 32, 64, 128, and 256. Limiting the max count of those pools will help ensure that your application does not reserve too much memory. When the max count is exceeded the excess will be discarded for garbage collection as usual.</p>
-<p>StringMaker also pools arrays of characters. StringMaker has a public, static ThreadSafeObjectPool of character arrays. Each array that StringMaker contributes to the pool is 1024 characters. Each StringMaker can only hold 27 of those arrays, but the static character array pool that all StringMaker instances share can store up to 65536. When you want to return the internal memory allocated to a StringMaker instance, you should set the Length as desired and call TrimExcess(), or just call Clear(). That will return the character arrays used by that StringMaker to the static StringMaker.CharacterArrayPool.</p>
+<p>Switchboard uses memory pooling to avoid garbage collection. A potential negative side effects of pooling memory is that you can effectively simulate a memory leak by pooling too much and never releasing it. Most of of the pooled memory can be controlled by setting the <a class="xref" href="../api/Switchboard.ObjectArrayPool.html#Switchboard_ObjectArrayPool_MaxCount">MaxCount</a> value on the four <a class="xref" href="../api/Switchboard.ObjectArrayPool.html">ObjectArrayPool</a> instances held by the <a class="xref" href="../api/Switchboard.SharedObjectArrayPool.html">SharedObjectArrayPool</a>. Instead of pooling various types of arrays, Switchboard's generic collections all use object arrays internally. SharedObjectArray is the static class that holds four ObjectArrayPool instances for object arrays of lengths 32, 64, 128, and 256. Limiting the MaxCount of those pools will help ensure that your application does not reserve too much memory. When the MaxCount is exceeded, the excess will be discarded for garbage collection as usual.</p>
+<p><a class="xref" href="../api/Switchboard.StringMaker.html">StringMaker</a> also pools character arrays. All StringMaker instances share a public, static <a class="xref" href="../api/Switchboard.StringMaker.html#Switchboard_StringMaker_CharacterArrayPool">CharacterArrayPool</a>. Each character array is 1,024 characters. Each StringMaker can hold 27 of those arrays. The CharacterArrayPool can store up to 65,536 arrays. Set the <a class="xref" href="../api/Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_MaxCount">MaxCount</a> to prevent pooling of too many character arrays. When you want to return the internal character arrays of a StringMaker, set the desired <a class="xref" href="../api/Switchboard.StringMaker.html#Switchboard_StringMaker_Length">Length</a> and call the <a class="xref" href="../api/Switchboard.StringMaker.html#Switchboard_StringMaker_TrimExcess">TrimExcess</a> method, or just call the <a class="xref" href="../api/Switchboard.StringMaker.html#Switchboard_StringMaker_Clear">Clear</a> method. That will return the unused character arrays to the static CharacterArrayPool.</p>
 </article>
 
         <div class="contribution d-print-none">

@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
       <title>Namespace Switchboard
- | Switchboard 1.0.0 </title>
+ | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Namespace Switchboard
- | Switchboard 1.0.0 ">
+ | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -34,8 +34,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
-            Switchboard 1.0.0
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard">
+            Switchboard
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -122,8 +122,7 @@ Any scripts that are ordered to execute later than <a class="xref" href="Switchb
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.DependencyInjector.html">DependencyInjector</a></dt>
-      <dd><p>Provides a base representation for an asset that can be initialized on start up,
-provide instances of requested types, and shut down on exit.</p>
+      <dd><p>Provides a base representation for a Unity asset that can activate, provide instances of types, then deactivate.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -175,8 +174,7 @@ Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectA
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.InjectorLocator.html">InjectorLocator</a></dt>
-      <dd><p>Provides a static event that an <a class="xref" href="Switchboard.IInjectable.html">IInjectable</a> can invoke to locate an <a class="xref" href="Switchboard.IInjector.html">IInjector</a>
-to call <a class="xref" href="Switchboard.IInjectable.html#Switchboard_IInjectable_Inject_Switchboard_IInjector_">Inject(IInjector)</a>.</p>
+      <dd><p>A static service locator that provides an <a class="xref" href="Switchboard.IInjector.html">IInjector</a>.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -229,7 +227,7 @@ Unused memory is returned to the <a class="xref" href="Switchboard.SharedObjectA
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="Switchboard.PlatformStats.html">PlatformStats</a></dt>
+      <dt><a class="xref" href="Switchboard.PlatformStatLog.html">PlatformStatLog</a></dt>
       <dd><p>Provides a string that contains detailed information about the current hardware platform on which the application is running.</p>
 </dd>
     </dl>
@@ -310,7 +308,7 @@ when assigned to UnityEngine.Debug.unityLogger.logHandler.</p>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.UnityLogger.html">UnityLogger</a></dt>
-      <dd><p>A singleton implementation of <a class="xref" href="Switchboard.ILogger.html">ILogger</a> that targets the <a class="xref" href="Switchboard.UnityLogHandler.html">UnityLogHandler</a>.</p>
+      <dd><p>An implementation of <a class="xref" href="Switchboard.ILogger.html">ILogger</a> that targets the <a class="xref" href="Switchboard.UnityLogHandler.html">UnityLogHandler</a>.</p>
 </dd>
     </dl>
     <h3 id="structs">Structs
@@ -328,13 +326,8 @@ when assigned to UnityEngine.Debug.unityLogger.logHandler.</p>
     <h3 id="interfaces">Interfaces
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="Switchboard.IInjectable.html">IInjectable</a></dt>
-      <dd><p>Provides a generic interface for having a single dependency injected per type.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.IInjector.html">IInjector</a></dt>
-      <dd><p>Provides a generic interface for injecting a single dependency per type.</p>
+      <dd><p>Provides a generic interface for getting an instance of a requested type.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -355,6 +348,11 @@ when assigned to UnityEngine.Debug.unityLogger.logHandler.</p>
     <h3 id="enums">Enums
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="Switchboard.DependencyInjector.State.html">DependencyInjector.State</a></dt>
+      <dd><p>The various states that a <a class="xref" href="Switchboard.DependencyInjector.html">DependencyInjector</a> can have while activating and deactivating.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Switchboard.LogLevel.html">LogLevel</a></dt>
       <dd><p>Defines the levels of significance that may be assigned to a log entry.</p>
 </dd>
@@ -369,9 +367,9 @@ or compare the current platform like so: PlatformFlagsVariable.HasFlag(<a class=
     <h3 id="delegates">Delegates
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="Switchboard.ActionIn-1.html">ActionIn&lt;T&gt;</a></dt>
-      <dd><p>Represents a type of delegate similar to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a>, but utilizing an in parameter as a readonly reference.
-Because the parameter is an in parameter, the action cannot have a contravariant type parameter like <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a>.</p>
+      <dt><a class="xref" href="Switchboard.ActionWithInput-1.html">ActionWithInput&lt;T&gt;</a></dt>
+      <dd><p>Represents a type of delegate similar to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a>, but using an in parameter as a readonly reference.
+Because the parameter is an in parameter, the type argument must be invariant, it cannot be contravariant like <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action&lt;T&gt;</a>.</p>
 </dd>
     </dl>
 

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Text Converter | Switchboard 1.0.0 </title>
+      <title>Text Converter | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Text Converter | Switchboard 1.0.0 ">
+      <meta name="title" content="Text Converter | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -32,8 +32,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
-            Switchboard 1.0.0
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard">
+            Switchboard
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -75,10 +75,10 @@
         <article data-uid="TextConverter">
 <h1 id="text-converter">Text Converter</h1>
 
-<p>On the issue of the ToString() method allocating a new string for garbage collection, Switchboard provides methods for converting any number variable into a string of characters without allocating garbage memory. It does this essentially as fast, or sometimes faster than ToString(), depending on the type. Floating point types are converted to text faster than with ToString(), and their actual values can be accurately represented. There are many fractional number values that ToString() is simply not capable of rendering. This includes when inspecting variables in the debugger! So, if your software has float or double values that need to be displayed as the actual value stored in memory, then you need Switchboard. Otherwise, you may be seeing only an approximate value. Also, integral types, such as int, can be easily rendered as hexadecimal or binary values. You can use the .NET BitConverter class methods DoubleToInt64Bits(double) and SingleToInt32Bits(int) to get the bitwise representation of floating point numbers and render them as binary or hexadecimal as well. The resulting representation can also be formatted in any way you can imagine.</p>
-<p>One note on formatting floating point numbers: If you find it necessary to limit the maximum fractional digits of a floating point number to 0, then you must implement a slightly custom method that checks whether the value is greater than a float value representing int.MaxValue. (A float can store a much larger number than int.MaxValue.) If the number is greater, simply convert it to text. It is impossible that it will have fractional digits to display. If the number is less than int.MaxValue, cast or round the float to an int and convert it to text as such. No fractional digits will be displayed then. The same pattern applies to double and long.</p>
-<p>I've also included a simple DateTimeToTextConverter that can render a DateTime value without allocation. However, the formatting is limited to my preferred style, which is similar to the ISO 8601 standard, but not exactly the same, as I don't include the 'T' or 'Z' characters.</p>
-<p>Also, in Unity there are new Append() extension methods added to StringMaker that support common Unity types, like Vector3.</p>
+<p>The <a class="xref" href="../api/Switchboard.StringMaker.html">StringMaker</a> class uses the <a class="xref" href="../api/Switchboard.FloatToTextConverter.html">Text Converter</a> module to convert number variables into characters without allocating garbage memory. Numbers can be appended to a StringMaker using all of the methods available via the Text Converter.</p>
+<p>There are many floating-point numbers that standard C# methods cannot render accurately. Methods like <a href="https://learn.microsoft.com/en-us/dotnet/api/system.object.tostring">object.ToString()</a> are not capable of rendering more than nine significant digits of a float variable. That includes when inspecting variables in the debugger! So, if your software has floating-point numbers that need to be displayed accurately, <a class="xref" href="../api/Switchboard.FloatToTextConverter.html">FloatToTextConverter</a> can display them. Otherwise, you could be seeing only an approximatation of the actual value that is stored in memory.</p>
+<p>You can also render integral types, like int variables, with the <a class="xref" href="../api/Switchboard.IntToTextConverter.html">IntToTextConverter</a>, including as binary or hexadecimal, without allocating garbage. You can use the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.bitconverter">BitConverter</a> <a href="https://learn.microsoft.com/en-us/dotnet/api/system.bitconverter.singletoint32bits">SingleToInt32Bits(float)</a> and <a href="https://learn.microsoft.com/en-us/dotnet/api/system.bitconverter.doubletoint64bits">DoubleToInt64Bits(double)</a> methods to convert floating-point numbers to integral types, and render them as binary or hexadecimal as well.</p>
+<p>There is also a DateTimeToTextConverter that can render a DateTime value without allocating garbage. However, the format is limited to the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> standard.</p>
 </article>
 
         <div class="contribution d-print-none">

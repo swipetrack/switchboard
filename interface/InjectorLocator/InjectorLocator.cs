@@ -1,26 +1,28 @@
+using System;
 
-// Copyright © 2023 SwipeTrack Solutions
-// The contents of this file are licensed under the MIT license in the file named MIT.txt or LICENSE.txt located in the nearest parent directory.
-
-namespace Switchboard
+public static class InjectorLocator
 {
-	/// <summary> Provides a static event that an IInjectable can invoke to locate an IInjector to call IInjectable.Inject(IInjector). </summary>
-	public static class InjectorLocator
+	private static Func<IInjector> LocatorDelegate;
+
+	public static IInjector GetInjector() => LocatorDelegate?.Invoke();
+
+	public static void AssignLocatorDelegate(Func<IInjector> locatorDelegate)
 	{
-		/// <summary> Observers of this event should call IInjectable.Inject(IInjector) on the IInjectable. </summary>
-		public static event System.Action<IInjectable> LocateInjector;
+		if(locatorDelegate == null)
+			throw new ArgumentNullException(nameof(locatorDelegate));
 
-		/// <summary> Invokes an event for an IInjectable to locate an IInjector to call IInjectable.Inject(IInjector). </summary>
-		/// <param name="injectable"> The injectable requesting an IInjector. </param>
-		public static void Inject(IInjectable injectable)
-		{
-			if(injectable == null)
-				ThrowArgumentNullException(nameof(injectable));
+		if(LocatorDelegate != null)
+			throw new InvalidOperationException("The locator delegate is already assigned.");
 
-			LocateInjector?.Invoke(injectable);
-		}
+		LocatorDelegate = locatorDelegate;
+	}
 
-		// Methods that throw exceptions cannot be inlined.
-		private static void ThrowArgumentNullException(string paramName) => throw new System.ArgumentNullException(paramName);
+	public static void RemoveLocatorDelegate(Func<IInjector> locatorDelegate)
+	{
+		if(locatorDelegate == null)
+			throw new ArgumentNullException(nameof(locatorDelegate));
+
+		if(LocatorDelegate == locatorDelegate)
+			LocatorDelegate = null;
 	}
 }

@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
       <title>Interface IInjector
- | Switchboard 1.0.0 </title>
+ | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IInjector
- | Switchboard 1.0.0 ">
+ | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -34,8 +34,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
-            Switchboard 1.0.0
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard">
+            Switchboard
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -88,7 +88,7 @@
   <dl><dt>Assembly</dt><dd>Switchboard.InjectorLocator.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides a generic interface for injecting a single dependency per type.</p>
+  <div class="markdown summary"><p>Provides a generic interface for getting an instance of a requested type.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -112,32 +112,26 @@
 </h2>
 
 
-  <a id="Switchboard_IInjector_Inject_" data-uid="Switchboard.IInjector.Inject*"></a>
+  <a id="Switchboard_IInjector_Get_" data-uid="Switchboard.IInjector.Get*"></a>
 
-  <h3 id="Switchboard_IInjector_Inject__1___0__" data-uid="Switchboard.IInjector.Inject``1(``0@)">
-  Inject&lt;T&gt;(out T)
+  <h3 id="Switchboard_IInjector_Get__1" data-uid="Switchboard.IInjector.Get``1">
+  Get&lt;T&gt;()
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Provides a reference to a specified type of dependency.</p>
+  <div class="markdown level1 summary"><p>Provides an instance of the requested type of dependency.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool Inject&lt;T&gt;(out T dependency) where T : class</code></pre>
+    <pre><code class="lang-csharp hljs">T Get&lt;T&gt;() where T : class</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>dependency</code> <span class="xref">T</span></dt>
-    <dd><p>Contains the reference to the requested type.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Returns true if an instance of the requested type was provided successfully.</p>
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns a reference to the requested type, or null.</p>
 </dd>
   </dl>
 

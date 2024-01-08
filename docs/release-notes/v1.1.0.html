@@ -2,11 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class PlatformStats
- | Switchboard 1.0.0 </title>
+      <title>Version 1.1.0 | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class PlatformStats
- | Switchboard 1.0.0 ">
+      <meta name="title" content="Version 1.1.0 | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -29,13 +27,13 @@
       <script type="text/javascript" src="../styles/main.js"></script>
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
-            Switchboard 1.0.0
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard">
+            Switchboard
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -74,85 +72,31 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Switchboard.PlatformStats">
+        <article data-uid="Version-1.1.0">
+<h1 id="version-110">Version 1.1.0</h1>
 
-
-
-  <h1 id="Switchboard_PlatformStats" data-uid="Switchboard.PlatformStats" class="text-break">
-    Class PlatformStats
-  
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>Switchboard.UnityLogger.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>Provides a string that contains detailed information about the current hardware platform on which the application is running.</p>
-</div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class PlatformStats</code></pre>
-  </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">PlatformStats</span></div>
-    </dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Switchboard_PlatformStats_GetStatLog_" data-uid="Switchboard.PlatformStats.GetStatLog*"></a>
-
-  <h3 id="Switchboard_PlatformStats_GetStatLog" data-uid="Switchboard.PlatformStats.GetStatLog">
-  GetStatLog()
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets a string that contains detailed information about the current hardware platform.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetStatLog()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>Returns the string with platform statistics.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+<ul>
+<li>Simplified the InjectorLocator pattern.
+<ul>
+<li>Removed the IInjectable interface.</li>
+<li>Changed the IInjector method signature from bool Inject<t>(out T) to T Get<t>().</t></t></li>
+<li>Changed the InjectorLocator to simply provide an IInjector reference via GetInjector() method, and to no longer allow assigning multiple delegates to an event. Rather, only a single delegate can be assigned or removed. This is to discourage attempts at nesting dependency containers via the functionality of InjectorLocator. If a dependency nesting solution is desired, it should be provided at a higher layer of the protocol with a custom DependencyInjector implementation at the CompositionRoot.</li>
+<li>InjectorLocator throws exceptions directly, not via helper method to help with inlining, because the exceptions are thrown from the AssignLocatorDelegate and RemoveLocatorDelegate methods, so they occur infrequently.</li>
+</ul>
+</li>
+<li>DependencyInjector no longer logs a warning if it fails to provide an instance of a type. That is better left to be handled by the derived DependencyInjector, or the dependent client code.</li>
+<li>DependencyInjector now just makes IInjector.Get<t>() an abstract method to be overloaded directly in derived classes. This helps make the IInjector implementation less mysterious.</t></li>
+<li>DependencyInjector removed InvalidOperationException from Get<t>() method. The expected use case is that the CompositionRoot will always have activated the one DependencyInjector instance using it. Removing the exception can only be beneficial for performance. If inactive, it will not invoke the Get method, but it will not throw an exception either.</t></li>
+<li>DependencyInjector now uses a State enum to control Activation() and Deactivation().</li>
+<li>CompositionRoot avoids the overloaded Unity null equality comparison on the DependencyInjector when deactivating. This allows Deactivation() to still be called, even if the dependency injector asset is deleted from the project while playing.</li>
+<li>SwitchboardLogger.RootInstance changed to SwitchboardLogger.Root.</li>
+<li>Changed the name of the ActionIn<t> delegate to ActionWithInput<t>.</t></t></li>
+<li>Changed PlatformStats to PlatformStatsLog, since it's an odd class and I don't want to cause name collisions with other assemblies.</li>
+<li>Made it more obvious that the CompositionRootAsset in the Switchboard settings menu is readonly.</li>
+<li>Moved the Expandable attribute assembly from the Interface directory to the Unity directory.</li>
+<li>Moved StringMakerILoggerExtensions to its own assembly.</li>
+<li>Moved PlatformStats to the LogFileManager assembly.</li>
+</ul>
 </article>
 
         <div class="contribution d-print-none">

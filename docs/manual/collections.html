@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Collections | Switchboard 1.0.0 </title>
+      <title>Collections | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Collections | Switchboard 1.0.0 ">
+      <meta name="title" content="Collections | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -32,8 +32,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
-            Switchboard 1.0.0
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard">
+            Switchboard
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -75,13 +75,9 @@
         <article data-uid="Collections">
 <h1 id="collections">Collections</h1>
 
-<p>While developing Switchboard, one of my ultimate goals was to eliminate allocation of new memory for garbage collection. You shouldn't have to worry about something like that just to integrate a plugin. This framework is designed for game development, and should have an absolutely minimal impact on performance. So, it became necessary to develop collections to replace some of the standard .NET collections. When a collection, like a List, grows in size, it must re-allocate an array of internal memory. For many collections the pattern is to allocate a new array, twice the size of the previous array, copy the contents, and discard the old array for garbage collection. Since I would like to eliminate undue garbage collection all together, I created collections that return unused arrays back to a memory pool.</p>
-<p>Creating multiple, generic collection classes, I did not want disparate memory pools of arrays of various lengths and types. I realized that I could use object arrays as a sort of universal underlying type to store anything, regardless of collection or type. So, I created the ObjectArrayPool, which can store an infinite amount of object arrays without ever allocating any additional memory, as long as the arrays are all the same length. This class serves as the basis for pooling all of the underlying memory arrays that serve the other collections. ObjectArrayPools are thread safe.</p>
-<p>So, after some benchmarking, I chose specific lengths for memory pages that I might use, 32, 64, 128, and 256. The SharedObjectArrayPool is a static class that holds an ObjectArrayPool for each of those lengths. So, when the generic ObjectPool, ThreadSafeObjectPool, or DynamicQueue need to expand their internal memory, they borrow an object array of one of those four lengths from the SharedObjectArrayPool. So, the main place to profile memory pooling is at the SharedObjectArrayPool. You can set a max count on each of the pools kept there. If they fill to that point, any excess arrays will be subject to garbage collection as usual.</p>
-<p>One advantage of Switchboard collections over standard collections is that they don't just grow dynamically. They also shrink dynamically. So, as elements are removed from a collection, the memory that was previously necessary to store those items is automatically returned to the shared pool. One disadvantage of using Switchboard ObjectPool or ThreadSafeObjectPool is that they have an inherent maximum capacity of 65536 by design. If you need a collection that stores more elements than that, you will have to find another solution.</p>
-<p>DynamicQueue functions as a queue, first-in first-out, that grows and shrinks dynamically to any length by chaining object arrays together like a linked list. Normally I would advise anyone away from ever using a linked list because their real world performance is abysmal. However, this solution is mostly comprised of arrays, with each array linked to the next after every 256 elements. Also, there is no method for iteration over the queue. So, the performance is not really impacted in this case. LogFileWriter uses this collection to queue up log entries before flushing them to disk.</p>
-<p>Switchboard has two types of object pool collections. ObjectPool has a ForEach method for iterating over the elements, and can remove specific elements. This was intended for future use on creating a replacement for the standard way of handling events, which will not allocate garbage as events typically do. The ThreadSafeObjectPool is more limited in its function, but it is, as the name implies, thread safe.</p>
-<p>Again, none of these collections contribute to garbage collection. They all share their internal memory allocations as object arrays of one of the four lengths kept in the SharedObjectArrayPool.</p>
+<p>Switchboard <a class="xref" href="../api/Switchboard.ObjectPool-1.html">Collections</a> resize their internal arrays, both growing and shrinking automatically, without allocating garbage memory. Unused internal arrays are returned back to a memory pool. All collections use the same memory pool of object arrays, regardless of the Type of objects stored in the collection.</p>
+<p>The <a class="xref" href="../api/Switchboard.ObjectArrayPool.html">ObjectArrayPool</a> can store an infinite amount of object arrays without ever allocating any additional memory, as long as the arrays are the same length. This class serves as the basis for pooling all of the underlying memory arrays that serve the other collections. ObjectArrayPools are thread safe.</p>
+<p>The <a class="xref" href="../api/Switchboard.SharedObjectArrayPool.html">SharedObjectArrayPool</a> is a static class that holds four ObjectArrayPool instances. Each ObjectArrayPool holds object arrays of a certain length. The four lengths used are 32, 64, 128, and 256. When an <a class="xref" href="../api/Switchboard.ObjectPool-1.html">ObjectPool</a>, <a class="xref" href="../api/Switchboard.ThreadSafeObjectPool-1.html">ThreadSafeObjectPool</a>, or <a class="xref" href="../api/Switchboard.DynamicQueue-1.html">DynamicQueue</a> needs to resize its internal memory, it borrows or returns object arrays from the SharedObjectArrayPool. You can set a max count on any ObjectArrayPool, ObjectPool, or ThreadSafeObjectPool. If they fill to the max count, any excess will be subject to garbage collection as usual.</p>
 </article>
 
         <div class="contribution d-print-none">

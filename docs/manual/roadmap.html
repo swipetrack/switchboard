@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Memory Pool Management | Switchboard 1.0.0 </title>
+      <title>Configuration Files | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Memory Pool Management | Switchboard 1.0.0 ">
+      <meta name="title" content="Configuration Files | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -32,8 +32,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
-            Switchboard 1.0.0
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard">
+            Switchboard
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -73,13 +73,17 @@
         </div>
 
         <article data-uid="Roadmap">
-<h2 id="memory-pool-management">Memory Pool Management</h2>
-
-<p>Right now, there is no straightforward or standardized way of profiling and configuring the various memory pools that Switchboard relies on to eliminate garbage collection. Every object pool in Switchboard has a Count property to track current allocations, but it's a very simple and somewhat hidden mechanic for profiling memory pools. All memory pools can have maximum count values set, so that they never grow too large or simulate a memory leak, but they have no max count set by default. Here again, there is no straightforward, standardized way of setting those max count values, such as through the editor. Ideally, a breakdown of memory allocation by current counts and bytes allocated would be easy to access by default.</p>
 <h2 id="configuration-files">Configuration Files</h2>
-<p>One module of this framework that did not make it into version 1.0.0 is for Configuration, using definable configuration sources, with a focus on .ini configuration files. This would be a nice fit for the framework as it would easily allow configuration of the logger, so that log level and other properties could be changed easily via local config file.</p>
+
+<p>A Configuration service is planned, using an IConfiguration interface and custom configuration sources, including an .ini file implementation. This would be a nice fit for the framework as it would allow easy configuration of the logger, so log level and other properties could be customized in built apps. Also, configurable app settings that can be customized after distribution are a common feature that any app might need.</p>
+<h2 id="serializable-interfaces">Serializable Interfaces</h2>
+<p>A custom property drawer for serializing fields in the editor by interface would lend well to dependency injection, and make concrete DependencyInjector implementations more flexible.</p>
 <h2 id="garbage-free-events">Garbage Free Events</h2>
-<p>While working on a Configuration module, I wanted to implement much of the interface using events. However, while researching events and delegates closely I determined that a lot of garbage memory is allocated when adding and removing observers via the normal process typically used in .NET. Also, the PriorityEvent class, which is used by the Ticker module to invoke update events, supports a priority parameter for specifying the order in which observers will be notified. I want to continue to support that feature, while refining the current implementation for event handling. Event handlers that do not allocate any memory for garbage collection are in development.</p>
+<p>The planned implementation of a Configuration module would be event based, with observers subscribing to the configuration properties they want to receive. However, standard C# events allocate garbage memory when adding and removing observers. I would like to develop a garbage-free alternative.</p>
+<h2 id="memory-pool-management">Memory Pool Management</h2>
+<p>I want to add a more user friendly way of profiling and configuring the memory pools that Switchboard uses to eliminate garbage collection. Every object pool in Switchboard has a Count property that can be used to track current allocations, but it's simple and somewhat hidden. You can set a MaxCount property on memory pools, so they never grow too large, but the MaxCount is not set by default. There should be an easier way to profile and set those values, like using the editor.</p>
+<h2 id="net-host-loggerprovider">.NET Host LoggerProvider</h2>
+<p>Adding a LoggerProvider implementation to integrate easily with the standard .NET Host would make it easy for users to integrate Switchboard log files outside of Unity.</p>
 </article>
 
         <div class="contribution d-print-none">

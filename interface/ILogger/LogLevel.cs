@@ -1,18 +1,10 @@
-
-// Copyright © 2023 SwipeTrack Solutions
-// The contents of this file are licensed under the MIT license in the file named MIT.txt or LICENSE.txt located in the nearest parent directory.
-
-namespace Switchboard
+public enum LogLevel
 {
-	/// <summary> Defines the levels of significance that may be assigned to a log entry. </summary>
-	public enum LogLevel
-	{
-		Trace,
-		Debug,
-		Information,
-		Warning,
-		Error,
-		Critical,
-		None
-	}
+	Trace,
+	Debug,
+	Information,
+	Warning,
+	Error,
+	Critical,
+	None
 }

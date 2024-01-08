@@ -1,13 +1,11 @@
 using System;
 using TMPro;
 
-// Adds methods to set text without allocating garbage or updating text geometry when it hasn't changed.
 namespace Switchboard
 {
 	public static class TextMeshProExtensions
 	{
 		private static char[] StaticBuffer => _buffer ??= new char[StringMaker.MaxCapacity];
-		[ThreadStatic] // <- If you think these methods could be accessed from multiple threads. (Unlikely, can remove.)
 		private static char[] _buffer;
 
 		public static void SetText(this TMP_Text textComponent, StringMaker stringMaker)

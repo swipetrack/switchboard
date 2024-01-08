@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
       <title>Class DependencyInjector
- | Switchboard 1.0.0 </title>
+ | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class DependencyInjector
- | Switchboard 1.0.0 ">
+ | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -34,8 +34,8 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard 1.0.0">
-            Switchboard 1.0.0
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard">
+            Switchboard
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-three-dots"></i>
@@ -88,8 +88,7 @@
   <dl><dt>Assembly</dt><dd>Switchboard.DependencyInjection.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides a base representation for an asset that can be initialized on start up,
-provide instances of requested types, and shut down on exit.</p>
+  <div class="markdown summary"><p>Provides a base representation for a Unity asset that can activate, provide instances of types, then deactivate.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -128,19 +127,19 @@ provide instances of requested types, and shut down on exit.</p>
 </h2>
 
 
-  <a id="Switchboard_DependencyInjector_IsActive_" data-uid="Switchboard.DependencyInjector.IsActive*"></a>
+  <a id="Switchboard_DependencyInjector_CurrentState_" data-uid="Switchboard.DependencyInjector.CurrentState*"></a>
 
-  <h3 id="Switchboard_DependencyInjector_IsActive" data-uid="Switchboard.DependencyInjector.IsActive">
-  IsActive
+  <h3 id="Switchboard_DependencyInjector_CurrentState" data-uid="Switchboard.DependencyInjector.CurrentState">
+  CurrentState
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets whether the instance has been initialized and not shut down.</p>
+  <div class="markdown level1 summary"><p>The current state of this instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DependencyInjector.State CurrentState { get; }</code></pre>
   </div>
 
 
@@ -166,8 +165,7 @@ provide instances of requested types, and shut down on exit.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Activation">Activation()</a>, unless it is already active.
-<a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_IsActive">IsActive</a> will be set to true even if an exception is thrown from <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Activation">Activation()</a>.</p>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Activation">Activation()</a> if the <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_CurrentState">CurrentState</a> is <a class="xref" href="Switchboard.DependencyInjector.State.html#Switchboard_DependencyInjector_State_Inactive">Inactive</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -194,7 +192,7 @@ provide instances of requested types, and shut down on exit.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Invoked on <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Activate">Activate()</a>, unless the instance <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_IsActive">IsActive</a>.</p>
+  <div class="markdown level1 summary"><p>Invoked when <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Activate">Activate()</a> is called if the <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_CurrentState">CurrentState</a> is <a class="xref" href="Switchboard.DependencyInjector.State.html#Switchboard_DependencyInjector_State_Inactive">Inactive</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -221,7 +219,8 @@ provide instances of requested types, and shut down on exit.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Deactivation">Deactivation()</a> and sets <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_IsActive">IsActive</a> to false, unless it is already inactive.</p>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Deactivation">Deactivation()</a> if the <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_CurrentState">CurrentState</a> is <a class="xref" href="Switchboard.DependencyInjector.State.html#Switchboard_DependencyInjector_State_Active">Active</a> or <a class="xref" href="Switchboard.DependencyInjector.State.html#Switchboard_DependencyInjector_State_ActiveWithException">ActiveWithException</a>.
+This means that <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Deactivation">Deactivation()</a> will be called even if an exception was thrown from <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Activation">Activation()</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -248,7 +247,8 @@ provide instances of requested types, and shut down on exit.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Invoked on <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Deactivate">Deactivate()</a> if <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_IsActive">IsActive</a> is true. It may not be called at all if the application exits unexpectedly.</p>
+  <div class="markdown level1 summary"><p>Invoked when <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Deactivate">Deactivate()</a> is called if the <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_CurrentState">CurrentState</a> is <a class="xref" href="Switchboard.DependencyInjector.State.html#Switchboard_DependencyInjector_State_Active">Active</a> or <a class="xref" href="Switchboard.DependencyInjector.State.html#Switchboard_DependencyInjector_State_ActiveWithException">ActiveWithException</a>.
+It may not be called at all if the application exits unexpectedly.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -268,71 +268,26 @@ provide instances of requested types, and shut down on exit.</p>
 
 
 
-  <a id="Switchboard_DependencyInjector_GetInstanceOf_" data-uid="Switchboard.DependencyInjector.GetInstanceOf*"></a>
+  <a id="Switchboard_DependencyInjector_Get_" data-uid="Switchboard.DependencyInjector.Get*"></a>
 
-  <h3 id="Switchboard_DependencyInjector_GetInstanceOf_System_Type_" data-uid="Switchboard.DependencyInjector.GetInstanceOf(System.Type)">
-  GetInstanceOf(Type)
+  <h3 id="Switchboard_DependencyInjector_Get__1" data-uid="Switchboard.DependencyInjector.Get``1">
+  Get&lt;T&gt;()
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Invoked on <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_Inject__1___0__">Inject&lt;T&gt;(out T)</a>, if the instance <a class="xref" href="Switchboard.DependencyInjector.html#Switchboard_DependencyInjector_IsActive">IsActive</a>.</p>
+  <div class="markdown level1 summary"><p>Provides an instance of the requested type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract object GetInstanceOf(Type type)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract T Get&lt;T&gt;() where T : class</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
-    <dd><p>The type of object requested.</p>
-</dd>
-  </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd><p>Returns an object reference to an instance of the requested type, or null if none can be provided.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Switchboard_DependencyInjector_Inject_" data-uid="Switchboard.DependencyInjector.Inject*"></a>
-
-  <h3 id="Switchboard_DependencyInjector_Inject__1___0__" data-uid="Switchboard.DependencyInjector.Inject``1(``0@)">
-  Inject&lt;T&gt;(out T)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets an instance of the requested type.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Inject&lt;T&gt;(out T instance) where T : class</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>instance</code> <span class="xref">T</span></dt>
-    <dd><p>Contains the reference to an instance of the requested type, or null if none can be provided.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Returns true if an instance of the requested type was provided successfully.</p>
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns a reference to the requested type, or null.</p>
 </dd>
   </dl>
 
@@ -349,12 +304,6 @@ provide instances of requested types, and shut down on exit.</p>
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
-    <dd><p>Thrown if the dependency injector is not active.</p>
-</dd>
-  </dl>
 
 
 

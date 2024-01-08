@@ -1,73 +1,41 @@
 using System;
 using Switchboard;
 using UnityEngine;
-using ILogger = Switchboard.ILogger;
 
-namespace SwitchboardExample
+// Rename the class and configure the CreateAssetMenu attribute.
+[CreateAssetMenu(fileName = nameof(ExampleInjector), menuName = "Switchboard/Example/Example Injector", order = SwitchboardMenuOrder.Value)]
+public class ExampleInjector : BasicInjector
 {
-	[CreateAssetMenu(fileName = "ExampleInjector", menuName = "Switchboard/Example/Dependency Injector", order = SwitchboardMenuOrder.Value)]
-	public sealed class ExampleInjector : DependencyInjector
+	// Example properties. Add your members here.
+	[Expandable] public ModelBase Model;
+	public SerializableClass ExampleData;
+
+	protected override void Activation()
 	{
-		[Tooltip("Gets or sets the hardware platforms for which log files will be enabled.")]
-		public PlatformFlags LogFilePlatforms = (PlatformFlags)532680447;
+		base.Activation();
 
-		private LogFileManager LogFileManager;
+		// Example activation code. Add your code here.
+		if(Model != null)
+			ApplicationTicker.StartTick(Model.TickAction);
+	}
 
-		// Example
-		[Expandable]
-		public ModelBase Model;
+	protected override void Deactivation()
+	{
+		// Example deactivation code. Add your code here.
+		if(Model != null)
+			ApplicationTicker.StopTick(Model.TickAction);
 
-		[Expandable] public SerializableClass ExampleData;
+		base.Deactivation();
+	}
 
+	public override T Get<T>()
+	{
+		Type type = typeof(T);
 
-		protected override void Activation()
-		{
-			// Enable Logger
-			LogFileManager = new LogFileManager();
-			if(LogFilePlatforms.HasFlag(ApplicationPlatform.Flag) && LogFileManager.StartLogging())
-			{
-				if(!Application.isEditor)
-					SwitchboardLogger.RemoveUnityLogger();
-				SwitchboardLogger.HijackUnityLogHandler();
-			}
+		// Example injection code. Provide instances of requested types here.
+		if(type == typeof(IModel))
+			return Model as T;
 
-			// Synchronize time stamps to system clock.
-			ClockSynchronizer.Start();
-
-
-			// Example code. Add your code here.
-			if(Model != null)
-				ApplicationTicker.StartTick(Model.TickAction);
-		}
-
-		protected override void Deactivation()
-		{
-			// Example
-			if(Model != null)
-				ApplicationTicker.StopTick(Model.TickAction);
-
-
-			// Disable Logger
-			SwitchboardLogger.ResetUnityLogHandler();
-			SwitchboardLogger.AddUnityLogger();
-			LogFileManager.StopLogging();
-			LogFileManager = null;
-		}
-
-		protected override object GetInstanceOf(Type type)
-		{
-			// This way of type comparison provides an instance only if the exact type is requested.
-			if(type == typeof(ILogger))
-				return SwitchboardLogger.RootInstance;
-
-			// This way is more flexible and provides an instance to any type that accepts the assignment.
-			if(type.IsAssignableFrom(typeof(Ticker)))
-				return ApplicationTicker.Ticker;
-
-			if(type.IsAssignableFrom(typeof(ModelBase)))
-				return Model;
-
-			return null;
-		}
+		return base.Get<T>();
 	}
 }
