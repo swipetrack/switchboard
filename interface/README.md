@@ -1,10 +1,7 @@
 
 ## License
 
-The MIT license applies only to files within this directory or sub-directories that explicitly state the terms of licensing within the source file.
-If no explicit mention of licensing is included within the file, all rights are reserved.
-
-#### MIT License
+MIT License
 
 Copyright (c) 2023 SwipeTrack Solutions
 
