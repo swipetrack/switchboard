@@ -111,15 +111,15 @@
     T Get&lt;T&gt;() where T : class;
 }
 </code></pre><h2 id="ilogger">ILogger</h2>
-<p>The <a class="xref" href="../api/Switchboard.ILogger.html">ILogger</a> interface is mostly identical to the typical .NET ILogger interface in the way it is used. However, the Switchboard.ILogger interface accepts a ReadOnlySpan of characters, which supports both string and char[] arguments, as well as StringMaker (by extension method) for zero-garbage logging. Also, it is able to automatically include the file name, line number, and method where the log originated, with almost no impact on performance.</p>
+<p>The <a class="xref" href="../api/Switchboard.ILogger.html">ILogger</a> interface is mostly identical to the typical .NET ILogger interface in the way it is used. However, the Switchboard.ILogger interface accepts a ReadOnlySpan of characters, which supports both string and char[] arguments, as well as StringMaker (by extension method) for zero-garbage logging. Also, it is able to automatically include the file name, line number, and method where the log originated, with essentially no impact on performance.</p>
 <h2 id="iticker">ITicker</h2>
 <p><a class="xref" href="../api/Switchboard.ITicker.html">ITicker</a> is the interface that can bind a method from any class to Unity's Update() method. The interface is intentionally limited, with only support for Update() ticks. All games have an update loop. Defining the interface further for LateUpdate() or FixedUpdate() could represent tight coupling to Unity specific logic. LateUpdate() and FixedUpdate() events are available via direct reference to the <a class="xref" href="../api/Switchboard.ApplicationTicker.html">ApplicationTicker</a> class.</p>
 <h2 id="actionwithinput">ActionWithInput</h2>
 <p>The <a class="xref" href="../api/Switchboard.ActionWithInput-1.html">ActionWithInput</a> delegate is similar to a .NET Action which accepts a single argument, except the argument is passed using the &quot;in&quot; keyword, which makes it a readonly reference parameter. This should have essentially no effect on passing class arguments, but it allows for efficient passing of readonly struct arguments. That means new event data can be instantiated on the stack as a local readonly struct, then passed into the event via readonly reference. That way, no garbage memory is ever allocated for new event arguments.</p>
 <h2 id="frameoftime">FrameOfTime</h2>
-<p><a class="xref" href="../api/Switchboard.FrameOfTime.html">FrameOfTime</a> represents the event data passed to event handlers when ticker events are invoked.</p>
+<p><a class="xref" href="../api/Switchboard.FrameOfTime.html">FrameOfTime</a> is a readonly struct that represents the event data passed to event handlers when ticker events are invoked.</p>
 <h2 id="stringmaker">StringMaker</h2>
-<p>Although using <a class="xref" href="../api/Switchboard.StringMaker.html">StringMaker</a> creates a tightly coupled dependency, it deserves an honorable mention here because it shares a syntactic interface with the standard .NET StringBuilder class. Therefore, replacing instances of StringBuilder with StringMaker, or vice versa, should be mostly a find and replace operation.</p>
+<p>Although using <a class="xref" href="../api/Switchboard.StringMaker.html">StringMaker</a> creates a tightly coupled dependency, it deserves an honorable mention here because it shares a syntactic interface with the standard .NET StringBuilder class. They have compatible duck typing, sharing most of the same methods and properties. Therefore, replacing instances of StringBuilder with StringMaker, or vice versa, should be mostly a find and replace operation.</p>
 </article>
 
         <div class="contribution d-print-none">
