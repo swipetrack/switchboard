@@ -142,27 +142,41 @@ public class ExampleInjector : BasicInjector
 }
 </code></pre><h2 id="get-dependencies-in-monobehaviours">Get Dependencies in MonoBehaviours</h2>
 <ul>
-<li>Call the <a class="xref" href="../api/Switchboard.InjectorLocator.html#Switchboard_InjectorLocator_GetInjector">InjectorLocator.GetInjector</a> method from the MonoBehaviour.Awake method to get the <a class="xref" href="../api/Switchboard.DependencyInjector.html">DependencyInjector</a> as an <a class="xref" href="../api/Switchboard.DependencyInjector.html">IInjector</a>.</li>
+<li>Call the <a class="xref" href="../api/Switchboard.InjectorLocator.html#Switchboard_InjectorLocator_GetInjector">InjectorLocator.GetInjector</a> method to get the <a class="xref" href="../api/Switchboard.DependencyInjector.html">DependencyInjector</a> as an <a class="xref" href="../api/Switchboard.DependencyInjector.html">IInjector</a>.</li>
 <li>If the IInjector instance is not null, use the <a class="xref" href="../api/Switchboard.IInjector.html#Switchboard_IInjector_Get__1">IInjector.Get</a> method to request dependencies using the generic type argument.</li>
-<li>If a dependency is required for the MonoBehaviour to update or otherwise function properly, throwing an exception from the Awake method will disable the MonoBehaviour.</li>
+<li>If a dependency is required for the MonoBehaviour to function properly, attempt to get the dependency in the OnEnable method. If it is unavailable, set enabled = false.</li>
 </ul>
 <pre><code class="lang-csharp">public class ExampleMonoBehaviour : MonoBehaviour
 {
     private ILogger Logger;
+    private IOptional OptionalDependency;
 
-    private void Awake()
+    private void OnEnable()
     {
-        IInjector injector = InjectorLocator.GetInjector();
-        if(injector != null)
+        IInjector injector = null;
+
+        // Get Logger
+        Logger ??= (injector ??= InjectorLocator.GetInjector())?.Get&lt;ILogger&gt;();
+        if(Logger == null)
         {
-            Logger = injector.Get&lt;ILogger&gt;();
+            enabled = false;
+            Debug.LogError(&quot;No Logger!&quot;);
+            return;
         }
 
-        if(Logger == null)
-            throw new Exception(&quot;Logger unavailable!&quot;);
+        // Get Optional Dependency
+        OptionalDependency ??= (injector ??= InjectorLocator.GetInjector())?.Get&lt;IOptional&gt;();
+        if(OptionalDependency == null)
+            Logger.LogWarning(&quot;Optional dependency unavailable.&quot;);
     }
 
-    private void Update()
+    private void OnDisable()
+    {
+        // Release the reference, and get a new one if enabled.
+        OptionalDependency = null;
+    }
+
+    private void Start()
     {
         Logger.LogInformation(&quot;Hello world!&quot;);
     }
