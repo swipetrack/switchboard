@@ -27,22 +27,22 @@ ________________
 
 ## Installation
 
-The files contained in this repository only represent the interface, examples, and documentation. The full Switchboard package can be downloaded from the Unity Asset Store.
+The files contained in this repository only represent the interface, examples, and documentation. The full Switchboard package can be downloaded from the Unity Asset Store. Even if you only intend to use the core library for non-Unity applications, the package is licensed for purchase through the Unity Asset Store. Once downloaded, the core assemblies can be added to any C# application that targets .NET Standard 2.1 or above.
+
 https://assetstore.unity.com/packages/tools/utilities/switchboard-250879
-Even if you only intend to use the core library for non-Unity applications, the package is licensed for purchase through the Unity Asset Store. Once downloaded, the core assemblies can be added to any C# application that targets .NET Standard 2.1 or above.
 
 ## Documentation
 
-Please see the full documentation at https://swipetrack.github.io/switchboard.
+Please see the full documentation at: https://swipetrack.github.io/switchboard
 
 ## Forum
 
-If you would like to discuss any topic please add your contribution to https://github.com/swipetrack/switchboard/discussions.
+If you would like to discuss any topic please add your contribution to: https://github.com/swipetrack/switchboard/discussions
 
 ## Report an Issue
 
-If you discover a bug, would like to request a feature, or have any other issue please contribute the issue to https://github.com/swipetrack/switchboard/issues.
+If you discover a bug, would like to request a feature, or have any other issue please contribute the issue to: https://github.com/swipetrack/switchboard/issues
 
 ## Direct Message
 
-If you would like to send a direct message concerning Switchboard, email switchboard@swipetrack.com.
+If you would like to send a direct message concerning Switchboard, email: switchboard@swipetrack.com
