@@ -35,7 +35,11 @@ https://assetstore.unity.com/packages/tools/utilities/switchboard-250879
 
 Please see the full documentation at: https://swipetrack.github.io/switchboard
 
-## Forum
+## Unity Forum
+
+Watch the official Switchboard thread on the Unity Forum for additional information: https://forum.unity.com/threads/switchboard-dependency-injection-log-files-zero-gc-strings.1509374/
+
+## Discussions
 
 If you would like to discuss any topic please add your contribution to: https://github.com/swipetrack/switchboard/discussions
 
