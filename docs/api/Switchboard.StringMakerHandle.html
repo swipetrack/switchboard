@@ -2732,7 +2732,7 @@ the number of characters that will be copied during operations like <a class="xr
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Clears and releases all memory pages.</p>
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> to zero.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -3067,6 +3067,346 @@ and clears characters by setting to '\0' from the <a class="xref" href="Switchbo
 
 
 
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Switchboard_StringMakerHandle_op_Addition_" data-uid="Switchboard.StringMakerHandle.op_Addition*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_Boolean_" data-uid="Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.Boolean)">
+  operator +(StringMakerHandle, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StringMakerHandle operator +(StringMakerHandle stringMakerHandle, bool value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stringMakerHandle</code> <a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>The StringMakerHandle to append.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The value to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_StringMakerHandle_op_Addition_" data-uid="Switchboard.StringMakerHandle.op_Addition*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_Char_" data-uid="Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.Char)">
+  operator +(StringMakerHandle, char)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StringMakerHandle operator +(StringMakerHandle stringMakerHandle, char value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stringMakerHandle</code> <a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>The StringMakerHandle to append.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The value to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_StringMakerHandle_op_Addition_" data-uid="Switchboard.StringMakerHandle.op_Addition*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_DateTime_" data-uid="Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.DateTime)">
+  operator +(StringMakerHandle, DateTime)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StringMakerHandle operator +(StringMakerHandle stringMakerHandle, DateTime value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stringMakerHandle</code> <a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>The StringMakerHandle to append.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The value to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_StringMakerHandle_op_Addition_" data-uid="Switchboard.StringMakerHandle.op_Addition*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_Double_" data-uid="Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.Double)">
+  operator +(StringMakerHandle, double)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StringMakerHandle operator +(StringMakerHandle stringMakerHandle, double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stringMakerHandle</code> <a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>The StringMakerHandle to append.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The value to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_StringMakerHandle_op_Addition_" data-uid="Switchboard.StringMakerHandle.op_Addition*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_Int64_" data-uid="Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.Int64)">
+  operator +(StringMakerHandle, long)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StringMakerHandle operator +(StringMakerHandle stringMakerHandle, long value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stringMakerHandle</code> <a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>The StringMakerHandle to append.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The value to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_StringMakerHandle_op_Addition_" data-uid="Switchboard.StringMakerHandle.op_Addition*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_ReadOnlySpan_System_Char__" data-uid="Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.ReadOnlySpan{System.Char})">
+  operator +(StringMakerHandle, ReadOnlySpan&lt;char&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StringMakerHandle operator +(StringMakerHandle stringMakerHandle, ReadOnlySpan&lt;char&gt; value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stringMakerHandle</code> <a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>The StringMakerHandle to append.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The value to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_StringMakerHandle_op_Addition_" data-uid="Switchboard.StringMakerHandle.op_Addition*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_UInt64_" data-uid="Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.UInt64)">
+  operator +(StringMakerHandle, ulong)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StringMakerHandle operator +(StringMakerHandle stringMakerHandle, ulong value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stringMakerHandle</code> <a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>The StringMaker to append.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The value to append.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
+    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
+</dd>
+  </dl>
 
 
 

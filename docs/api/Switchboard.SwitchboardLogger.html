@@ -88,7 +88,7 @@
   <dl><dt>Assembly</dt><dd>Switchboard.UnityLogger.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides a single, static <a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a> and helper methods for standard operations.</p>
+  <div class="markdown summary"><p>Provides a single, static <a class="xref" href="Switchboard.ILogger.html">ILogger</a> <a class="xref" href="Switchboard.LoggerRoot.html">LoggerRoot</a> that can send log output to multiple targets.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -126,7 +126,7 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the static logger root.</p>
+  <div class="markdown level1 summary"><p>Gets the static logger root instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -150,19 +150,19 @@
 </h2>
 
 
-  <a id="Switchboard_SwitchboardLogger_AddUnityLogger_" data-uid="Switchboard.SwitchboardLogger.AddUnityLogger*"></a>
+  <a id="Switchboard_SwitchboardLogger_AddDefaultUnityLogger_" data-uid="Switchboard.SwitchboardLogger.AddDefaultUnityLogger*"></a>
 
-  <h3 id="Switchboard_SwitchboardLogger_AddUnityLogger" data-uid="Switchboard.SwitchboardLogger.AddUnityLogger">
-  AddUnityLogger()
+  <h3 id="Switchboard_SwitchboardLogger_AddDefaultUnityLogger" data-uid="Switchboard.SwitchboardLogger.AddDefaultUnityLogger">
+  AddDefaultUnityLogger()
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Adds the Unity logger to the logger root.</p>
+  <div class="markdown level1 summary"><p>Sends <a class="xref" href="Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_Root">Root</a> log output to Unity's default logger.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void AddUnityLogger()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void AddDefaultUnityLogger()</code></pre>
   </div>
 
 
@@ -177,19 +177,19 @@
 
 
 
-  <a id="Switchboard_SwitchboardLogger_HijackUnityLogHandler_" data-uid="Switchboard.SwitchboardLogger.HijackUnityLogHandler*"></a>
+  <a id="Switchboard_SwitchboardLogger_HijackDebugLogHandler_" data-uid="Switchboard.SwitchboardLogger.HijackDebugLogHandler*"></a>
 
-  <h3 id="Switchboard_SwitchboardLogger_HijackUnityLogHandler" data-uid="Switchboard.SwitchboardLogger.HijackUnityLogHandler">
-  HijackUnityLogHandler()
+  <h3 id="Switchboard_SwitchboardLogger_HijackDebugLogHandler" data-uid="Switchboard.SwitchboardLogger.HijackDebugLogHandler">
+  HijackDebugLogHandler()
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Redirects calls to Unity log methods to the logger root.</p>
+  <div class="markdown level1 summary"><p>Sends calls to Unity's Debug.Log method to the logger <a class="xref" href="Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_Root">Root</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void HijackUnityLogHandler()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void HijackDebugLogHandler()</code></pre>
   </div>
 
 
@@ -204,19 +204,19 @@
 
 
 
-  <a id="Switchboard_SwitchboardLogger_RemoveUnityLogger_" data-uid="Switchboard.SwitchboardLogger.RemoveUnityLogger*"></a>
+  <a id="Switchboard_SwitchboardLogger_RemoveDefaultUnityLogger_" data-uid="Switchboard.SwitchboardLogger.RemoveDefaultUnityLogger*"></a>
 
-  <h3 id="Switchboard_SwitchboardLogger_RemoveUnityLogger" data-uid="Switchboard.SwitchboardLogger.RemoveUnityLogger">
-  RemoveUnityLogger()
+  <h3 id="Switchboard_SwitchboardLogger_RemoveDefaultUnityLogger" data-uid="Switchboard.SwitchboardLogger.RemoveDefaultUnityLogger">
+  RemoveDefaultUnityLogger()
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Removes the Unity logger from the logger root.</p>
+  <div class="markdown level1 summary"><p>Stops sending <a class="xref" href="Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_Root">Root</a> log output to Unity's default logger.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void RemoveUnityLogger()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void RemoveDefaultUnityLogger()</code></pre>
   </div>
 
 
@@ -231,19 +231,19 @@
 
 
 
-  <a id="Switchboard_SwitchboardLogger_ResetUnityLogHandler_" data-uid="Switchboard.SwitchboardLogger.ResetUnityLogHandler*"></a>
+  <a id="Switchboard_SwitchboardLogger_RestoreDebugLogHandler_" data-uid="Switchboard.SwitchboardLogger.RestoreDebugLogHandler*"></a>
 
-  <h3 id="Switchboard_SwitchboardLogger_ResetUnityLogHandler" data-uid="Switchboard.SwitchboardLogger.ResetUnityLogHandler">
-  ResetUnityLogHandler()
+  <h3 id="Switchboard_SwitchboardLogger_RestoreDebugLogHandler" data-uid="Switchboard.SwitchboardLogger.RestoreDebugLogHandler">
+  RestoreDebugLogHandler()
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Directs calls to Unity log methods to the default log handler.</p>
+  <div class="markdown level1 summary"><p>Sends calls to Unity's Debug.Log method straight to Unity's default logger.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ResetUnityLogHandler()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void RestoreDebugLogHandler()</code></pre>
   </div>
 
 

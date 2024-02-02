@@ -2,415 +2,403 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.ActionWithInput-1.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.ApplicationEnd.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.ApplicationPlatform.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.ApplicationTicker.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://swipetrack.github.io/switchboard/api/Switchboard.ClockSynchronizer.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.CompositionRoot.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.CompositionRootAsset.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.DateTimeToTextConverter.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.DependencyInjector.State.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.DependencyInjector.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.Destructor.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.DynamicQueue-1.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.ExpandableAttribute.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.FileRemover.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.FixedTicker.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.FloatFormatInfo.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.FloatToTextConverter.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.FloatToTextExtensions.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.FrameOfTime.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.IInjector.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.ILogFormatter.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.ILogger.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.ILoggerExtensions.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.InjectorLocator.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.IntToTextConverter.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.ITicker.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.LateTicker.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://swipetrack.github.io/switchboard/api/Switchboard.LogFileManager.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.LogFileWriter.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.LoggerRoot.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.LogLevel.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.ObjectArrayPool.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.ObjectPool-1.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.PathUtility.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.PlatformFlags.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://swipetrack.github.io/switchboard/api/Switchboard.PlatformStatLog.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.PreciseClock.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.PriorityEvent-1.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.SharedObjectArrayPool.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.StandardLogFormatter.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.StringMaker.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.StringMakerHandle.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.StringMakerILoggerExtensions.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.StringMakerUnityExtensions.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.SwitchboardLogger.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.SwitchboardMenuOrder.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.ThreadSafeObjectPool-1.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.Ticker.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.TickerBase.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.UnityLogger.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.UnityLogHandler.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.UnityLogHijacker.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/api/Switchboard.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/index.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/manual/collections.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/manual/dependency-injection.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/manual/feedback.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/manual/interface.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/manual/introduction.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/manual/logger.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/manual/memory-management.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/manual/miscellaneous.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/manual/roadmap.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/manual/setup.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/manual/stringmaker.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/manual/text-converter.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/manual/ticker.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/release-notes/v1.0.0.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://swipetrack.github.io/switchboard/release-notes/v1.1.0.html</loc>
-    <lastmod>2024-01-11T02:53:26-06:00</lastmod>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://swipetrack.github.io/switchboard/release-notes/v1.2.0.html</loc>
+    <lastmod>2024-02-02T02:53:22-06:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

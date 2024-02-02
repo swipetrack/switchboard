@@ -57,16 +57,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.ClockSynchronizer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.ClockSynchronizer.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Switchboard.CompositionRoot.yml",
       "output": {
         ".html": {
@@ -287,16 +277,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.LogFileManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.LogFileManager.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Switchboard.LogFileWriter.yml",
       "output": {
         ".html": {
@@ -361,16 +341,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Switchboard.PlatformFlags.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.PlatformStatLog.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.PlatformStatLog.html"
         }
       },
       "version": ""
@@ -564,6 +534,26 @@
       "output": {
         "resource": {
           "relative_path": "assets/CompositionRoot.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/FileLogger.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/FileLogger.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/LogFile.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/LogFile.png"
         }
       },
       "version": ""
@@ -770,6 +760,16 @@
       "output": {
         ".html": {
           "relative_path": "release-notes/v1.1.0.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "release-notes/v1.2.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "release-notes/v1.2.0.html"
         }
       },
       "version": ""

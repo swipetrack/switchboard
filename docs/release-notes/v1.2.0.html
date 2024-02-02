@@ -2,11 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class UnityLogHandler
- | Switchboard </title>
+      <title>Version 1.2.0 | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class UnityLogHandler
- | Switchboard ">
+      <meta name="title" content="Version 1.2.0 | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -29,7 +27,7 @@
       <script type="text/javascript" src="../styles/main.js"></script>
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -74,79 +72,31 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Switchboard.UnityLogHandler">
+        <article data-uid="Version-1.2.0">
+<h1 id="version-120">Version 1.2.0</h1>
 
-
-
-  <h1 id="Switchboard_UnityLogHandler" data-uid="Switchboard.UnityLogHandler" class="text-break">
-    Class UnityLogHandler
-  
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>Switchboard.UnityLogger.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>Provides a reference to the default Unity log handler.</p>
-</div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class UnityLogHandler</code></pre>
-  </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">UnityLogHandler</span></div>
-    </dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="Switchboard_UnityLogHandler_Default_" data-uid="Switchboard.UnityLogHandler.Default*"></a>
-
-  <h3 id="Switchboard_UnityLogHandler_Default" data-uid="Switchboard.UnityLogHandler.Default">
-  Default
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the default Unity log handler.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ILogHandler Default { get; }</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p>It is now easier to use log files directly without dependencies on any other assemblies. For instance, if you don't want to use dependency injection, or the ticker module, they can be deleted without losing any of the log file functionality provided by the new FileLogger component.</p>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li>CompositionRoot now always sets its DependencyInjector to null and removes itself from the InjectorLocator when it begins activation, to prevent corrupted state between play sessions in the editor. It will only assign itself to the InjectorLocator if the DependencyInjector state is truly active, with no exceptions. Now, it always saves a reference to the assigned dependency injector BEFORE it attempts to activate it. So, if activating the DependencyInjector throws an exception, it will still deactivate it when play stops.</li>
+<li>A log file is now opened immediately when the BasicInjector activates.</li>
+<li>LogFileWriter no longer throws an AggregateException every time it fails to open a new file, only if an exception also occurred when closing the old file.</li>
+<li>StandardLogFormatter and UnityLogger are now more resilient to caller info that has been manually set to null or empty.</li>
+</ul>
+<h2 id="changes">Changes</h2>
+<ul>
+<li>Converted LogFileManager into a MonoBehaviour named FileLogger, and added it to the readable Scripts directory.</li>
+<li>Removed the LogFileManager and ClockSynchronizer assemblies.</li>
+<li>Changed StringMaker.Clear method to just set Length = 0, just as StringBuilder does. Before, it was releasing its internal memory back to the shared CharacterArrayPool. But, you can achieve that same behavior by manually calling StringMaker.Clear().TrimExcess(). Having StringMaker.Clear() helps enable fluent interface operations, and its more performant and consistent with StringBuilder for it to just set Length = 0.</li>
+<li>Overloaded the + operator to append basic types to StringMaker.</li>
+<li>Renamed StringMaker.ThreadStaticInstance, ObjectPool.ThreadStaticInstance, and ThreadSafeObjectPool.StaticInstance properties to Shared.</li>
+<li>Renamed the ObjectPool and ThreadSafeObjectPool RequestItem methods to TryGet.</li>
+<li>Updated example code. Simplified example injection code. FloatExample demonstrates usage of StringMaker + operator.</li>
+<li>Improved formatting of platform stats at the beginning of log files created by the BasicInjector.</li>
+<li>StandardLogFormatter moved the caller info to come right after the time stamp.</li>
+<li>Added ILogger extension methods that allow for logging an exception without having to provide a message argument.</li>
+<li>UnityLogHandler.Initialize method is now private.</li>
+</ul>
 </article>
 
         <div class="contribution d-print-none">

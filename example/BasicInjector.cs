@@ -10,56 +10,74 @@ namespace Switchboard
 		public LogLevel LogLevel;
 
 		[Tooltip("Sets whether the log should display caller info.")]
-		public bool DisplayCallerInfo = true;
+		public bool DisplayCallerInfo;
 
 		[Tooltip("Gets or sets the hardware platforms where log files will be enabled.")]
 		public PlatformFlags LogFilePlatforms = (PlatformFlags)532680447;
 
-		private LogFileManager LogFileManager;
 
 		protected override void Activation()
 		{
-			// Configure logger.
+			// Configure Switchboard logger.
 			SwitchboardLogger.Root.LogLevel = LogLevel;
-			UnityLogger.StaticInstance.DisplayCallerInfo = DisplayCallerInfo;
+			UnityLogger.Default.DisplayCallerInfo = DisplayCallerInfo;
 
 			// Activate log files.
 			if(LogFilePlatforms.HasFlag(ApplicationPlatform.Flag))
 			{
-				LogFileManager = new LogFileManager();
-				LogFileManager.DisplayCallerInfo = DisplayCallerInfo;
-				if(LogFileManager.StartLogging())
-				{
-					SwitchboardLogger.HijackUnityLogHandler();
-					if(!Application.isEditor)
-						SwitchboardLogger.RemoveUnityLogger();
-				}
-			}
+				GameObject logFileObject = new GameObject(nameof(FileLogger));
+				DontDestroyOnLoad(logFileObject);
+				logFileObject.hideFlags = HideFlags.HideInHierarchy;
 
-			// Periodically synchronize time stamps to system clock.
-			ClockSynchronizer.Start();
+				// Configure log files.
+				FileLogger logFiles = logFileObject.AddComponent<FileLogger>();
+				// Default Values:
+				//logFiles.Directory = Application.persistentDataPath;
+				//logFiles.FileNamePrefix = Application.productName.Replace(" ", "");
+				//logFiles.FileExtension = LogFileWriter.DefaultFileExtension;
+				//logFiles.FileSizeLimit = LogFileWriter.DefaultFileSizeLimit;
+				//logFiles.DirectorySizeLimit = FileLogger.DefaultDirectorySizeLimit;
+				//logFiles.Formatter = StandardLogFormatter.Default;
+				logFiles.LogLevel = LogLevel;
+				logFiles.DisplayCallerInfo = DisplayCallerInfo;
+				logFiles.enabled = true;
+				if(logFiles.enabled)
+				{
+					// Add log files to the root logger.
+					SwitchboardLogger.Root.Add(logFiles);
+					logFiles.Destroyed += static (ILogger logger) => SwitchboardLogger.Root.Remove(logger);
+
+					// Send Debug.Log calls to the root logger, not directly to Unity's default logger.
+					// The root logger still sends the messages to Unity's default logger, but they pass through the root first.
+					SwitchboardLogger.HijackDebugLogHandler();
+
+					if(!Application.isEditor)
+					{
+						// Remove Unity's default logger from the root logger, disabling Unity's log files outside of the editor.
+						SwitchboardLogger.RemoveDefaultUnityLogger();
+						logFiles.Destroyed += static (ILogger logger) => SwitchboardLogger.AddDefaultUnityLogger();
+					}
+
+					// Add hardware platform information directly to the log file.
+					logFiles.LogInformation(PlatformStatLog.GetStatLog());
+				}
+				else
+					Destroy(logFileObject);
+			}
 		}
 
 		protected override void Deactivation()
 		{
-			ClockSynchronizer.Stop();
-
-			// Reset logger.
-			SwitchboardLogger.AddUnityLogger();
-			SwitchboardLogger.ResetUnityLogHandler();
-			LogFileManager?.StopLogging();
-			LogFileManager = null;
+			// Send Debug.Log calls directly to Unity's default logger.
+			SwitchboardLogger.RestoreDebugLogHandler();
 		}
 
 		public override T Get<T>()
 		{
 			Type type = typeof(T);
 
-			if(type == typeof(Switchboard.ILogger))
+			if(type == typeof(ILogger))
 				return SwitchboardLogger.Root as T;
-
-			if(type == typeof(ITicker))
-				return ApplicationTicker.Ticker as T;
 
 			return null;
 		}

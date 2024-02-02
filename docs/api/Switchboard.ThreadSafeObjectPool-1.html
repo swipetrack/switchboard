@@ -285,10 +285,10 @@ The value can be set with the <a class="xref" href="Switchboard.ThreadSafeObject
 
 
 
-  <a id="Switchboard_ThreadSafeObjectPool_1_StaticInstance_" data-uid="Switchboard.ThreadSafeObjectPool`1.StaticInstance*"></a>
+  <a id="Switchboard_ThreadSafeObjectPool_1_Shared_" data-uid="Switchboard.ThreadSafeObjectPool`1.Shared*"></a>
 
-  <h3 id="Switchboard_ThreadSafeObjectPool_1_StaticInstance" data-uid="Switchboard.ThreadSafeObjectPool`1.StaticInstance">
-  StaticInstance
+  <h3 id="Switchboard_ThreadSafeObjectPool_1_Shared" data-uid="Switchboard.ThreadSafeObjectPool`1.Shared">
+  Shared
   
   </h3>
 
@@ -297,7 +297,7 @@ The value can be set with the <a class="xref" href="Switchboard.ThreadSafeObject
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ThreadSafeObjectPool&lt;T&gt; StaticInstance { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static ThreadSafeObjectPool&lt;T&gt; Shared { get; }</code></pre>
   </div>
 
 
@@ -388,78 +388,6 @@ The value can be set with the <a class="xref" href="Switchboard.ThreadSafeObject
 
 
 
-  <a id="Switchboard_ThreadSafeObjectPool_1_RequestItem_" data-uid="Switchboard.ThreadSafeObjectPool`1.RequestItem*"></a>
-
-  <h3 id="Switchboard_ThreadSafeObjectPool_1_RequestItem" data-uid="Switchboard.ThreadSafeObjectPool`1.RequestItem">
-  RequestItem()
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Provides an object from the pool, if one is available.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T RequestItem()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><span class="xref">T</span></dt>
-    <dd><p>Returns an object, removed from the pool, if one is available. Otherwise, returns null.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Switchboard_ThreadSafeObjectPool_1_RequestItem_" data-uid="Switchboard.ThreadSafeObjectPool`1.RequestItem*"></a>
-
-  <h3 id="Switchboard_ThreadSafeObjectPool_1_RequestItem__0__" data-uid="Switchboard.ThreadSafeObjectPool`1.RequestItem(`0@)">
-  RequestItem(out T)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Provides an object from the pool, if one is available.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool RequestItem(out T item)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>item</code> <span class="xref">T</span></dt>
-    <dd><p>The item returned from the pool if available, otherwise null.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Returns true if the item is not null.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
   <a id="Switchboard_ThreadSafeObjectPool_1_SetMaxCount_" data-uid="Switchboard.ThreadSafeObjectPool`1.SetMaxCount*"></a>
 
   <h3 id="Switchboard_ThreadSafeObjectPool_1_SetMaxCount_System_Int32_" data-uid="Switchboard.ThreadSafeObjectPool`1.SetMaxCount(System.Int32)">
@@ -498,6 +426,78 @@ It could cause other threads to become locked if they are also attempting to ope
     <dd><p>Thrown if the value of <code class="paramref">maxCount</code> is less than zero, or greater than <a class="xref" href="Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_MaxCapacity">MaxCapacity</a>.</p>
 </dd>
   </dl>
+
+
+
+  <a id="Switchboard_ThreadSafeObjectPool_1_TryGet_" data-uid="Switchboard.ThreadSafeObjectPool`1.TryGet*"></a>
+
+  <h3 id="Switchboard_ThreadSafeObjectPool_1_TryGet" data-uid="Switchboard.ThreadSafeObjectPool`1.TryGet">
+  TryGet()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides an object from the pool, if one is available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T TryGet()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns an object, removed from the pool, if one is available. Otherwise, returns null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_ThreadSafeObjectPool_1_TryGet_" data-uid="Switchboard.ThreadSafeObjectPool`1.TryGet*"></a>
+
+  <h3 id="Switchboard_ThreadSafeObjectPool_1_TryGet__0__" data-uid="Switchboard.ThreadSafeObjectPool`1.TryGet(`0@)">
+  TryGet(out T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides an object from the pool, if one is available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGet(out T item)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>item</code> <span class="xref">T</span></dt>
+    <dd><p>The object returned from the pool if available, otherwise null.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Returns true if the object is not null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
 
 
 

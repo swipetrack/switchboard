@@ -149,36 +149,34 @@ public class ExampleInjector : BasicInjector
 <pre><code class="lang-csharp">public class ExampleMonoBehaviour : MonoBehaviour
 {
     private ILogger Logger;
-    private IOptional OptionalDependency;
+    private IService RequiredDependency;
 
     private void OnEnable()
     {
-        IInjector injector = null;
+        IInjector injector = InjectorLocator.GetInjector();
 
         // Get Logger
-        Logger ??= (injector ??= InjectorLocator.GetInjector())?.Get&lt;ILogger&gt;();
-        if(Logger == null)
+        Logger ??= injector?.Get&lt;ILogger&gt;();
+
+        // Get Required Dependency
+        RequiredDependency ??= injector?.Get&lt;IService&gt;();
+        if(RequiredDependency == null)
         {
             enabled = false;
-            Debug.LogError(&quot;No Logger!&quot;);
+            Logger?.LogError(&quot;A required dependency was not provided!&quot;);
             return;
         }
-
-        // Get Optional Dependency
-        OptionalDependency ??= (injector ??= InjectorLocator.GetInjector())?.Get&lt;IOptional&gt;();
-        if(OptionalDependency == null)
-            Logger.LogWarning(&quot;Optional dependency unavailable.&quot;);
     }
 
     private void OnDisable()
     {
-        // Release the reference, and get a new one if enabled.
-        OptionalDependency = null;
+        // If you release the reference OnDisable, a new instance can be injected OnEnable.
+        RequiredDependency = null;
     }
 
     private void Start()
     {
-        Logger.LogInformation(&quot;Hello world!&quot;);
+        Logger?.LogInformation(&quot;Hello world! I definitely have my required dependencies!&quot;);
     }
 }
 </code></pre><h2 id="textmeshpro-integration">TextMeshPro Integration</h2>

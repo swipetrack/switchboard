@@ -8,7 +8,7 @@ references:
   name: What is Dependency Injection?
   href: manual/dependency-injection.html
 - uid: Feedback
-  name: Discussion Forum
+  name: Unity Forum
   href: manual/feedback.html
 - uid: Interface
   name: The Interface
@@ -281,53 +281,6 @@ references:
   isSpec: "True"
   fullName: Switchboard.ApplicationTicker.Ticker
   nameWithType: ApplicationTicker.Ticker
-- uid: Switchboard.ClockSynchronizer
-  name: ClockSynchronizer
-  href: api/Switchboard.ClockSynchronizer.html
-  commentId: T:Switchboard.ClockSynchronizer
-  fullName: Switchboard.ClockSynchronizer
-  nameWithType: ClockSynchronizer
-- uid: Switchboard.ClockSynchronizer.DefaultFrequency
-  name: DefaultFrequency
-  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer_DefaultFrequency
-  commentId: F:Switchboard.ClockSynchronizer.DefaultFrequency
-  fullName: Switchboard.ClockSynchronizer.DefaultFrequency
-  nameWithType: ClockSynchronizer.DefaultFrequency
-- uid: Switchboard.ClockSynchronizer.Start
-  name: Start()
-  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer_Start
-  commentId: M:Switchboard.ClockSynchronizer.Start
-  fullName: Switchboard.ClockSynchronizer.Start()
-  nameWithType: ClockSynchronizer.Start()
-- uid: Switchboard.ClockSynchronizer.Start(System.Single)
-  name: Start(float)
-  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer_Start_System_Single_
-  commentId: M:Switchboard.ClockSynchronizer.Start(System.Single)
-  name.vb: Start(Single)
-  fullName: Switchboard.ClockSynchronizer.Start(float)
-  fullName.vb: Switchboard.ClockSynchronizer.Start(Single)
-  nameWithType: ClockSynchronizer.Start(float)
-  nameWithType.vb: ClockSynchronizer.Start(Single)
-- uid: Switchboard.ClockSynchronizer.Start*
-  name: Start
-  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer_Start_
-  commentId: Overload:Switchboard.ClockSynchronizer.Start
-  isSpec: "True"
-  fullName: Switchboard.ClockSynchronizer.Start
-  nameWithType: ClockSynchronizer.Start
-- uid: Switchboard.ClockSynchronizer.Stop
-  name: Stop()
-  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer_Stop
-  commentId: M:Switchboard.ClockSynchronizer.Stop
-  fullName: Switchboard.ClockSynchronizer.Stop()
-  nameWithType: ClockSynchronizer.Stop()
-- uid: Switchboard.ClockSynchronizer.Stop*
-  name: Stop
-  href: api/Switchboard.ClockSynchronizer.html#Switchboard_ClockSynchronizer_Stop_
-  commentId: Overload:Switchboard.ClockSynchronizer.Stop
-  isSpec: "True"
-  fullName: Switchboard.ClockSynchronizer.Stop
-  nameWithType: ClockSynchronizer.Stop
 - uid: Switchboard.CompositionRoot
   name: CompositionRoot
   href: api/Switchboard.CompositionRoot.html
@@ -2008,6 +1961,19 @@ references:
   commentId: T:Switchboard.ILoggerExtensions
   fullName: Switchboard.ILoggerExtensions
   nameWithType: ILoggerExtensions
+- uid: Switchboard.ILoggerExtensions.Log(Switchboard.ILogger,Switchboard.LogLevel,System.Exception)
+  name: Log(ILogger, LogLevel, Exception)
+  href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_Log_Switchboard_ILogger_Switchboard_LogLevel_System_Exception_
+  commentId: M:Switchboard.ILoggerExtensions.Log(Switchboard.ILogger,Switchboard.LogLevel,System.Exception)
+  fullName: Switchboard.ILoggerExtensions.Log(Switchboard.ILogger, Switchboard.LogLevel, System.Exception)
+  nameWithType: ILoggerExtensions.Log(ILogger, LogLevel, Exception)
+- uid: Switchboard.ILoggerExtensions.Log*
+  name: Log
+  href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_Log_
+  commentId: Overload:Switchboard.ILoggerExtensions.Log
+  isSpec: "True"
+  fullName: Switchboard.ILoggerExtensions.Log
+  nameWithType: ILoggerExtensions.Log
 - uid: Switchboard.ILoggerExtensions.LogCritical(Switchboard.ILogger,System.Exception,System.ReadOnlySpan{System.Char})
   name: LogCritical(ILogger, Exception, ReadOnlySpan<char>)
   href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogCritical_Switchboard_ILogger_System_Exception_System_ReadOnlySpan_System_Char__
@@ -2017,6 +1983,12 @@ references:
   fullName.vb: Switchboard.ILoggerExtensions.LogCritical(Switchboard.ILogger, System.Exception, System.ReadOnlySpan(Of Char))
   nameWithType: ILoggerExtensions.LogCritical(ILogger, Exception, ReadOnlySpan<char>)
   nameWithType.vb: ILoggerExtensions.LogCritical(ILogger, Exception, ReadOnlySpan(Of Char))
+- uid: Switchboard.ILoggerExtensions.LogCritical(Switchboard.ILogger,System.Exception)
+  name: LogCritical(ILogger, Exception)
+  href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogCritical_Switchboard_ILogger_System_Exception_
+  commentId: M:Switchboard.ILoggerExtensions.LogCritical(Switchboard.ILogger,System.Exception)
+  fullName: Switchboard.ILoggerExtensions.LogCritical(Switchboard.ILogger, System.Exception)
+  nameWithType: ILoggerExtensions.LogCritical(ILogger, Exception)
 - uid: Switchboard.ILoggerExtensions.LogCritical(Switchboard.ILogger,System.ReadOnlySpan{System.Char},System.String,System.String,System.Int32)
   name: LogCritical(ILogger, ReadOnlySpan<char>, string, string, int)
   href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogCritical_Switchboard_ILogger_System_ReadOnlySpan_System_Char__System_String_System_String_System_Int32_
@@ -2042,6 +2014,12 @@ references:
   fullName.vb: Switchboard.ILoggerExtensions.LogDebug(Switchboard.ILogger, System.Exception, System.ReadOnlySpan(Of Char))
   nameWithType: ILoggerExtensions.LogDebug(ILogger, Exception, ReadOnlySpan<char>)
   nameWithType.vb: ILoggerExtensions.LogDebug(ILogger, Exception, ReadOnlySpan(Of Char))
+- uid: Switchboard.ILoggerExtensions.LogDebug(Switchboard.ILogger,System.Exception)
+  name: LogDebug(ILogger, Exception)
+  href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogDebug_Switchboard_ILogger_System_Exception_
+  commentId: M:Switchboard.ILoggerExtensions.LogDebug(Switchboard.ILogger,System.Exception)
+  fullName: Switchboard.ILoggerExtensions.LogDebug(Switchboard.ILogger, System.Exception)
+  nameWithType: ILoggerExtensions.LogDebug(ILogger, Exception)
 - uid: Switchboard.ILoggerExtensions.LogDebug(Switchboard.ILogger,System.ReadOnlySpan{System.Char},System.String,System.String,System.Int32)
   name: LogDebug(ILogger, ReadOnlySpan<char>, string, string, int)
   href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogDebug_Switchboard_ILogger_System_ReadOnlySpan_System_Char__System_String_System_String_System_Int32_
@@ -2067,6 +2045,12 @@ references:
   fullName.vb: Switchboard.ILoggerExtensions.LogError(Switchboard.ILogger, System.Exception, System.ReadOnlySpan(Of Char))
   nameWithType: ILoggerExtensions.LogError(ILogger, Exception, ReadOnlySpan<char>)
   nameWithType.vb: ILoggerExtensions.LogError(ILogger, Exception, ReadOnlySpan(Of Char))
+- uid: Switchboard.ILoggerExtensions.LogError(Switchboard.ILogger,System.Exception)
+  name: LogError(ILogger, Exception)
+  href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogError_Switchboard_ILogger_System_Exception_
+  commentId: M:Switchboard.ILoggerExtensions.LogError(Switchboard.ILogger,System.Exception)
+  fullName: Switchboard.ILoggerExtensions.LogError(Switchboard.ILogger, System.Exception)
+  nameWithType: ILoggerExtensions.LogError(ILogger, Exception)
 - uid: Switchboard.ILoggerExtensions.LogError(Switchboard.ILogger,System.ReadOnlySpan{System.Char},System.String,System.String,System.Int32)
   name: LogError(ILogger, ReadOnlySpan<char>, string, string, int)
   href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogError_Switchboard_ILogger_System_ReadOnlySpan_System_Char__System_String_System_String_System_Int32_
@@ -2092,6 +2076,12 @@ references:
   fullName.vb: Switchboard.ILoggerExtensions.LogInformation(Switchboard.ILogger, System.Exception, System.ReadOnlySpan(Of Char))
   nameWithType: ILoggerExtensions.LogInformation(ILogger, Exception, ReadOnlySpan<char>)
   nameWithType.vb: ILoggerExtensions.LogInformation(ILogger, Exception, ReadOnlySpan(Of Char))
+- uid: Switchboard.ILoggerExtensions.LogInformation(Switchboard.ILogger,System.Exception)
+  name: LogInformation(ILogger, Exception)
+  href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogInformation_Switchboard_ILogger_System_Exception_
+  commentId: M:Switchboard.ILoggerExtensions.LogInformation(Switchboard.ILogger,System.Exception)
+  fullName: Switchboard.ILoggerExtensions.LogInformation(Switchboard.ILogger, System.Exception)
+  nameWithType: ILoggerExtensions.LogInformation(ILogger, Exception)
 - uid: Switchboard.ILoggerExtensions.LogInformation(Switchboard.ILogger,System.ReadOnlySpan{System.Char},System.String,System.String,System.Int32)
   name: LogInformation(ILogger, ReadOnlySpan<char>, string, string, int)
   href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogInformation_Switchboard_ILogger_System_ReadOnlySpan_System_Char__System_String_System_String_System_Int32_
@@ -2117,6 +2107,12 @@ references:
   fullName.vb: Switchboard.ILoggerExtensions.LogTrace(Switchboard.ILogger, System.Exception, System.ReadOnlySpan(Of Char))
   nameWithType: ILoggerExtensions.LogTrace(ILogger, Exception, ReadOnlySpan<char>)
   nameWithType.vb: ILoggerExtensions.LogTrace(ILogger, Exception, ReadOnlySpan(Of Char))
+- uid: Switchboard.ILoggerExtensions.LogTrace(Switchboard.ILogger,System.Exception)
+  name: LogTrace(ILogger, Exception)
+  href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogTrace_Switchboard_ILogger_System_Exception_
+  commentId: M:Switchboard.ILoggerExtensions.LogTrace(Switchboard.ILogger,System.Exception)
+  fullName: Switchboard.ILoggerExtensions.LogTrace(Switchboard.ILogger, System.Exception)
+  nameWithType: ILoggerExtensions.LogTrace(ILogger, Exception)
 - uid: Switchboard.ILoggerExtensions.LogTrace(Switchboard.ILogger,System.ReadOnlySpan{System.Char},System.String,System.String,System.Int32)
   name: LogTrace(ILogger, ReadOnlySpan<char>, string, string, int)
   href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogTrace_Switchboard_ILogger_System_ReadOnlySpan_System_Char__System_String_System_String_System_Int32_
@@ -2142,6 +2138,12 @@ references:
   fullName.vb: Switchboard.ILoggerExtensions.LogWarning(Switchboard.ILogger, System.Exception, System.ReadOnlySpan(Of Char))
   nameWithType: ILoggerExtensions.LogWarning(ILogger, Exception, ReadOnlySpan<char>)
   nameWithType.vb: ILoggerExtensions.LogWarning(ILogger, Exception, ReadOnlySpan(Of Char))
+- uid: Switchboard.ILoggerExtensions.LogWarning(Switchboard.ILogger,System.Exception)
+  name: LogWarning(ILogger, Exception)
+  href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogWarning_Switchboard_ILogger_System_Exception_
+  commentId: M:Switchboard.ILoggerExtensions.LogWarning(Switchboard.ILogger,System.Exception)
+  fullName: Switchboard.ILoggerExtensions.LogWarning(Switchboard.ILogger, System.Exception)
+  nameWithType: ILoggerExtensions.LogWarning(ILogger, Exception)
 - uid: Switchboard.ILoggerExtensions.LogWarning(Switchboard.ILogger,System.ReadOnlySpan{System.Char},System.String,System.String,System.Int32)
   name: LogWarning(ILogger, ReadOnlySpan<char>, string, string, int)
   href: api/Switchboard.ILoggerExtensions.html#Switchboard_ILoggerExtensions_LogWarning_Switchboard_ILogger_System_ReadOnlySpan_System_Char__System_String_System_String_System_Int32_
@@ -3006,250 +3008,6 @@ references:
   commentId: T:Switchboard.LateTicker
   fullName: Switchboard.LateTicker
   nameWithType: LateTicker
-- uid: Switchboard.LogFileManager
-  name: LogFileManager
-  href: api/Switchboard.LogFileManager.html
-  commentId: T:Switchboard.LogFileManager
-  fullName: Switchboard.LogFileManager
-  nameWithType: LogFileManager
-- uid: Switchboard.LogFileManager.#ctor
-  name: LogFileManager()
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager__ctor
-  commentId: M:Switchboard.LogFileManager.#ctor
-  name.vb: New()
-  fullName: Switchboard.LogFileManager.LogFileManager()
-  fullName.vb: Switchboard.LogFileManager.New()
-  nameWithType: LogFileManager.LogFileManager()
-  nameWithType.vb: LogFileManager.New()
-- uid: Switchboard.LogFileManager.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,Switchboard.ILogFormatter)
-  name: LogFileManager(string, string, string, int, int, ILogFormatter)
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager__ctor_System_String_System_String_System_String_System_Int32_System_Int32_Switchboard_ILogFormatter_
-  commentId: M:Switchboard.LogFileManager.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,Switchboard.ILogFormatter)
-  name.vb: New(String, String, String, Integer, Integer, ILogFormatter)
-  fullName: Switchboard.LogFileManager.LogFileManager(string, string, string, int, int, Switchboard.ILogFormatter)
-  fullName.vb: Switchboard.LogFileManager.New(String, String, String, Integer, Integer, Switchboard.ILogFormatter)
-  nameWithType: LogFileManager.LogFileManager(string, string, string, int, int, ILogFormatter)
-  nameWithType.vb: LogFileManager.New(String, String, String, Integer, Integer, ILogFormatter)
-- uid: Switchboard.LogFileManager.#ctor(System.String,System.String,System.String,System.Int32,System.Int32)
-  name: LogFileManager(string, string, string, int, int)
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager__ctor_System_String_System_String_System_String_System_Int32_System_Int32_
-  commentId: M:Switchboard.LogFileManager.#ctor(System.String,System.String,System.String,System.Int32,System.Int32)
-  name.vb: New(String, String, String, Integer, Integer)
-  fullName: Switchboard.LogFileManager.LogFileManager(string, string, string, int, int)
-  fullName.vb: Switchboard.LogFileManager.New(String, String, String, Integer, Integer)
-  nameWithType: LogFileManager.LogFileManager(string, string, string, int, int)
-  nameWithType.vb: LogFileManager.New(String, String, String, Integer, Integer)
-- uid: Switchboard.LogFileManager.#ctor(System.String,System.String,System.String,System.Int32)
-  name: LogFileManager(string, string, string, int)
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager__ctor_System_String_System_String_System_String_System_Int32_
-  commentId: M:Switchboard.LogFileManager.#ctor(System.String,System.String,System.String,System.Int32)
-  name.vb: New(String, String, String, Integer)
-  fullName: Switchboard.LogFileManager.LogFileManager(string, string, string, int)
-  fullName.vb: Switchboard.LogFileManager.New(String, String, String, Integer)
-  nameWithType: LogFileManager.LogFileManager(string, string, string, int)
-  nameWithType.vb: LogFileManager.New(String, String, String, Integer)
-- uid: Switchboard.LogFileManager.#ctor(System.String,System.String,System.String)
-  name: LogFileManager(string, string, string)
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager__ctor_System_String_System_String_System_String_
-  commentId: M:Switchboard.LogFileManager.#ctor(System.String,System.String,System.String)
-  name.vb: New(String, String, String)
-  fullName: Switchboard.LogFileManager.LogFileManager(string, string, string)
-  fullName.vb: Switchboard.LogFileManager.New(String, String, String)
-  nameWithType: LogFileManager.LogFileManager(string, string, string)
-  nameWithType.vb: LogFileManager.New(String, String, String)
-- uid: Switchboard.LogFileManager.#ctor(System.String,System.String)
-  name: LogFileManager(string, string)
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager__ctor_System_String_System_String_
-  commentId: M:Switchboard.LogFileManager.#ctor(System.String,System.String)
-  name.vb: New(String, String)
-  fullName: Switchboard.LogFileManager.LogFileManager(string, string)
-  fullName.vb: Switchboard.LogFileManager.New(String, String)
-  nameWithType: LogFileManager.LogFileManager(string, string)
-  nameWithType.vb: LogFileManager.New(String, String)
-- uid: Switchboard.LogFileManager.#ctor(System.String)
-  name: LogFileManager(string)
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager__ctor_System_String_
-  commentId: M:Switchboard.LogFileManager.#ctor(System.String)
-  name.vb: New(String)
-  fullName: Switchboard.LogFileManager.LogFileManager(string)
-  fullName.vb: Switchboard.LogFileManager.New(String)
-  nameWithType: LogFileManager.LogFileManager(string)
-  nameWithType.vb: LogFileManager.New(String)
-- uid: Switchboard.LogFileManager.#ctor*
-  name: LogFileManager
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager__ctor_
-  commentId: Overload:Switchboard.LogFileManager.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: Switchboard.LogFileManager.LogFileManager
-  fullName.vb: Switchboard.LogFileManager.New
-  nameWithType: LogFileManager.LogFileManager
-  nameWithType.vb: LogFileManager.New
-- uid: Switchboard.LogFileManager.DefaultDirectorySizeLimit
-  name: DefaultDirectorySizeLimit
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_DefaultDirectorySizeLimit
-  commentId: F:Switchboard.LogFileManager.DefaultDirectorySizeLimit
-  fullName: Switchboard.LogFileManager.DefaultDirectorySizeLimit
-  nameWithType: LogFileManager.DefaultDirectorySizeLimit
-- uid: Switchboard.LogFileManager.DirectorySizeLimit
-  name: DirectorySizeLimit
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_DirectorySizeLimit
-  commentId: P:Switchboard.LogFileManager.DirectorySizeLimit
-  fullName: Switchboard.LogFileManager.DirectorySizeLimit
-  nameWithType: LogFileManager.DirectorySizeLimit
-- uid: Switchboard.LogFileManager.DirectorySizeLimit*
-  name: DirectorySizeLimit
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_DirectorySizeLimit_
-  commentId: Overload:Switchboard.LogFileManager.DirectorySizeLimit
-  isSpec: "True"
-  fullName: Switchboard.LogFileManager.DirectorySizeLimit
-  nameWithType: LogFileManager.DirectorySizeLimit
-- uid: Switchboard.LogFileManager.DisplayCallerInfo
-  name: DisplayCallerInfo
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_DisplayCallerInfo
-  commentId: P:Switchboard.LogFileManager.DisplayCallerInfo
-  fullName: Switchboard.LogFileManager.DisplayCallerInfo
-  nameWithType: LogFileManager.DisplayCallerInfo
-- uid: Switchboard.LogFileManager.DisplayCallerInfo*
-  name: DisplayCallerInfo
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_DisplayCallerInfo_
-  commentId: Overload:Switchboard.LogFileManager.DisplayCallerInfo
-  isSpec: "True"
-  fullName: Switchboard.LogFileManager.DisplayCallerInfo
-  nameWithType: LogFileManager.DisplayCallerInfo
-- uid: Switchboard.LogFileManager.FileSizeLimit
-  name: FileSizeLimit
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_FileSizeLimit
-  commentId: P:Switchboard.LogFileManager.FileSizeLimit
-  fullName: Switchboard.LogFileManager.FileSizeLimit
-  nameWithType: LogFileManager.FileSizeLimit
-- uid: Switchboard.LogFileManager.FileSizeLimit*
-  name: FileSizeLimit
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_FileSizeLimit_
-  commentId: Overload:Switchboard.LogFileManager.FileSizeLimit
-  isSpec: "True"
-  fullName: Switchboard.LogFileManager.FileSizeLimit
-  nameWithType: LogFileManager.FileSizeLimit
-- uid: Switchboard.LogFileManager.FlushLogFile
-  name: FlushLogFile()
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_FlushLogFile
-  commentId: M:Switchboard.LogFileManager.FlushLogFile
-  fullName: Switchboard.LogFileManager.FlushLogFile()
-  nameWithType: LogFileManager.FlushLogFile()
-- uid: Switchboard.LogFileManager.FlushLogFile*
-  name: FlushLogFile
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_FlushLogFile_
-  commentId: Overload:Switchboard.LogFileManager.FlushLogFile
-  isSpec: "True"
-  fullName: Switchboard.LogFileManager.FlushLogFile
-  nameWithType: LogFileManager.FlushLogFile
-- uid: Switchboard.LogFileManager.Formatter
-  name: Formatter
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_Formatter
-  commentId: P:Switchboard.LogFileManager.Formatter
-  fullName: Switchboard.LogFileManager.Formatter
-  nameWithType: LogFileManager.Formatter
-- uid: Switchboard.LogFileManager.Formatter*
-  name: Formatter
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_Formatter_
-  commentId: Overload:Switchboard.LogFileManager.Formatter
-  isSpec: "True"
-  fullName: Switchboard.LogFileManager.Formatter
-  nameWithType: LogFileManager.Formatter
-- uid: Switchboard.LogFileManager.LogFileWriter
-  name: LogFileWriter
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_LogFileWriter
-  commentId: P:Switchboard.LogFileManager.LogFileWriter
-  fullName: Switchboard.LogFileManager.LogFileWriter
-  nameWithType: LogFileManager.LogFileWriter
-- uid: Switchboard.LogFileManager.LogFileWriter*
-  name: LogFileWriter
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_LogFileWriter_
-  commentId: Overload:Switchboard.LogFileManager.LogFileWriter
-  isSpec: "True"
-  fullName: Switchboard.LogFileManager.LogFileWriter
-  nameWithType: LogFileManager.LogFileWriter
-- uid: Switchboard.LogFileManager.LogLevel
-  name: LogLevel
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_LogLevel
-  commentId: P:Switchboard.LogFileManager.LogLevel
-  fullName: Switchboard.LogFileManager.LogLevel
-  nameWithType: LogFileManager.LogLevel
-- uid: Switchboard.LogFileManager.LogLevel*
-  name: LogLevel
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_LogLevel_
-  commentId: Overload:Switchboard.LogFileManager.LogLevel
-  isSpec: "True"
-  fullName: Switchboard.LogFileManager.LogLevel
-  nameWithType: LogFileManager.LogLevel
-- uid: Switchboard.LogFileManager.Path
-  name: Path
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_Path
-  commentId: P:Switchboard.LogFileManager.Path
-  fullName: Switchboard.LogFileManager.Path
-  nameWithType: LogFileManager.Path
-- uid: Switchboard.LogFileManager.Path*
-  name: Path
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_Path_
-  commentId: Overload:Switchboard.LogFileManager.Path
-  isSpec: "True"
-  fullName: Switchboard.LogFileManager.Path
-  nameWithType: LogFileManager.Path
-- uid: Switchboard.LogFileManager.RemoveExcessLogFiles
-  name: RemoveExcessLogFiles()
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_RemoveExcessLogFiles
-  commentId: M:Switchboard.LogFileManager.RemoveExcessLogFiles
-  fullName: Switchboard.LogFileManager.RemoveExcessLogFiles()
-  nameWithType: LogFileManager.RemoveExcessLogFiles()
-- uid: Switchboard.LogFileManager.RemoveExcessLogFiles*
-  name: RemoveExcessLogFiles
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_RemoveExcessLogFiles_
-  commentId: Overload:Switchboard.LogFileManager.RemoveExcessLogFiles
-  isSpec: "True"
-  fullName: Switchboard.LogFileManager.RemoveExcessLogFiles
-  nameWithType: LogFileManager.RemoveExcessLogFiles
-- uid: Switchboard.LogFileManager.RemoveLogFilesBeyondLimit(System.Int32)
-  name: RemoveLogFilesBeyondLimit(int)
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_RemoveLogFilesBeyondLimit_System_Int32_
-  commentId: M:Switchboard.LogFileManager.RemoveLogFilesBeyondLimit(System.Int32)
-  name.vb: RemoveLogFilesBeyondLimit(Integer)
-  fullName: Switchboard.LogFileManager.RemoveLogFilesBeyondLimit(int)
-  fullName.vb: Switchboard.LogFileManager.RemoveLogFilesBeyondLimit(Integer)
-  nameWithType: LogFileManager.RemoveLogFilesBeyondLimit(int)
-  nameWithType.vb: LogFileManager.RemoveLogFilesBeyondLimit(Integer)
-- uid: Switchboard.LogFileManager.RemoveLogFilesBeyondLimit*
-  name: RemoveLogFilesBeyondLimit
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_RemoveLogFilesBeyondLimit_
-  commentId: Overload:Switchboard.LogFileManager.RemoveLogFilesBeyondLimit
-  isSpec: "True"
-  fullName: Switchboard.LogFileManager.RemoveLogFilesBeyondLimit
-  nameWithType: LogFileManager.RemoveLogFilesBeyondLimit
-- uid: Switchboard.LogFileManager.StartLogging
-  name: StartLogging()
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_StartLogging
-  commentId: M:Switchboard.LogFileManager.StartLogging
-  fullName: Switchboard.LogFileManager.StartLogging()
-  nameWithType: LogFileManager.StartLogging()
-- uid: Switchboard.LogFileManager.StartLogging*
-  name: StartLogging
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_StartLogging_
-  commentId: Overload:Switchboard.LogFileManager.StartLogging
-  isSpec: "True"
-  fullName: Switchboard.LogFileManager.StartLogging
-  nameWithType: LogFileManager.StartLogging
-- uid: Switchboard.LogFileManager.StopLogging
-  name: StopLogging()
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_StopLogging
-  commentId: M:Switchboard.LogFileManager.StopLogging
-  fullName: Switchboard.LogFileManager.StopLogging()
-  nameWithType: LogFileManager.StopLogging()
-- uid: Switchboard.LogFileManager.StopLogging*
-  name: StopLogging
-  href: api/Switchboard.LogFileManager.html#Switchboard_LogFileManager_StopLogging_
-  commentId: Overload:Switchboard.LogFileManager.StopLogging
-  isSpec: "True"
-  fullName: Switchboard.LogFileManager.StopLogging
-  nameWithType: LogFileManager.StopLogging
 - uid: Switchboard.LogFileWriter
   name: LogFileWriter
   href: api/Switchboard.LogFileWriter.html
@@ -3315,18 +3073,31 @@ references:
   isSpec: "True"
   fullName: Switchboard.LogFileWriter.Close
   nameWithType: LogFileWriter.Close
-- uid: Switchboard.LogFileWriter.DefaultExtension
-  name: DefaultExtension
-  href: api/Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_DefaultExtension
-  commentId: F:Switchboard.LogFileWriter.DefaultExtension
-  fullName: Switchboard.LogFileWriter.DefaultExtension
-  nameWithType: LogFileWriter.DefaultExtension
+- uid: Switchboard.LogFileWriter.DefaultFileExtension
+  name: DefaultFileExtension
+  href: api/Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_DefaultFileExtension
+  commentId: F:Switchboard.LogFileWriter.DefaultFileExtension
+  fullName: Switchboard.LogFileWriter.DefaultFileExtension
+  nameWithType: LogFileWriter.DefaultFileExtension
 - uid: Switchboard.LogFileWriter.DefaultFileSizeLimit
   name: DefaultFileSizeLimit
   href: api/Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_DefaultFileSizeLimit
   commentId: F:Switchboard.LogFileWriter.DefaultFileSizeLimit
   fullName: Switchboard.LogFileWriter.DefaultFileSizeLimit
   nameWithType: LogFileWriter.DefaultFileSizeLimit
+- uid: Switchboard.LogFileWriter.Directory
+  name: Directory
+  href: api/Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Directory
+  commentId: P:Switchboard.LogFileWriter.Directory
+  fullName: Switchboard.LogFileWriter.Directory
+  nameWithType: LogFileWriter.Directory
+- uid: Switchboard.LogFileWriter.Directory*
+  name: Directory
+  href: api/Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Directory_
+  commentId: Overload:Switchboard.LogFileWriter.Directory
+  isSpec: "True"
+  fullName: Switchboard.LogFileWriter.Directory
+  nameWithType: LogFileWriter.Directory
 - uid: Switchboard.LogFileWriter.DisplayCallerInfo
   name: DisplayCallerInfo
   href: api/Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_DisplayCallerInfo
@@ -3346,6 +3117,32 @@ references:
   commentId: E:Switchboard.LogFileWriter.FileClosed
   fullName: Switchboard.LogFileWriter.FileClosed
   nameWithType: LogFileWriter.FileClosed
+- uid: Switchboard.LogFileWriter.FileExtension
+  name: FileExtension
+  href: api/Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_FileExtension
+  commentId: P:Switchboard.LogFileWriter.FileExtension
+  fullName: Switchboard.LogFileWriter.FileExtension
+  nameWithType: LogFileWriter.FileExtension
+- uid: Switchboard.LogFileWriter.FileExtension*
+  name: FileExtension
+  href: api/Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_FileExtension_
+  commentId: Overload:Switchboard.LogFileWriter.FileExtension
+  isSpec: "True"
+  fullName: Switchboard.LogFileWriter.FileExtension
+  nameWithType: LogFileWriter.FileExtension
+- uid: Switchboard.LogFileWriter.FileNamePrefix
+  name: FileNamePrefix
+  href: api/Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_FileNamePrefix
+  commentId: P:Switchboard.LogFileWriter.FileNamePrefix
+  fullName: Switchboard.LogFileWriter.FileNamePrefix
+  nameWithType: LogFileWriter.FileNamePrefix
+- uid: Switchboard.LogFileWriter.FileNamePrefix*
+  name: FileNamePrefix
+  href: api/Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_FileNamePrefix_
+  commentId: Overload:Switchboard.LogFileWriter.FileNamePrefix
+  isSpec: "True"
+  fullName: Switchboard.LogFileWriter.FileNamePrefix
+  nameWithType: LogFileWriter.FileNamePrefix
 - uid: Switchboard.LogFileWriter.FileSizeLimit
   name: FileSizeLimit
   href: api/Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_FileSizeLimit
@@ -3930,32 +3727,6 @@ references:
   fullName.vb: Switchboard.ObjectPool(Of T).Remove
   nameWithType: ObjectPool<T>.Remove
   nameWithType.vb: ObjectPool(Of T).Remove
-- uid: Switchboard.ObjectPool`1.RequestItem
-  name: RequestItem()
-  href: api/Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_RequestItem
-  commentId: M:Switchboard.ObjectPool`1.RequestItem
-  fullName: Switchboard.ObjectPool<T>.RequestItem()
-  fullName.vb: Switchboard.ObjectPool(Of T).RequestItem()
-  nameWithType: ObjectPool<T>.RequestItem()
-  nameWithType.vb: ObjectPool(Of T).RequestItem()
-- uid: Switchboard.ObjectPool`1.RequestItem(`0@)
-  name: RequestItem(out T)
-  href: api/Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_RequestItem__0__
-  commentId: M:Switchboard.ObjectPool`1.RequestItem(`0@)
-  name.vb: RequestItem(T)
-  fullName: Switchboard.ObjectPool<T>.RequestItem(out T)
-  fullName.vb: Switchboard.ObjectPool(Of T).RequestItem(T)
-  nameWithType: ObjectPool<T>.RequestItem(out T)
-  nameWithType.vb: ObjectPool(Of T).RequestItem(T)
-- uid: Switchboard.ObjectPool`1.RequestItem*
-  name: RequestItem
-  href: api/Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_RequestItem_
-  commentId: Overload:Switchboard.ObjectPool`1.RequestItem
-  isSpec: "True"
-  fullName: Switchboard.ObjectPool<T>.RequestItem
-  fullName.vb: Switchboard.ObjectPool(Of T).RequestItem
-  nameWithType: ObjectPool<T>.RequestItem
-  nameWithType.vb: ObjectPool(Of T).RequestItem
 - uid: Switchboard.ObjectPool`1.SetMaxCount(System.Int32)
   name: SetMaxCount(int)
   href: api/Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_SetMaxCount_System_Int32_
@@ -3974,23 +3745,49 @@ references:
   fullName.vb: Switchboard.ObjectPool(Of T).SetMaxCount
   nameWithType: ObjectPool<T>.SetMaxCount
   nameWithType.vb: ObjectPool(Of T).SetMaxCount
-- uid: Switchboard.ObjectPool`1.ThreadStaticInstance
-  name: ThreadStaticInstance
-  href: api/Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_ThreadStaticInstance
-  commentId: P:Switchboard.ObjectPool`1.ThreadStaticInstance
-  fullName: Switchboard.ObjectPool<T>.ThreadStaticInstance
-  fullName.vb: Switchboard.ObjectPool(Of T).ThreadStaticInstance
-  nameWithType: ObjectPool<T>.ThreadStaticInstance
-  nameWithType.vb: ObjectPool(Of T).ThreadStaticInstance
-- uid: Switchboard.ObjectPool`1.ThreadStaticInstance*
-  name: ThreadStaticInstance
-  href: api/Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_ThreadStaticInstance_
-  commentId: Overload:Switchboard.ObjectPool`1.ThreadStaticInstance
+- uid: Switchboard.ObjectPool`1.Shared
+  name: Shared
+  href: api/Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_Shared
+  commentId: P:Switchboard.ObjectPool`1.Shared
+  fullName: Switchboard.ObjectPool<T>.Shared
+  fullName.vb: Switchboard.ObjectPool(Of T).Shared
+  nameWithType: ObjectPool<T>.Shared
+  nameWithType.vb: ObjectPool(Of T).Shared
+- uid: Switchboard.ObjectPool`1.Shared*
+  name: Shared
+  href: api/Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_Shared_
+  commentId: Overload:Switchboard.ObjectPool`1.Shared
   isSpec: "True"
-  fullName: Switchboard.ObjectPool<T>.ThreadStaticInstance
-  fullName.vb: Switchboard.ObjectPool(Of T).ThreadStaticInstance
-  nameWithType: ObjectPool<T>.ThreadStaticInstance
-  nameWithType.vb: ObjectPool(Of T).ThreadStaticInstance
+  fullName: Switchboard.ObjectPool<T>.Shared
+  fullName.vb: Switchboard.ObjectPool(Of T).Shared
+  nameWithType: ObjectPool<T>.Shared
+  nameWithType.vb: ObjectPool(Of T).Shared
+- uid: Switchboard.ObjectPool`1.TryGet
+  name: TryGet()
+  href: api/Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_TryGet
+  commentId: M:Switchboard.ObjectPool`1.TryGet
+  fullName: Switchboard.ObjectPool<T>.TryGet()
+  fullName.vb: Switchboard.ObjectPool(Of T).TryGet()
+  nameWithType: ObjectPool<T>.TryGet()
+  nameWithType.vb: ObjectPool(Of T).TryGet()
+- uid: Switchboard.ObjectPool`1.TryGet(`0@)
+  name: TryGet(out T)
+  href: api/Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_TryGet__0__
+  commentId: M:Switchboard.ObjectPool`1.TryGet(`0@)
+  name.vb: TryGet(T)
+  fullName: Switchboard.ObjectPool<T>.TryGet(out T)
+  fullName.vb: Switchboard.ObjectPool(Of T).TryGet(T)
+  nameWithType: ObjectPool<T>.TryGet(out T)
+  nameWithType.vb: ObjectPool(Of T).TryGet(T)
+- uid: Switchboard.ObjectPool`1.TryGet*
+  name: TryGet
+  href: api/Switchboard.ObjectPool-1.html#Switchboard_ObjectPool_1_TryGet_
+  commentId: Overload:Switchboard.ObjectPool`1.TryGet
+  isSpec: "True"
+  fullName: Switchboard.ObjectPool<T>.TryGet
+  fullName.vb: Switchboard.ObjectPool(Of T).TryGet
+  nameWithType: ObjectPool<T>.TryGet
+  nameWithType.vb: ObjectPool(Of T).TryGet
 - uid: Switchboard.PathUtility
   name: PathUtility
   href: api/Switchboard.PathUtility.html
@@ -4462,25 +4259,6 @@ references:
   commentId: F:Switchboard.PlatformFlags.XboxOne
   fullName: Switchboard.PlatformFlags.XboxOne
   nameWithType: PlatformFlags.XboxOne
-- uid: Switchboard.PlatformStatLog
-  name: PlatformStatLog
-  href: api/Switchboard.PlatformStatLog.html
-  commentId: T:Switchboard.PlatformStatLog
-  fullName: Switchboard.PlatformStatLog
-  nameWithType: PlatformStatLog
-- uid: Switchboard.PlatformStatLog.GetStatLog
-  name: GetStatLog()
-  href: api/Switchboard.PlatformStatLog.html#Switchboard_PlatformStatLog_GetStatLog
-  commentId: M:Switchboard.PlatformStatLog.GetStatLog
-  fullName: Switchboard.PlatformStatLog.GetStatLog()
-  nameWithType: PlatformStatLog.GetStatLog()
-- uid: Switchboard.PlatformStatLog.GetStatLog*
-  name: GetStatLog
-  href: api/Switchboard.PlatformStatLog.html#Switchboard_PlatformStatLog_GetStatLog_
-  commentId: Overload:Switchboard.PlatformStatLog.GetStatLog
-  isSpec: "True"
-  fullName: Switchboard.PlatformStatLog.GetStatLog
-  nameWithType: PlatformStatLog.GetStatLog
 - uid: Switchboard.PreciseClock
   name: PreciseClock
   href: api/Switchboard.PreciseClock.html
@@ -4663,6 +4441,19 @@ references:
   commentId: T:Switchboard.StandardLogFormatter
   fullName: Switchboard.StandardLogFormatter
   nameWithType: StandardLogFormatter
+- uid: Switchboard.StandardLogFormatter.Default
+  name: Default
+  href: api/Switchboard.StandardLogFormatter.html#Switchboard_StandardLogFormatter_Default
+  commentId: P:Switchboard.StandardLogFormatter.Default
+  fullName: Switchboard.StandardLogFormatter.Default
+  nameWithType: StandardLogFormatter.Default
+- uid: Switchboard.StandardLogFormatter.Default*
+  name: Default
+  href: api/Switchboard.StandardLogFormatter.html#Switchboard_StandardLogFormatter_Default_
+  commentId: Overload:Switchboard.StandardLogFormatter.Default
+  isSpec: "True"
+  fullName: Switchboard.StandardLogFormatter.Default
+  nameWithType: StandardLogFormatter.Default
 - uid: Switchboard.StandardLogFormatter.Format(Switchboard.LogLevel,System.Exception,System.ReadOnlySpan{System.Char},Switchboard.StringMakerHandle)
   name: Format(LogLevel, Exception, ReadOnlySpan<char>, StringMakerHandle)
   href: api/Switchboard.StandardLogFormatter.html#Switchboard_StandardLogFormatter_Format_Switchboard_LogLevel_System_Exception_System_ReadOnlySpan_System_Char__Switchboard_StringMakerHandle_
@@ -4697,19 +4488,6 @@ references:
   isSpec: "True"
   fullName: Switchboard.StandardLogFormatter.Format
   nameWithType: StandardLogFormatter.Format
-- uid: Switchboard.StandardLogFormatter.StaticInstance
-  name: StaticInstance
-  href: api/Switchboard.StandardLogFormatter.html#Switchboard_StandardLogFormatter_StaticInstance
-  commentId: P:Switchboard.StandardLogFormatter.StaticInstance
-  fullName: Switchboard.StandardLogFormatter.StaticInstance
-  nameWithType: StandardLogFormatter.StaticInstance
-- uid: Switchboard.StandardLogFormatter.StaticInstance*
-  name: StaticInstance
-  href: api/Switchboard.StandardLogFormatter.html#Switchboard_StandardLogFormatter_StaticInstance_
-  commentId: Overload:Switchboard.StandardLogFormatter.StaticInstance
-  isSpec: "True"
-  fullName: Switchboard.StandardLogFormatter.StaticInstance
-  nameWithType: StandardLogFormatter.StaticInstance
 - uid: Switchboard.StringMaker
   name: StringMaker
   href: api/Switchboard.StringMaker.html
@@ -4861,7 +4639,14 @@ references:
 - uid: Switchboard.StringMaker.AppendAction
   name: AppendAction
   href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_AppendAction
-  commentId: F:Switchboard.StringMaker.AppendAction
+  commentId: P:Switchboard.StringMaker.AppendAction
+  fullName: Switchboard.StringMaker.AppendAction
+  nameWithType: StringMaker.AppendAction
+- uid: Switchboard.StringMaker.AppendAction*
+  name: AppendAction
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_AppendAction_
+  commentId: Overload:Switchboard.StringMaker.AppendAction
+  isSpec: "True"
   fullName: Switchboard.StringMaker.AppendAction
   nameWithType: StringMaker.AppendAction
 - uid: Switchboard.StringMaker.AppendAsBinary(System.Byte)
@@ -5280,7 +5065,14 @@ references:
 - uid: Switchboard.StringMaker.CopyAction
   name: CopyAction
   href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_CopyAction
-  commentId: F:Switchboard.StringMaker.CopyAction
+  commentId: P:Switchboard.StringMaker.CopyAction
+  fullName: Switchboard.StringMaker.CopyAction
+  nameWithType: StringMaker.CopyAction
+- uid: Switchboard.StringMaker.CopyAction*
+  name: CopyAction
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_CopyAction_
+  commentId: Overload:Switchboard.StringMaker.CopyAction
+  isSpec: "True"
   fullName: Switchboard.StringMaker.CopyAction
   nameWithType: StringMaker.CopyAction
 - uid: Switchboard.StringMaker.CopyTo(System.Span{System.Char})
@@ -5381,25 +5173,98 @@ references:
   commentId: F:Switchboard.StringMaker.MaxPages
   fullName: Switchboard.StringMaker.MaxPages
   nameWithType: StringMaker.MaxPages
+- uid: Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.Boolean)
+  name: operator +(StringMaker, bool)
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_op_Addition_Switchboard_StringMaker_System_Boolean_
+  commentId: M:Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.Boolean)
+  name.vb: +(StringMaker, Boolean)
+  fullName: Switchboard.StringMaker.operator +(Switchboard.StringMaker, bool)
+  fullName.vb: Switchboard.StringMaker.+(Switchboard.StringMaker, Boolean)
+  nameWithType: StringMaker.operator +(StringMaker, bool)
+  nameWithType.vb: StringMaker.+(StringMaker, Boolean)
+- uid: Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.Char)
+  name: operator +(StringMaker, char)
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_op_Addition_Switchboard_StringMaker_System_Char_
+  commentId: M:Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.Char)
+  name.vb: +(StringMaker, Char)
+  fullName: Switchboard.StringMaker.operator +(Switchboard.StringMaker, char)
+  fullName.vb: Switchboard.StringMaker.+(Switchboard.StringMaker, Char)
+  nameWithType: StringMaker.operator +(StringMaker, char)
+  nameWithType.vb: StringMaker.+(StringMaker, Char)
+- uid: Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.DateTime)
+  name: operator +(StringMaker, DateTime)
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_op_Addition_Switchboard_StringMaker_System_DateTime_
+  commentId: M:Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.DateTime)
+  name.vb: +(StringMaker, Date)
+  fullName: Switchboard.StringMaker.operator +(Switchboard.StringMaker, System.DateTime)
+  fullName.vb: Switchboard.StringMaker.+(Switchboard.StringMaker, Date)
+  nameWithType: StringMaker.operator +(StringMaker, DateTime)
+  nameWithType.vb: StringMaker.+(StringMaker, Date)
+- uid: Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.Double)
+  name: operator +(StringMaker, double)
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_op_Addition_Switchboard_StringMaker_System_Double_
+  commentId: M:Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.Double)
+  name.vb: +(StringMaker, Double)
+  fullName: Switchboard.StringMaker.operator +(Switchboard.StringMaker, double)
+  fullName.vb: Switchboard.StringMaker.+(Switchboard.StringMaker, Double)
+  nameWithType: StringMaker.operator +(StringMaker, double)
+  nameWithType.vb: StringMaker.+(StringMaker, Double)
+- uid: Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.Int64)
+  name: operator +(StringMaker, long)
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_op_Addition_Switchboard_StringMaker_System_Int64_
+  commentId: M:Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.Int64)
+  name.vb: +(StringMaker, Long)
+  fullName: Switchboard.StringMaker.operator +(Switchboard.StringMaker, long)
+  fullName.vb: Switchboard.StringMaker.+(Switchboard.StringMaker, Long)
+  nameWithType: StringMaker.operator +(StringMaker, long)
+  nameWithType.vb: StringMaker.+(StringMaker, Long)
+- uid: Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.ReadOnlySpan{System.Char})
+  name: operator +(StringMaker, ReadOnlySpan<char>)
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_op_Addition_Switchboard_StringMaker_System_ReadOnlySpan_System_Char__
+  commentId: M:Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.ReadOnlySpan{System.Char})
+  name.vb: +(StringMaker, ReadOnlySpan(Of Char))
+  fullName: Switchboard.StringMaker.operator +(Switchboard.StringMaker, System.ReadOnlySpan<char>)
+  fullName.vb: Switchboard.StringMaker.+(Switchboard.StringMaker, System.ReadOnlySpan(Of Char))
+  nameWithType: StringMaker.operator +(StringMaker, ReadOnlySpan<char>)
+  nameWithType.vb: StringMaker.+(StringMaker, ReadOnlySpan(Of Char))
+- uid: Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.UInt64)
+  name: operator +(StringMaker, ulong)
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_op_Addition_Switchboard_StringMaker_System_UInt64_
+  commentId: M:Switchboard.StringMaker.op_Addition(Switchboard.StringMaker,System.UInt64)
+  name.vb: +(StringMaker, ULong)
+  fullName: Switchboard.StringMaker.operator +(Switchboard.StringMaker, ulong)
+  fullName.vb: Switchboard.StringMaker.+(Switchboard.StringMaker, ULong)
+  nameWithType: StringMaker.operator +(StringMaker, ulong)
+  nameWithType.vb: StringMaker.+(StringMaker, ULong)
+- uid: Switchboard.StringMaker.op_Addition*
+  name: operator +
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_op_Addition_
+  commentId: Overload:Switchboard.StringMaker.op_Addition
+  isSpec: "True"
+  name.vb: +
+  fullName: Switchboard.StringMaker.operator +
+  fullName.vb: Switchboard.StringMaker.+
+  nameWithType: StringMaker.operator +
+  nameWithType.vb: StringMaker.+
 - uid: Switchboard.StringMaker.PageLength
   name: PageLength
   href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_PageLength
   commentId: F:Switchboard.StringMaker.PageLength
   fullName: Switchboard.StringMaker.PageLength
   nameWithType: StringMaker.PageLength
-- uid: Switchboard.StringMaker.ThreadStaticInstance
-  name: ThreadStaticInstance
-  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_ThreadStaticInstance
-  commentId: P:Switchboard.StringMaker.ThreadStaticInstance
-  fullName: Switchboard.StringMaker.ThreadStaticInstance
-  nameWithType: StringMaker.ThreadStaticInstance
-- uid: Switchboard.StringMaker.ThreadStaticInstance*
-  name: ThreadStaticInstance
-  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_ThreadStaticInstance_
-  commentId: Overload:Switchboard.StringMaker.ThreadStaticInstance
+- uid: Switchboard.StringMaker.Shared
+  name: Shared
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_Shared
+  commentId: P:Switchboard.StringMaker.Shared
+  fullName: Switchboard.StringMaker.Shared
+  nameWithType: StringMaker.Shared
+- uid: Switchboard.StringMaker.Shared*
+  name: Shared
+  href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_Shared_
+  commentId: Overload:Switchboard.StringMaker.Shared
   isSpec: "True"
-  fullName: Switchboard.StringMaker.ThreadStaticInstance
-  nameWithType: StringMaker.ThreadStaticInstance
+  fullName: Switchboard.StringMaker.Shared
+  nameWithType: StringMaker.Shared
 - uid: Switchboard.StringMaker.ToString
   name: ToString()
   href: api/Switchboard.StringMaker.html#Switchboard_StringMaker_ToString
@@ -6092,6 +5957,79 @@ references:
   isSpec: "True"
   fullName: Switchboard.StringMakerHandle.Length
   nameWithType: StringMakerHandle.Length
+- uid: Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.Boolean)
+  name: operator +(StringMakerHandle, bool)
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_Boolean_
+  commentId: M:Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.Boolean)
+  name.vb: +(StringMakerHandle, Boolean)
+  fullName: Switchboard.StringMakerHandle.operator +(Switchboard.StringMakerHandle, bool)
+  fullName.vb: Switchboard.StringMakerHandle.+(Switchboard.StringMakerHandle, Boolean)
+  nameWithType: StringMakerHandle.operator +(StringMakerHandle, bool)
+  nameWithType.vb: StringMakerHandle.+(StringMakerHandle, Boolean)
+- uid: Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.Char)
+  name: operator +(StringMakerHandle, char)
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_Char_
+  commentId: M:Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.Char)
+  name.vb: +(StringMakerHandle, Char)
+  fullName: Switchboard.StringMakerHandle.operator +(Switchboard.StringMakerHandle, char)
+  fullName.vb: Switchboard.StringMakerHandle.+(Switchboard.StringMakerHandle, Char)
+  nameWithType: StringMakerHandle.operator +(StringMakerHandle, char)
+  nameWithType.vb: StringMakerHandle.+(StringMakerHandle, Char)
+- uid: Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.DateTime)
+  name: operator +(StringMakerHandle, DateTime)
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_DateTime_
+  commentId: M:Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.DateTime)
+  name.vb: +(StringMakerHandle, Date)
+  fullName: Switchboard.StringMakerHandle.operator +(Switchboard.StringMakerHandle, System.DateTime)
+  fullName.vb: Switchboard.StringMakerHandle.+(Switchboard.StringMakerHandle, Date)
+  nameWithType: StringMakerHandle.operator +(StringMakerHandle, DateTime)
+  nameWithType.vb: StringMakerHandle.+(StringMakerHandle, Date)
+- uid: Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.Double)
+  name: operator +(StringMakerHandle, double)
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_Double_
+  commentId: M:Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.Double)
+  name.vb: +(StringMakerHandle, Double)
+  fullName: Switchboard.StringMakerHandle.operator +(Switchboard.StringMakerHandle, double)
+  fullName.vb: Switchboard.StringMakerHandle.+(Switchboard.StringMakerHandle, Double)
+  nameWithType: StringMakerHandle.operator +(StringMakerHandle, double)
+  nameWithType.vb: StringMakerHandle.+(StringMakerHandle, Double)
+- uid: Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.Int64)
+  name: operator +(StringMakerHandle, long)
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_Int64_
+  commentId: M:Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.Int64)
+  name.vb: +(StringMakerHandle, Long)
+  fullName: Switchboard.StringMakerHandle.operator +(Switchboard.StringMakerHandle, long)
+  fullName.vb: Switchboard.StringMakerHandle.+(Switchboard.StringMakerHandle, Long)
+  nameWithType: StringMakerHandle.operator +(StringMakerHandle, long)
+  nameWithType.vb: StringMakerHandle.+(StringMakerHandle, Long)
+- uid: Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.ReadOnlySpan{System.Char})
+  name: operator +(StringMakerHandle, ReadOnlySpan<char>)
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_ReadOnlySpan_System_Char__
+  commentId: M:Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.ReadOnlySpan{System.Char})
+  name.vb: +(StringMakerHandle, ReadOnlySpan(Of Char))
+  fullName: Switchboard.StringMakerHandle.operator +(Switchboard.StringMakerHandle, System.ReadOnlySpan<char>)
+  fullName.vb: Switchboard.StringMakerHandle.+(Switchboard.StringMakerHandle, System.ReadOnlySpan(Of Char))
+  nameWithType: StringMakerHandle.operator +(StringMakerHandle, ReadOnlySpan<char>)
+  nameWithType.vb: StringMakerHandle.+(StringMakerHandle, ReadOnlySpan(Of Char))
+- uid: Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.UInt64)
+  name: operator +(StringMakerHandle, ulong)
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_op_Addition_Switchboard_StringMakerHandle_System_UInt64_
+  commentId: M:Switchboard.StringMakerHandle.op_Addition(Switchboard.StringMakerHandle,System.UInt64)
+  name.vb: +(StringMakerHandle, ULong)
+  fullName: Switchboard.StringMakerHandle.operator +(Switchboard.StringMakerHandle, ulong)
+  fullName.vb: Switchboard.StringMakerHandle.+(Switchboard.StringMakerHandle, ULong)
+  nameWithType: StringMakerHandle.operator +(StringMakerHandle, ulong)
+  nameWithType.vb: StringMakerHandle.+(StringMakerHandle, ULong)
+- uid: Switchboard.StringMakerHandle.op_Addition*
+  name: operator +
+  href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_op_Addition_
+  commentId: Overload:Switchboard.StringMakerHandle.op_Addition
+  isSpec: "True"
+  name.vb: +
+  fullName: Switchboard.StringMakerHandle.operator +
+  fullName.vb: Switchboard.StringMakerHandle.+
+  nameWithType: StringMakerHandle.operator +
+  nameWithType.vb: StringMakerHandle.+
 - uid: Switchboard.StringMakerHandle.ToString
   name: ToString()
   href: api/Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_ToString
@@ -6315,58 +6253,58 @@ references:
   commentId: T:Switchboard.SwitchboardLogger
   fullName: Switchboard.SwitchboardLogger
   nameWithType: SwitchboardLogger
-- uid: Switchboard.SwitchboardLogger.AddUnityLogger
-  name: AddUnityLogger()
-  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_AddUnityLogger
-  commentId: M:Switchboard.SwitchboardLogger.AddUnityLogger
-  fullName: Switchboard.SwitchboardLogger.AddUnityLogger()
-  nameWithType: SwitchboardLogger.AddUnityLogger()
-- uid: Switchboard.SwitchboardLogger.AddUnityLogger*
-  name: AddUnityLogger
-  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_AddUnityLogger_
-  commentId: Overload:Switchboard.SwitchboardLogger.AddUnityLogger
+- uid: Switchboard.SwitchboardLogger.AddDefaultUnityLogger
+  name: AddDefaultUnityLogger()
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_AddDefaultUnityLogger
+  commentId: M:Switchboard.SwitchboardLogger.AddDefaultUnityLogger
+  fullName: Switchboard.SwitchboardLogger.AddDefaultUnityLogger()
+  nameWithType: SwitchboardLogger.AddDefaultUnityLogger()
+- uid: Switchboard.SwitchboardLogger.AddDefaultUnityLogger*
+  name: AddDefaultUnityLogger
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_AddDefaultUnityLogger_
+  commentId: Overload:Switchboard.SwitchboardLogger.AddDefaultUnityLogger
   isSpec: "True"
-  fullName: Switchboard.SwitchboardLogger.AddUnityLogger
-  nameWithType: SwitchboardLogger.AddUnityLogger
-- uid: Switchboard.SwitchboardLogger.HijackUnityLogHandler
-  name: HijackUnityLogHandler()
-  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_HijackUnityLogHandler
-  commentId: M:Switchboard.SwitchboardLogger.HijackUnityLogHandler
-  fullName: Switchboard.SwitchboardLogger.HijackUnityLogHandler()
-  nameWithType: SwitchboardLogger.HijackUnityLogHandler()
-- uid: Switchboard.SwitchboardLogger.HijackUnityLogHandler*
-  name: HijackUnityLogHandler
-  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_HijackUnityLogHandler_
-  commentId: Overload:Switchboard.SwitchboardLogger.HijackUnityLogHandler
+  fullName: Switchboard.SwitchboardLogger.AddDefaultUnityLogger
+  nameWithType: SwitchboardLogger.AddDefaultUnityLogger
+- uid: Switchboard.SwitchboardLogger.HijackDebugLogHandler
+  name: HijackDebugLogHandler()
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_HijackDebugLogHandler
+  commentId: M:Switchboard.SwitchboardLogger.HijackDebugLogHandler
+  fullName: Switchboard.SwitchboardLogger.HijackDebugLogHandler()
+  nameWithType: SwitchboardLogger.HijackDebugLogHandler()
+- uid: Switchboard.SwitchboardLogger.HijackDebugLogHandler*
+  name: HijackDebugLogHandler
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_HijackDebugLogHandler_
+  commentId: Overload:Switchboard.SwitchboardLogger.HijackDebugLogHandler
   isSpec: "True"
-  fullName: Switchboard.SwitchboardLogger.HijackUnityLogHandler
-  nameWithType: SwitchboardLogger.HijackUnityLogHandler
-- uid: Switchboard.SwitchboardLogger.RemoveUnityLogger
-  name: RemoveUnityLogger()
-  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_RemoveUnityLogger
-  commentId: M:Switchboard.SwitchboardLogger.RemoveUnityLogger
-  fullName: Switchboard.SwitchboardLogger.RemoveUnityLogger()
-  nameWithType: SwitchboardLogger.RemoveUnityLogger()
-- uid: Switchboard.SwitchboardLogger.RemoveUnityLogger*
-  name: RemoveUnityLogger
-  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_RemoveUnityLogger_
-  commentId: Overload:Switchboard.SwitchboardLogger.RemoveUnityLogger
+  fullName: Switchboard.SwitchboardLogger.HijackDebugLogHandler
+  nameWithType: SwitchboardLogger.HijackDebugLogHandler
+- uid: Switchboard.SwitchboardLogger.RemoveDefaultUnityLogger
+  name: RemoveDefaultUnityLogger()
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_RemoveDefaultUnityLogger
+  commentId: M:Switchboard.SwitchboardLogger.RemoveDefaultUnityLogger
+  fullName: Switchboard.SwitchboardLogger.RemoveDefaultUnityLogger()
+  nameWithType: SwitchboardLogger.RemoveDefaultUnityLogger()
+- uid: Switchboard.SwitchboardLogger.RemoveDefaultUnityLogger*
+  name: RemoveDefaultUnityLogger
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_RemoveDefaultUnityLogger_
+  commentId: Overload:Switchboard.SwitchboardLogger.RemoveDefaultUnityLogger
   isSpec: "True"
-  fullName: Switchboard.SwitchboardLogger.RemoveUnityLogger
-  nameWithType: SwitchboardLogger.RemoveUnityLogger
-- uid: Switchboard.SwitchboardLogger.ResetUnityLogHandler
-  name: ResetUnityLogHandler()
-  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_ResetUnityLogHandler
-  commentId: M:Switchboard.SwitchboardLogger.ResetUnityLogHandler
-  fullName: Switchboard.SwitchboardLogger.ResetUnityLogHandler()
-  nameWithType: SwitchboardLogger.ResetUnityLogHandler()
-- uid: Switchboard.SwitchboardLogger.ResetUnityLogHandler*
-  name: ResetUnityLogHandler
-  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_ResetUnityLogHandler_
-  commentId: Overload:Switchboard.SwitchboardLogger.ResetUnityLogHandler
+  fullName: Switchboard.SwitchboardLogger.RemoveDefaultUnityLogger
+  nameWithType: SwitchboardLogger.RemoveDefaultUnityLogger
+- uid: Switchboard.SwitchboardLogger.RestoreDebugLogHandler
+  name: RestoreDebugLogHandler()
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_RestoreDebugLogHandler
+  commentId: M:Switchboard.SwitchboardLogger.RestoreDebugLogHandler
+  fullName: Switchboard.SwitchboardLogger.RestoreDebugLogHandler()
+  nameWithType: SwitchboardLogger.RestoreDebugLogHandler()
+- uid: Switchboard.SwitchboardLogger.RestoreDebugLogHandler*
+  name: RestoreDebugLogHandler
+  href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_RestoreDebugLogHandler_
+  commentId: Overload:Switchboard.SwitchboardLogger.RestoreDebugLogHandler
   isSpec: "True"
-  fullName: Switchboard.SwitchboardLogger.ResetUnityLogHandler
-  nameWithType: SwitchboardLogger.ResetUnityLogHandler
+  fullName: Switchboard.SwitchboardLogger.RestoreDebugLogHandler
+  nameWithType: SwitchboardLogger.RestoreDebugLogHandler
 - uid: Switchboard.SwitchboardLogger.Root
   name: Root
   href: api/Switchboard.SwitchboardLogger.html#Switchboard_SwitchboardLogger_Root
@@ -6505,32 +6443,6 @@ references:
   fullName.vb: Switchboard.ThreadSafeObjectPool(Of T).MaxCount
   nameWithType: ThreadSafeObjectPool<T>.MaxCount
   nameWithType.vb: ThreadSafeObjectPool(Of T).MaxCount
-- uid: Switchboard.ThreadSafeObjectPool`1.RequestItem
-  name: RequestItem()
-  href: api/Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_RequestItem
-  commentId: M:Switchboard.ThreadSafeObjectPool`1.RequestItem
-  fullName: Switchboard.ThreadSafeObjectPool<T>.RequestItem()
-  fullName.vb: Switchboard.ThreadSafeObjectPool(Of T).RequestItem()
-  nameWithType: ThreadSafeObjectPool<T>.RequestItem()
-  nameWithType.vb: ThreadSafeObjectPool(Of T).RequestItem()
-- uid: Switchboard.ThreadSafeObjectPool`1.RequestItem(`0@)
-  name: RequestItem(out T)
-  href: api/Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_RequestItem__0__
-  commentId: M:Switchboard.ThreadSafeObjectPool`1.RequestItem(`0@)
-  name.vb: RequestItem(T)
-  fullName: Switchboard.ThreadSafeObjectPool<T>.RequestItem(out T)
-  fullName.vb: Switchboard.ThreadSafeObjectPool(Of T).RequestItem(T)
-  nameWithType: ThreadSafeObjectPool<T>.RequestItem(out T)
-  nameWithType.vb: ThreadSafeObjectPool(Of T).RequestItem(T)
-- uid: Switchboard.ThreadSafeObjectPool`1.RequestItem*
-  name: RequestItem
-  href: api/Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_RequestItem_
-  commentId: Overload:Switchboard.ThreadSafeObjectPool`1.RequestItem
-  isSpec: "True"
-  fullName: Switchboard.ThreadSafeObjectPool<T>.RequestItem
-  fullName.vb: Switchboard.ThreadSafeObjectPool(Of T).RequestItem
-  nameWithType: ThreadSafeObjectPool<T>.RequestItem
-  nameWithType.vb: ThreadSafeObjectPool(Of T).RequestItem
 - uid: Switchboard.ThreadSafeObjectPool`1.SetMaxCount(System.Int32)
   name: SetMaxCount(int)
   href: api/Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_SetMaxCount_System_Int32_
@@ -6549,23 +6461,49 @@ references:
   fullName.vb: Switchboard.ThreadSafeObjectPool(Of T).SetMaxCount
   nameWithType: ThreadSafeObjectPool<T>.SetMaxCount
   nameWithType.vb: ThreadSafeObjectPool(Of T).SetMaxCount
-- uid: Switchboard.ThreadSafeObjectPool`1.StaticInstance
-  name: StaticInstance
-  href: api/Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_StaticInstance
-  commentId: P:Switchboard.ThreadSafeObjectPool`1.StaticInstance
-  fullName: Switchboard.ThreadSafeObjectPool<T>.StaticInstance
-  fullName.vb: Switchboard.ThreadSafeObjectPool(Of T).StaticInstance
-  nameWithType: ThreadSafeObjectPool<T>.StaticInstance
-  nameWithType.vb: ThreadSafeObjectPool(Of T).StaticInstance
-- uid: Switchboard.ThreadSafeObjectPool`1.StaticInstance*
-  name: StaticInstance
-  href: api/Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_StaticInstance_
-  commentId: Overload:Switchboard.ThreadSafeObjectPool`1.StaticInstance
+- uid: Switchboard.ThreadSafeObjectPool`1.Shared
+  name: Shared
+  href: api/Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_Shared
+  commentId: P:Switchboard.ThreadSafeObjectPool`1.Shared
+  fullName: Switchboard.ThreadSafeObjectPool<T>.Shared
+  fullName.vb: Switchboard.ThreadSafeObjectPool(Of T).Shared
+  nameWithType: ThreadSafeObjectPool<T>.Shared
+  nameWithType.vb: ThreadSafeObjectPool(Of T).Shared
+- uid: Switchboard.ThreadSafeObjectPool`1.Shared*
+  name: Shared
+  href: api/Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_Shared_
+  commentId: Overload:Switchboard.ThreadSafeObjectPool`1.Shared
   isSpec: "True"
-  fullName: Switchboard.ThreadSafeObjectPool<T>.StaticInstance
-  fullName.vb: Switchboard.ThreadSafeObjectPool(Of T).StaticInstance
-  nameWithType: ThreadSafeObjectPool<T>.StaticInstance
-  nameWithType.vb: ThreadSafeObjectPool(Of T).StaticInstance
+  fullName: Switchboard.ThreadSafeObjectPool<T>.Shared
+  fullName.vb: Switchboard.ThreadSafeObjectPool(Of T).Shared
+  nameWithType: ThreadSafeObjectPool<T>.Shared
+  nameWithType.vb: ThreadSafeObjectPool(Of T).Shared
+- uid: Switchboard.ThreadSafeObjectPool`1.TryGet
+  name: TryGet()
+  href: api/Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_TryGet
+  commentId: M:Switchboard.ThreadSafeObjectPool`1.TryGet
+  fullName: Switchboard.ThreadSafeObjectPool<T>.TryGet()
+  fullName.vb: Switchboard.ThreadSafeObjectPool(Of T).TryGet()
+  nameWithType: ThreadSafeObjectPool<T>.TryGet()
+  nameWithType.vb: ThreadSafeObjectPool(Of T).TryGet()
+- uid: Switchboard.ThreadSafeObjectPool`1.TryGet(`0@)
+  name: TryGet(out T)
+  href: api/Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_TryGet__0__
+  commentId: M:Switchboard.ThreadSafeObjectPool`1.TryGet(`0@)
+  name.vb: TryGet(T)
+  fullName: Switchboard.ThreadSafeObjectPool<T>.TryGet(out T)
+  fullName.vb: Switchboard.ThreadSafeObjectPool(Of T).TryGet(T)
+  nameWithType: ThreadSafeObjectPool<T>.TryGet(out T)
+  nameWithType.vb: ThreadSafeObjectPool(Of T).TryGet(T)
+- uid: Switchboard.ThreadSafeObjectPool`1.TryGet*
+  name: TryGet
+  href: api/Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_TryGet_
+  commentId: Overload:Switchboard.ThreadSafeObjectPool`1.TryGet
+  isSpec: "True"
+  fullName: Switchboard.ThreadSafeObjectPool<T>.TryGet
+  fullName.vb: Switchboard.ThreadSafeObjectPool(Of T).TryGet
+  nameWithType: ThreadSafeObjectPool<T>.TryGet
+  nameWithType.vb: ThreadSafeObjectPool(Of T).TryGet
 - uid: Switchboard.Ticker
   name: Ticker
   href: api/Switchboard.Ticker.html
@@ -6638,6 +6576,19 @@ references:
   commentId: T:Switchboard.UnityLogger
   fullName: Switchboard.UnityLogger
   nameWithType: UnityLogger
+- uid: Switchboard.UnityLogger.Default
+  name: Default
+  href: api/Switchboard.UnityLogger.html#Switchboard_UnityLogger_Default
+  commentId: P:Switchboard.UnityLogger.Default
+  fullName: Switchboard.UnityLogger.Default
+  nameWithType: UnityLogger.Default
+- uid: Switchboard.UnityLogger.Default*
+  name: Default
+  href: api/Switchboard.UnityLogger.html#Switchboard_UnityLogger_Default_
+  commentId: Overload:Switchboard.UnityLogger.Default
+  isSpec: "True"
+  fullName: Switchboard.UnityLogger.Default
+  nameWithType: UnityLogger.Default
 - uid: Switchboard.UnityLogger.DisplayCallerInfo
   name: DisplayCallerInfo
   href: api/Switchboard.UnityLogger.html#Switchboard_UnityLogger_DisplayCallerInfo
@@ -6689,19 +6640,6 @@ references:
   isSpec: "True"
   fullName: Switchboard.UnityLogger.LogLevel
   nameWithType: UnityLogger.LogLevel
-- uid: Switchboard.UnityLogger.StaticInstance
-  name: StaticInstance
-  href: api/Switchboard.UnityLogger.html#Switchboard_UnityLogger_StaticInstance
-  commentId: P:Switchboard.UnityLogger.StaticInstance
-  fullName: Switchboard.UnityLogger.StaticInstance
-  nameWithType: UnityLogger.StaticInstance
-- uid: Switchboard.UnityLogger.StaticInstance*
-  name: StaticInstance
-  href: api/Switchboard.UnityLogger.html#Switchboard_UnityLogger_StaticInstance_
-  commentId: Overload:Switchboard.UnityLogger.StaticInstance
-  isSpec: "True"
-  fullName: Switchboard.UnityLogger.StaticInstance
-  nameWithType: UnityLogger.StaticInstance
 - uid: Switchboard.UnityLogHandler
   name: UnityLogHandler
   href: api/Switchboard.UnityLogHandler.html
@@ -6721,19 +6659,6 @@ references:
   isSpec: "True"
   fullName: Switchboard.UnityLogHandler.Default
   nameWithType: UnityLogHandler.Default
-- uid: Switchboard.UnityLogHandler.Initialize
-  name: Initialize()
-  href: api/Switchboard.UnityLogHandler.html#Switchboard_UnityLogHandler_Initialize
-  commentId: M:Switchboard.UnityLogHandler.Initialize
-  fullName: Switchboard.UnityLogHandler.Initialize()
-  nameWithType: UnityLogHandler.Initialize()
-- uid: Switchboard.UnityLogHandler.Initialize*
-  name: Initialize
-  href: api/Switchboard.UnityLogHandler.html#Switchboard_UnityLogHandler_Initialize_
-  commentId: Overload:Switchboard.UnityLogHandler.Initialize
-  isSpec: "True"
-  fullName: Switchboard.UnityLogHandler.Initialize
-  nameWithType: UnityLogHandler.Initialize
 - uid: Switchboard.UnityLogHijacker
   name: UnityLogHijacker
   href: api/Switchboard.UnityLogHijacker.html
@@ -6800,3 +6725,6 @@ references:
 - uid: Version-1.1.0
   name: Version 1.1.0
   href: release-notes/v1.1.0.html
+- uid: Version-1.2.0
+  name: Version 1.2.0
+  href: release-notes/v1.2.0.html
