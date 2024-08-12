@@ -115,6 +115,37 @@
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="Switchboard_StringMakerILoggerExtensions_StackAllocMax" data-uid="Switchboard.StringMakerILoggerExtensions.StackAllocMax">
+  StackAllocMax
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum character length that uses stackalloc to allocate temporary memory on the stack when copying the contents of a StringMaker.
+If a StringMaker contains more than this number of characters, a new character array will be allocated on the heap for garbage collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int StackAllocMax = 32768</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -126,7 +157,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Logs a <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a> message.</p>
+  <div class="markdown level1 summary"><p>Logs a <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a> message. If the length of the message is greater than <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_StackAllocMax">StackAllocMax</a>,
+a new character array will be allocated on the heap for garbage collection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -167,15 +199,49 @@ Do not provide an argument. The compiler will automatically assign the correct v
 
 
 
-  <h4 class="section">Exceptions</h4>
+
+
+
+  <a id="Switchboard_StringMakerILoggerExtensions_Log_" data-uid="Switchboard.StringMakerILoggerExtensions.Log*"></a>
+
+  <h3 id="Switchboard_StringMakerILoggerExtensions_Log_Switchboard_ILogger_Switchboard_LogLevel_System_Exception_Switchboard_StringMaker_" data-uid="Switchboard.StringMakerILoggerExtensions.Log(Switchboard.ILogger,Switchboard.LogLevel,System.Exception,Switchboard.StringMaker)">
+  Log(ILogger, LogLevel, Exception, StringMaker)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs an exception with a <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a> message. If the length of the message is greater than <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_StackAllocMax">StackAllocMax</a>,
+a new character array will be allocated on the heap for garbage collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Log(this ILogger logger, LogLevel logLevel, Exception exception, StringMaker message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">logger</code> or <code class="paramref">message</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dt><code>logger</code> <a class="xref" href="Switchboard.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger.</p>
 </dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Thrown if <code class="paramref">message</code> is empty.</p>
+    <dt><code>logLevel</code> <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a></dt>
+    <dd><p>The level of significance assigned to the exception.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception to log.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>A log message to be included with the exception.</p>
 </dd>
   </dl>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -213,6 +279,45 @@ Do not provide an argument. The compiler will automatically assign the correct v
     <dt><code>lineNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The line number within the file that contains the member that called the method.
 Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerILoggerExtensions_LogCritical_" data-uid="Switchboard.StringMakerILoggerExtensions.LogCritical*"></a>
+
+  <h3 id="Switchboard_StringMakerILoggerExtensions_LogCritical_Switchboard_ILogger_System_Exception_Switchboard_StringMaker_" data-uid="Switchboard.StringMakerILoggerExtensions.LogCritical(Switchboard.ILogger,System.Exception,Switchboard.StringMaker)">
+  LogCritical(ILogger, Exception, StringMaker)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs an exception with the <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a> set to <a class="xref" href="Switchboard.LogLevel.html#Switchboard_LogLevel_Critical">Critical</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogCritical(this ILogger logger, Exception exception, StringMaker message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Switchboard.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception to log.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>A log message to be included with the exception.</p>
 </dd>
   </dl>
 
@@ -275,6 +380,45 @@ Do not provide an argument. The compiler will automatically assign the correct v
 
 
 
+  <a id="Switchboard_StringMakerILoggerExtensions_LogDebug_" data-uid="Switchboard.StringMakerILoggerExtensions.LogDebug*"></a>
+
+  <h3 id="Switchboard_StringMakerILoggerExtensions_LogDebug_Switchboard_ILogger_System_Exception_Switchboard_StringMaker_" data-uid="Switchboard.StringMakerILoggerExtensions.LogDebug(Switchboard.ILogger,System.Exception,Switchboard.StringMaker)">
+  LogDebug(ILogger, Exception, StringMaker)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs an exception with the <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a> set to <a class="xref" href="Switchboard.LogLevel.html#Switchboard_LogLevel_Debug">Debug</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogDebug(this ILogger logger, Exception exception, StringMaker message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Switchboard.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception to log.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>A log message to be included with the exception.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Switchboard_StringMakerILoggerExtensions_LogError_" data-uid="Switchboard.StringMakerILoggerExtensions.LogError*"></a>
 
   <h3 id="Switchboard_StringMakerILoggerExtensions_LogError_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_" data-uid="Switchboard.StringMakerILoggerExtensions.LogError(Switchboard.ILogger,Switchboard.StringMaker,System.String,System.String,System.Int32)">
@@ -309,6 +453,45 @@ Do not provide an argument. The compiler will automatically assign the correct v
     <dt><code>lineNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The line number within the file that contains the member that called the method.
 Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerILoggerExtensions_LogError_" data-uid="Switchboard.StringMakerILoggerExtensions.LogError*"></a>
+
+  <h3 id="Switchboard_StringMakerILoggerExtensions_LogError_Switchboard_ILogger_System_Exception_Switchboard_StringMaker_" data-uid="Switchboard.StringMakerILoggerExtensions.LogError(Switchboard.ILogger,System.Exception,Switchboard.StringMaker)">
+  LogError(ILogger, Exception, StringMaker)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs an exception with the <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a> set to <a class="xref" href="Switchboard.LogLevel.html#Switchboard_LogLevel_Error">Error</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogError(this ILogger logger, Exception exception, StringMaker message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Switchboard.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception to log.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>A log message to be included with the exception.</p>
 </dd>
   </dl>
 
@@ -371,6 +554,45 @@ Do not provide an argument. The compiler will automatically assign the correct v
 
 
 
+  <a id="Switchboard_StringMakerILoggerExtensions_LogInformation_" data-uid="Switchboard.StringMakerILoggerExtensions.LogInformation*"></a>
+
+  <h3 id="Switchboard_StringMakerILoggerExtensions_LogInformation_Switchboard_ILogger_System_Exception_Switchboard_StringMaker_" data-uid="Switchboard.StringMakerILoggerExtensions.LogInformation(Switchboard.ILogger,System.Exception,Switchboard.StringMaker)">
+  LogInformation(ILogger, Exception, StringMaker)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs an exception with the <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a> set to <a class="xref" href="Switchboard.LogLevel.html#Switchboard_LogLevel_Information">Information</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogInformation(this ILogger logger, Exception exception, StringMaker message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Switchboard.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception to log.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>A log message to be included with the exception.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Switchboard_StringMakerILoggerExtensions_LogTrace_" data-uid="Switchboard.StringMakerILoggerExtensions.LogTrace*"></a>
 
   <h3 id="Switchboard_StringMakerILoggerExtensions_LogTrace_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_" data-uid="Switchboard.StringMakerILoggerExtensions.LogTrace(Switchboard.ILogger,Switchboard.StringMaker,System.String,System.String,System.Int32)">
@@ -419,6 +641,45 @@ Do not provide an argument. The compiler will automatically assign the correct v
 
 
 
+  <a id="Switchboard_StringMakerILoggerExtensions_LogTrace_" data-uid="Switchboard.StringMakerILoggerExtensions.LogTrace*"></a>
+
+  <h3 id="Switchboard_StringMakerILoggerExtensions_LogTrace_Switchboard_ILogger_System_Exception_Switchboard_StringMaker_" data-uid="Switchboard.StringMakerILoggerExtensions.LogTrace(Switchboard.ILogger,System.Exception,Switchboard.StringMaker)">
+  LogTrace(ILogger, Exception, StringMaker)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs an exception with the <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a> set to <a class="xref" href="Switchboard.LogLevel.html#Switchboard_LogLevel_Trace">Trace</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogTrace(this ILogger logger, Exception exception, StringMaker message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Switchboard.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception to log.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>A log message to be included with the exception.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Switchboard_StringMakerILoggerExtensions_LogWarning_" data-uid="Switchboard.StringMakerILoggerExtensions.LogWarning*"></a>
 
   <h3 id="Switchboard_StringMakerILoggerExtensions_LogWarning_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_" data-uid="Switchboard.StringMakerILoggerExtensions.LogWarning(Switchboard.ILogger,Switchboard.StringMaker,System.String,System.String,System.Int32)">
@@ -453,6 +714,45 @@ Do not provide an argument. The compiler will automatically assign the correct v
     <dt><code>lineNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The line number within the file that contains the member that called the method.
 Do not provide an argument. The compiler will automatically assign the correct value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerILoggerExtensions_LogWarning_" data-uid="Switchboard.StringMakerILoggerExtensions.LogWarning*"></a>
+
+  <h3 id="Switchboard_StringMakerILoggerExtensions_LogWarning_Switchboard_ILogger_System_Exception_Switchboard_StringMaker_" data-uid="Switchboard.StringMakerILoggerExtensions.LogWarning(Switchboard.ILogger,System.Exception,Switchboard.StringMaker)">
+  LogWarning(ILogger, Exception, StringMaker)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs an exception with the <a class="xref" href="Switchboard.LogLevel.html">LogLevel</a> set to <a class="xref" href="Switchboard.LogLevel.html#Switchboard_LogLevel_Warning">Warning</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogWarning(this ILogger logger, Exception exception, StringMaker message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Switchboard.ILogger.html">ILogger</a></dt>
+    <dd><p>The logger.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception to log.</p>
+</dd>
+    <dt><code>message</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a></dt>
+    <dd><p>A log message to be included with the exception.</p>
 </dd>
   </dl>
 

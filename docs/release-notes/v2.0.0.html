@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Version 2.0.0 | Switchboard </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Version 2.0.0 | Switchboard ">
+      
+      <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
+      <link rel="stylesheet" href="../styles/docfx.min.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+
+      <script>
+        MathJax = {
+          options: {
+            processHtmlClass: ['tex2jax_process', 'math']
+          }
+        };
+      </script>
+
+      <script type="text/javascript" src="../styles/docfx.min.js"></script>
+      <script type="text/javascript" src="../styles/main.js"></script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/SwitchboardIconBorderless64.png" alt="Switchboard">
+            Switchboard
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Version-2.0.0">
+<h1 id="version-200">Version 2.0.0</h1>
+
+<p>This version aims to focus Switchboard into a zero-garbage log file plugin for Unity, with dependency injection, rather than a dependency injection plugin with log files. Some of the important changes include getting rid of the Collections, Ticker, and Events assemblies, removing the character limit from StringMaker, and changing the way floating-point numbers handle the FloatFormatInfo object. A StringMaker can now set and clear a FloatFormatInfo object that will control the way all numbers are formatted when appending, so that you can use the streamlined + operator syntax and still get the desired number formatting results. Also tried to make the examples and documentation more approachable.</p>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li>Fixed UnityLogger not displaying LogLevel.Critical appropriately as an error.</li>
+<li>Fixed a bug where trying to display the longest possible double-precision floating-point numbers was causing an exception. Based on Rick Regan's article about the longest possible doubles, I thought the number of digits was 1074, but either he miscounted, or was not including the leading zero before the decimal place. After counting the number of characters myself from his article I was able to see that I need to allocate enough space for one more character.</li>
+<li>Fixed an issue that was allocating garbage when checking TextMesh Pro text property for equality with StringMaker before calling SetCharArray. In the editor, SetCharArray itself allocates. In a build, checking the text property allocates. So, I got rid of the equality check, and you can get to 0 GC in a final build.</li>
+<li>Fixed an issue with over indentation of the expandable object drawer with serializable classes in Unity 2022.</li>
+<li>Fixed an issue where file names for caller info were not being parsed correctly on Linux because the paths were compiled on Windows.</li>
+</ul>
+<h2 id="changes">Changes</h2>
+<ul>
+<li>Loggers no longer throw an exception if logging a null or empty message.</li>
+<li>Added ILogger extensions for logging exceptions with a StringMaker message. It may as well be supported.</li>
+<li>Removed the lines from the expandable property drawer because expandable works with lists and arrays, but the lines didn't render properly.</li>
+<li>Returned to throwing exceptions from separate methods to prevent interference with inlining.</li>
+<li>Removed the character limit on StringMaker.</li>
+<li>Changed the name of StringMaker.TrimExcess to StringMaker.ReleaseMemory.</li>
+<li>Changed StringMaker methods AppendAsHex, AppendAsBinary, AppendAsScientific to AppendHexadecimal, AppendBinary, AppendScientific.</li>
+<li>Removed the StringMaker Capacity property because I can't think of a use for it where you wouldn't just use Length or Append(char, int), and ReleaseMemory(), and it simplifies the internal logic.</li>
+<li>Changed StringMakerILoggerExtensions to use a soft character limit of 32768 under which it uses stackalloc, and over it allocates new char arrays. Did something similar with TextMeshProExtensions, with the same character count, but using a static char[] because TMPro_Text.SetCharArray doesn't accept a Span argument, so stackalloc is not an option.</li>
+<li>Added a ForEachSpan<t>(ReadOnlySpanAction&lt;char, T&gt;, T) method to StringMaker that will allow me to feed the individual memory pages of a StringMaker directly into LogFileWriter so that I can encode UTF-8 bytes one page at a time and not worry about big intermediary byte buffers.</t></li>
+<li>Simplified the internal logic of LogFileWriter.FlushLogs(). FlushLogs now only attempts to open the existing file path. It no longer attempts to create a new file during the attempt to flush. If FlushLogs is failing because it can't get the existing file open, then it should be handle with a try/catch block that handles repeated failures by manually trying to open a new file, or taking some other action.</li>
+<li>Added a LogFileWriter.FileIsOpen property to make it easy for users to check if they have successfully opened a FileStream.</li>
+<li>Added a way to set the max count of the StringMakerPool that LogFileWriter uses, and changed FlushLogs to release all StringMakers at the end of the flush, with one SpinLock, instead of one at a time. It will fail to release the StringMakers if there is an exception during a flush, but that's not the end of the world, the exception is worse. Should improve performance of the flush a bit.</li>
+<li>Now that StringMaker has no character limit, LogFileWriter has logic for re-logging an entry if it runs out of space in the current file. If a log entry is cut off, it will be re-logged at the start of the next file. But, it will only re-log an entry once, any time that entry is the start of a new file, even if it cannot fit into to file size limit.</li>
+<li>Removed all of the assemblies related to Collections, Ticker, and Events to clean up the whole plugin and make it much more focused it representing what it does.</li>
+<li>Added an extension method to IInjector that adds a bool TryGet<t>(out T) method, but any IInjector implementers only need to implent the basic T Get<t>() method to get both options.</t></t></li>
+<li>Cleaned up the BasicInjector that will come set automatically when you download the plugin to have all of the log file settings visible in the Switchboard Project Settings menu, and cleaned up the FileLogger component to be much more readable, simpler, and likely more robust with better exception handling. Moved the settings into separate serializable data class, so that those settings are naturally built into their own sections with a collapsable foldout. So, they won't interfere with any customer's additional injector properties.</li>
+<li>Moved PlatformFlags and ApplicationPlatform to the public scripts folder because that may be the most likely thing in the whole plugin to break over time as Unity changes their hardware platform support. If it's a public script it can be modified to change with the times.</li>
+<li>Changed FloatToTextConverter back to being able to specify 0 maximum fractional digits.</li>
+<li>I improved the example so that when customers change the model asset at the root of the project the behavior and color of the object changes immediately in real time. I also added a bunch of comments to the ExampleMonoBehvaiour as a sort of mini documentation.</li>
+<li>Changed the order of minFractionalDigits and maxFractionalDigits on FloatToTextConverter/StringMaker methods.</li>
+<li>Changed FloatToTextConverter/StringMaker methods that take a FloatFormatInfo to only take that argument, which also contains MinFractionalDigits and MaxFractionalDigits now.</li>
+<li>StringMaker now has a NumberFormat property where you can set a FloatFormatInfo object that gets used every time you append a number value. So, you can still use the overloaed + operator notation, and still get the desired custom formatting. For integer numbers, it uses the specified digit group separator character to separate digit groups, if the group digits option is set.</li>
+<li>Added an overload for StringMaker.Clear() that takes a FloatFormatInfo so that you can clear and set the NumberFormat at the same time. Added a Reset() method that clears and clear the NumberFormat. Changed instances of Clear to Reset as necessary, now that number format is something to account for on a StringMaker instance.</li>
+<li>Changed FloatFormatInfo to use a ScientificNotationCharacter value, instead of a boolean for uppercase / lowercase E. Changed it to use MinExponentDigits, so you can specify 0-3 minimum digits for the exponent in scientific notation. That makes the boolean for whether to show a 0 exponent, and the boolean for padding exponents redundant, and you can customize to match what .NET does by default. With E formatting they force a minimum of 3 digits, but with G formatting they use minimum 2 exponent digits. My tests are now able to match the default .NET output easily with a few property tweaks of a FloatFormatInfo object, depending on which style you're trying to match.</li>
+<li>Changed the amount of leading zeroes allowed on fractional numbers before converting to scientific notation.</li>
+<li>Added a setting for immediate flush log level to the FileLogger, so that it attempts to flush the log file immediately on errors and such.</li>
+<li>Added an option to the expandable property drawer so that you can set an object field as runtime readonly, and when you start playing in the editor it will lock that object so that it's obvious you shouldn't try to change it at runtime.</li>
+<li>Added a protected ILogger reference that just points to SwitchboardLogger.Root to the BasicInjector class so that derived injectors can easily reference Logger.</li>
+<li>Added static factory methods to FloatFormatInfo that create format objects that match .NET's standard ToString() behavior, and the behavior of the &quot;G9&quot;, &quot;G17&quot;, and &quot;E&quot; format specifiers, so that customers can easily match the standard .NET output if they like.</li>
+<li>Changed the definition of PlatformFlags because Unity 2022 throws a warning about obsolete hardware platforms. Also reorganized the order so they are in sections for easier reading.</li>
+<li>Renamed TextMeshProExtensions methods from SetText to SetCharArray for clarity, and so that it's not possible to accidentally try to call StringMaker.ToString.</li>
+</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span> <span>Switchboard was created by <a href="https://www.linkedin.com/in/ronnie-moon-12209380/">Ronnie Moon</a>.  Copyright © 2023 <a href="http://www.swipetrack.com/">SwipeTrack Solutions</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

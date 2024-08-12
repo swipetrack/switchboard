@@ -149,72 +149,6 @@
 </h2>
 
 
-  <a id="Switchboard_StringMakerHandle_Capacity_" data-uid="Switchboard.StringMakerHandle.Capacity*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_Capacity" data-uid="Switchboard.StringMakerHandle.Capacity">
-  Capacity
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the current <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> of characters that can be set without borrowing or allocating new memory.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Capacity { get; }</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Switchboard_StringMakerHandle_Item_" data-uid="Switchboard.StringMakerHandle.Item*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_Item_System_Int32_" data-uid="Switchboard.StringMakerHandle.Item(System.Int32)">
-  this[int]
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets or sets the character at a specific index.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public char this[int index] { get; set; }</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The character index.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">index</code> is less than zero, or greater than or equal to <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Capacity">Capacity</a>.</p>
-</dd>
-  </dl>
-
-
-
   <a id="Switchboard_StringMakerHandle_Length_" data-uid="Switchboard.StringMakerHandle.Length*"></a>
 
   <h3 id="Switchboard_StringMakerHandle_Length" data-uid="Switchboard.StringMakerHandle.Length">
@@ -243,9 +177,36 @@ the number of characters that will be copied during operations like <a class="xr
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if the set value is less than zero or greater than <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a></p>
+    <dd><p>Thrown if the set value is less than zero.</p>
 </dd>
   </dl>
+
+
+
+  <a id="Switchboard_StringMakerHandle_NumberFormat_" data-uid="Switchboard.StringMakerHandle.NumberFormat*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_NumberFormat" data-uid="Switchboard.StringMakerHandle.NumberFormat">
+  NumberFormat
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a> used to format number values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FloatFormatInfo NumberFormat { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -289,12 +250,6 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -334,12 +289,6 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -382,12 +331,6 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -427,12 +370,6 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -475,12 +412,6 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -520,19 +451,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
   <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_Append_System_Double_System_Int32_" data-uid="Switchboard.StringMakerHandle.Append(System.Double,System.Int32)">
-  Append(double, int)
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Double_Switchboard_FloatFormatInfo_" data-uid="Switchboard.StringMakerHandle.Append(System.Double,Switchboard.FloatFormatInfo)">
+  Append(double, FloatFormatInfo)
   
   </h3>
 
@@ -541,181 +466,13 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(double value, int fractionalMax)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(double value, FloatFormatInfo format)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
     <dd><p>The number to append.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
-    <dd><p>Returns the instance, enabling a fluent interface.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_Append_System_Double_System_Int32_System_Int32_" data-uid="Switchboard.StringMakerHandle.Append(System.Double,System.Int32,System.Int32)">
-  Append(double, int, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(double value, int fractionalMax, int fractionalMin)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to append.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
-    <dd><p>Returns the instance, enabling a fluent interface.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_Append_System_Double_System_Int32_System_Int32_System_Boolean_" data-uid="Switchboard.StringMakerHandle.Append(System.Double,System.Int32,System.Int32,System.Boolean)">
-  Append(double, int, int, bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(double value, int fractionalMax, int fractionalMin, bool groupDigits)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to append.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a comma.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
-    <dd><p>Returns the instance, enabling a fluent interface.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_Append_System_Double_System_Int32_System_Int32_System_Boolean_Switchboard_FloatFormatInfo_" data-uid="Switchboard.StringMakerHandle.Append(System.Double,System.Int32,System.Int32,System.Boolean,Switchboard.FloatFormatInfo)">
-  Append(double, int, int, bool, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(double value, int fractionalMax, int fractionalMin, bool groupDigits, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to append.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
 </dd>
     <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
     <dd><p>The format configuration info used to append the result.</p>
@@ -736,16 +493,159 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Double_System_Int32_" data-uid="Switchboard.StringMakerHandle.Append(System.Double,System.Int32)">
+  Append(double, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(double value, int minFractionalDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> is less than zero.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Double_System_Int32_System_Int32_" data-uid="Switchboard.StringMakerHandle.Append(System.Double,System.Int32,System.Int32)">
+  Append(double, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(double value, int minFractionalDigits, int maxFractionalDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+    <dt><code>maxFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of fractional digits to display.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> or <code class="paramref">maxFractionalDigits</code> are less than zero,
+or if <code class="paramref">minFractionalDigits</code> is greater than <code class="paramref">maxFractionalDigits</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_StringMakerHandle_Append_" data-uid="Switchboard.StringMakerHandle.Append*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Append_System_Double_System_Int32_System_Int32_System_Boolean_" data-uid="Switchboard.StringMakerHandle.Append(System.Double,System.Int32,System.Int32,System.Boolean)">
+  Append(double, int, int, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Append(double value, int minFractionalDigits, int maxFractionalDigits, bool groupDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to append.</p>
+</dd>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+    <dt><code>maxFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of fractional digits to display.</p>
+</dd>
+    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to separate digit groups with a comma.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> or <code class="paramref">maxFractionalDigits</code> are less than zero,
+or if <code class="paramref">minFractionalDigits</code> is greater than <code class="paramref">maxFractionalDigits</code>.</p>
 </dd>
   </dl>
 
@@ -787,12 +687,6 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -835,12 +729,6 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -880,12 +768,6 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -925,12 +807,6 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -973,19 +849,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Byte_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Byte)">
-  AppendAsBinary(byte)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_Byte_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.Byte)">
+  AppendBinary(byte)
   
   </h3>
 
@@ -994,7 +864,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(byte value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(byte value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1018,19 +888,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Int16_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Int16)">
-  AppendAsBinary(short)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_Int16_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.Int16)">
+  AppendBinary(short)
   
   </h3>
 
@@ -1039,7 +903,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(short value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(short value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1063,19 +927,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Int16_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Int16,System.Char)">
-  AppendAsBinary(short, char)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_Int16_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.Int16,System.Char)">
+  AppendBinary(short, char)
   
   </h3>
 
@@ -1084,7 +942,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(short value, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(short value, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1111,19 +969,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Int32_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Int32)">
-  AppendAsBinary(int)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_Int32_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.Int32)">
+  AppendBinary(int)
   
   </h3>
 
@@ -1132,7 +984,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(int value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(int value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1156,19 +1008,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Int32_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Int32,System.Char)">
-  AppendAsBinary(int, char)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_Int32_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.Int32,System.Char)">
+  AppendBinary(int, char)
   
   </h3>
 
@@ -1177,7 +1023,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(int value, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(int value, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1204,19 +1050,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Int64_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Int64)">
-  AppendAsBinary(long)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_Int64_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.Int64)">
+  AppendBinary(long)
   
   </h3>
 
@@ -1225,7 +1065,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(long value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(long value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1249,19 +1089,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_Int64_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.Int64,System.Char)">
-  AppendAsBinary(long, char)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_Int64_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.Int64,System.Char)">
+  AppendBinary(long, char)
   
   </h3>
 
@@ -1270,7 +1104,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(long value, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(long value, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1297,19 +1131,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_SByte_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.SByte)">
-  AppendAsBinary(sbyte)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_SByte_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.SByte)">
+  AppendBinary(sbyte)
   
   </h3>
 
@@ -1318,7 +1146,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(sbyte value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(sbyte value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1342,19 +1170,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_UInt16_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.UInt16)">
-  AppendAsBinary(ushort)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_UInt16_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.UInt16)">
+  AppendBinary(ushort)
   
   </h3>
 
@@ -1363,7 +1185,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(ushort value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(ushort value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1387,19 +1209,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_UInt16_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.UInt16,System.Char)">
-  AppendAsBinary(ushort, char)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_UInt16_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.UInt16,System.Char)">
+  AppendBinary(ushort, char)
   
   </h3>
 
@@ -1408,7 +1224,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(ushort value, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(ushort value, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1435,19 +1251,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_UInt32_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.UInt32)">
-  AppendAsBinary(uint)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_UInt32_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.UInt32)">
+  AppendBinary(uint)
   
   </h3>
 
@@ -1456,7 +1266,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(uint value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(uint value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1480,19 +1290,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_UInt32_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.UInt32,System.Char)">
-  AppendAsBinary(uint, char)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_UInt32_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.UInt32,System.Char)">
+  AppendBinary(uint, char)
   
   </h3>
 
@@ -1501,7 +1305,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(uint value, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(uint value, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1528,19 +1332,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_UInt64_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.UInt64)">
-  AppendAsBinary(ulong)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_UInt64_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.UInt64)">
+  AppendBinary(ulong)
   
   </h3>
 
@@ -1549,7 +1347,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(ulong value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(ulong value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1573,19 +1371,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsBinary_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendBinary_" data-uid="Switchboard.StringMakerHandle.AppendBinary*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsBinary_System_UInt64_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsBinary(System.UInt64,System.Char)">
-  AppendAsBinary(ulong, char)
+  <h3 id="Switchboard_StringMakerHandle_AppendBinary_System_UInt64_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendBinary(System.UInt64,System.Char)">
+  AppendBinary(ulong, char)
   
   </h3>
 
@@ -1594,7 +1386,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsBinary(ulong value, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendBinary(ulong value, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1621,19 +1413,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Byte_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Byte)">
-  AppendAsHex(byte)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_Byte_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.Byte)">
+  AppendHexadecimal(byte)
   
   </h3>
 
@@ -1642,7 +1428,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(byte value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(byte value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1666,19 +1452,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Int16_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Int16)">
-  AppendAsHex(short)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_Int16_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.Int16)">
+  AppendHexadecimal(short)
   
   </h3>
 
@@ -1687,7 +1467,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(short value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(short value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1711,19 +1491,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Int16_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Int16,System.Char)">
-  AppendAsHex(short, char)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_Int16_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.Int16,System.Char)">
+  AppendHexadecimal(short, char)
   
   </h3>
 
@@ -1732,7 +1506,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(short value, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(short value, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1759,19 +1533,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Int32_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Int32)">
-  AppendAsHex(int)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_Int32_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.Int32)">
+  AppendHexadecimal(int)
   
   </h3>
 
@@ -1780,7 +1548,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(int value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(int value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1804,19 +1572,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Int32_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Int32,System.Char)">
-  AppendAsHex(int, char)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_Int32_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.Int32,System.Char)">
+  AppendHexadecimal(int, char)
   
   </h3>
 
@@ -1825,7 +1587,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(int value, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(int value, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1852,19 +1614,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Int64_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Int64)">
-  AppendAsHex(long)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_Int64_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.Int64)">
+  AppendHexadecimal(long)
   
   </h3>
 
@@ -1873,7 +1629,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(long value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(long value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1897,19 +1653,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_Int64_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.Int64,System.Char)">
-  AppendAsHex(long, char)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_Int64_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.Int64,System.Char)">
+  AppendHexadecimal(long, char)
   
   </h3>
 
@@ -1918,7 +1668,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(long value, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(long value, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1945,19 +1695,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_SByte_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.SByte)">
-  AppendAsHex(sbyte)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_SByte_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.SByte)">
+  AppendHexadecimal(sbyte)
   
   </h3>
 
@@ -1966,7 +1710,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(sbyte value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(sbyte value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -1990,19 +1734,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_UInt16_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.UInt16)">
-  AppendAsHex(ushort)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_UInt16_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.UInt16)">
+  AppendHexadecimal(ushort)
   
   </h3>
 
@@ -2011,7 +1749,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(ushort value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(ushort value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2035,19 +1773,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_UInt16_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.UInt16,System.Char)">
-  AppendAsHex(ushort, char)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_UInt16_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.UInt16,System.Char)">
+  AppendHexadecimal(ushort, char)
   
   </h3>
 
@@ -2056,7 +1788,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(ushort value, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(ushort value, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2083,19 +1815,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_UInt32_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.UInt32)">
-  AppendAsHex(uint)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_UInt32_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.UInt32)">
+  AppendHexadecimal(uint)
   
   </h3>
 
@@ -2104,7 +1830,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(uint value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(uint value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2128,19 +1854,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_UInt32_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.UInt32,System.Char)">
-  AppendAsHex(uint, char)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_UInt32_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.UInt32,System.Char)">
+  AppendHexadecimal(uint, char)
   
   </h3>
 
@@ -2149,7 +1869,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(uint value, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(uint value, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2176,19 +1896,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_UInt64_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.UInt64)">
-  AppendAsHex(ulong)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_UInt64_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.UInt64)">
+  AppendHexadecimal(ulong)
   
   </h3>
 
@@ -2197,7 +1911,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(ulong value)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(ulong value)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2221,19 +1935,13 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
-  <a id="Switchboard_StringMakerHandle_AppendAsHex_" data-uid="Switchboard.StringMakerHandle.AppendAsHex*"></a>
+  <a id="Switchboard_StringMakerHandle_AppendHexadecimal_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal*"></a>
 
-  <h3 id="Switchboard_StringMakerHandle_AppendAsHex_System_UInt64_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendAsHex(System.UInt64,System.Char)">
-  AppendAsHex(ulong, char)
+  <h3 id="Switchboard_StringMakerHandle_AppendHexadecimal_System_UInt64_System_Char_" data-uid="Switchboard.StringMakerHandle.AppendHexadecimal(System.UInt64,System.Char)">
+  AppendHexadecimal(ulong, char)
   
   </h3>
 
@@ -2242,7 +1950,7 @@ the number of characters that will be copied during operations like <a class="xr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsHex(ulong value, char digitGroupSeparator)</code></pre>
+    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendHexadecimal(ulong value, char digitGroupSeparator)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2269,459 +1977,6 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_StringMakerHandle_AppendAsScientific_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_AppendAsScientific_System_Double_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific(System.Double)">
-  AppendAsScientific(double)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsScientific(double value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to append.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
-    <dd><p>Returns the instance, enabling a fluent interface.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_StringMakerHandle_AppendAsScientific_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_AppendAsScientific_System_Double_System_Int32_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific(System.Double,System.Int32)">
-  AppendAsScientific(double, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsScientific(double value, int digitMax)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to append.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
-    <dd><p>Returns the instance, enabling a fluent interface.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_StringMakerHandle_AppendAsScientific_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_AppendAsScientific_System_Double_System_Int32_System_Int32_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific(System.Double,System.Int32,System.Int32)">
-  AppendAsScientific(double, int, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsScientific(double value, int digitMax, int digitMin)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to append.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of digits to display.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
-    <dd><p>Returns the instance, enabling a fluent interface.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">digitMax</code> is greater than zero and less than <code class="paramref">digitMin</code>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_StringMakerHandle_AppendAsScientific_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_AppendAsScientific_System_Double_System_Int32_System_Int32_Switchboard_FloatFormatInfo_" data-uid="Switchboard.StringMakerHandle.AppendAsScientific(System.Double,System.Int32,System.Int32,Switchboard.FloatFormatInfo)">
-  AppendAsScientific(double, int, int, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendAsScientific(double value, int digitMax, int digitMin, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to append.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of digits to display.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>The format configuration info used to append the result.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
-    <dd><p>Returns the instance, enabling a fluent interface.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">digitMax</code> is greater than zero and less than <code class="paramref">digitMin</code>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_StringMakerHandle_AppendLine_" data-uid="Switchboard.StringMakerHandle.AppendLine*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_AppendLine" data-uid="Switchboard.StringMakerHandle.AppendLine">
-  AppendLine()
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Appends the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.environment.newline">NewLine</a> character(s).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendLine()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
-    <dd><p>Returns the instance, enabling a fluent interface.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_StringMakerHandle_AppendLine_" data-uid="Switchboard.StringMakerHandle.AppendLine*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_AppendLine_System_ReadOnlySpan_System_Char__" data-uid="Switchboard.StringMakerHandle.AppendLine(System.ReadOnlySpan{System.Char})">
-  AppendLine(ReadOnlySpan&lt;char&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Appends a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters, followed by the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.environment.newline">NewLine</a> character(s).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendLine(ReadOnlySpan&lt;char&gt; value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters to append.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
-    <dd><p>Returns the instance, enabling a fluent interface.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_StringMakerHandle_AppendWithDigitLimit_" data-uid="Switchboard.StringMakerHandle.AppendWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_AppendWithDigitLimit_System_Double_System_Int32_" data-uid="Switchboard.StringMakerHandle.AppendWithDigitLimit(System.Double,System.Int32)">
-  AppendWithDigitLimit(double, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendWithDigitLimit(double value, int digitLimit)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to append.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display. Results may be converted to scientific notation.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
-    <dd><p>Returns the instance, enabling a fluent interface.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_StringMakerHandle_AppendWithDigitLimit_" data-uid="Switchboard.StringMakerHandle.AppendWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_AppendWithDigitLimit_System_Double_System_Int32_System_Boolean_" data-uid="Switchboard.StringMakerHandle.AppendWithDigitLimit(System.Double,System.Int32,System.Boolean)">
-  AppendWithDigitLimit(double, int, bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendWithDigitLimit(double value, int digitLimit, bool groupDigits)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to append.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display. Results may be converted to scientific notation.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a comma.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
-    <dd><p>Returns the instance, enabling a fluent interface.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_StringMakerHandle_AppendWithDigitLimit_" data-uid="Switchboard.StringMakerHandle.AppendWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_AppendWithDigitLimit_System_Double_System_Int32_System_Boolean_Switchboard_FloatFormatInfo_" data-uid="Switchboard.StringMakerHandle.AppendWithDigitLimit(System.Double,System.Int32,System.Boolean,Switchboard.FloatFormatInfo)">
-  AppendWithDigitLimit(double, int, bool, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Appends a double-precision floating-point number.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle AppendWithDigitLimit(double value, int digitLimit, bool groupDigits, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to append.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display. Results may be converted to scientific notation.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>The format configuration info used to append the result.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
-    <dd><p>Returns the instance, enabling a fluent interface.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -2740,6 +1995,44 @@ the number of characters that will be copied during operations like <a class="xr
     <pre><code class="lang-csharp hljs">public StringMakerHandle Clear()</code></pre>
   </div>
 
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Clear_" data-uid="Switchboard.StringMakerHandle.Clear*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Clear_Switchboard_FloatFormatInfo_" data-uid="Switchboard.StringMakerHandle.Clear(Switchboard.FloatFormatInfo)">
+  Clear(FloatFormatInfo)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> to zero, and sets the <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_NumberFormat">NumberFormat</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Clear(FloatFormatInfo numberFormat)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>numberFormat</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
+    <dd></dd>
+  </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
@@ -2836,51 +2129,6 @@ the number of characters that will be copied during operations like <a class="xr
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
     <dd><p>Thrown if the <code class="paramref">target</code> length is less than this StringMaker <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_StringMakerHandle_EnsureCapacity_" data-uid="Switchboard.StringMakerHandle.EnsureCapacity*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_EnsureCapacity_System_Int32_" data-uid="Switchboard.StringMakerHandle.EnsureCapacity(System.Int32)">
-  EnsureCapacity(int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Allocates enough internal memory to store the specified number of characters.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int EnsureCapacity(int capacity)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>capacity</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The total number of characters for which to ensure capacity.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The actual allocated character capacity, may be more than requested.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">capacity</code> is less than zero or greater than <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a></p>
 </dd>
   </dl>
 
@@ -3003,6 +2251,115 @@ the number of characters that will be copied during operations like <a class="xr
 
 
 
+  <a id="Switchboard_StringMakerHandle_ForEachArray_" data-uid="Switchboard.StringMakerHandle.ForEachArray*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_ForEachArray__1___0_Switchboard_StringMaker_ForEachArrayAction___0__" data-uid="Switchboard.StringMakerHandle.ForEachArray``1(``0,Switchboard.StringMaker.ForEachArrayAction{``0})">
+  ForEachArray&lt;T&gt;(T, ForEachArrayAction&lt;T&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invokes a <a class="xref" href="Switchboard.StringMaker.ForEachArrayAction-1.html">StringMaker.ForEachArrayAction&lt;TArg&gt;</a> for each character array in the StringMaker.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ForEachArray&lt;T&gt;(T arg, StringMaker.ForEachArrayAction&lt;T&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the action.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="Switchboard.StringMaker.html">StringMaker</a>.<a class="xref" href="Switchboard.StringMaker.ForEachArrayAction-1.html">ForEachArrayAction</a>&lt;T&gt;</dt>
+    <dd><p>The action to invoke.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of argument to be passed into the action.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_ReleaseMemory_" data-uid="Switchboard.StringMakerHandle.ReleaseMemory*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_ReleaseMemory" data-uid="Switchboard.StringMakerHandle.ReleaseMemory">
+  ReleaseMemory()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears and releases excess character arrays to the shared pool,
+and sets the null '\0' character from the <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> index to the end of the last remaining character array.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle ReleaseMemory()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_StringMakerHandle_Reset_" data-uid="Switchboard.StringMakerHandle.Reset*"></a>
+
+  <h3 id="Switchboard_StringMakerHandle_Reset" data-uid="Switchboard.StringMakerHandle.Reset">
+  Reset()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> to zero, and clear the <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_NumberFormat">NumberFormat</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StringMakerHandle Reset()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
+    <dd><p>Returns the instance, enabling a fluent interface.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Switchboard_StringMakerHandle_ToString_" data-uid="Switchboard.StringMakerHandle.ToString*"></a>
 
   <h3 id="Switchboard_StringMakerHandle_ToString" data-uid="Switchboard.StringMakerHandle.ToString">
@@ -3023,40 +2380,6 @@ the number of characters that will be copied during operations like <a class="xr
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>The new string.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Switchboard_StringMakerHandle_TrimExcess_" data-uid="Switchboard.StringMakerHandle.TrimExcess*"></a>
-
-  <h3 id="Switchboard_StringMakerHandle_TrimExcess" data-uid="Switchboard.StringMakerHandle.TrimExcess">
-  TrimExcess()
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Releases excess memory pages to the <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_CharacterArrayPool">CharacterArrayPool</a>,
-and clears characters by setting to '\0' from the <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> index to the end of the page.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StringMakerHandle TrimExcess()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.StringMakerHandle.html">StringMakerHandle</a></dt>
-    <dd><p>Returns the instance, enabling a fluent interface.</p>
 </dd>
   </dl>
 
@@ -3113,12 +2436,6 @@ and clears characters by setting to '\0' from the <a class="xref" href="Switchbo
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -3161,12 +2478,6 @@ and clears characters by setting to '\0' from the <a class="xref" href="Switchbo
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -3209,12 +2520,6 @@ and clears characters by setting to '\0' from the <a class="xref" href="Switchbo
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -3257,12 +2562,6 @@ and clears characters by setting to '\0' from the <a class="xref" href="Switchbo
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -3273,7 +2572,7 @@ and clears characters by setting to '\0' from the <a class="xref" href="Switchbo
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Appends a value.</p>
+  <div class="markdown level1 summary"><p>Appends a long integer.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -3305,12 +2604,6 @@ and clears characters by setting to '\0' from the <a class="xref" href="Switchbo
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -3353,12 +2646,6 @@ and clears characters by setting to '\0' from the <a class="xref" href="Switchbo
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 
@@ -3401,12 +2688,6 @@ and clears characters by setting to '\0' from the <a class="xref" href="Switchbo
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formatexception">FormatException</a></dt>
-    <dd><p>Thrown when the new <a class="xref" href="Switchboard.StringMakerHandle.html#Switchboard_StringMakerHandle_Length">Length</a> would exceed <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.</p>
-</dd>
-  </dl>
 
 
 

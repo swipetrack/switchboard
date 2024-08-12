@@ -126,7 +126,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -168,8 +169,8 @@
 
   <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
 
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Double_System_Span_System_Char__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Double,System.Span{System.Char},System.Int32)">
-  ConvertToText(double, Span&lt;char&gt;, int)
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Double_System_Span_System_Char__Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Double,System.Span{System.Char},Switchboard.FloatFormatInfo)">
+  ConvertToText(double, Span&lt;char&gt;, FloatFormatInfo)
   
   </h3>
 
@@ -178,7 +179,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToText(this double value, Span&lt;char&gt; result, int fractionalMax)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this double value, Span&lt;char&gt; result, FloatFormatInfo format)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -188,183 +189,6 @@
 </dd>
     <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
     <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Double_System_Span_System_Char__System_Int32_System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Double,System.Span{System.Char},System.Int32,System.Int32)">
-  ConvertToText(double, Span&lt;char&gt;, int, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToText(this double value, Span&lt;char&gt; result, int fractionalMax, int fractionalMin)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Double_System_Span_System_Char__System_Int32_System_Int32_System_Boolean_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Double,System.Span{System.Char},System.Int32,System.Int32,System.Boolean)">
-  ConvertToText(double, Span&lt;char&gt;, int, int, bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToText(this double value, Span&lt;char&gt; result, int fractionalMax, int fractionalMin, bool groupDigits)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a comma.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Double_System_Span_System_Char__System_Int32_System_Int32_System_Boolean_Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Double,System.Span{System.Char},System.Int32,System.Int32,System.Boolean,Switchboard.FloatFormatInfo)">
-  ConvertToText(double, Span&lt;char&gt;, int, int, bool, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToText(this double value, Span&lt;char&gt; result, int fractionalMax, int fractionalMin, bool groupDigits, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
 </dd>
     <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
     <dd><p>Detailed settings for formatting the result.</p>
@@ -387,12 +211,6 @@
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
     <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
 </dd>
@@ -402,8 +220,8 @@
 
   <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
 
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Double_System_Span_System_Char__System_Int32_System_Int32_System_Boolean_Switchboard_FloatFormatInfo_System_Boolean__" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Double,System.Span{System.Char},System.Int32,System.Int32,System.Boolean,Switchboard.FloatFormatInfo,System.Boolean@)">
-  ConvertToText(double, Span&lt;char&gt;, int, int, bool, FloatFormatInfo, out bool)
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Double_System_Span_System_Char__Switchboard_FloatFormatInfo_System_Boolean__" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Double,System.Span{System.Char},Switchboard.FloatFormatInfo,System.Boolean@)">
+  ConvertToText(double, Span&lt;char&gt;, FloatFormatInfo, out bool)
   
   </h3>
 
@@ -412,7 +230,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToText(this double value, Span&lt;char&gt; result, int fractionalMax, int fractionalMin, bool groupDigits, FloatFormatInfo format, out bool valueIsNegative)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this double value, Span&lt;char&gt; result, FloatFormatInfo format, out bool valueIsNegative)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -422,15 +240,6 @@
 </dd>
     <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
     <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
 </dd>
     <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
     <dd><p>Detailed settings for formatting the result.</p>
@@ -456,14 +265,181 @@
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
     <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
+
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Double_System_Span_System_Char__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Double,System.Span{System.Char},System.Int32)">
+  ConvertToText(double, Span&lt;char&gt;, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this double value, Span&lt;char&gt; result, int minFractionalDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> is less than zero.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
+
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Double_System_Span_System_Char__System_Int32_System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Double,System.Span{System.Char},System.Int32,System.Int32)">
+  ConvertToText(double, Span&lt;char&gt;, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this double value, Span&lt;char&gt; result, int minFractionalDigits, int maxFractionalDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+    <dt><code>maxFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of fractional digits to display.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> or <code class="paramref">maxFractionalDigits</code> are less than zero,
+or if <code class="paramref">minFractionalDigits</code> is greater than <code class="paramref">maxFractionalDigits</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
+
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Double_System_Span_System_Char__System_Int32_System_Int32_System_Boolean_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Double,System.Span{System.Char},System.Int32,System.Int32,System.Boolean)">
+  ConvertToText(double, Span&lt;char&gt;, int, int, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this double value, Span&lt;char&gt; result, int minFractionalDigits, int maxFractionalDigits, bool groupDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+    <dt><code>maxFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of fractional digits to display.</p>
+</dd>
+    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to separate digit groups with a comma.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> or <code class="paramref">maxFractionalDigits</code> are less than zero,
+or if <code class="paramref">minFractionalDigits</code> is greater than <code class="paramref">maxFractionalDigits</code>.</p>
 </dd>
   </dl>
 
@@ -519,8 +495,8 @@
 
   <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
 
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Single_System_Span_System_Char__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Single,System.Span{System.Char},System.Int32)">
-  ConvertToText(float, Span&lt;char&gt;, int)
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Single_System_Span_System_Char__Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Single,System.Span{System.Char},Switchboard.FloatFormatInfo)">
+  ConvertToText(float, Span&lt;char&gt;, FloatFormatInfo)
   
   </h3>
 
@@ -529,7 +505,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToText(this float value, Span&lt;char&gt; result, int fractionalMax)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this float value, Span&lt;char&gt; result, FloatFormatInfo format)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -540,8 +516,8 @@
     <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
     <dd><p>The target to contain the result of the conversion.</p>
 </dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
+    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
+    <dd><p>Detailed settings for formatting the result.</p>
 </dd>
   </dl>
 
@@ -563,6 +539,114 @@
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
     <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
+
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Single_System_Span_System_Char__Switchboard_FloatFormatInfo_System_Boolean__" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Single,System.Span{System.Char},Switchboard.FloatFormatInfo,System.Boolean@)">
+  ConvertToText(float, Span&lt;char&gt;, FloatFormatInfo, out bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters, without a negative sign.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this float value, Span&lt;char&gt; result, FloatFormatInfo format, out bool valueIsNegative)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
+    <dd><p>Detailed settings for formatting the result.</p>
+</dd>
+    <dt><code>valueIsNegative</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The value will be true if the <code class="paramref">value</code> is a negative number.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
+
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Single_System_Span_System_Char__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Single,System.Span{System.Char},System.Int32)">
+  ConvertToText(float, Span&lt;char&gt;, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this float value, Span&lt;char&gt; result, int minFractionalDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>The target to contain the result of the conversion.</p>
+</dd>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Returns the number of characters in the result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> is less than zero.</p>
 </dd>
   </dl>
 
@@ -580,7 +664,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToText(this float value, Span&lt;char&gt; result, int fractionalMax, int fractionalMin)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this float value, Span&lt;char&gt; result, int minFractionalDigits, int maxFractionalDigits)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -591,11 +675,11 @@
     <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
     <dd><p>The target to contain the result of the conversion.</p>
 </dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+    <dt><code>maxFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of fractional digits to display.</p>
 </dd>
   </dl>
 
@@ -615,11 +699,12 @@
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
     <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> or <code class="paramref">maxFractionalDigits</code> are less than zero,
+or if <code class="paramref">minFractionalDigits</code> is greater than <code class="paramref">maxFractionalDigits</code>.</p>
 </dd>
   </dl>
 
@@ -637,7 +722,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToText(this float value, Span&lt;char&gt; result, int fractionalMax, int fractionalMin, bool groupDigits)</code></pre>
+    <pre><code class="lang-csharp hljs">public static int ConvertToText(this float value, Span&lt;char&gt; result, int minFractionalDigits, int maxFractionalDigits, bool groupDigits)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -648,77 +733,14 @@
     <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
     <dd><p>The target to contain the result of the conversion.</p>
 </dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The minimum number of fractional digits to display.</p>
 </dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a comma.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Single_System_Span_System_Char__System_Int32_System_Int32_System_Boolean_Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Single,System.Span{System.Char},System.Int32,System.Int32,System.Boolean,Switchboard.FloatFormatInfo)">
-  ConvertToText(float, Span&lt;char&gt;, int, int, bool, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToText(this float value, Span&lt;char&gt; result, int fractionalMax, int fractionalMin, bool groupDigits, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>maxFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>The maximum number of fractional digits to display.</p>
 </dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
     <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
+    <dd><p>Whether to separate digit groups with a comma.</p>
 </dd>
   </dl>
 
@@ -738,1921 +760,12 @@
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText_System_Single_System_Span_System_Char__System_Int32_System_Int32_System_Boolean_Switchboard_FloatFormatInfo_System_Boolean__" data-uid="Switchboard.FloatToTextExtensions.ConvertToText(System.Single,System.Span{System.Char},System.Int32,System.Int32,System.Boolean,Switchboard.FloatFormatInfo,System.Boolean@)">
-  ConvertToText(float, Span&lt;char&gt;, int, int, bool, FloatFormatInfo, out bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters, without a negative sign.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToText(this float value, Span&lt;char&gt; result, int fractionalMax, int fractionalMin, bool groupDigits, FloatFormatInfo format, out bool valueIsNegative)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
-</dd>
-    <dt><code>valueIsNegative</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>The value will be true if the <code class="paramref">value</code> is a negative number.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_System_Double_System_Span_System_Char__" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific(System.Double,System.Span{System.Char})">
-  ConvertToTextAsScientific(double, Span&lt;char&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsScientific(this double value, Span&lt;char&gt; result)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_System_Double_System_Span_System_Char__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific(System.Double,System.Span{System.Char},System.Int32)">
-  ConvertToTextAsScientific(double, Span&lt;char&gt;, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsScientific(this double value, Span&lt;char&gt; result, int digitMax)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_System_Double_System_Span_System_Char__System_Int32_System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific(System.Double,System.Span{System.Char},System.Int32,System.Int32)">
-  ConvertToTextAsScientific(double, Span&lt;char&gt;, int, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsScientific(this double value, Span&lt;char&gt; result, int digitMax, int digitMin)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of digits to display.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">digitMax</code> is greater than zero and less than <code class="paramref">digitMin</code>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_System_Double_System_Span_System_Char__System_Int32_System_Int32_Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific(System.Double,System.Span{System.Char},System.Int32,System.Int32,Switchboard.FloatFormatInfo)">
-  ConvertToTextAsScientific(double, Span&lt;char&gt;, int, int, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsScientific(this double value, Span&lt;char&gt; result, int digitMax, int digitMin, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of digits to display.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">digitMax</code> is greater than zero and less than <code class="paramref">digitMin</code>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_System_Double_System_Span_System_Char__System_Int32_System_Int32_Switchboard_FloatFormatInfo_System_Boolean__" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific(System.Double,System.Span{System.Char},System.Int32,System.Int32,Switchboard.FloatFormatInfo,System.Boolean@)">
-  ConvertToTextAsScientific(double, Span&lt;char&gt;, int, int, FloatFormatInfo, out bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation, without a negative sign.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsScientific(this double value, Span&lt;char&gt; result, int digitMax, int digitMin, FloatFormatInfo format, out bool valueIsNegative)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of digits to display.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
-</dd>
-    <dt><code>valueIsNegative</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>The value will be true if the <code class="paramref">value</code> is a negative number.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">digitMax</code> is greater than zero and less than <code class="paramref">digitMin</code>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_System_Single_System_Span_System_Char__" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific(System.Single,System.Span{System.Char})">
-  ConvertToTextAsScientific(float, Span&lt;char&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsScientific(this float value, Span&lt;char&gt; result)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_System_Single_System_Span_System_Char__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific(System.Single,System.Span{System.Char},System.Int32)">
-  ConvertToTextAsScientific(float, Span&lt;char&gt;, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsScientific(this float value, Span&lt;char&gt; result, int digitMax)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_System_Single_System_Span_System_Char__System_Int32_System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific(System.Single,System.Span{System.Char},System.Int32,System.Int32)">
-  ConvertToTextAsScientific(float, Span&lt;char&gt;, int, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsScientific(this float value, Span&lt;char&gt; result, int digitMax, int digitMin)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of digits to display.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">digitMax</code> is greater than zero and less than <code class="paramref">digitMin</code>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_System_Single_System_Span_System_Char__System_Int32_System_Int32_Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific(System.Single,System.Span{System.Char},System.Int32,System.Int32,Switchboard.FloatFormatInfo)">
-  ConvertToTextAsScientific(float, Span&lt;char&gt;, int, int, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsScientific(this float value, Span&lt;char&gt; result, int digitMax, int digitMin, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of digits to display.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">digitMax</code> is greater than zero and less than <code class="paramref">digitMin</code>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_System_Single_System_Span_System_Char__System_Int32_System_Int32_Switchboard_FloatFormatInfo_System_Boolean__" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific(System.Single,System.Span{System.Char},System.Int32,System.Int32,Switchboard.FloatFormatInfo,System.Boolean@)">
-  ConvertToTextAsScientific(float, Span&lt;char&gt;, int, int, FloatFormatInfo, out bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation, without a negative sign.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextAsScientific(this float value, Span&lt;char&gt; result, int digitMax, int digitMin, FloatFormatInfo format, out bool valueIsNegative)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of digits to display.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
-</dd>
-    <dt><code>valueIsNegative</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>The value will be true if the <code class="paramref">value</code> is a negative number.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">digitMax</code> is greater than zero and less than <code class="paramref">digitMin</code>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
-  ConvertToTextAsScientific&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32)">
-  ConvertToTextAsScientific&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32)">
-  ConvertToTextAsScientific&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, int, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax, int digitMin)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of digits to display.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">digitMax</code> is greater than zero and less than <code class="paramref">digitMin</code>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32,Switchboard.FloatFormatInfo)">
-  ConvertToTextAsScientific&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, int, int, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax, int digitMin, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of digits to display.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> or <code class="paramref">format</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">digitMax</code> is greater than zero and less than <code class="paramref">digitMin</code>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0})">
-  ConvertToTextAsScientific&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32)">
-  ConvertToTextAsScientific&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32)">
-  ConvertToTextAsScientific&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, int, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax, int digitMin)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of digits to display.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">digitMax</code> is greater than zero and less than <code class="paramref">digitMin</code>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextAsScientific__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextAsScientific``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32,Switchboard.FloatFormatInfo)">
-  ConvertToTextAsScientific&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, int, int, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters in scientific notation.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextAsScientific&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitMax, int digitMin, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>digitMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>digitMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of digits to display.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> or <code class="paramref">format</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">digitMax</code> is greater than zero and less than <code class="paramref">digitMin</code>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_System_Double_System_Span_System_Char__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit(System.Double,System.Span{System.Char},System.Int32)">
-  ConvertToTextWithDigitLimit(double, Span&lt;char&gt;, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextWithDigitLimit(this double value, Span&lt;char&gt; result, int digitLimit)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_System_Double_System_Span_System_Char__System_Int32_System_Boolean_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit(System.Double,System.Span{System.Char},System.Int32,System.Boolean)">
-  ConvertToTextWithDigitLimit(double, Span&lt;char&gt;, int, bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextWithDigitLimit(this double value, Span&lt;char&gt; result, int digitLimit, bool groupDigits)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a comma.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_System_Double_System_Span_System_Char__System_Int32_System_Boolean_Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit(System.Double,System.Span{System.Char},System.Int32,System.Boolean,Switchboard.FloatFormatInfo)">
-  ConvertToTextWithDigitLimit(double, Span&lt;char&gt;, int, bool, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextWithDigitLimit(this double value, Span&lt;char&gt; result, int digitLimit, bool groupDigits, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_System_Double_System_Span_System_Char__System_Int32_System_Boolean_Switchboard_FloatFormatInfo_System_Boolean__" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit(System.Double,System.Span{System.Char},System.Int32,System.Boolean,Switchboard.FloatFormatInfo,System.Boolean@)">
-  ConvertToTextWithDigitLimit(double, Span&lt;char&gt;, int, bool, FloatFormatInfo, out bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits, without a negative sign.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextWithDigitLimit(this double value, Span&lt;char&gt; result, int digitLimit, bool groupDigits, FloatFormatInfo format, out bool valueIsNegative)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
-</dd>
-    <dt><code>valueIsNegative</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>The value will be true if the <code class="paramref">value</code> is a negative number.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_System_Single_System_Span_System_Char__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit(System.Single,System.Span{System.Char},System.Int32)">
-  ConvertToTextWithDigitLimit(float, Span&lt;char&gt;, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextWithDigitLimit(this float value, Span&lt;char&gt; result, int digitLimit)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_System_Single_System_Span_System_Char__System_Int32_System_Boolean_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit(System.Single,System.Span{System.Char},System.Int32,System.Boolean)">
-  ConvertToTextWithDigitLimit(float, Span&lt;char&gt;, int, bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextWithDigitLimit(this float value, Span&lt;char&gt; result, int digitLimit, bool groupDigits)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a comma.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_System_Single_System_Span_System_Char__System_Int32_System_Boolean_Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit(System.Single,System.Span{System.Char},System.Int32,System.Boolean,Switchboard.FloatFormatInfo)">
-  ConvertToTextWithDigitLimit(float, Span&lt;char&gt;, int, bool, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextWithDigitLimit(this float value, Span&lt;char&gt; result, int digitLimit, bool groupDigits, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_System_Single_System_Span_System_Char__System_Int32_System_Boolean_Switchboard_FloatFormatInfo_System_Boolean__" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit(System.Single,System.Span{System.Char},System.Int32,System.Boolean,Switchboard.FloatFormatInfo,System.Boolean@)">
-  ConvertToTextWithDigitLimit(float, Span&lt;char&gt;, int, bool, FloatFormatInfo, out bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits, without a negative sign.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int ConvertToTextWithDigitLimit(this float value, Span&lt;char&gt; result, int digitLimit, bool groupDigits, FloatFormatInfo format, out bool valueIsNegative)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
-    <dd><p>The target to contain the result of the conversion.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
-</dd>
-    <dt><code>valueIsNegative</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>The value will be true if the <code class="paramref">value</code> is a negative number.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Returns the number of characters in the result.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">format</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">result</code> is not long enough to hold the value.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32)">
-  ConvertToTextWithDigitLimit&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextWithDigitLimit&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Boolean_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Boolean)">
-  ConvertToTextWithDigitLimit&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, int, bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextWithDigitLimit&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit, bool groupDigits)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a comma.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Boolean_Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Boolean,Switchboard.FloatFormatInfo)">
-  ConvertToTextWithDigitLimit&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, int, bool, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextWithDigitLimit&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit, bool groupDigits, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> or <code class="paramref">format</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32)">
-  ConvertToTextWithDigitLimit&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextWithDigitLimit&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Boolean_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Boolean)">
-  ConvertToTextWithDigitLimit&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, int, bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextWithDigitLimit&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit, bool groupDigits)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a comma.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToTextWithDigitLimit__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Boolean_Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToTextWithDigitLimit``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Boolean,Switchboard.FloatFormatInfo)">
-  ConvertToTextWithDigitLimit&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, int, bool, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters with a limited number of digits.
-Results may be converted to scientific notation if the actual number of digits exceeds to the <code class="paramref">digitLimit</code>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToTextWithDigitLimit&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int digitLimit, bool groupDigits, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>digitLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
-</dd>
-    <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
-    <dd><p>Detailed settings for formatting the result.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> or <code class="paramref">format</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> or <code class="paramref">maxFractionalDigits</code> are less than zero,
+or if <code class="paramref">minFractionalDigits</code> is greater than <code class="paramref">maxFractionalDigits</code>.</p>
 </dd>
   </dl>
 
@@ -2703,7 +816,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if <code class="paramref">action</code> is null.</p>
 </dd>
   </dl>
 
@@ -2711,8 +824,8 @@ Results may be converted to scientific notation if the actual number of digits e
 
   <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
 
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32)">
-  ConvertToText&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, int)
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},Switchboard.FloatFormatInfo)">
+  ConvertToText&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, FloatFormatInfo)
   
   </h3>
 
@@ -2721,7 +834,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, FloatFormatInfo format)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -2734,192 +847,6 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
     <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32)">
-  ConvertToText&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, int, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_System_Boolean_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32,System.Boolean)">
-  ConvertToText&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, int, int, bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin, bool groupDigits)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a comma.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_System_Boolean_Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32,System.Boolean,Switchboard.FloatFormatInfo)">
-  ConvertToText&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, int, int, bool, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin, bool groupDigits, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
 </dd>
     <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
     <dd><p>Detailed settings for formatting the result.</p>
@@ -2943,10 +870,192 @@ Results may be converted to scientific notation if the actual number of digits e
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> or <code class="paramref">format</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if <code class="paramref">action</code> is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
+
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32)">
+  ConvertToText&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters,
+then passes the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> to the provided <code class="paramref">action</code>, along with the <code class="paramref">argument</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int minFractionalDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">action</code> is null.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> is less than zero.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
+
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32)">
+  ConvertToText&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters,
+then passes the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> to the provided <code class="paramref">action</code>, along with the <code class="paramref">argument</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int minFractionalDigits, int maxFractionalDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+    <dt><code>maxFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of fractional digits to display.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">action</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> or <code class="paramref">maxFractionalDigits</code> are less than zero,
+or if <code class="paramref">minFractionalDigits</code> is greater than <code class="paramref">maxFractionalDigits</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
+
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Double___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_System_Boolean_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Double,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32,System.Boolean)">
+  ConvertToText&lt;T&gt;(double, T, ReadOnlySpanAction&lt;char, T&gt;, int, int, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a double-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters,
+then passes the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> to the provided <code class="paramref">action</code>, along with the <code class="paramref">argument</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this double value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int minFractionalDigits, int maxFractionalDigits, bool groupDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+    <dt><code>maxFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of fractional digits to display.</p>
+</dd>
+    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to separate digit groups with a comma.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">action</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> or <code class="paramref">maxFractionalDigits</code> are less than zero,
+or if <code class="paramref">minFractionalDigits</code> is greater than <code class="paramref">maxFractionalDigits</code>.</p>
 </dd>
   </dl>
 
@@ -2997,7 +1106,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if <code class="paramref">action</code> is null.</p>
 </dd>
   </dl>
 
@@ -3005,8 +1114,8 @@ Results may be converted to scientific notation if the actual number of digits e
 
   <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
 
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32)">
-  ConvertToText&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, int)
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},Switchboard.FloatFormatInfo)">
+  ConvertToText&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, FloatFormatInfo)
   
   </h3>
 
@@ -3015,7 +1124,7 @@ Results may be converted to scientific notation if the actual number of digits e
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, FloatFormatInfo format)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3028,192 +1137,6 @@ Results may be converted to scientific notation if the actual number of digits e
 </dd>
     <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
     <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32)">
-  ConvertToText&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, int, int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_System_Boolean_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32,System.Boolean)">
-  ConvertToText&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, int, int, bool)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin, bool groupDigits)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a comma.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
-
-  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_System_Boolean_Switchboard_FloatFormatInfo_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32,System.Boolean,Switchboard.FloatFormatInfo)">
-  ConvertToText&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, int, int, bool, FloatFormatInfo)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int fractionalMax, int fractionalMin, bool groupDigits, FloatFormatInfo format)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>The number to convert.</p>
-</dd>
-    <dt><code>argument</code> <span class="xref">T</span></dt>
-    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
-</dd>
-    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
-    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
-</dd>
-    <dt><code>fractionalMax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The maximum number of fractional digits to display.</p>
-</dd>
-    <dt><code>fractionalMin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The minimum number of fractional digits to display.</p>
-</dd>
-    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>Set true if three-digit groups should be separated by a <a class="xref" href="Switchboard.FloatFormatInfo.html#Switchboard_FloatFormatInfo_DigitGroupSeparator">DigitGroupSeparator</a>.</p>
 </dd>
     <dt><code>format</code> <a class="xref" href="Switchboard.FloatFormatInfo.html">FloatFormatInfo</a></dt>
     <dd><p>Detailed settings for formatting the result.</p>
@@ -3237,10 +1160,192 @@ Results may be converted to scientific notation if the actual number of digits e
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if <code class="paramref">action</code> or <code class="paramref">format</code> are <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+    <dd><p>Thrown if <code class="paramref">action</code> is null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
+
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32)">
+  ConvertToText&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters,
+then passes the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> to the provided <code class="paramref">action</code>, along with the <code class="paramref">argument</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int minFractionalDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">action</code> is null.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if <code class="paramref">fractionalMax</code> is greater than zero and less than <code class="paramref">fractionalMin</code>.</p>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> is less than zero.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
+
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32)">
+  ConvertToText&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters,
+then passes the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> to the provided <code class="paramref">action</code>, along with the <code class="paramref">argument</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int minFractionalDigits, int maxFractionalDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+    <dt><code>maxFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of fractional digits to display.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">action</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> or <code class="paramref">maxFractionalDigits</code> are less than zero,
+or if <code class="paramref">minFractionalDigits</code> is greater than <code class="paramref">maxFractionalDigits</code>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_FloatToTextExtensions_ConvertToText_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText*"></a>
+
+  <h3 id="Switchboard_FloatToTextExtensions_ConvertToText__1_System_Single___0_System_Buffers_ReadOnlySpanAction_System_Char___0__System_Int32_System_Int32_System_Boolean_" data-uid="Switchboard.FloatToTextExtensions.ConvertToText``1(System.Single,``0,System.Buffers.ReadOnlySpanAction{System.Char,``0},System.Int32,System.Int32,System.Boolean)">
+  ConvertToText&lt;T&gt;(float, T, ReadOnlySpanAction&lt;char, T&gt;, int, int, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a single-precision floating-point number into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> of characters,
+then passes the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> to the provided <code class="paramref">action</code>, along with the <code class="paramref">argument</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ConvertToText&lt;T&gt;(this float value, T argument, ReadOnlySpanAction&lt;char, T&gt; action, int minFractionalDigits, int maxFractionalDigits, bool groupDigits)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The number to convert.</p>
+</dd>
+    <dt><code>argument</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to pass into the <code class="paramref">action</code>.</p>
+</dd>
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.readonlyspanaction-2">ReadOnlySpanAction</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>, T&gt;</dt>
+    <dd><p>The action to perform with the resulting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> of characters.</p>
+</dd>
+    <dt><code>minFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The minimum number of fractional digits to display.</p>
+</dd>
+    <dt><code>maxFractionalDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of fractional digits to display.</p>
+</dd>
+    <dt><code>groupDigits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to separate digit groups with a comma.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of <code class="paramref">argument</code> to pass into the <code class="paramref">action</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Thrown if <code class="paramref">action</code> is null.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">minFractionalDigits</code> or <code class="paramref">maxFractionalDigits</code> are less than zero,
+or if <code class="paramref">minFractionalDigits</code> is greater than <code class="paramref">maxFractionalDigits</code>.</p>
 </dd>
   </dl>
 

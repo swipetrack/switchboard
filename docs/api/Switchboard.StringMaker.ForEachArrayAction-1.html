@@ -2,9 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Events | Switchboard </title>
+      <title>Delegate StringMaker.ForEachArrayAction&lt;TArg&gt;
+ | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Events | Switchboard ">
+      <meta name="title" content="Delegate StringMaker.ForEachArrayAction&lt;TArg&gt;
+ | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -27,7 +29,7 @@
       <script type="text/javascript" src="../styles/main.js"></script>
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -72,10 +74,59 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Events">
-<h1 id="events">Events</h1>
+        <article data-uid="Switchboard.StringMaker.ForEachArrayAction`1">
 
-<p>The Ticker module uses the PriorityEvent class to invoke update events. The priority event class has good performance, but work is in progress to develop an even better system for event handling that will serve as the basis for the Configuration module.</p>
+
+
+  <h1 id="Switchboard_StringMaker_ForEachArrayAction_1" data-uid="Switchboard.StringMaker.ForEachArrayAction`1" class="text-break">
+    Delegate StringMaker.ForEachArrayAction&lt;TArg&gt;
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Switchboard.StringMaker.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Encapsulates a method that receives a state object of type TArg, a read-only span of characters in the current array, and boolean indicating if it is the final array.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate void StringMaker.ForEachArrayAction&lt;in TArg&gt;(TArg arg, ReadOnlySpan&lt;char&gt; charSpan, bool finalArray)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg</code> <span class="xref">TArg</span></dt>
+    <dd><p>A state object of type <a class="xref" href="Switchboard.StringMaker.ForEachArrayAction-1.html">StringMaker.ForEachArrayAction&lt;TArg&gt;</a>.</p>
+</dd>
+    <dt><code>charSpan</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a>&gt;</dt>
+    <dd><p>A read-only span of characters in the current array.</p>
+</dd>
+    <dt><code>finalArray</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A boolean indicating if this is the final array.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TArg</code></dt>
+    <dd><p>The type of the object that represents the state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 </article>
 
         <div class="contribution d-print-none">

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Memory Management | Switchboard </title>
+      <title>Expandable Objects | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Memory Management | Switchboard ">
+      <meta name="title" content="Expandable Objects | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -72,11 +72,11 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="MemoryManagement">
-<h1 id="memory-management">Memory Management</h1>
+        <article data-uid="Expandable">
+<h2 id="expandable-objects">Expandable Objects</h2>
 
-<p>Switchboard uses memory pooling to avoid garbage collection. A potential negative side effects of pooling memory is that you can effectively simulate a memory leak by pooling too much and never releasing it. Most of of the pooled memory can be controlled by setting the <a class="xref" href="../api/Switchboard.ObjectArrayPool.html#Switchboard_ObjectArrayPool_MaxCount">MaxCount</a> value on the four <a class="xref" href="../api/Switchboard.ObjectArrayPool.html">ObjectArrayPool</a> instances held by the <a class="xref" href="../api/Switchboard.SharedObjectArrayPool.html">SharedObjectArrayPool</a>. Instead of pooling various types of arrays, Switchboard's generic collections all use object arrays internally. SharedObjectArray is the static class that holds four ObjectArrayPool instances for object arrays of lengths 32, 64, 128, and 256. Limiting the MaxCount of those pools will help ensure that your application does not reserve too much memory. When the MaxCount is exceeded, the excess will be discarded for garbage collection as usual.</p>
-<p><a class="xref" href="../api/Switchboard.StringMaker.html">StringMaker</a> also pools character arrays. All StringMaker instances share a public, static <a class="xref" href="../api/Switchboard.StringMaker.html#Switchboard_StringMaker_CharacterArrayPool">CharacterArrayPool</a>. Each character array is 1,024 characters. Each StringMaker can hold 27 of those arrays. The CharacterArrayPool can store up to 65,536 arrays. Set the <a class="xref" href="../api/Switchboard.ThreadSafeObjectPool-1.html#Switchboard_ThreadSafeObjectPool_1_MaxCount">MaxCount</a> to prevent pooling of too many character arrays. When you want to return the internal character arrays of a StringMaker, set the desired <a class="xref" href="../api/Switchboard.StringMaker.html#Switchboard_StringMaker_Length">Length</a> and call the <a class="xref" href="../api/Switchboard.StringMaker.html#Switchboard_StringMaker_TrimExcess">TrimExcess</a> method, or just call the <a class="xref" href="../api/Switchboard.StringMaker.html#Switchboard_StringMaker_Clear">Clear</a> method. That will return the unused character arrays to the static CharacterArrayPool.</p>
+<p>Switchboard uses an <a class="xref" href="../api/Switchboard.ExpandableAttribute.html">Expandable</a> attribute on the <a class="xref" href="../api/Switchboard.DependencyInjector.html">DependencyInjector</a> in the <a class="xref" href="../api/Switchboard.CompositionRootAsset.html">CompositionRootAsset</a>. This allows you to assign the DependencyInjector and modify its properties in place, without having to select the object. You can apply the Expandable attribute to any object reference in the editor to see its properties. The attribute accepts a boolean argument to specify if the property is runtime read-only. If true, the object reference will become unchangeable when you press play. This helps to clarify objects that are not intended to change at runtime. Expandable object fields can be nested, and there is no depth limit on nested objects. However, if an object has already been expanded once it will not be expanded again in the same hierarchy to avoid infinite recursion from circular references.</p>
+<p><img src="../assets/ExpandableObjects.png" alt="ExpandableObjects"></p>
 </article>
 
         <div class="contribution d-print-none">

@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum PlatformFlags
+      <title>Class IInjectorExtensions
  | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum PlatformFlags
+      <meta name="title" content="Class IInjectorExtensions
  | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
@@ -74,102 +74,97 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Switchboard.PlatformFlags">
+        <article data-uid="Switchboard.IInjectorExtensions">
 
 
 
-
-  <h1 id="Switchboard_PlatformFlags" data-uid="Switchboard.PlatformFlags" class="text-break">
-    Enum PlatformFlags
+  <h1 id="Switchboard_IInjectorExtensions" data-uid="Switchboard.IInjectorExtensions" class="text-break">
+    Class IInjectorExtensions
   
   </h1>
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>Switchboard.PlatformFlags.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>Switchboard.InjectorLocator.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.flagsattribute">FlagsAttribute</a> enum comparable to UnityEngine.RuntimePlatform.
-Use the <a class="xref" href="Switchboard.ApplicationPlatform.html#Switchboard_ApplicationPlatform_GetFlag_UnityEngine_RuntimePlatform_">GetFlag(RuntimePlatform)</a> method to convert a RuntimePlatform value into a flag value,
-or compare the current platform like so: PlatformFlagsVariable.HasFlag(<a class="xref" href="Switchboard.ApplicationPlatform.html#Switchboard_ApplicationPlatform_Flag">Flag</a>)</p>
+  <div class="markdown summary"><p>Provides extension methods for the <a class="xref" href="Switchboard.IInjector.html">IInjector</a> interface.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Flags]
-public enum PlatformFlags</code></pre>
+    <pre><code class="lang-csharp hljs">public static class IInjectorExtensions</code></pre>
   </div>
 
 
 
 
-
-
-
-
-
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="Switchboard_PlatformFlags_OSXEditor"><code>OSXEditor = 1</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_OSXPlayer"><code>OSXPlayer = 2</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_WindowsPlayer"><code>WindowsPlayer = 4</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_WindowsEditor"><code>WindowsEditor = 8</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_IPhonePlayer"><code>IPhonePlayer = 16</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_Android"><code>Android = 32</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_LinuxPlayer"><code>LinuxPlayer = 64</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_LinuxEditor"><code>LinuxEditor = 128</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_WebGLPlayer"><code>WebGLPlayer = 256</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_WSAPlayerX86"><code>WSAPlayerX86 = 512</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_WSAPlayerX64"><code>WSAPlayerX64 = 1024</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_WSAPlayerARM"><code>WSAPlayerARM = 2048</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_PS4"><code>PS4 = 4096</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_XboxOne"><code>XboxOne = 8192</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_tvOS"><code>tvOS = 16384</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_Switch"><code>Switch = 32768</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_Lumin"><code>Lumin = 65536</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_Stadia"><code>Stadia = 131072</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_CloudRendering"><code>CloudRendering = 262144</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_GameCoreXboxSeries"><code>GameCoreXboxSeries = 524288</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_GameCoreXboxOne"><code>GameCoreXboxOne = 1048576</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_PS5"><code>PS5 = 2097152</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_EmbeddedLinuxArm64"><code>EmbeddedLinuxArm64 = 4194304</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_EmbeddedLinuxArm32"><code>EmbeddedLinuxArm32 = 8388608</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_EmbeddedLinuxX64"><code>EmbeddedLinuxX64 = 16777216</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_EmbeddedLinuxX86"><code>EmbeddedLinuxX86 = 33554432</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_LinuxServer"><code>LinuxServer = 67108864</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_WindowsServer"><code>WindowsServer = 134217728</code></dt>
-    <dd></dd>
-    <dt id="Switchboard_PlatformFlags_OSXServer"><code>OSXServer = 268435456</code></dt>
-    <dd></dd>
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">IInjectorExtensions</span></div>
+    </dd>
   </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Switchboard_IInjectorExtensions_TryGet_" data-uid="Switchboard.IInjectorExtensions.TryGet*"></a>
+
+  <h3 id="Switchboard_IInjectorExtensions_TryGet__1_Switchboard_IInjector___0__" data-uid="Switchboard.IInjectorExtensions.TryGet``1(Switchboard.IInjector,``0@)">
+  TryGet&lt;T&gt;(IInjector, out T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to get a type of dependency from an <a class="xref" href="Switchboard.IInjector.html">IInjector</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGet&lt;T&gt;(this IInjector injector, out T dependency) where T : class</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>injector</code> <a class="xref" href="Switchboard.IInjector.html">IInjector</a></dt>
+    <dd><p>The <a class="xref" href="Switchboard.IInjector.html">IInjector</a> from which to get a dependency.</p>
+</dd>
+    <dt><code>dependency</code> <span class="xref">T</span></dt>
+    <dd><p>The dependency instance provided.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Returns true if the output <code class="paramref">dependency</code> does not equal null.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of dependency to get.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
 
 
 

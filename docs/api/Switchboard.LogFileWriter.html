@@ -181,22 +181,43 @@
       <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_Log_Switchboard_ILogger_Switchboard_LogLevel_Switchboard_StringMaker_System_String_System_String_System_Int32_">StringMakerILoggerExtensions.Log(ILogger, LogLevel, StringMaker, string, string, int)</a>
   </div>
   <div>
+      <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_Log_Switchboard_ILogger_Switchboard_LogLevel_System_Exception_Switchboard_StringMaker_">StringMakerILoggerExtensions.Log(ILogger, LogLevel, Exception, StringMaker)</a>
+  </div>
+  <div>
       <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogCritical_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_">StringMakerILoggerExtensions.LogCritical(ILogger, StringMaker, string, string, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogCritical_Switchboard_ILogger_System_Exception_Switchboard_StringMaker_">StringMakerILoggerExtensions.LogCritical(ILogger, Exception, StringMaker)</a>
   </div>
   <div>
       <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogDebug_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_">StringMakerILoggerExtensions.LogDebug(ILogger, StringMaker, string, string, int)</a>
   </div>
   <div>
+      <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogDebug_Switchboard_ILogger_System_Exception_Switchboard_StringMaker_">StringMakerILoggerExtensions.LogDebug(ILogger, Exception, StringMaker)</a>
+  </div>
+  <div>
       <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogError_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_">StringMakerILoggerExtensions.LogError(ILogger, StringMaker, string, string, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogError_Switchboard_ILogger_System_Exception_Switchboard_StringMaker_">StringMakerILoggerExtensions.LogError(ILogger, Exception, StringMaker)</a>
   </div>
   <div>
       <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogInformation_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_">StringMakerILoggerExtensions.LogInformation(ILogger, StringMaker, string, string, int)</a>
   </div>
   <div>
+      <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogInformation_Switchboard_ILogger_System_Exception_Switchboard_StringMaker_">StringMakerILoggerExtensions.LogInformation(ILogger, Exception, StringMaker)</a>
+  </div>
+  <div>
       <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogTrace_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_">StringMakerILoggerExtensions.LogTrace(ILogger, StringMaker, string, string, int)</a>
   </div>
   <div>
+      <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogTrace_Switchboard_ILogger_System_Exception_Switchboard_StringMaker_">StringMakerILoggerExtensions.LogTrace(ILogger, Exception, StringMaker)</a>
+  </div>
+  <div>
       <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogWarning_Switchboard_ILogger_Switchboard_StringMaker_System_String_System_String_System_Int32_">StringMakerILoggerExtensions.LogWarning(ILogger, StringMaker, string, string, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="Switchboard.StringMakerILoggerExtensions.html#Switchboard_StringMakerILoggerExtensions_LogWarning_Switchboard_ILogger_System_Exception_Switchboard_StringMaker_">StringMakerILoggerExtensions.LogWarning(ILogger, Exception, StringMaker)</a>
   </div>
   </dd></dl>
 
@@ -359,7 +380,7 @@ When a log file reaches the size limit, a new file will be created.</p>
 \ OR \ Thrown if <code class="paramref">fileNamePrefix</code> or <code class="paramref">fileExtension</code> contain invalid file name characters for the current platform.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">fileSizeLimit</code> is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MaxBytesPerLog">MaxBytesPerLog</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">fileSizeLimit</code> is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MinFileSize">MinFileSize</a>.</p>
 </dd>
   </dl>
 
@@ -420,7 +441,7 @@ When a log file reaches the size limit, a new file will be created.</p>
 \ OR \ Thrown if <code class="paramref">fileNamePrefix</code> or <code class="paramref">fileExtension</code> contain invalid file name characters for the current platform.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">fileSizeLimit</code> is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MaxBytesPerLog">MaxBytesPerLog</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">fileSizeLimit</code> is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MinFileSize">MinFileSize</a>.</p>
 </dd>
   </dl>
 
@@ -483,17 +504,17 @@ When a log file reaches the size limit, a new file will be created.</p>
 
 
 
-  <h3 id="Switchboard_LogFileWriter_MaxBytesPerLog" data-uid="Switchboard.LogFileWriter.MaxBytesPerLog">
-  MaxBytesPerLog
+  <h3 id="Switchboard_LogFileWriter_MinFileSize" data-uid="Switchboard.LogFileWriter.MinFileSize">
+  MinFileSize
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets the maximum number of bytes that may be necessary to write a single log entry to the log file.</p>
+  <div class="markdown level1 summary"><p>Gets the minimum number of bytes required for each log file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int MaxBytesPerLog = 82944</code></pre>
+    <pre><code class="lang-csharp hljs">public const int MinFileSize = 3072</code></pre>
   </div>
 
 
@@ -539,33 +560,6 @@ When a log file reaches the size limit, a new file will be created.</p>
 
 
 
-  <a id="Switchboard_LogFileWriter_DisplayCallerInfo_" data-uid="Switchboard.LogFileWriter.DisplayCallerInfo*"></a>
-
-  <h3 id="Switchboard_LogFileWriter_DisplayCallerInfo" data-uid="Switchboard.LogFileWriter.DisplayCallerInfo">
-  DisplayCallerInfo
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets or sets whether information about the caller of the log method should be displayed.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DisplayCallerInfo { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
   <a id="Switchboard_LogFileWriter_FileExtension_" data-uid="Switchboard.LogFileWriter.FileExtension*"></a>
 
   <h3 id="Switchboard_LogFileWriter_FileExtension" data-uid="Switchboard.LogFileWriter.FileExtension">
@@ -593,6 +587,33 @@ When a log file reaches the size limit, a new file will be created.</p>
 
 
 
+  <a id="Switchboard_LogFileWriter_FileIsOpen_" data-uid="Switchboard.LogFileWriter.FileIsOpen*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_FileIsOpen" data-uid="Switchboard.LogFileWriter.FileIsOpen">
+  FileIsOpen
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether there is a log file with an open <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.filestream">FileStream</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FileIsOpen { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Switchboard_LogFileWriter_FileNamePrefix_" data-uid="Switchboard.LogFileWriter.FileNamePrefix*"></a>
 
   <h3 id="Switchboard_LogFileWriter_FileNamePrefix" data-uid="Switchboard.LogFileWriter.FileNamePrefix">
@@ -600,7 +621,7 @@ When a log file reaches the size limit, a new file will be created.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets file name prefix for the current log file.</p>
+  <div class="markdown level1 summary"><p>Gets file name prefix for the current log file, the part before the time stamp.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -627,8 +648,7 @@ When a log file reaches the size limit, a new file will be created.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the maximum size of log files in bytes.
-When a log file reaches the size limit, a new file will be created.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the maximum size of log files in bytes.  When a log file reaches the size limit, a new file will be created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -648,7 +668,7 @@ When a log file reaches the size limit, a new file will be created.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if the set value is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MaxBytesPerLog">MaxBytesPerLog</a>.</p>
+    <dd><p>Thrown if the set value is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MinFileSize">MinFileSize</a>.</p>
 </dd>
   </dl>
 
@@ -667,6 +687,33 @@ When a log file reaches the size limit, a new file will be created.</p>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ILogFormatter Formatter { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileWriter_LogCallerInfo_" data-uid="Switchboard.LogFileWriter.LogCallerInfo*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_LogCallerInfo" data-uid="Switchboard.LogFileWriter.LogCallerInfo">
+  LogCallerInfo
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets whether information about the caller of the log method should be displayed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool LogCallerInfo { get; set; }</code></pre>
   </div>
 
 
@@ -721,6 +768,60 @@ When a log file reaches the size limit, a new file will be created.</p>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Path { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileWriter_StringMakerPoolCount_" data-uid="Switchboard.LogFileWriter.StringMakerPoolCount*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_StringMakerPoolCount" data-uid="Switchboard.LogFileWriter.StringMakerPoolCount">
+  StringMakerPoolCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of StringMakers stored in the shared pool. May not be perfectly accurate while other threads are modifying the pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int StringMakerPoolCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Switchboard_LogFileWriter_StringMakerPoolMaxCount_" data-uid="Switchboard.LogFileWriter.StringMakerPoolMaxCount*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_StringMakerPoolMaxCount" data-uid="Switchboard.LogFileWriter.StringMakerPoolMaxCount">
+  StringMakerPoolMaxCount
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum number of StringMakers that can be stored in the shared pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int StringMakerPoolMaxCount { get; }</code></pre>
   </div>
 
 
@@ -817,9 +918,6 @@ such as when the file or directory is set for read-only access.</p>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.pathtoolongexception">PathTooLongException</a></dt>
     <dd><p>A new file needs to be created, and the specified path exceeds the system-defined maximum length.</p>
 </dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.aggregateexception">AggregateException</a></dt>
-    <dd><p>Thrown if multiple exceptions occur during the course of the method.</p>
-</dd>
   </dl>
 
 
@@ -832,7 +930,6 @@ such as when the file or directory is set for read-only access.</p>
   </h3>
 
   <div class="markdown level1 summary"><p>Queues an exception to be written to the log file.
-The character limit is equal to <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.
 If the <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Formatter">Formatter</a> throws an exception when formatting the <code class="paramref">exception</code>,
 the formatting exception, the <code class="paramref">message</code>, and original <code class="paramref">exception</code> will be queued without formatting.
 No exception will be thrown.</p>
@@ -881,7 +978,6 @@ No exception will be thrown.</p>
   </h3>
 
   <div class="markdown level1 summary"><p>Queues a message to be written to the log file.
-The character limit is equal to <a class="xref" href="Switchboard.StringMaker.html#Switchboard_StringMaker_MaxCapacity">MaxCapacity</a>.
 If the <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_Formatter">Formatter</a> throws an exception when formatting the <code class="paramref">message</code>,
 the <code class="paramref">message</code> will be queued without formatting.
 Then, the formatting exception will be re-thrown.</p>
@@ -922,12 +1018,6 @@ Do not provide an argument. The compiler will automatically assign the correct v
 
 
 
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Thrown if <code class="paramref">message</code> is empty.</p>
-</dd>
-  </dl>
 
 
 
@@ -975,9 +1065,6 @@ If there is no current log file a new one will be created.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.pathtoolongexception">PathTooLongException</a></dt>
     <dd><p>The specified path exceeds the system-defined maximum length.</p>
-</dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.aggregateexception">AggregateException</a></dt>
-    <dd><p>Thrown if multiple exceptions occur during the course of the method.</p>
 </dd>
   </dl>
 
@@ -1066,7 +1153,46 @@ When a log file reaches the size limit, a new file will be created.</p>
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">fileSizeLimit</code> is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MaxBytesPerLog">MaxBytesPerLog</a>.</p>
+    <dd><p>Thrown if the <code class="paramref">fileSizeLimit</code> is less than <a class="xref" href="Switchboard.LogFileWriter.html#Switchboard_LogFileWriter_MinFileSize">MinFileSize</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="Switchboard_LogFileWriter_SetStringMakerPoolMaxCount_" data-uid="Switchboard.LogFileWriter.SetStringMakerPoolMaxCount*"></a>
+
+  <h3 id="Switchboard_LogFileWriter_SetStringMakerPoolMaxCount_System_Int32_" data-uid="Switchboard.LogFileWriter.SetStringMakerPoolMaxCount(System.Int32)">
+  SetStringMakerPoolMaxCount(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the maximum number of StringMakers that can be stored in the shared pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetStringMakerPoolMaxCount(int maxCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maxCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The maximum number of StringMakers that can be stored.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">maxCount</code> is less than zero.</p>
 </dd>
   </dl>
 

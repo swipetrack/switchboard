@@ -17,40 +17,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.ActionWithInput-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.ActionWithInput-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Switchboard.ApplicationEnd.yml",
       "output": {
         ".html": {
           "relative_path": "api/Switchboard.ApplicationEnd.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.ApplicationPlatform.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.ApplicationPlatform.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.ApplicationTicker.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.ApplicationTicker.html"
         }
       },
       "version": ""
@@ -117,16 +87,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.DynamicQueue-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.DynamicQueue-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Switchboard.ExpandableAttribute.yml",
       "output": {
         ".html": {
@@ -141,16 +101,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Switchboard.FileRemover.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.FixedTicker.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.FixedTicker.html"
         }
       },
       "version": ""
@@ -187,20 +137,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.FrameOfTime.yml",
+      "source_relative_path": "api/Switchboard.IInjector.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Switchboard.FrameOfTime.html"
+          "relative_path": "api/Switchboard.IInjector.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.IInjector.yml",
+      "source_relative_path": "api/Switchboard.IInjectorExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Switchboard.IInjector.html"
+          "relative_path": "api/Switchboard.IInjectorExtensions.html"
         }
       },
       "version": ""
@@ -237,16 +187,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.ITicker.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.ITicker.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Switchboard.InjectorLocator.yml",
       "output": {
         ".html": {
@@ -261,16 +201,6 @@
       "output": {
         ".html": {
           "relative_path": "api/Switchboard.IntToTextConverter.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.LateTicker.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.LateTicker.html"
         }
       },
       "version": ""
@@ -307,40 +237,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.ObjectArrayPool.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.ObjectArrayPool.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.ObjectPool-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.ObjectPool-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Switchboard.PathUtility.yml",
       "output": {
         ".html": {
           "relative_path": "api/Switchboard.PathUtility.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.PlatformFlags.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.PlatformFlags.html"
         }
       },
       "version": ""
@@ -357,30 +257,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.PriorityEvent-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.PriorityEvent-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.SharedObjectArrayPool.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.SharedObjectArrayPool.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Switchboard.StandardLogFormatter.yml",
       "output": {
         ".html": {
           "relative_path": "api/Switchboard.StandardLogFormatter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Switchboard.StringMaker.ForEachArrayAction-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Switchboard.StringMaker.ForEachArrayAction-1.html"
         }
       },
       "version": ""
@@ -447,36 +337,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.ThreadSafeObjectPool-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.ThreadSafeObjectPool-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.Ticker.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.Ticker.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Switchboard.TickerBase.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Switchboard.TickerBase.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Switchboard.UnityLogHandler.yml",
       "output": {
         ".html": {
@@ -530,10 +390,20 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "assets/CompositionRoot.png",
+      "source_relative_path": "assets/BasicInjector.png",
       "output": {
         "resource": {
-          "relative_path": "assets/CompositionRoot.png"
+          "relative_path": "assets/BasicInjector.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/ExpandableObjects.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/ExpandableObjects.png"
         }
       },
       "version": ""
@@ -550,10 +420,80 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "assets/FloatExample.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/FloatExample.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "assets/LogFile.png",
       "output": {
         "resource": {
           "relative_path": "assets/LogFile.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/ModelA.gif",
+      "output": {
+        "resource": {
+          "relative_path": "assets/ModelA.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/ModelA.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/ModelA.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/ModelB.gif",
+      "output": {
+        "resource": {
+          "relative_path": "assets/ModelB.gif"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/ModelB.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/ModelB.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/PlatformFlags.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/PlatformFlags.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/ScriptExecutionOrder.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/ScriptExecutionOrder.png"
         }
       },
       "version": ""
@@ -579,21 +519,21 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "index.md",
+      "type": "Resource",
+      "source_relative_path": "assets/TextMeshProExample.png",
       "output": {
-        ".html": {
-          "relative_path": "index.html"
+        "resource": {
+          "relative_path": "assets/TextMeshProExample.png"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/collections.md",
+      "source_relative_path": "index.md",
       "output": {
         ".html": {
-          "relative_path": "manual/collections.html"
+          "relative_path": "index.html"
         }
       },
       "version": ""
@@ -610,20 +550,20 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/feedback.md",
+      "source_relative_path": "manual/expandable.md",
       "output": {
         ".html": {
-          "relative_path": "manual/feedback.html"
+          "relative_path": "manual/expandable.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/interface.md",
+      "source_relative_path": "manual/feedback.md",
       "output": {
         ".html": {
-          "relative_path": "manual/interface.html"
+          "relative_path": "manual/feedback.html"
         }
       },
       "version": ""
@@ -650,30 +590,20 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/memory-management.md",
+      "source_relative_path": "manual/other-features.md",
       "output": {
         ".html": {
-          "relative_path": "manual/memory-management.html"
+          "relative_path": "manual/other-features.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/miscellaneous.md",
+      "source_relative_path": "manual/platform-flags.md",
       "output": {
         ".html": {
-          "relative_path": "manual/miscellaneous.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/roadmap.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/roadmap.html"
+          "relative_path": "manual/platform-flags.html"
         }
       },
       "version": ""
@@ -694,26 +624,6 @@
       "output": {
         ".html": {
           "relative_path": "manual/stringmaker.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/text-converter.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/text-converter.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/ticker.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/ticker.html"
         }
       },
       "version": ""
@@ -770,6 +680,16 @@
       "output": {
         ".html": {
           "relative_path": "release-notes/v1.2.0.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "release-notes/v2.0.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "release-notes/v2.0.0.html"
         }
       },
       "version": ""

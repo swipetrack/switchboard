@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Collections | Switchboard </title>
+      <title>Precise Clock | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Collections | Switchboard ">
+      <meta name="title" content="Precise Clock | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -72,12 +72,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Collections">
-<h1 id="collections">Collections</h1>
+        <article data-uid="OtherFeatures">
+<h2 id="precise-clock">Precise Clock</h2>
 
-<p>Switchboard <a class="xref" href="../api/Switchboard.ObjectPool-1.html">Collections</a> resize their internal arrays, both growing and shrinking automatically, without allocating garbage memory. Unused internal arrays are returned back to a memory pool. All collections use the same memory pool of object arrays, regardless of the Type of objects stored in the collection.</p>
-<p>The <a class="xref" href="../api/Switchboard.ObjectArrayPool.html">ObjectArrayPool</a> can store an infinite amount of object arrays without ever allocating any additional memory, as long as the arrays are the same length. This class serves as the basis for pooling all of the underlying memory arrays that serve the other collections. ObjectArrayPools are thread safe.</p>
-<p>The <a class="xref" href="../api/Switchboard.SharedObjectArrayPool.html">SharedObjectArrayPool</a> is a static class that holds four ObjectArrayPool instances. Each ObjectArrayPool holds object arrays of a certain length. The four lengths used are 32, 64, 128, and 256. When an <a class="xref" href="../api/Switchboard.ObjectPool-1.html">ObjectPool</a>, <a class="xref" href="../api/Switchboard.ThreadSafeObjectPool-1.html">ThreadSafeObjectPool</a>, or <a class="xref" href="../api/Switchboard.DynamicQueue-1.html">DynamicQueue</a> needs to resize its internal memory, it borrows or returns object arrays from the SharedObjectArrayPool. You can set a max count on any ObjectArrayPool, ObjectPool, or ThreadSafeObjectPool. If they fill to the max count, any excess will be subject to garbage collection as usual.</p>
+<p>The <a class="xref" href="../api/Switchboard.PreciseClock.html">PreciseClock</a> is a static class that provides <a href="https://learn.microsoft.com/en-us/dotnet/api/system.datetime">DateTime</a> values with the precision of a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch">Stopwatch</a>.</p>
+<h2 id="file-utilties">File Utilties</h2>
+<p>The File Utilties module provides a <a class="xref" href="../api/Switchboard.PathUtility.html">PathUtility</a> for operations like validating and combining file paths, and a <a class="xref" href="../api/Switchboard.FileRemover.html">FileRemover</a> for removing old log files when the directory reaches its limit.</p>
 </article>
 
         <div class="contribution d-print-none">

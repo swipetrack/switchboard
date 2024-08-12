@@ -2,11 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class SharedObjectArrayPool
- | Switchboard </title>
+      <title>Platform Flags | Switchboard </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class SharedObjectArrayPool
- | Switchboard ">
+      <meta name="title" content="Platform Flags | Switchboard ">
       
       <link rel="icon" href="../assets/SwitchboardIconBorderless16.ico">
       <link rel="stylesheet" href="../styles/docfx.min.css">
@@ -29,7 +27,7 @@
       <script type="text/javascript" src="../styles/main.js"></script>
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -74,98 +72,11 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Switchboard.SharedObjectArrayPool">
+        <article data-uid="PlatformFlags">
+<h2 id="platform-flags">Platform Flags</h2>
 
-
-
-  <h1 id="Switchboard_SharedObjectArrayPool" data-uid="Switchboard.SharedObjectArrayPool" class="text-break">
-    Class SharedObjectArrayPool
-  
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Switchboard.html">Switchboard</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>Switchboard.Collections.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>A static collection of <a class="xref" href="Switchboard.ObjectArrayPool.html">ObjectArrayPool</a> instances that store object arrays of length 32, 64, 128, 256.</p>
-</div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class SharedObjectArrayPool</code></pre>
-  </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">SharedObjectArrayPool</span></div>
-    </dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Switchboard_SharedObjectArrayPool_GetPoolForLength_" data-uid="Switchboard.SharedObjectArrayPool.GetPoolForLength*"></a>
-
-  <h3 id="Switchboard_SharedObjectArrayPool_GetPoolForLength_System_Int32_" data-uid="Switchboard.SharedObjectArrayPool.GetPoolForLength(System.Int32)">
-  GetPoolForLength(int)
-  
-  </h3>
-
-  <div class="markdown level1 summary"><p>Provides a static <a class="xref" href="Switchboard.ObjectArrayPool.html">ObjectArrayPool</a> instance that stores object arrays of the requested length.
-The only recognized length values are 32, 64, 128, 256.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ObjectArrayPool GetPoolForLength(int arrayLength)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>arrayLength</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>The length of the arrays stored in the requested <a class="xref" href="Switchboard.ObjectArrayPool.html">ObjectArrayPool</a>.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Switchboard.ObjectArrayPool.html">ObjectArrayPool</a></dt>
-    <dd><p>A static <a class="xref" href="Switchboard.ObjectArrayPool.html">ObjectArrayPool</a> instance that stores object arrays of the specified <code class="paramref">arrayLength</code>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Thrown if the <code class="paramref">arrayLength</code> value is anything other than 32, 64, 128, 256.</p>
-</dd>
-  </dl>
-
-
-
-
+<p>The PlatformFlags enum provides a dropdown menu in the editor for selecting multiple hardware platforms. So, you can easily add a property for selecting various platforms, and compare it against the current platform using the ApplicationPlatform class, for creating platform dependent conditions.</p>
+<p><img src="../assets/PlatformFlags.png" alt="PlatformFlags"></p>
 </article>
 
         <div class="contribution d-print-none">

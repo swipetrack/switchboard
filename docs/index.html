@@ -75,24 +75,11 @@
         <article data-uid="">
 <h1 id="switchboard">Switchboard</h1>
 
-<p>Switchboard is a dependency injection framework for the Unity game engine, and more. It provides a composition root where you can add code that runs when you play, in any scene. From there, you can initialize objects that MonoBehaviours get when they awake. Getting a dependency as an interface creates loose coupling, enabling modular design. You don't need to create singletons, or service locators, or load certain scenes before others. The composition root can be changed easily in the editor, perfect for testing and experimentation. An innovative design pattern allows Switchboard to completely avoid the costly reflection and code generation that other frameworks use.</p>
-<p>Switchboard is highly compatible with other projects and plugins. Your MonoBehaviours don't need to inherit from a certain base class or implement an interface. There are no framework specific attributes or methods to add to your code base. Domain reload and scene reload can be disabled, so you can enter play mode instantly. The performance is beyond compare. Dependencies resolve in milliseconds, and there is no code generation necessary when making changes.</p>
-<p>Switchboard also provides high performance log files. Log files can be used in debug or release builds with almost no impact on performance, and zero memory allocated for garbage collection. The StringMaker class is a direct replacement for StringBuilder. It allows you to append number variables to strings without allocating garbage memory, which is not possible with StringBuilder in Unity.</p>
-<p>StringMaker can also render accurate floating-point numbers that standard C# can not. The standard C# methods for displaying floating-point numbers always round the real value to a limited number of digits, even in the debugger! StringMaker can reveal the true value of a floating-point number, formatted to your liking. These, and the other core modules work in any C# application, not just Unity.</p>
-<p>Applying Switchboard to your project is sure to improve the quality of your application. Download Switchboard from the <a href="https://assetstore.unity.com/packages/tools/utilities/switchboard-250879">Unity Asset Store</a> today.</p>
-<h2 id="unity-specific-features">Unity Specific Features</h2>
-<ul>
-<li>Dependency Injection</li>
-<li>Composition Root</li>
-<li>Update Any Object</li>
-<li>S.O.L.I.D. Code, Loose Coupling</li>
-</ul>
-<h2 id="universal-c-features">Universal C# Features</h2>
-<ul>
-<li>High Performance Log Files</li>
-<li>Zero-Garbage Strings</li>
-<li>Accurate Floating-Point Values</li>
-</ul>
+<p>Switchboard is a high performance logging framework, with dependency injection, built for the Unity game engine. Switchboard will automatically create rotating log files on any hardware platform, with almost no measurable impact on performance. No garbage memory is allocated in the process, and you can log thousands of log entries per frame without affecting gameplay. Log files for Android, iOS, and other platforms are no problem.</p>
+<p>Manipulating strings of text without garbage memory allocation is made possible by StringMaker, a direct replacement for StringBuilder. In Unity, StringBuilder allocates garbage memory when appending number variables. StringMaker can append numbers without allocation, in every imaginable format, even those not supported by .NET. Standard .NET code is simply not capable of displaying certain number values. A float can never display more than nine significant digits, for example. Even the debugger is inaccurate. StringMaker renders perfectly accurate floating-point numbers that show the true decimal representation of what is actually stored in binary. StringMaker is compatible with TextMesh Pro, so you can even update the text in your game without allocating any garbage memory.</p>
+<p>Dependency injection for Unity is built in. Switchboard provides a composition root where you can define the code that runs when you play the game, no matter which scene is loaded. From there, you can inject dependencies, like the logger, into MonoBehaviours with a loosely coupled interface. No need to directly reference a specific class dependency. This helps keep your code modular, and allows for unit testing with mock dependencies. You'll never need another singleton, or to load a certain scene to initialize your game. Play testing in any scene is easy. Switchboard is designed for disabling domain reload and scene reload, so you can enter play mode instantly. Your composition root properties can be changed easily in the editor, perfect for testing and experimentation, and you will not lose any changes when you stop playing, as with scene data. An innovative design pattern allows Switchboard to completely avoid the costly reflection and code generation that other frameworks use.</p>
+<p>Modular dependencies are key, so Switchboard is designed for you to only use the features you need. For example, if you want log files, but not dependency injection, removing or replacing the unwanted modules is easy. Each feature is built with modularity in mind, so you only import what you actually need.</p>
+<p>Switchboard is available on the <a href="https://assetstore.unity.com/packages/tools/utilities/switchboard-250879">Unity Asset Store</a>.</p>
 </article>
 
         <div class="contribution d-print-none">
